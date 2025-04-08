@@ -4,7 +4,7 @@ import sys
 
 class Valves(QtWidgets.QWidget):
     ValveChangingPos = QtCore.pyqtSignal(int)
-    updatevalues = QtCore.pyqtSignal(dict,list)
+    updatevalues = QtCore.pyqtSignal()
     def __init__(self,store:Store,variableid,value):
         super().__init__()
         self.setFixedSize(200,400)
@@ -79,22 +79,25 @@ class Valves(QtWidgets.QWidget):
         self.Close.clicked.connect(self.ClosingPostion)
 
     def OpeningPosition(self):
+        self.store.settingValueOPC(self.variableid,1)
         self.OPValue.setText("OPEN")
         self.Openradio.setChecked(True)
         self.Closeradio.setChecked(False)
+        
         # self.ValveChangingPos.emit(1)
         # print("Signal emitted: OpeningPosition")
 
     def ClosingPostion(self):
+        self.store.settingValueOPC(self.variableid,2)
         self.OPValue.setText("CLOSE")
         self.Closeradio.setChecked(True)
         self.Openradio.setChecked(False)
         # self.ValveChangingPos.emit(2)
         # print("Signal emitted: ClosingPostion")
     
-    @QtCore.pyqtSlot(dict,list)
-    def ReadingValue(self, data, tags):
-        value = data[self.variableid]
+    @QtCore.pyqtSlot()
+    def ReadingValue(self):
+        value = self.store.finaltag[self.variableid]
         # print(f"{self.variableid}:{value}")
         # self.ValveChangingPos.emit(value)
         

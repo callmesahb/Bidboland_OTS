@@ -1,16 +1,17 @@
 
 from PyQt6.QtWidgets import QLabel, QLineEdit, QApplication, QVBoxLayout, QWidget
-from PyQt6.QtGui import QPixmap,QTransform,QMouseEvent
+from PyQt6.QtGui import QPixmap,QTransform,QMouseEvent , QPainter
 from PyQt6.QtCore import Qt,pyqtSignal,pyqtSlot
 from ControllerPlate import ControllerPlate
 import sys
 import os
 import numpy as np
+from Store import Store
 
 class ControllerValve(QWidget):
         ChangePosValve = pyqtSignal(float)
-        updatevalues = pyqtSignal(dict,list)
-        def __init__(self,name,rotated,pvvalues,variableid,store):
+        updatevalues = pyqtSignal()
+        def __init__(self,name,rotated,pvvalues,variableid,store:Store):
                 super().__init__()
                 self.setWindowTitle("controllerValve")
                 self.resize(50, 40)
@@ -34,12 +35,12 @@ class ControllerValve(QWidget):
                 layout.addWidget(self.image_label)
                 self.setLayout(layout)
                 self.load_image()
-                store.updatevalues.connect(self.settingValueController)
+                # store.updatevalues.connect(self.settingValueController)
                 # repeat_count=10 
                 # for i in range(repeat_count):
                 #     random_number=random.choice([1,2])
                 #     print(f"{random_number}")
-
+                self.store=store
 
                 # self.set_status(5)
                 
@@ -50,6 +51,7 @@ class ControllerValve(QWidget):
                 "Controller_r": QPixmap(f"{self.equip_path}/cont2r.png"),
                 "Controller_g": QPixmap(f"{self.equip_path}/contg2.png")
             }
+
             if self.rotated == "left":
                 transform = QTransform().rotate(-90)
                 self.image["Controller_g"] = self.image["Controller_g"].transformed(transform)
@@ -58,8 +60,13 @@ class ControllerValve(QWidget):
                 transform = QTransform().rotate(90)
                 self.image["Controller_g"] = self.image["Controller_g"].transformed(transform)
                 self.image["Controller_r"] = self.image["Controller_r"].transformed(transform)
-        
-        @pyqtSlot(float)
+        # def paintEvent(self, event):
+        #     painter = QPainter(self)
+        #     painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+        #     # painter.translate(self.width() / 2, self.height() / 2)
+        #     # painter.rotate(90)
+        #     # painter.translate(-self.height() / 2, -self.width() / 2)
+        #     painter.drawPixmap(0, 0, self.image1)     
         def set_status(self, status):
             match status:
                 case x if 0 <= x < 1:
@@ -68,10 +75,11 @@ class ControllerValve(QWidget):
                     self.image_label.setPixmap(self.image["Controller_g"])
                 case _:
                     pass
+            self.update()
                 
-        @pyqtSlot(dict,list)
-        def settingValueController(self,data,tags):
-            value = data[self.variableid]
+        @pyqtSlot()
+        def settingValueController(self):
+            value =self.store.finaltag[self.variableid]
             self.set_status(value)
             # print(value)
                     
@@ -79,6 +87,10 @@ class ControllerValve(QWidget):
             if event.button() == Qt.MouseButton.LeftButton:
                 self.faceplate.show()
             return super().mousePressEvent(event)
+        
+        def Updatingvalue(self,data):
+            self.value = data.get(self.variableid,self.value)
+            self.update()
 
                         
          

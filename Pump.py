@@ -7,20 +7,23 @@ import sys
 import os
 import time
 import random
+from Store import Store
 
 class NormalPump(QWidget):
         PumpChangingPos = pyqtSignal(str)
-        updatevalues = pyqtSignal(dict,list)
-        def __init__(self,name,value):
+        updatevalues = pyqtSignal()
+        def __init__(self,store:Store,variableid,name,value):
             super().__init__()
             self.name = name
             self.value = value
-            self.setWindowTitle(name)
+            self.store=store
+            self.variableid=variableid
+            # self.setWindowTitle(name)
             
             self.resize(50, 40)
             current_path = os.getcwd()
-            self.faceplate = PumpFacePlate()
-            self.faceplate.PumpChangingPos.connect(self.set_status)
+            self.faceplate = PumpFacePlate(variableid,store)
+            # self.faceplate.PumpChangingPos.connect(self.set_status)
             images = os.path.join(current_path, "images")
             self.equip_path = os.path.join(images, "equipment")
             
@@ -39,7 +42,7 @@ class NormalPump(QWidget):
 
             self.RIGHT="right"
             self.LEFT="left"
-
+            self.store.updatevalues.connect(self.ReadingValue)
             self.set_status("RUN")
                           
 
@@ -51,18 +54,23 @@ class NormalPump(QWidget):
                 }
 
                           
-        @pyqtSlot(str)
+        @pyqtSlot()
         def set_status(self,status):
                 match status:
-                    case "RUN":
+                    case 1:
                         self.image_label.setPixmap(self.image["p1g"])
-                    case "STOP":
+                    case 2:
                         self.image_label.setPixmap(self.image["p1r"])
+        @pyqtSlot()
+        def ReadingValue(self):
+            value = self.store.finaltag[self.variableid]
+            self.set_status(value)
         def mousePressEvent(self, event:QMouseEvent):
             if event.button() == Qt.MouseButton.LeftButton:
                 self.faceplate.setWindowTitle(self.name)
                 self.faceplate.pname.setText(self.name)
                 self.faceplate.show()
+                
         
 
 if __name__ == '__main__':

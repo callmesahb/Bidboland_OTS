@@ -1,9 +1,9 @@
 from PyQt6 import QtWidgets, QtGui, QtCore
 from controllerbar import TriangleWidget
 import sys
-
+from Store import Store
 class Sensor(QtWidgets.QWidget):
-    def __init__(self,value,store,name,variableid):
+    def __init__(self,value,store:Store,name,variableid):
         updatevalues = QtCore.pyqtSignal(dict,list)
         super().__init__()
         self.setWindowTitle("")
@@ -57,11 +57,11 @@ class Sensor(QtWidgets.QWidget):
         hlayout_op.addWidget(self.PVValue)
         self.vlayout.addLayout(hlayout_op)
     
-    @QtCore.pyqtSlot(dict,list)
-    def updatingvalue(self,data,tags):
-        value = data[self.variableid]
+    @QtCore.pyqtSlot()
+    def updatingvalue(self):
+        value = self.store.finaltag[self.variableid]
         self.PVValue.setText(str(round(value,2)))
-        self.Progressbar.progress.setValue(int(value))
+        self.Progressbar.setCentervalue(int(value))
         self.Progressbar.setRightValue(int(value))
         
         

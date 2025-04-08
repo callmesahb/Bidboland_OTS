@@ -22,7 +22,7 @@ class HAND(QWidget):
                 self.eqpath = os.path.join(path,"equipment")
                 self.list = self.store.GettingControllerDetails(varid)
                 self.plate = ControllerPlate(varid,self.list,varid,store)
-                self.plate.changeHandtype.connect(self.set_status)
+                # self.plate.changeHandtype.connect(self.set_status)
 
                 self.image = {}
                 self.load_image()
@@ -30,7 +30,6 @@ class HAND(QWidget):
                 self.image_label = QLabel(self)
                 self.image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
                 self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
-
         
                 layout = QVBoxLayout()
                 layout.addWidget(self.image_label)
@@ -51,12 +50,18 @@ class HAND(QWidget):
         @pyqtSlot(str)
         def set_status(self, status):
             match status:
-                case "NORMAL":
+                case 0:
                     self.image_label.setPixmap(self.image["ha"])
-                case "AUTO":
+                case 1:
                     self.image_label.setPixmap(self.image["hm"])
                 case _ :
                         print("Wrong")
+                        
+        @pyqtSlot()
+        def ReadingValue(self):
+            tv = self.varid + "TV"
+            tvvalue = self.store.finaltag[tv]
+            self.set_status(tvvalue)
        
 
 if __name__ == '__main__':

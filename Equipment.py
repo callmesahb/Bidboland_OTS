@@ -15,4 +15,3 @@ class Equipment(QtWidgets.QWidget):
             if self.type == "handswitch":
                 self.hs = HandSwitch(self.name,self.btns)
                 self.hs.show()
-        # return super().mousePressEvent(event)

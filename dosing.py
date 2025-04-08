@@ -7,11 +7,12 @@ import sys
 import time
 import os
 import random
+from Store import Store
 
 class DosingPump(QWidget):
         PumpChangingPos = pyqtSignal(str)
-        updatevalues = pyqtSignal(dict,list)
-        def __init__(self,rotated):
+        updatevalues = pyqtSignal()
+        def __init__(self, store:Store,variableid ,value,rotated):
                 super().__init__()
                 self.setWindowTitle("p2")
                 self.rotated = rotated
@@ -19,14 +20,16 @@ class DosingPump(QWidget):
                 self.resize(50, 40)
                 self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
                 self.setWindowFlags(Qt.WindowType.FramelessWindowHint)
-                self.faceplate = DosingPump
                 
                 current_path = os.getcwd()
                 images = os.path.join(current_path, "images")
                 self.equip_path = os.path.join(images, "equipment")
-                
-                self.faceplate = PumpFacePlate()
-                self.faceplate.PumpChangingPos.connect(self.set_status)
+                self.store=store
+                self.variableid=variableid
+                self.value=value
+                self.faceplate = PumpFacePlate(variableid,store)
+                # self.faceplate.PumpChangingPos.connect(self.set_status)
+                self.store.updatevalues.connect(self.ReadingValue)
 
                 self.image = {}
                 self.load_image()
@@ -63,19 +66,23 @@ class DosingPump(QWidget):
                     self.image["p2rl"] = self.image["p2rl"]
 
                           
-        @pyqtSlot(str)
+        @pyqtSlot(int)
         def set_status(self,status:str):
             match status:
-                case "RUN":
+                case 1:
                     self.image_label.setPixmap(self.image["p2gl"])
-                case "STOP":
+                case 2:
                     self.image_label.setPixmap(self.image["p2rl"])
+        
                         
         def mousePressEvent(self, event: QMouseEvent):
             if event.button() == Qt.MouseButton.LeftButton:
                 self.faceplate.show()
             return super().mousePressEvent(event)
-        
+        @pyqtSlot()
+        def ReadingValue(self):
+            value = self.store.finaltag[self.variableid]
+            self.set_status(value)
 
 if __name__ == '__main__':
         app = QApplication(sys.argv)

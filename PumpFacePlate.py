@@ -1,13 +1,16 @@
 from PyQt6 import QtWidgets, QtGui, QtCore
+from Store import Store
 import sys
 
 class PumpFacePlate(QtWidgets.QWidget):
     PumpChangingPos = QtCore.pyqtSignal(str)
-    def __init__(self):
+    def __init__(self,variableid,store:Store):
         super().__init__()
         self.setWindowTitle("Pump")
         # self.setFixedSize(280,150)
         self.setFixedWidth(200)
+        self.variableid = variableid
+        self.store = store
         self._InitUI()
         self.settingdata()
     
@@ -18,6 +21,7 @@ class PumpFacePlate(QtWidgets.QWidget):
         
     def settingdata(self):
         self.pname = QtWidgets.QLabel("")
+        self.pname.setText(str(self.variableid))
         self.vlayout.addWidget(self.pname)
         hline = QtWidgets.QFrame()
         hline.setFrameShape(QtWidgets.QFrame.Shape.HLine)
@@ -85,7 +89,7 @@ class PumpFacePlate(QtWidgets.QWidget):
             self.OPCLOSE.setChecked(True)
             self.Runradio.setChecked(False)
             self.OPOPEN.setChecked(False)
-            self.PumpChangingPos.emit("STOP")
+            self.store.settingValueOPC(self.variableid,2)
         
         if self.opvalue.currentText() == "RUN":
             self.Stopradio.setChecked(False)
@@ -93,8 +97,8 @@ class PumpFacePlate(QtWidgets.QWidget):
             self.Runradio.setChecked(True)
             self.OPOPEN.setChecked(True)
             self.PumpChangingPos.emit("RUN")
-        
-        
+            self.store.settingValueOPC(self.variableid,1)
+
         
 if __name__ == '__main__':
         app = QtWidgets.QApplication(sys.argv)

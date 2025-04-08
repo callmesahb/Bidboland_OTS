@@ -305,7 +305,7 @@
           },
           {
             "id": "0AI001",
-            "pos": { "l": 1113, "t": 48.5, "w": 100, "h": 20 },
+            "pos": { "l": 1120, "t": 48.5, "w": 100, "h": 20 },
             "variableId": "403ARS0AI001",
             "type": ""
           },
@@ -2758,7 +2758,7 @@
           {
             "id": "0TI009",
             "pos": { "l": 1359, "t": 849, "w": 80, "h": 20 },
-            "variableId": "0TI009",
+            "variableId": "403ARS0TI009",
             "type": ""
           },
           {
@@ -3213,7 +3213,7 @@
             "id": "0TIC040",
             "pos": { "l": 862, "t": 419.5, "w": 80, "h": 20 },
             "variableId": "403ARS0TIC040",
-            "type": ""
+            "type": "controller"
           },
           {
             "id": "0TI003",
@@ -4627,7 +4627,7 @@
             "id": "0LIC012",
             "pos": { "l": 306, "t": 679.5, "w": 80, "h": 20 },
             "variableId": "407ES0LIC012",
-            "type": ""
+            "type": "controller"
           },
           {
             "id": "0FIC015",
@@ -5227,7 +5227,7 @@
             "rotated": "left",
             "type": "sdv",
             "namePos": "S",
-            "variableId": "407ED0BPZIC001"
+            "variableId": "407ED0BP001"
           },
           {
             "id": "0KV028C",
@@ -5590,7 +5590,7 @@
           {
             "id": "PDI306",
             "pos": { "l": 1048.5, "t": 443.5, "w": 80, "h": 20 },
-            "variableId": "407EDPDI306",
+            "variableId": "407ED0PDI306",
             "type": ""
           },
           {

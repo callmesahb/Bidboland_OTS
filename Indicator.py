@@ -5,10 +5,10 @@ from PyQt6.QtCore import Qt
 from IndicatorValue import IndicatorValue
 from ControllerPlate import ControllerPlate
 from Sensor import Sensor
-
+from Store import Store
 class Indicator(QtWidgets.QWidget):
     updatevalues = QtCore.pyqtSignal(dict,list)
-    def __init__(self,name,value,itype,pvvalues,store,variableid):
+    def __init__(self,name,value,itype,pvvalues,store:Store,variableid):
         super().__init__()
         self.setStyleSheet("background-color:black")
         self.name = name
@@ -47,14 +47,20 @@ class Indicator(QtWidgets.QWidget):
                 self.sensor.sensorname.setText(self.name)
                 self.sensor.show()
     
-    @QtCore.pyqtSlot(dict,list)
-    def updatinvalue(self,data,tags):
+    @QtCore.pyqtSlot()
+    def updatinvalue(self):
         if self.itype == "":
-            value = data[self.variableid]
+            value = self.store.finaltag[self.variableid]
             self.Value.setText(str(round(value,2)))
         if self.itype == "controller":
-            value = data[self.variableid]
-            print(f"{self.variableid}:{value}")
+            varid = self.variableid + "PV"
+            value = self.store.finaltag[varid]
+            self.Value.setText(str(round(value,2)))
+            # print(f"{self.variableid}:{value}")
+    
+    def SettingValue(self,value):
+            if self.itype == "":
+                self.Value.setText(str(round(value,2)))
 
     # def paintEvent(self, event):
     #     painter = QPainter(self)

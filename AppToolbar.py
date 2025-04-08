@@ -26,18 +26,15 @@ class Toolbar(QtWidgets.QToolBar):
         self.addAction(self.Pause)
         self.addAction(self.Rewind)
         self.addAction(self.interupt)
-        self.SettingTimer()
+        self.timer = QtWidgets.QLabel("Timer:",self)
         self.addWidget(self.timer)
         self.Run.triggered.connect(self.RunAPI)
-        self.store.updatevalues.connect(self.readingdata)
         
     def RunAPI(self):
         self.aspen = Aspen()
         self.aspen.OpenSimulationFile()
         self.aspen.Visible()
         
-    def SettingTimer(self):
-        self.timer = QtWidgets.QLabel("Timer:",self)
     
     @pyqtSlot(dict, list)
     def readingdata(self, dictvalue, data):

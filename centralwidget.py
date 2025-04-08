@@ -1,9 +1,9 @@
 from PyQt6 import QtWidgets, QtGui, QtCore
-from PyQt6.QtCore import Qt, pyqtSignal, pyqtSlot
+from PyQt6.QtCore import Qt, pyqtSignal, pyqtSlot,QTimer
 from Store import Store
 from Link import Link
 from Indicator import Indicator
-from valveEV import valveEV
+# from valveEV import valveEV
 from dosing import DosingPump
 from Store import Store
 from AirCoolerElem import Aircooler
@@ -15,6 +15,7 @@ from Pump import NormalPump
 from controllerValve import ControllerValve
 from Slider import Slider
 from HAND import HAND
+from valvetest import valveEV
 import os
 import json
 
@@ -28,6 +29,8 @@ class MainWidget(QtWidgets.QWidget):
         self.rootdir = os.getcwd()
         self.imgdir = os.path.join(self.rootdir, "images")
         self.store = store
+        self.cache = {}
+        
         self._initUi()
         self._addMenu()
         self._addGraphic()
@@ -36,8 +39,6 @@ class MainWidget(QtWidgets.QWidget):
         self.mainlayout = QtWidgets.QHBoxLayout()
         self.mainlayout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self.mainlayout)
-    def Printing(self):
-        print("SAAALLLAAAMMMM")
 
     def _addMenu(self):
         self.menu = Menu(self.store)
@@ -54,7 +55,6 @@ class MainWidget(QtWidgets.QWidget):
         self.graphicsscene = QtWidgets.QGraphicsScene()
         self.graphicsview.setScene(self.graphicsscene)
         self.graphicsview.setStyleSheet("background-color: rgb(103, 103, 103);")
-        # self.graphicsview.fitInView()
         self.mainlayout.addWidget(self.graphicsview)
 
     def newImage(self, img: QtGui.QPixmap) -> QtGui.QPixmap:
@@ -74,7 +74,6 @@ class MainWidget(QtWidgets.QWidget):
         newImg = img.scaled(newimg_width, newimg_height)
 
         return newImg
-
     def createAllscenes(self, pages: list):
         self.scenes = []
         for page in pages:
@@ -90,9 +89,13 @@ class MainWidget(QtWidgets.QWidget):
                 itype = _ind["type"]
                 value = self.store.SettingInitial(variableid)
                 pvvalues = self.store.GettingControllerDetails(variableid)
-                indi = Indicator(name, value, itype, pvvalues,self.store,variableid)
-                indi.setGeometry(int(self.scale * pos["l"]), int(self.scale * pos["t"]), 80, 20)
-                tempScene.addWidget(indi)
+                # value = self.store.opc.getValue(variableid)
+                # print(f"{name}:{variableid}:{value}")
+                self.indi = Indicator(name, value, itype, pvvalues,self.store,variableid)
+                self.indi.setGeometry(int(self.scale * pos["l"]), int(self.scale * pos["t"]), 80, 20)
+                self.store.updatevalues.connect(self.indi.updatinvalue)
+                # self.indi.Value.setText(str(round(value,2)))
+                tempScene.addWidget(self.indi)
             for _link in page["links"]:
                 pos = _link["pos"]
                 dest = _link["to"]
@@ -114,26 +117,31 @@ class MainWidget(QtWidgets.QWidget):
                 if _type == "controller" and variableid in self.store.getting_names():
                     pvvalues = self.store.GettingControllerDetails(variableid)
                     valve = ControllerValve(name, rotated, pvvalues,variableid,self.store)
-                    valve.set_status(pvvalues[2])
+                    self.store.updatevalues.connect(valve.settingValueController)
                 elif _type in {"sdv", "bdv"}:
                     valve = valveEV(self.store,variableid,name, value,rotated)
+                    self.store.updatevalues.connect(valve.ReadingValue)
                     # valve.ChangingValveStatus.connect(self.CheckingvalueSDV)
                     # valve.set_status(value)
                 elif _type == "dosing":
-                    valve = DosingPump(rotated)
-                    valve.set_status(value)
+                    valve =DosingPump(self.store,variableid, value,rotated)
+                    self.store.updatevalues.connect(valve.ReadingValue)
+                    # valve.set_status(value)
                 elif _type == "fan":
-                    valve = Aircooler(name)
-                    valve.set_status(value)
+                    valve = Aircooler(self.store,variableid,name, value)
+                    self.store.updatevalues.connect(valve.ReadingValue)
+                    # valve.set_status(value)
                 elif _type == "bps":
                     valve = BPS(self.store,variableid,name, value)
                     valve.set_status(value)
                 elif _type == "Filter":
-                    valve = Filter(name, value)
-                    valve.toggle_images(value)
+                    valve =Filter(self.store,variableid,name, value)
+                    # valve.toggle_images(value)
+                    self.store.updatevalues.connect(valve.settingValueController)
                 elif _type == "pump":
-                    valve = NormalPump(name, value)
-                    valve.set_status(value)
+                    valve =NormalPump(self.store,variableid,name, value)
+                    # valve.set_status(value)
+                    self.store.updatevalues.connect(valve.ReadingValue)
 
                 if valve:
                     valve.setGeometry(
@@ -154,6 +162,7 @@ class MainWidget(QtWidgets.QWidget):
                 slider = Slider(rotated, w, h, pvvalues[2],name,self.store,variableid)
                 slider.setGeometry(int(self.scale * pos["l"]), int(self.scale * pos["t"]), int(self.scale * pos["w"]),
                                    int(self.scale * pos["h"]))
+                self.store.updatevalues.connect(slider.updateSlider)
                 tempScene.addWidget(slider)
             for _eqn in page["equipments"]:
                 _id = _eqn["id"]
@@ -172,11 +181,16 @@ class MainWidget(QtWidgets.QWidget):
                     dast = HAND(self.store,variableid)
                     dast.setGeometry(int(self.scale * pos["l"])+80, int(self.scale * pos["t"])-35, 15, 20)
                     tempScene.addWidget(dast)
+                    # dast.set_status(1)
+                    self.store.updatevalues.connect(dast.ReadingValue)
             self.scenes.append(tempScene)
-
     def SetActiveScene(self, SceneIndex: int):
         self.graphicsview.setScene(self.scenes[SceneIndex])
         # self.graphicsview.fitInView(self.scenes[SceneIndex].sceneRect(), QtCore.Qt.AspectRatioMode.KeepAspectRatio)
+        
+    # @pyqtSlot(dict,list)
+    # def updatingValues(self,data,tags):
+    #     self.
         
 
 
@@ -187,9 +201,8 @@ class MainWidget(QtWidgets.QWidget):
     def resizeEvent(self, a0):
         super().resizeEvent(a0)
         # self.graphicsview.fitInView(self.scenes[SceneIndex].sceneRect(), QtCore.Qt.AspectRatioMode.KeepAspectRatio)
-        self.graphicsview.fitInView(QtCore.QRectF(self.scaledImage.rect()), QtCore.Qt.AspectRatioMode.KeepAspectRatio)
+        self.graphicsview.fitInView(QtCore.QRectF(self.scaledImage.rect()), QtCore.Qt.AspectRatioMode.IgnoreAspectRatio)
         
-
         
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
@@ -198,9 +211,6 @@ if __name__ == "__main__":
     pages = json.loads(
         open(r"D:\\Petro\\New_OTS\\data\\data.json", "r").read())
     page = pages["layout"]["sections"]
-    # # print(page)
     window.createAllscenes(page)
     window.SetActiveScene(0)
-    # print(page)
-    # window.drawPage(page)
     app.exec()

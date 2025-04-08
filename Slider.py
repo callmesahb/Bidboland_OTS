@@ -3,7 +3,7 @@ from Store import Store
 import sys
 
 class Slider(QtWidgets.QWidget):
-    updatevalues = QtCore.pyqtSignal(dict,list)
+    updatevalues = QtCore.pyqtSignal()
     def __init__(self,rotated,w,h,op,name,store:Store,variableid):
         super().__init__()
         self.rotated = rotated
@@ -13,7 +13,7 @@ class Slider(QtWidgets.QWidget):
         self.name = name
         self.store = store
         self.variableid = variableid
-        self.store.updatevalues.connect(self.updateSlider)
+        # self.store.updatevalues.connect(self.updateSlider)
         self.setAttribute(QtCore.Qt.WidgetAttribute.WA_TranslucentBackground)
         # print(self.rotated)
         
@@ -42,13 +42,12 @@ class Slider(QtWidgets.QWidget):
         if self.name[0] == "S":
             self.valuelabel.setHidden(True)
             
-    @QtCore.pyqtSlot(dict,list)
-    def updateSlider(self,data,tags):
-        value = data[self.variableid]
+    @QtCore.pyqtSlot()
+    def updateSlider(self):
+        value = self.store.finaltag[self.variableid]
         self.progress_bar.setValue(int(value))
         self.valuelabel.setText(str(value))
-    def settingRotation(self):
-        pass
+        self.update()
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     ex = Slider()

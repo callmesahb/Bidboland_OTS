@@ -5,10 +5,11 @@ from AppToolbar import Toolbar
 from Menubar import Menu
 # from toolbar import AppToolbar
 from Store import Store
+import datetime
 import os
 
 class MainWindow(QtWidgets.QMainWindow):
-    updatevalues = QtCore.pyqtSignal(dict,list)
+    updatevalues = QtCore.pyqtSignal()
     def __init__(self,data,store:Store):
         super().__init__()
 
@@ -19,6 +20,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.menu.left.clicked.connect(self.Printing)
         self.Currentindex = 0
         self.page = self.data["layout"]["sections"]
+        self.store.updatevalues.connect(self.update)
         self._initUI()
         self.getPageOrder()
         self.drawFirstPage()
@@ -164,6 +166,11 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.Currentindex = 5
                 self.centralWidget().SetActiveScene(self.Currentindex)
             
+    @pyqtSlot()
+    def update(self):
+        timerstc = datetime.timedelta(seconds=self.store.finaltag["407EDTIMER"])
+        self.toolbar.timer.setText("Timer:"+str(timerstc))
+        # self.cntwidget.update_widgets(data)
         
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])

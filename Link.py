@@ -21,6 +21,10 @@ class Link(QtWidgets.QWidget):
         super().mousePressEvent(event)
         if event.button() == Qt.MouseButton.LeftButton:
             self.changePageSignal.emit(self.dest)
+    
+    def Updatingvalue(self,data):
+        self.value = data.get(self.value)
+        self.update()
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     widget = Link()

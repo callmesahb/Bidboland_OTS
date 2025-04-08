@@ -1,4 +1,5 @@
 from PyQt6 import QtCore
+import time
 
 class StoreThread(QtCore.QThread):
     data_ready = QtCore.pyqtSignal(dict,list)
@@ -9,12 +10,19 @@ class StoreThread(QtCore.QThread):
         self.csvfile = csvfile
         self.tag = tag
         self.running = True
+        self.newtags = {i: self.opc.getValue(i) for i in self.csvfile["tag"]}
+        self.finaltag = self.newtags
+        # self.setAutoDelete(True)
+        
         
     def run(self):
+        print("ffffffffffffffffffff")
+        print(self.running)
         while self.running:
             newtags = {i: self.opc.getValue(i) for i in self.csvfile["tag"]}
-            self.data_ready.emit(newtags,self.tag)
-            QtCore.QThread.sleep(2)
+            self.finaltag = newtags
+            print("Runningggg")
+            # time.sleep(0.5)
         
     def stop(self):
         self.running = False

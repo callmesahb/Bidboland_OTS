@@ -7,11 +7,13 @@ from SDVPlate import Valves
 import time
 import os
 import random
+from Store import Store
+
 
 class BPS(QWidget):
         ValveChangingPos = pyqtSignal(int)
-        updatevalues = pyqtSignal(dict,list)
-        def __init__(self,store,variableid,name,value):
+        updatevalues = pyqtSignal()
+        def __init__(self,store:Store,variableid,name,value):
                 super().__init__()
                 
                 self.resize(50, 40)
@@ -24,9 +26,10 @@ class BPS(QWidget):
 
                 self.image = {}
                 self.load_image()
+                self.variableid = variableid
                 self.faceplate = Valves(store,variableid,value)
                 self.faceplate.ValveChangingPos.connect(self.set_status)
-
+                self.store=store
                 self.image_label = QLabel(self)
                 self.image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
                 self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
@@ -59,12 +62,15 @@ class BPS(QWidget):
                 case _ :
                         # print("Wrong")
                         pass
+        @pyqtSlot()
+        def ReadingValue(self):
+            value = self.store.finaltag[self.variableid]
+            self.set_status(value)
         def mousePressEvent(self, event:QMouseEvent):
             if event.button() == Qt.MouseButton.LeftButton:
                 self.faceplate.setWindowTitle(self.name)
                 self.faceplate.name.setText(self.name)
                 self.faceplate.show()
-       
 
 if __name__ == '__main__':
         app = QApplication(sys.argv)
