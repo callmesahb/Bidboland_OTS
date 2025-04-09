@@ -115,6 +115,7 @@ class MainWidget(QtWidgets.QWidget):
                 value = self.store.setting_valueEV(variableid) if _type != "controller" else None
 
                 if _type == "controller" and variableid in self.store.getting_names():
+                    print(self.store.getting_names())
                     pvvalues = self.store.GettingControllerDetails(variableid)
                     valve = ControllerValve(name, rotated, pvvalues,variableid,self.store)
                     self.store.updatevalues.connect(valve.settingValueController)

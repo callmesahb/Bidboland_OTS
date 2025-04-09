@@ -1420,7 +1420,7 @@
     { "name": "0LI029CAS", "value": 0, "initial": 0},
     { "name": "0LI029PV", "value": 100, "initial": 100, "R": [0, 100], "HHR": [0, 100], "HR": [0, 100],"unit":"cum/hr"},
     { "name": "0LI029SP", "value": 100, "initial": 100, "R": [0, 100], "HHR": [0, 100], "HR": [0, 100],"unit":"cum/hr"},
-    { "name": "0LI029OP", "value": 100, "initial": 100, "R": [0, 100], "HHR": [0, 100], "HR": [0, 100],"unit":"cum/hr"},
+    { "name": "0LI029OP", "value": 62, "initial": 62, "R": [0, 100], "HHR": [0, 100], "HR": [0, 100],"unit":"cum/hr"},
   
   
   

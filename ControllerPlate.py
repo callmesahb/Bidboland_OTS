@@ -44,7 +44,8 @@ class ControllerPlate(QtWidgets.QWidget):
         self.vlayout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self.vlayout)
 
-        self.namee = QtWidgets.QLabel("403ARS0PIC001", self)
+        self.namee = QtWidgets.QLabel("", self)
+        self.namee.setText(str(self.variableid))
         hline = QtWidgets.QFrame()
         self.vlayout.addWidget(self.namee)
         hline.setFrameShape(QtWidgets.QFrame.Shape.HLine)
