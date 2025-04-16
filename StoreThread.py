@@ -16,12 +16,10 @@ class StoreThread(QtCore.QThread):
         
         
     def run(self):
-        print("ffffffffffffffffffff")
-        print(self.running)
         while self.running:
             newtags = {i: self.opc.getValue(i) for i in self.csvfile["tag"]}
             self.finaltag = newtags
-            print("Runningggg")
+            # print("Runningggg")
             # time.sleep(0.5)
         
     def stop(self):

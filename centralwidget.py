@@ -56,34 +56,58 @@ class MainWidget(QtWidgets.QWidget):
         self.graphicsview.setScene(self.graphicsscene)
         self.graphicsview.setStyleSheet("background-color: rgb(103, 103, 103);")
         self.mainlayout.addWidget(self.graphicsview)
+        
+    def normalize_pos(self,pos,img_width,img_height):
+        # return (
+        #     int(pos["l"] / 100 * img_width),
+        #     int(pos["t"] / 100 * img_height),
+        #     int(pos["w"] / 100 * img_width),
+        #     int(pos["h"] / 100 * img_height),
+        # )
+        l = max(0, int(pos["l"] / 100 * img_width))
+        t = max(0, int(pos["t"] / 100 * img_height))
+        w = max(10, int(pos["w"] / 100 * img_width))
+        h = max(10, int(pos["h"] / 100 * img_height))
+        return l,t,w,h
 
     def newImage(self, img: QtGui.QPixmap) -> QtGui.QPixmap:
         img_width = img.size().width()
         img_height = img.size().height()
         screen_width = self.screen().size().width()
         screen_height = 0.88 * self.screen().size().height()
-
         width_scale = screen_width / img_width
         height_scale = screen_height / img_height
 
         self.scale = min(width_scale, height_scale)
+        # print(self.scale)
 
         newimg_width = int(img_width * self.scale)
         newimg_height = int(img_height * self.scale)
 
         newImg = img.scaled(newimg_width, newimg_height)
 
-        return newImg
+        return img
     def createAllscenes(self, pages: list):
         self.scenes = []
+        screen_width = self.screen().size().width()
+        screen_height = 0.88 * self.screen().size().height()
+        scales = []
         for page in pages:
             tempScene = QtWidgets.QGraphicsScene()
             img_path = os.path.join(self.rootdir, page["imageUrl"])
             mainImage = QtGui.QPixmap(img_path)
             self.scaledImage = self.newImage(mainImage)
-            tempScene.addPixmap(self.scaledImage)
+            img_width = mainImage.width()
+            img_height = mainImage.height()
+            width_scale = screen_width / img_width
+            height_scale = screen_height / img_height
+            scales.append(min(width_scale,height_scale))
+            
+            tempScene.addPixmap(mainImage)
             for _ind in page["indicators"]:
                 pos = _ind["pos"]
+                print(pos["l"])
+                # l,t,w,h = self.normalize_pos(int(pos["l"],pos["t"],pos["w"],pos["h"]))
                 name = _ind["id"]
                 variableid = _ind["variableId"]
                 itype = _ind["type"]
@@ -92,16 +116,16 @@ class MainWidget(QtWidgets.QWidget):
                 # value = self.store.opc.getValue(variableid)
                 # print(f"{name}:{variableid}:{value}")
                 self.indi = Indicator(name, value, itype, pvvalues,self.store,variableid)
-                self.indi.setGeometry(int(self.scale * pos["l"]), int(self.scale * pos["t"]), 80, 20)
+                self.indi.setGeometry(int(pos["l"]),int(pos["t"]),80,20)
                 self.store.updatevalues.connect(self.indi.updatinvalue)
                 # self.indi.Value.setText(str(round(value,2)))
                 tempScene.addWidget(self.indi)
             for _link in page["links"]:
                 pos = _link["pos"]
+                # l,t,w,h = self.normalize_pos(pos,img_width,img_height)
                 dest = _link["to"]
                 link = Link(dest)
-                link.setGeometry(int(self.scale * pos["l"]), int(self.scale * pos["t"]), int(self.scale * pos["w"]),
-                                 int(self.scale * pos["h"]))
+                link.setGeometry(int(pos["l"]),int(pos["t"]),int(pos["w"]),int(pos["h"]))
                 link.changePageSignal.connect(self.ChangePageByLink)
                 tempScene.addWidget(link)
             for _valve in page["valves"]:
@@ -115,7 +139,7 @@ class MainWidget(QtWidgets.QWidget):
                 value = self.store.setting_valueEV(variableid) if _type != "controller" else None
 
                 if _type == "controller" and variableid in self.store.getting_names():
-                    print(self.store.getting_names())
+                    # print(self.store.getting_names())
                     pvvalues = self.store.GettingControllerDetails(variableid)
                     valve = ControllerValve(name, rotated, pvvalues,variableid,self.store)
                     self.store.updatevalues.connect(valve.settingValueController)
@@ -140,16 +164,16 @@ class MainWidget(QtWidgets.QWidget):
                     # valve.toggle_images(value)
                     self.store.updatevalues.connect(valve.settingValueController)
                 elif _type == "pump":
-                    valve =NormalPump(self.store,variableid,name, value)
+                    valve =NormalPump(self.store,variableid,name, value,rotated)
                     # valve.set_status(value)
                     self.store.updatevalues.connect(valve.ReadingValue)
 
                 if valve:
                     valve.setGeometry(
-                        int(self.scale * pos["l"]),
-                        int(self.scale * pos["t"]),
-                        int(self.scale * pos["w"]),
-                        int(self.scale * pos["h"]),
+                        int(pos["l"]),
+                        int(pos["t"]),
+                        int(pos["w"]),
+                        int(pos["h"]),
                     )
                     tempScene.addWidget(valve)
             for _slider in page["sliders"]:
@@ -161,8 +185,8 @@ class MainWidget(QtWidgets.QWidget):
                 pvvalues = self.store.GettingControllerDetails(variableid)
                 rotated = _slider["rotated"]
                 slider = Slider(rotated, w, h, pvvalues[2],name,self.store,variableid)
-                slider.setGeometry(int(self.scale * pos["l"]), int(self.scale * pos["t"]), int(self.scale * pos["w"]),
-                                   int(self.scale * pos["h"]))
+                slider.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]),
+                                   int(pos["h"]))
                 self.store.updatevalues.connect(slider.updateSlider)
                 tempScene.addWidget(slider)
             for _eqn in page["equipments"]:
@@ -171,8 +195,8 @@ class MainWidget(QtWidgets.QWidget):
                 htype = _eqn["type"]
                 btns = _eqn["buttons"]
                 eqn = Equipment(_id,htype,btns)
-                eqn.setGeometry(int(self.scale * pos["l"]), int(self.scale * pos["t"]), int(self.scale * pos["w"]),
-                                   int(self.scale * pos["h"]))
+                eqn.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]),
+                                   int(pos["h"]))
                 tempScene.addWidget(eqn)
             for hand in page["indicators"]:
                 pos = hand["pos"]
@@ -180,14 +204,23 @@ class MainWidget(QtWidgets.QWidget):
                 dtype = hand["type"]
                 if dtype == "controller":
                     dast = HAND(self.store,variableid)
-                    dast.setGeometry(int(self.scale * pos["l"])+80, int(self.scale * pos["t"])-35, 15, 20)
+                    dast.setGeometry(int(pos["l"])+80, int(pos["t"])-35, 15, 20)
                     tempScene.addWidget(dast)
                     # dast.set_status(1)
                     self.store.updatevalues.connect(dast.ReadingValue)
+            if scales:
+                self.scale = sum(scales)/ len(scales)
+            else:
+                self.scale = 1.0
             self.scenes.append(tempScene)
     def SetActiveScene(self, SceneIndex: int):
         self.graphicsview.setScene(self.scenes[SceneIndex])
+        # self.graphicsview.setTransform(QtGui.QTransform().scale(self.scale,self.scale))
         # self.graphicsview.fitInView(self.scenes[SceneIndex].sceneRect(), QtCore.Qt.AspectRatioMode.KeepAspectRatio)
+        
+    def resizeEvent(self, a0):
+        self.graphicsview.setTransform(QtGui.QTransform().scale(self.scale, self.scale))
+        super().resizeEvent(a0)
         
     # @pyqtSlot(dict,list)
     # def updatingValues(self,data,tags):

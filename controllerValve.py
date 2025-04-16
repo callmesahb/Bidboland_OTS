@@ -71,7 +71,7 @@ class ControllerValve(QWidget):
             match status:
                 case x if 0 <= x < 1:
                     self.image_label.setPixmap(self.image["Controller_r"])
-                case x if 1 <= x < 100:
+                case x if 1 <= x <= 100:
                     self.image_label.setPixmap(self.image["Controller_g"])
                 case _:
                     pass

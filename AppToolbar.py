@@ -2,7 +2,7 @@ from PyQt6 import QtWidgets,QtCore,QtGui
 from PyQt6.QtCore import pyqtSignal,pyqtSlot
 import datetime
 import os
-from APIs import Aspen
+from APIs import Aspen , AspenSimulatorManager
 from Store import Store
 import sys
 
@@ -28,17 +28,26 @@ class Toolbar(QtWidgets.QToolBar):
         self.addAction(self.interupt)
         self.timer = QtWidgets.QLabel("Timer:",self)
         self.addWidget(self.timer)
-        self.Run.triggered.connect(self.RunAPI)
+        # self.Run.triggered.connect(self.RunAPI)
+        self.store.updatevalues.connect(self.readingdata)
+        self.aspen = AspenSimulatorManager()
         
     def RunAPI(self):
-        self.aspen = Aspen()
-        self.aspen.OpenSimulationFile()
-        self.aspen.Visible()
-        
+        # self.aspen = Aspen()
+        # # self.aspen.OpenSimulationFile()
+        # self.aspen.app1.Run(True)
+        # # self.aspen.Visibling()
+        # self.aspen.set_visibility(True)
+        # result = self.aspen.run_all()
+        # if result:
+        #     print("شبیه‌سازی با موفقیت Sync شد!")
+        # else:
+        #     print("خطا در اجرای شبیه‌سازی یا Sync!")
+        os.startfile(r"C:\\BB_403ARegTr_403RegDe_407C2Tr_407C2De\\apis\\Run_Sim.exe")
     
-    @pyqtSlot(dict, list)
-    def readingdata(self, dictvalue, data):
-        timerstc = datetime.timedelta(seconds=dictvalue["407EDTIMER"])
+    @pyqtSlot()
+    def readingdata(self):
+        timerstc = datetime.timedelta(seconds=self.store.finaltag["407EDTIMER"])
         self.timer.setText("Timer:"+str(timerstc))
         
         

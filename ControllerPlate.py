@@ -124,7 +124,7 @@ class ControllerPlate(QtWidgets.QWidget):
     def handlingmethod(self):
         Varid = self.variableid.replace("OP", "")
         tv = Varid + "TV"
-        print(self.MDComboBox.currentText())
+        # print(self.MDComboBox.currentText())
         if self.MDComboBox.currentText() == "MAN":
             self.store.settingValueOPC(tv,1)
         elif self.MDComboBox.currentText() == "AUTO":

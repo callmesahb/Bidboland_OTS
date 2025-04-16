@@ -27,7 +27,7 @@ class Store(QObject):
         self.datas = []
         for i in self.csvfile["tag"]:
             self.datas.append(i)
-        print(self.datas)
+        # print(self.datas)
         self.newtags = {i: self.opc.getValue(i) for i in self.datas}
 
         

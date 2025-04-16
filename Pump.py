@@ -1,6 +1,6 @@
 
 from PyQt6.QtWidgets import QLabel, QLineEdit, QApplication, QVBoxLayout, QWidget
-from PyQt6.QtGui import QPixmap,QMouseEvent
+from PyQt6.QtGui import QPixmap,QMouseEvent,QTransform
 from PyQt6.QtCore import Qt,pyqtSignal,pyqtSlot
 from PumpFacePlate import PumpFacePlate
 import sys
@@ -12,12 +12,13 @@ from Store import Store
 class NormalPump(QWidget):
         PumpChangingPos = pyqtSignal(str)
         updatevalues = pyqtSignal()
-        def __init__(self,store:Store,variableid,name,value):
+        def __init__(self,store:Store,variableid,name,value,rotated):
             super().__init__()
             self.name = name
             self.value = value
             self.store=store
             self.variableid=variableid
+            self.rotated = rotated
             # self.setWindowTitle(name)
             
             self.resize(50, 40)
@@ -52,6 +53,10 @@ class NormalPump(QWidget):
                     "p1g": QPixmap(os.path.join(self.equip_path,"p1.png")),
                     "p1r": QPixmap(os.path.join(self.equip_path,"p1r.png"))
                 }
+                if self.rotated == "left":
+                    transform = QTransform().rotate(180)
+                    self.image["p1g"] = self.image["p1g"].transformed(transform)
+                    self.image["p1r"] = self.image["p1r"].transformed(transform)
 
                           
         @pyqtSlot()

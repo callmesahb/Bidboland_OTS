@@ -30,15 +30,19 @@ class Slider(QtWidgets.QWidget):
         self.progress_bar.setTextVisible(False)
         self.valuelabel = QtWidgets.QLabel(f"{self.op}")
         
-        self.hlayout.addWidget(self.progress_bar)
-        self.hlayout.addWidget(self.valuelabel)
         self.setLayout(self.hlayout)
         if self.rotated == "left":
             self.progress_bar.setOrientation(QtCore.Qt.Orientation.Horizontal)
             self.progress_bar.setFixedSize(self.w,self.h)
+            self.hlayout.addWidget(self.progress_bar)
+            self.hlayout.addWidget(self.valuelabel)
         if self.rotated == "":
             self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
             self.progress_bar.setFixedSize(self.w,self.h)
+            self.hlayout.addWidget(self.progress_bar)
+            self.hlayout.addWidget(self.valuelabel)
+        if self.rotated == "right":
+            pass
         if self.name[0] == "S":
             self.valuelabel.setHidden(True)
             

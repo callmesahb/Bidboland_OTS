@@ -98,9 +98,9 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.drawoverviews()
             if self.page[self.Currentindex]["parentId"] != 0:
                 old_id = self.page[self.Currentindex]["parentId"]
-                print(self.Currentindex)
+                # print(self.Currentindex)
                 self.Currentindex = self.Currentindex - 1
-                print(self.Currentindex)
+                # print(self.Currentindex)
                 new_id = self.page[self.Currentindex]["parentId"]
                 if old_id == new_id:
                     desc = self.store.ListingDescs(self.Currentindex)["description"]

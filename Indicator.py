@@ -29,7 +29,7 @@ class Indicator(QtWidgets.QWidget):
         self.settingValue()
     def settingValue(self):
         self.Value = QtWidgets.QLabel("245",self)
-        self.Value.move(5,0)
+        self.Value.move(8,0)
         if self.itype == "":
             self.Value.setText(str(round(self.value,2)))
         if self.itype == "controller":
