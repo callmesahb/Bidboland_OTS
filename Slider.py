@@ -45,6 +45,20 @@ class Slider(QtWidgets.QWidget):
             pass
         if self.name[0] == "S":
             self.valuelabel.setHidden(True)
+        self.progress_bar.setFixedSize(self.w, self.h)
+        self.progress_bar.setStyleSheet("""
+            QProgressBar {
+                background-color: #2e2e2e;
+                border: none;
+                border-radius: 2px;
+            }
+            QProgressBar::chunk {
+                background-color: #00FF00;
+                margin: 0px;
+            }
+        """)
+
+
             
     @QtCore.pyqtSlot()
     def updateSlider(self):
@@ -58,6 +72,3 @@ if __name__ == '__main__':
     ex.show()
     # ex.timer.start(1000)
     sys.exit(app.exec())
-        
-        
-        

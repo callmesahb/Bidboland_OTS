@@ -13,8 +13,11 @@ from FilterElem import Filter
 from Equipment import Equipment
 from Pump import NormalPump
 from controllerValve import ControllerValve
+from Trend import Trend
 from Slider import Slider
 from HAND import HAND
+from AlarmLine import AlarmLine
+from ESDwidget import ESD
 from valvetest import valveEV
 import os
 import json
@@ -96,13 +99,17 @@ class MainWidget(QtWidgets.QWidget):
             tempScene = QtWidgets.QGraphicsScene()
             img_path = os.path.join(self.rootdir, page["imageUrl"])
             mainImage = QtGui.QPixmap(img_path)
+            print(page["imageUrl"])
             self.scaledImage = self.newImage(mainImage)
             img_width = mainImage.width()
             img_height = mainImage.height()
             width_scale = screen_width / img_width
             height_scale = screen_height / img_height
             scales.append(min(width_scale,height_scale))
-            
+            if scales:
+                self.scale = sum(scales)/ len(scales)
+            else:
+                self.scale = 1.0
             tempScene.addPixmap(mainImage)
             for _ind in page["indicators"]:
                 pos = _ind["pos"]
@@ -118,6 +125,7 @@ class MainWidget(QtWidgets.QWidget):
                 self.indi = Indicator(name, value, itype, pvvalues,self.store,variableid)
                 self.indi.setGeometry(int(pos["l"]),int(pos["t"]),80,20)
                 self.store.updatevalues.connect(self.indi.updatinvalue)
+                self.indi.TrendRequested.connect(self.showingTrend)
                 # self.indi.Value.setText(str(round(value,2)))
                 tempScene.addWidget(self.indi)
             for _link in page["links"]:
@@ -208,10 +216,20 @@ class MainWidget(QtWidgets.QWidget):
                     tempScene.addWidget(dast)
                     # dast.set_status(1)
                     self.store.updatevalues.connect(dast.ReadingValue)
-            if scales:
-                self.scale = sum(scales)/ len(scales)
-            else:
-                self.scale = 1.0
+            for _line in page["lines"]:
+                pos = _line["points"]
+                line = AlarmLine(pos)
+                tempScene.addItem(line)
+                if hasattr(line, "arrow_item"):
+                    tempScene.addItem(line.arrow_item)
+                    
+            for _esd in page["esds"]:
+                pos = _esd["pos"]
+                id = _esd["id"]
+                esd = ESD(id)
+                esd.setGeometry(int(self.scale*pos["l"]), int(self.scale*pos["t"]), int(self.scale*pos["w"]),
+                                   int(self.scale*pos["h"]))
+                tempScene.addWidget(esd)
             self.scenes.append(tempScene)
     def SetActiveScene(self, SceneIndex: int):
         self.graphicsview.setScene(self.scenes[SceneIndex])
@@ -222,15 +240,16 @@ class MainWidget(QtWidgets.QWidget):
         self.graphicsview.setTransform(QtGui.QTransform().scale(self.scale, self.scale))
         super().resizeEvent(a0)
         
-    # @pyqtSlot(dict,list)
-    # def updatingValues(self,data,tags):
-    #     self.
         
 
 
     @pyqtSlot(int)
     def ChangePageByLink(self, dest):
         self.changePageSignal.emit(dest)
+    
+    @pyqtSlot(str)
+    def showingTrend(self):
+        trend = Trend(self)
     
     def resizeEvent(self, a0):
         super().resizeEvent(a0)

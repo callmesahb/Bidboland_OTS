@@ -6,8 +6,11 @@ from IndicatorValue import IndicatorValue
 from ControllerPlate import ControllerPlate
 from Sensor import Sensor
 from Store import Store
+from Trend import Trend
 class Indicator(QtWidgets.QWidget):
     updatevalues = QtCore.pyqtSignal(dict,list)
+    TrendRequested = QtCore.pyqtSignal(str)
+    
     def __init__(self,name,value,itype,pvvalues,store:Store,variableid):
         super().__init__()
         self.setStyleSheet("background-color:black")
@@ -81,12 +84,14 @@ class Indicator(QtWidgets.QWidget):
     def SettingValue(self,value):
             if self.itype == "":
                 self.Value.setText(str(round(value,2)))
-
-    # def paintEvent(self, event):
-    #     painter = QPainter(self)
-    #     brush = QBrush(QColor(0, 0, 0, 0))  # Fully transparent brush
-    #     painter.setBrush(brush)
-    #     painter.drawRect(self.rect())
+                
+    # def contextMenuEvent(self, event):
+    #     menu = QtWidgets.QMenu(self)
+    #     trend_action = menu.addAction("Show Trend")
+    #     action = menu.exec(event.globalPos())
+    #     if action == trend_action:
+    #         self.trend = Trend(self.variableid,self.itype,self.store)
+    #         self.trend.show()
         
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

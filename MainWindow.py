@@ -68,8 +68,8 @@ class MainWindow(QtWidgets.QMainWindow):
         if self.Currentindex + 1 < len(self.page):
             if self.page[self.Currentindex]["parentId"] == 0:
                 self.Currentindex = self.Currentindex + 1
-                if self.Currentindex == 6:
-                    self.Currentindex = self.Currentindex - 1
+                # if self.Currentindex == 6:
+                #     self.Currentindex = self.Currentindex - 1
                 desc = self.store.ListingDescs(self.Currentindex)["description"]
                 page = self.store.ListingDescs(self.Currentindex)["page"]
                 self.cntwidget.updateDesc(desc)
