@@ -15,6 +15,7 @@ class ControllerValve(QWidget):
                 super().__init__()
                 self.setWindowTitle("controllerValve")
                 self.resize(50, 40)
+                self.faceplates = []
                 self.rotated = rotated
                 self.name = name
                 self.pvvalues = pvvalues
@@ -69,7 +70,7 @@ class ControllerValve(QWidget):
         #     painter.drawPixmap(0, 0, self.image1)     
         def set_status(self, status):
             match status:
-                case x if 0 <= x < 1:
+                case x if -1000 <= x < 1:
                     self.image_label.setPixmap(self.image["Controller_r"])
                 case x if 1 <= x <= 100:
                     self.image_label.setPixmap(self.image["Controller_g"])
@@ -85,8 +86,16 @@ class ControllerValve(QWidget):
                     
         def mousePressEvent(self, event: QMouseEvent):
             if event.button() == Qt.MouseButton.LeftButton:
-                self.faceplate.show()
+                # هر بار یک faceplate جدید بساز بدون parent
+                faceplate = ControllerPlate(self.name, self.pvvalues, self.variableid, self.store)
+                faceplate.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose, True)  # مهم: وقتی بسته شد، خودش جمع بشه
+                faceplate.setWindowFlag(Qt.WindowType.WindowStaysOnTopHint, True)
+                faceplate.show()
+
+                self.faceplates.append(faceplate)  # ذخیره کن تا از حافظه پاک نشه
+
             return super().mousePressEvent(event)
+
         
         def Updatingvalue(self,data):
             self.value = data.get(self.variableid,self.value)

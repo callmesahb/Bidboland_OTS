@@ -1,4 +1,6 @@
 from PyQt6 import QtWidgets, QtCore
+from Store import Store
+from ESDAction import Action
 import sys
 
 class ESD(QtWidgets.QWidget):
@@ -6,7 +8,6 @@ class ESD(QtWidgets.QWidget):
         super().__init__()
         self.id = id
         
-        # self.setFixedSize(200, 100)  # سایز ثابت میدیم
         self.setAttribute(QtCore.Qt.WidgetAttribute.WA_TranslucentBackground)
         self.setStyleSheet("""
             QWidget {
@@ -17,7 +18,6 @@ class ESD(QtWidgets.QWidget):
         """)
         
         self._Initui()
-        
     def _Initui(self):
         self.vlayout = QtWidgets.QVBoxLayout(self)
         self.name = QtWidgets.QLabel(self.id)

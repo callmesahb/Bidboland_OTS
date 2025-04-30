@@ -55,15 +55,15 @@ class Indicator(QtWidgets.QWidget):
         if self.itype == "":
             value = self.store.finaltag[self.variableid]
             self.Value.setText(str(round(value,2)))
-            if value < self.store.SettingDetailsofsensor(self.variableid)[4] and value > self.store.SettingDetailsofsensor(self.variableid)[2]:
+            if value < self.store.SettingDetailsofsensor(self.variableid)[4] and value > self.store.SettingDetailsofsensor(self.variableid)[2]:  #Between LL and L
                 self.Value.setStyleSheet("color:#FFFF00; font-size:14px;")
-            elif value < self.store.SettingDetailsofsensor(self.variableid)[2]:
+            elif value < self.store.SettingDetailsofsensor(self.variableid)[2]: # Less than LL
                 self.Value.setStyleSheet("color:#FF0000; font-size:14px;")
-            elif value > self.store.SettingDetailsofsensor(self.variableid)[5] and value < self.store.SettingDetailsofsensor(self.variableid)[3]:
+            elif value > self.store.SettingDetailsofsensor(self.variableid)[5] and value < self.store.SettingDetailsofsensor(self.variableid)[3]: # Between H & HH
                 self.Value.setStyleSheet("color:#FFFF00; font-size:14px;")
-            elif value > self.store.SettingDetailsofsensor(self.variableid)[3]:
+            elif value > self.store.SettingDetailsofsensor(self.variableid)[3]: #greater than HH
                 self.Value.setStyleSheet("color:#FF0000; font-size:14px;")
-            else:
+            else: # Normal
                 self.Value.setStyleSheet("color:#40d964; font-size:14px;")
         if self.itype == "controller":
             varid = self.variableid + "PV"

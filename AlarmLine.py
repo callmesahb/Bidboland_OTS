@@ -1,38 +1,94 @@
 from PyQt6.QtWidgets import QApplication, QGraphicsScene, QGraphicsView, QGraphicsPathItem, QMainWindow,QWidget
 from PyQt6.QtGui import QPainterPath, QPen, QColor, QBrush, QPolygonF
-from PyQt6.QtCore import Qt, QTimer, QPointF
+from PyQt6.QtCore import Qt, QTimer, QPointF,pyqtSignal,QObject
+from Store import Store
+from ESDAction import Action
 import sys
 
 
 
+class SignalEmitter(QObject):
+    done_signal = pyqtSignal(str)
+    def __init__(self):
+        super().__init__()
+
 class AlarmLine(QGraphicsPathItem):
-    def __init__(self, points):
+    def __init__(self, points,connected,action:list,store:Store,lineid:str):
         super().__init__()
         self.path = QPainterPath()
         self.points = points
-        self.line_data= {
-        "Line0": [[1.5, 245, "M"], [271.5, 245, "L"]],
-        "Line1": [[283.5, 179, "M"], [283.5, 381, "L"], [283.5, 289, "L"], [416.5, 289, "L"]],
-        "Line2": [[144.5, 330, "M"], [278.5, 330, "L"]]
-        }
-        self.logic_data= {"Line1": {"condition": ["Line0", "Line2", "0TAHH009"],"action": ["403ARS0EV013", "close"]}}
-        self.alarm_data= {"0TAHH009": 1}
+        self.connected = connected
+        self.action = action
+        self.store = store
+        self.lineid = lineid
+        self.signals = SignalEmitter()
+        # print(connected)
+        self.color = "default"
+        self.connected_lines = []
+        self.line_data= {}
+        self.logic_data= {}
+        self.alarm_data= {}
         self.blinking_lines={}
         self.setPath(self.make_path(points))
-        self.setPen(QPen(Qt.GlobalColor.green, 3))
+        self.setPen(QPen(Qt.GlobalColor.blue, 3))
         self.blinking = False
-        self.blink_timer = QTimer()
-        self.blink_timer.timeout.connect(self.toggle_color)
+        self.status = "NORMAL"
+        self.doinAction = Action(self.action,self.store)
+        self.actiontimer = QTimer()
+        self.actiontimer.timeout.connect(self.alarm_triggered)
         self.visible = True
 
         last_two = points[-2:]
         if len(last_two) >= 2:
             self.arrow_item = QGraphicsPathItem()
             self.arrow_item.setPen(QPen(Qt.PenStyle.NoPen))
-            self.arrow_item.setBrush(QBrush(Qt.GlobalColor.green))
+            self.arrow_item.setBrush(QBrush(Qt.GlobalColor.blue))
             self.arrow_item.setZValue(1)
             self.set_arrow(points[-2], points[-1])
+            
+        self.lineid = None
+        
+    def set_connected_lines(self,line_objects):
+        self.connected_lines = line_objects
+    def set_color(self, color):
+        self.color = color
 
+        if color == "red":
+            self.setPen(QPen(Qt.GlobalColor.red, 3))
+            if hasattr(self, "arrow_item"):
+                self.arrow_item.setBrush(QBrush(Qt.GlobalColor.red))
+                self.status = "ALARM"
+        else:
+            self.setPen(QPen(Qt.GlobalColor.blue, 3))
+            if hasattr(self, "arrow_item"):
+                self.arrow_item.setBrush(QBrush(Qt.GlobalColor.blue))
+                self.status = "NORMAL"
+
+        if self.scene():
+            self.scene().update()
+
+
+        for connected_line in self.connected_lines:
+            if color == "red":
+                QTimer.singleShot(2000, lambda line=connected_line: self.set_connected_line_red(line))
+            else:
+                connected_line.set_color("green")
+                if connected_line.scene():
+                    connected_line.scene().update()
+
+    def set_connected_line_red(self, line):
+        line.set_color("red")
+        if line.scene():
+            line.scene().update()
+
+
+
+    
+    def update_color(self):
+        self.set_color("red")
+        if self.color == "red":
+            for connected_line in self.connected_lines:
+                QTimer.singleShot(2000,lambda:connected_line.set_color("red"))
     def make_path(self, points):
         path = QPainterPath()
         for pt in points:
@@ -42,6 +98,44 @@ class AlarmLine(QGraphicsPathItem):
             elif cmd == "L":
                 path.lineTo(x, y)
         return path
+    
+    
+    def settting_color(self, status: str):
+        if status == "ALARM":
+            self.setPen(QPen(Qt.GlobalColor.red, 3))
+            if hasattr(self, "arrow_item"):
+                self.arrow_item.setBrush(QBrush(Qt.GlobalColor.red))
+        
+
+            if self.connected and self.scene():
+                for item in self.scene().items():
+                    if isinstance(item, AlarmLine) and hasattr(item, 'lineid') and item.lineid == self.connected:
+                        QTimer.singleShot(2000, lambda line=item: self._set_line_red(line))
+                        self.status = "NORMAL"
+                self.actiontimer.start(1000)
+
+        else:
+            self.setPen(QPen(Qt.GlobalColor.blue, 3))
+            if hasattr(self, "arrow_item"):
+                self.arrow_item.setBrush(QBrush(Qt.GlobalColor.blue))
+            
+            self.actiontimer.stop()
+
+            if self.connected and self.scene():
+                for item in self.scene().items():
+                    if isinstance(item, AlarmLine) and hasattr(item, 'lineid') and item.lineid == self.connected:
+                        item.setPen(QPen(Qt.GlobalColor.blue, 3))
+                        if hasattr(item, "arrow_item"):
+                            item.arrow_item.setBrush(QBrush(Qt.GlobalColor.blue))
+                        item.update()
+
+    def _set_line_red(self, line):
+        line.setPen(QPen(Qt.GlobalColor.red, 3))
+        if hasattr(line, "arrow_item"):
+            line.arrow_item.setBrush(QBrush(Qt.GlobalColor.red))
+        line.update()
+
+
 
     def set_arrow(self, from_point, to_point):
         fx, fy, _ = from_point
@@ -75,8 +169,8 @@ class AlarmLine(QGraphicsPathItem):
         if self.blinking:
             self.blinking = False
             self.blinking_lines[self.line_id] = False
-            self.setPen(QPen(Qt.GlobalColor.green, 3))
-            self.arrow_item.setBrush(QBrush(Qt.GlobalColor.green))
+            self.setPen(QPen(Qt.GlobalColor.blue, 3))
+            self.arrow_item.setBrush(QBrush(Qt.GlobalColor.blue))
             self.blink_timer.stop()
 
     def toggle_color(self):
@@ -84,6 +178,20 @@ class AlarmLine(QGraphicsPathItem):
             self.setPen(QPen(Qt.GlobalColor.red, 3))
             self.arrow_item.setBrush(QBrush(Qt.GlobalColor.red))
         else:
-            self.setPen(QPen(Qt.GlobalColor.green, 3))
-            self.arrow_item.setBrush(QBrush(Qt.GlobalColor.green))
+            self.setPen(QPen(Qt.GlobalColor.blue, 3))
+            self.arrow_item.setBrush(QBrush(Qt.GlobalColor.blue))
         self.visible = not self.visible
+    
+        
+    def alarm_triggered(self):
+        for item in self.scene().items():
+            if isinstance(item, AlarmLine) and hasattr(item, 'lineid') and item.lineid == self.connected:
+                tag = item.action[0]
+                action = item.action[1]
+                emitted = self.connected[:-1]
+                if action in ["shutdown", "close"]:
+                    self.signals.done_signal.emit(emitted)
+                    self.store.opc.setValue(tag, 2)
+                    
+                    
+    

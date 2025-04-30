@@ -28,6 +28,5 @@ class Link(QtWidgets.QWidget):
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     widget = Link()
-    # widget.resize(400, 300)
     widget.show()
     sys.exit(app.exec())

@@ -16,9 +16,12 @@ from controllerValve import ControllerValve
 from Trend import Trend
 from Slider import Slider
 from HAND import HAND
+from ActionText import TextAction
 from AlarmLine import AlarmLine
+from ESDAction import Action
 from ESDwidget import ESD
 from valvetest import valveEV
+from Alarm import Alarm
 import os
 import json
 
@@ -37,6 +40,13 @@ class MainWidget(QtWidgets.QWidget):
         self._initUi()
         self._addMenu()
         self._addGraphic()
+        
+        self.action_mapping = {}
+        self.done_status = {}
+        self.textactions = {}
+        self.timer = QtCore.QTimer()
+        self.timer.timeout.connect(self.check_alarm_status)
+        self.timer.start(1000)
 
     def _initUi(self):
         self.mainlayout = QtWidgets.QHBoxLayout()
@@ -61,12 +71,6 @@ class MainWidget(QtWidgets.QWidget):
         self.mainlayout.addWidget(self.graphicsview)
         
     def normalize_pos(self,pos,img_width,img_height):
-        # return (
-        #     int(pos["l"] / 100 * img_width),
-        #     int(pos["t"] / 100 * img_height),
-        #     int(pos["w"] / 100 * img_width),
-        #     int(pos["h"] / 100 * img_height),
-        # )
         l = max(0, int(pos["l"] / 100 * img_width))
         t = max(0, int(pos["t"] / 100 * img_height))
         w = max(10, int(pos["w"] / 100 * img_width))
@@ -95,11 +99,14 @@ class MainWidget(QtWidgets.QWidget):
         screen_width = self.screen().size().width()
         screen_height = 0.88 * self.screen().size().height()
         scales = []
+        def on_alarm_triggered(status, line, connected_lines, all_lines):
+            line.settting_color(status)
+            if status == "ALARM":
+                line.propagate_alarm(connected_lines, all_lines)
         for page in pages:
             tempScene = QtWidgets.QGraphicsScene()
             img_path = os.path.join(self.rootdir, page["imageUrl"])
             mainImage = QtGui.QPixmap(img_path)
-            print(page["imageUrl"])
             self.scaledImage = self.newImage(mainImage)
             img_width = mainImage.width()
             img_height = mainImage.height()
@@ -110,11 +117,12 @@ class MainWidget(QtWidgets.QWidget):
                 self.scale = sum(scales)/ len(scales)
             else:
                 self.scale = 1.0
+                
+            self.alarmlines = {}
+            self.connectedlines = {}
             tempScene.addPixmap(mainImage)
             for _ind in page["indicators"]:
                 pos = _ind["pos"]
-                print(pos["l"])
-                # l,t,w,h = self.normalize_pos(int(pos["l"],pos["t"],pos["w"],pos["h"]))
                 name = _ind["id"]
                 variableid = _ind["variableId"]
                 itype = _ind["type"]
@@ -218,30 +226,98 @@ class MainWidget(QtWidgets.QWidget):
                     self.store.updatevalues.connect(dast.ReadingValue)
             for _line in page["lines"]:
                 pos = _line["points"]
-                line = AlarmLine(pos)
-                tempScene.addItem(line)
-                if hasattr(line, "arrow_item"):
-                    tempScene.addItem(line.arrow_item)
+                lineid = _line["id"]
+                connected = _line["connected"]
+                action = _line["action"]
+                self.line = AlarmLine(pos,connected,action,self.store,lineid)
+                self.line.lineid = lineid
+                self.line.signals.done_signal.connect(self.set_done)
+                tempScene.addItem(self.line)
+                if lineid:
+                    self.line.lineid = lineid
+                    self.alarmlines[lineid] = lineid
+                if hasattr(self.line, "arrow_item"):
+                    tempScene.addItem(self.line.arrow_item)
                     
+                self.alarmlines[lineid] = self.line
+                self.connectedlines[lineid] = connected
+
+                    
+            
+            for _alarm in page["alarms"]:
+                pos = _alarm["pos"]
+                id = _alarm["id"]
+                variableid = _alarm["variableid"]
+                
+
+                alarm = Alarm(variableid, self.store)
+                alarm.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]), int(pos["h"]))
+                self.store.updatevalues.connect(alarm.updateAlarm)
+                tempScene.addWidget(alarm)
+
+                related_line_id = id + 'L'
+
+                
+                if related_line_id in self.alarmlines:
+                    relatedline = self.alarmlines[related_line_id]
+                    alarm.alarmtriggered.connect(relatedline.settting_color)
+                else:
+                    pass
             for _esd in page["esds"]:
                 pos = _esd["pos"]
                 id = _esd["id"]
+                kind = _esd["type"]
+                variableid = _esd["variableid"]
                 esd = ESD(id)
-                esd.setGeometry(int(self.scale*pos["l"]), int(self.scale*pos["t"]), int(self.scale*pos["w"]),
-                                   int(self.scale*pos["h"]))
-                tempScene.addWidget(esd)
+                esd.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]),
+                                   int(pos["h"]))
+                text = _esd["text"]
+                if kind == "logic_res":
+                    anslogic = TextAction(text,variableid,self.store)
+                    self.textactions[id] = anslogic
+                    anslogic.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]),
+                                   int(pos["h"]))
+                    tempScene.addWidget(anslogic)
+                else:
+                    tempScene.addWidget(esd)
+            # for _action in page["anslogics"]:
+            #     pos = _action["pos"]
+            #     id = _action["id"]
+            #     # print(self.connectedlines)
+            #     actionlist = _action["action"]
+            #     actionlines = _action["actionline"]
+            #     actionobj = Action(actionlist,self.store,actionlines)
+            #     # state = actionobj.outputfunc
+            #     actionobj.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]),
+            #                        int(pos["h"]))
+            #     related_line_id = id + "L"
+            #     if related_line_id in self.alarmlines:
+            #         related_line = self.alarmlines[related_line_id]
+            #         self.action_mapping[related_line] = actionobj
+                
+                # tempScene.addWidget(actionobj)
             self.scenes.append(tempScene)
     def SetActiveScene(self, SceneIndex: int):
         self.graphicsview.setScene(self.scenes[SceneIndex])
-        # self.graphicsview.setTransform(QtGui.QTransform().scale(self.scale,self.scale))
-        # self.graphicsview.fitInView(self.scenes[SceneIndex].sceneRect(), QtCore.Qt.AspectRatioMode.KeepAspectRatio)
         
     def resizeEvent(self, a0):
         self.graphicsview.setTransform(QtGui.QTransform().scale(self.scale, self.scale))
         super().resizeEvent(a0)
         
         
-
+    def check_alarm_status(self):
+        for line,action in self.action_mapping.items():
+            if line.status == "ALARM":
+                line.settting_color("BLINK")
+                QtCore.QTimer.singleShot(3000, action.outputfunc)
+                
+    def set_done(self,esd_id):
+        self.done_status[esd_id] = True
+        self.textactions[esd_id].updatevalue()
+        if esd_id in self.textactions:
+            # print()
+            pass
+            
 
     @pyqtSlot(int)
     def ChangePageByLink(self, dest):

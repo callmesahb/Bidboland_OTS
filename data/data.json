@@ -329,7 +329,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "SLI011",
@@ -804,7 +804,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0LIC003B",
@@ -1289,7 +1289,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0PIC060",
@@ -1825,7 +1825,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0FIC031",
@@ -2060,7 +2060,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "SLI0708",
@@ -2463,7 +2463,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "SLI1",
@@ -2546,28 +2546,36 @@
               [543, 178.5, "L"],
               [617, 178.5, "L"]
             ],
-            "id": "0ESD3027AL"
+            "id": "0ESD3027AL",
+            "connected": "",
+            "action":["403ARS0E001FA01A","shutdown"]
           },
           {
             "points": [
               [472, 176.5, "M"],
               [542, 176.5, "L"]
             ],
-            "id": "0ESD2003AL"
+            "id": "0ESD2003AL",
+            "connected": "",
+            "action":["",""]
           },
           {
             "points": [
               [471, 210.5, "M"],
               [543, 210.5, "L"]
             ],
-            "id": "0ESD2303AL"
+            "id": "0ESD2303AL",
+            "connected": "",
+            "action":["",""]
           },
           {
             "points": [
               [471, 265.5, "M"],
               [544, 265.5, "L"]
             ],
-            "id": "0VAHH001AL"
+            "id": "0VAHH001AL",
+            "connected": "0ESD3027AL",
+            "action":["",""]
           },
           {
             "points": [
@@ -2576,29 +2584,36 @@
               [1190, 178.5, "L"],
               [1260, 178.5, "L"]
             ],
-            "id": "0ESD3027BL"
+            "id": "0ESD3027BL",
+            "connected": "",
+            "action":["403ARS0E001FA02A","shutdown"]
           },
           {
             "points": [
               [1117, 177.5, "M"],
               [1188, 177.5, "L"]
             ],
-            "id": "0ESD2003AL"
+            "id": "0ESD2003AL",
+            "connected": "",
+            "action":["",""]
           },
-          { "points": [[1117, 211.5, "M"]] },
           {
             "points": [
               [1117, 211.5, "M"],
               [1189, 211.5, "L"]
             ],
-            "id": "0ESD2303AL"
+            "id": "0ESD2303AL",
+            "connected": "",
+            "action":["",""]
           },
           {
             "points": [
               [1118, 265.5, "M"],
               [1188, 265.5, "L"]
             ],
-            "id": "0VAHH002AL"
+            "id": "0VAHH002AL",
+            "connected": "0ESD3027BL",
+            "action":["",""]
           },
           {
             "points": [
@@ -2607,28 +2622,36 @@
               [543, 416.5, "L"],
               [615, 416.5, "L"]
             ],
-            "id": "0ESD3049AL"
+            "id": "0ESD3049AL",
+            "connected": "",
+            "action":["403ARS0E001FA01B","shutdown"]
           },
           {
             "points": [
               [471, 416.5, "M"],
               [541, 416.5, "L"]
             ],
-            "id": "0ESD2003AL"
+            "id": "0ESD2003AL",
+            "connected": "",
+            "action":["",""]
           },
           {
             "points": [
               [472, 452.5, "M"],
               [541, 452.5, "L"]
             ],
-            "id": "0ESD2303AL"
+            "id": "0ESD2303AL",
+            "connected": "",
+            "action":["",""]
           },
           {
             "points": [
               [469, 507.5, "M"],
               [541, 507.5, "L"]
             ],
-            "id": "0VAHH001BL"
+            "id": "0VAHH001BL",
+            "connected": "0ESD3049AL",
+            "action":["",""]
           },
           {
             "points": [
@@ -2637,28 +2660,36 @@
               [1190, 418.5, "L"],
               [1262, 418.5, "L"]
             ],
-            "id": "0ESD3049BL"
+            "id": "0ESD3049BL",
+            "connected": "",
+            "action":["403ARS0E001FA02B","shutdown"]
           },
           {
             "points": [
               [1116, 416.5, "M"],
               [1185, 416.5, "L"]
             ],
-            "id": "0ESD2003AL"
+            "id": "0ESD2003AL",
+            "connected": "",
+            "action":["",""]
           },
           {
             "points": [
               [1117, 451.5, "M"],
               [1187, 451.5, "L"]
             ],
-            "id": "0ESD2303AL"
+            "id": "0ESD2303AL",
+            "connected": "",
+            "action":["",""]
           },
           {
             "points": [
               [1119, 506.5, "M"],
               [1189, 506.5, "L"]
             ],
-            "id": "0VAHH002BL"
+            "id": "0VAHH002BL",
+            "connected": "0ESD3049BL",
+            "action":["",""]
           },
           {
             "points": [
@@ -2667,28 +2698,36 @@
               [543, 656.5, "L"],
               [615, 656.5, "L"]
             ],
-            "id": "0ESD3027CL"
+            "id": "0ESD3027CL",
+            "connected": "",
+            "action":["403ARS0E001FA03A","shutdown"]
           },
           {
             "points": [
               [472, 657.5, "M"],
               [542, 657.5, "L"]
             ],
-            "id": "0ESD2003AL"
+            "id": "0ESD2003AL",
+            "connected": "",
+            "action":["",""]
           },
           {
             "points": [
               [473, 692.5, "M"],
               [538, 692.5, "L"]
             ],
-            "id": "0ESD2303AL"
+            "id": "0ESD2303AL",
+            "connected": "",
+            "action":["",""]
           },
           {
             "points": [
               [471, 746.5, "M"],
               [541, 746.5, "L"]
             ],
-            "id": "0VAHH003AL"
+            "id": "0VAHH003AL",
+            "connected": "0ESD3027CL",
+            "action":["",""]
           },
           {
             "points": [
@@ -2697,28 +2736,36 @@
               [1190, 657.5, "L"],
               [1261, 657.5, "L"]
             ],
-            "id": "0ESD3049CL"
+            "id": "0ESD3049CL",
+            "connected": "",
+            "action":["403ARS0E001FA03B","shutdown"]
           },
           {
             "points": [
               [1117, 656.5, "M"],
               [1188, 656.5, "L"]
             ],
-            "id": "0ESD2003AL"
+            "id": "0ESD2003AL",
+            "connected": "",
+            "action":["",""]
           },
           {
             "points": [
               [1117, 692.5, "M"],
               [1186, 692.5, "L"]
             ],
-            "id": "0ESD2303AL"
+            "id": "0ESD2303AL",
+            "connected": "",
+            "action":["",""]
           },
           {
             "points": [
               [1117, 746.5, "M"],
               [1185, 746.5, "L"]
             ],
-            "id": "0VAHH003BL"
+            "id": "0VAHH003BL",
+            "connected": "0ESD3049CL",
+            "action":["",""]
           }
         ],
         "valves": [],
@@ -2728,103 +2775,290 @@
         "alarms": [
           {
             "id": "0VAHH001A",
-            "pos": { "l": 393, "t": 256.5, "w": 76, "h": 19 }
+            "pos": { "l": 393, "t": 256.5, "w": 80, "h": 20 },
+            "variableid": "403ARS0TI033"
           },
           {
             "id": "0VAHH001B",
-            "pos": { "l": 393, "t": 496.5, "w": 75, "h": 17 }
+            "pos": { "l": 393, "t": 496.5, "w": 80, "h": 20 },
+            "variableid": "403ARS0TI033"
           },
           {
             "id": "0VAHH002A",
-            "pos": { "l": 1038, "t": 256.5, "w": 78, "h": 19 }
+            "pos": { "l": 1038, "t": 256.5, "w": 80, "h": 20 },
+            "variableid": "403ARS0TI033"
           },
           {
             "id": "0VAHH002B",
-            "pos": { "l": 1039, "t": 496.5, "w": 78, "h": 19 }
+            "pos": { "l": 1039, "t": 496.5, "w": 80, "h": 20 },
+            "variableid": "403ARS0TI033"
           },
           {
             "id": "0VAHH003A",
-            "pos": { "l": 392, "t": 736.5, "w": 78, "h": 21 }
+            "pos": { "l": 392, "t": 736.5, "w": 80, "h": 20 },
+            "variableid": "403ARS0TI033"
           },
           {
             "id": "0VAHH003B",
-            "pos": { "l": 1038, "t": 736.5, "w": 76, "h": 19 }
+            "pos": { "l": 1038, "t": 736.5, "w": 80, "h": 20 },
+            "variableid": "403ARS0TI033"
           }
         ],
-        "flares": [],
+        "anslogics": [
+          {
+            "id": "0ESD3027A",
+            "pos": { "l": 620, "t": 152.5, "w": 164, "h": 44 },
+            "action":["403ARS0E001FA01A","shutdown"],
+            "actionline":"0ESD3027AL"
+          },
+          {
+            "id": "0ESD3049A",
+            "pos": { "l": 562, "t": 369.5, "w": 166, "h": 43 },
+            "action":["403ARS0E001FA01B","shutdown"],
+            "actionline":"0ESD3049AL"
+          },
+          {
+            "id": "0ESD3027C",
+            "pos": { "l": 563, "t": 587.5, "w": 164, "h": 48 },
+            "action":["403ARS0E001FA03A","shutdown"],
+            "actionline":"0ESD3027CL"
+          },
+          {
+            "id": "0ESD3027B",
+            "pos": { "l": 1153, "t": 153.5, "w": 163, "h": 42 },
+            "action":["403ARS0E001FA02A","shutdown"],
+            "actionline":"0ESD3027BL"
+          },
+          {
+            "id": "0ESD3049B",
+            "pos": { "l": 1153, "t": 371.5, "w": 166, "h": 41 },
+            "action":["403ARS0E001FA02B","shutdown"],
+            "actionline":"0ESD3049BL"
+          },
+          {
+            "id": "0ESD3049C",
+            "pos": { "l": 1153, "t": 588.5, "w": 166, "h": 44 },
+            "action":["403ARS0E001FA03B","shutdown"],
+            "actionline":"0ESD3049CL"
+          }
+        ],
         "sliders": [],
         "esds": [
           {
             "id": "0ESD2003A",
-            "pos": { "l": 333, "t": 165.5, "w": 140, "h": 21 }
+            "pos": { "l": 333, "t": 165.5, "w": 140, "h": 21 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD2303A",
-            "pos": { "l": 333, "t": 201.5, "w": 138, "h": 20 }
+            "pos": { "l": 333, "t": 201.5, "w": 138, "h": 20 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD2003A",
-            "pos": { "l": 978, "t": 165.5, "w": 139, "h": 23 }
+            "pos": { "l": 978, "t": 165.5, "w": 139, "h": 23 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD2303A",
-            "pos": { "l": 978, "t": 201.5, "w": 137, "h": 23 }
+            "pos": { "l": 978, "t": 201.5, "w": 137, "h": 23 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD2003A",
-            "pos": { "l": 333, "t": 406.5, "w": 137, "h": 23 }
+            "pos": { "l": 333, "t": 406.5, "w": 137, "h": 23 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD2303A",
-            "pos": { "l": 333, "t": 440.5, "w": 139, "h": 22 }
+            "pos": { "l": 333, "t": 440.5, "w": 139, "h": 22 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD2003A",
-            "pos": { "l": 978, "t": 406.5, "w": 138, "h": 21 }
+            "pos": { "l": 978, "t": 406.5, "w": 138, "h": 21 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD2303A",
-            "pos": { "l": 979, "t": 440.5, "w": 137, "h": 22 }
+            "pos": { "l": 979, "t": 440.5, "w": 137, "h": 22 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD2003A",
-            "pos": { "l": 333, "t": 646.5, "w": 139, "h": 21 }
+            "pos": { "l": 333, "t": 646.5, "w": 139, "h": 21 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD2303A",
-            "pos": { "l": 333, "t": 682.5, "w": 139, "h": 21 }
+            "pos": { "l": 333, "t": 682.5, "w": 139, "h": 21 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD2003A",
-            "pos": { "l": 978, "t": 646.5, "w": 138, "h": 22 }
+            "pos": { "l": 978, "t": 646.5, "w": 138, "h": 22 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD2303A",
-            "pos": { "l": 978, "t": 682.5, "w": 137, "h": 20 }
+            "pos": { "l": 978, "t": 682.5, "w": 137, "h": 20 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
-            "id": "0ESD3027A\n COOL REGEN GAS\\n BAY A FAN A",
-            "pos": { "l": 476, "t": 89.5, "w": 137, "h": 50 }
+            "id": "0ESD3027A\n COOL REGEN GAS\n BAY A FAN A",
+            "pos": { "l": 476, "t": 89.5, "w": 137, "h": 50 },
+            "type":"esd",
+            "action":"",
+            "text":"403A0YSLL001A\nSHUTDOWN E-403A-001-FA-01AM",
+            "done":false,
+            "variableid":"403AR0"
           },
           {
             "id": "0ESD3027B\nCOOL REGEN GAS\nBAY B FAN  A",
-            "pos": { "l": 1120, "t": 90.5, "w": 138, "h": 48 }
+            "pos": { "l": 1120, "t": 90.5, "w": 138, "h": 48 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD3049A\nCOOL REGEN GAS\nBAY A FAN B",
-            "pos": { "l": 476, "t": 330.5, "w": 139, "h": 49 }
+            "pos": { "l": 476, "t": 330.5, "w": 139, "h": 49 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD3049B\nCOOL REGEN GAS\nBAY B FAN B",
-            "pos": { "l": 1121, "t": 331.5, "w": 137, "h": 49 }
+            "pos": { "l": 1121, "t": 331.5, "w": 137, "h": 49 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD3027C\nCOOL REGEN GAS\nBAY C FAN A",
-            "pos": { "l": 476, "t": 570.5, "w": 138, "h": 52 }
+            "pos": { "l": 476, "t": 570.5, "w": 138, "h": 52 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
           },
           {
             "id": "0ESD3049C\nCOOL REGEN GAS\nBAY C FAN B",
-            "pos": { "l": 1121, "t": 571.5, "w": 137, "h": 49 }
+            "pos": { "l": 1121, "t": 571.5, "w": 137, "h": 49 },
+            "action": "",
+            "type":"esd",
+            "text":"",
+            "done":false,
+            "variableid":""
+          },
+          {
+            "id": "0ESD3027A",
+            "pos": { "l": 620, "t": 152.5, "w": 164, "h": 44 },
+            "action":["403ARS0E001FA01A","shutdown"],
+            "type":"logic_res",
+            "text":"403A0YSLL001A SHUTDOWN E-403A-001-FA-01AM",
+            "done":false,
+            "variableid":"403ARS0E001FA01A"
+          },
+          {
+            "id": "0ESD3049A",
+            "pos": { "l": 562, "t": 369.5, "w": 166, "h": 43 },
+            "action":["403ARS0E001FA01B","shutdown"],
+            "type":"logic_res",
+            "text":"",
+            "done":false,
+            "variableid":"403ARS0E001FA01B"
+          },
+          {
+            "id": "0ESD3027C",
+            "pos": { "l": 563, "t": 587.5, "w": 164, "h": 48 },
+            "action":["403ARS0E001FA03A","shutdown"],
+            "type":"logic_res",
+            "text":"",
+            "done":false,
+            "variableid":"403ARS0E001FA03A"
+          },
+          {
+            "id": "0ESD3027B",
+            "pos": { "l": 1153, "t": 153.5, "w": 163, "h": 42 },
+            "action":["403ARS0E001FA02A","shutdown"],
+            "type":"logic_res",
+            "text":"",
+            "done":false,
+            "variableid":"403ARS0E001FA02A"
+          },
+          {
+            "id": "0ESD3049B",
+            "pos": { "l": 1153, "t": 371.5, "w": 166, "h": 41 },
+            "action":["403ARS0E001FA02B","shutdown"],
+            "type":"logic_res",
+            "text":"",
+            "done":false,
+            "variableid":"403ARS0E001FA02B"
+          },
+          {
+            "id": "0ESD3049C",
+            "pos": { "l": 1153, "t": 588.5, "w": 166, "h": 44 },
+            "action":["403ARS0E001FA03B","shutdown"],
+            "type":"logic_res",
+            "text":"",
+            "done":false,
+            "variableid":"403ARS0E001FA03B"
           }
         ],
         "logics": []
@@ -2914,7 +3148,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [],
         "esds": [],
         "logics": []
@@ -3084,35 +3318,46 @@
         "alarms": [
           {
             "id": "0VAHH003A",
-            "pos": { "l": 173, "t": 520, "w": 83, "h": 22 }
+            "pos": { "l": 173, "t": 520, "w": 83, "h": 22 },
+            "variableid": "403ARS0TI033"
           },
           {
             "id": "0VAHH003B",
-            "pos": { "l": 322, "t": 520, "w": 82, "h": 22 }
+            "pos": { "l": 322, "t": 520, "w": 82, "h": 22 },
+            "variableid": "403ARS0TI033"
           },
           {
             "id": "0VAHH001A",
-            "pos": { "l": 172, "t": 382, "w": 81, "h": 19 }
+            "pos": { "l": 172, "t": 382, "w": 81, "h": 19 },
+            "variableid": "403ARS0TI033"
           },
           {
             "id": "0VAHH001B",
-            "pos": { "l": 326, "t": 384, "w": 81, "h": 21 }
+            "pos": { "l": 326, "t": 384, "w": 81, "h": 21 },
+            "variableid": "403ARS0TI033"
           },
           {
             "id": "0VAHH002A",
-            "pos": { "l": 574, "t": 381, "w": 77, "h": 19 }
+            "pos": { "l": 574, "t": 381, "w": 77, "h": 19 },
+            "variableid": "403ARS0TI033"
           },
           {
             "id": "0VAHH002B",
-            "pos": { "l": 721, "t": 378, "w": 79, "h": 22 }
+            "pos": { "l": 721, "t": 378, "w": 79, "h": 22 },
+            "variableid": "403ARS0TI033"
           },
           {
             "id": "0VAHH004A",
-            "pos": { "l": 573, "t": 523, "w": 78, "h": 19 }
+            "pos": { "l": 573, "t": 523, "w": 78, "h": 19 },
+            "variableid": "403ARS0TI033"
           },
-          { "id": "0VAHH004B", "pos": { "l": 720, "t": 520, "w": 82, "h": 21 } }
+          {
+            "id": "0VAHH004B",
+            "pos": { "l": 720, "t": 520, "w": 82, "h": 21 },
+            "variableid": "403ARS0TI033"
+          }
         ],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0TI009",
@@ -3327,7 +3572,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "SLI0011",
@@ -3530,7 +3775,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "SLI0003",
@@ -3680,7 +3925,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "SLI023",
@@ -4017,10 +4262,18 @@
           }
         ],
         "alarms": [
-          { "id": "0TAH004", "pos": { "l": 18, "t": 654.5, "w": 76, "h": 25 } },
-          { "id": "0FAL004", "pos": { "l": 17, "t": 705.5, "w": 78, "h": 22 } }
+          {
+            "id": "0TAH004",
+            "pos": { "l": 18, "t": 654.5, "w": 76, "h": 25 },
+            "variableid": "403ARS0TI033"
+          },
+          {
+            "id": "0FAL004",
+            "pos": { "l": 17, "t": 705.5, "w": 78, "h": 22 },
+            "variableid": "403ARS0TI033"
+          }
         ],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0SLI003",
@@ -4297,10 +4550,18 @@
           }
         ],
         "alarms": [
-          { "id": "0TAH005", "pos": { "l": 683, "t": 210, "w": 78, "h": 23 } },
-          { "id": "0FAL005", "pos": { "l": 685, "t": 261, "w": 76, "h": 18 } }
+          {
+            "id": "0TAH005",
+            "pos": { "l": 683, "t": 210, "w": 78, "h": 23 },
+            "variableid": "403ARS0TI033"
+          },
+          {
+            "id": "0FAL005",
+            "pos": { "l": 685, "t": 261, "w": 76, "h": 18 },
+            "variableid": "403ARS0TI033"
+          }
         ],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0SLI029",
@@ -4527,7 +4788,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0SLI011",
@@ -4734,7 +4995,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0TIC100",
@@ -4962,7 +5223,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0SLI012",
@@ -5207,7 +5468,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0SLI011",
@@ -5355,7 +5616,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0SLI011",
@@ -5424,7 +5685,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0SLI015",
@@ -5837,7 +6098,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0FIC031",
@@ -5908,7 +6169,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [],
         "esds": [],
         "logics": []
@@ -6065,7 +6326,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [],
         "esds": [],
         "logics": []
@@ -6199,7 +6460,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "SLI0016",
@@ -6429,7 +6690,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0FV020",
@@ -6529,7 +6790,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [],
         "esds": [],
         "logics": []
@@ -6598,7 +6859,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0TIC011",
@@ -6831,7 +7092,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "SLI0702",
@@ -7102,7 +7363,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "0LIC708",
@@ -7262,7 +7523,7 @@
           }
         ],
         "alarms": [],
-        "flares": [],
+        "anslogics": [],
         "sliders": [
           {
             "id": "SLI0708",
