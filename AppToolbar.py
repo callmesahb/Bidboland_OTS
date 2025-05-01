@@ -2,6 +2,7 @@ from PyQt6 import QtWidgets,QtCore,QtGui
 from PyQt6.QtCore import pyqtSignal,pyqtSlot
 import datetime
 import os
+import subprocess
 from APIs import Aspen , AspenSimulatorManager
 from Store import Store
 import sys
@@ -28,22 +29,49 @@ class Toolbar(QtWidgets.QToolBar):
         self.addAction(self.interupt)
         self.timer = QtWidgets.QLabel("Timer:",self)
         self.addWidget(self.timer)
-        # self.Run.triggered.connect(self.RunAPI)
+        self.Run.triggered.connect(self.RunAPI)
+        self.Pause.triggered.connect(self.PauseAPI)
+        self.Rewind.triggered.connect(self.RewindSim)
         self.store.updatevalues.connect(self.readingdata)
-        self.aspen = AspenSimulatorManager()
+        self.aspen = Aspen()
         
     def RunAPI(self):
-        # self.aspen = Aspen()
-        # # self.aspen.OpenSimulationFile()
-        # self.aspen.app1.Run(True)
-        # # self.aspen.Visibling()
-        # self.aspen.set_visibility(True)
-        # result = self.aspen.run_all()
-        # if result:
-        #     print("شبیه‌سازی با موفقیت Sync شد!")
-        # else:
-        #     print("خطا در اجرای شبیه‌سازی یا Sync!")
-        os.startfile(r"C:\\BB_403ARegTr_403RegDe_407C2Tr_407C2De\\apis\\Run_Sim.exe")
+        exe_path = r"C:\\BB_403ARegTr_403RegDe_407C2Tr_407C2De\\apis\\Run_Sim.exe"
+        try:
+            subprocess.Popen(
+                [exe_path],
+                creationflags=subprocess.CREATE_NO_WINDOW,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL
+            )
+        except:
+            print("Cannot open path file")
+    def PauseAPI(self):
+        self.aspen.PauseSim()
+        # exe_path = r"C:\\BB_403ARegTr_403RegDe_407C2Tr_407C2De\\apis\\Pause_Sim.exe"
+        # print(exe_path)
+        # try:
+        #     print("SALAMMM")
+        #     subprocess.Popen(
+        #         [exe_path],
+        #         creationflags=subprocess.CREATE_NO_WINDOW,
+        #         stdout=subprocess.DEVNULL,
+        #         stderr=subprocess.DEVNULL
+        #     )
+        # except:
+        #     print("Cannot open path file")
+    
+    def RewindSim(self):
+        # exe_path = r"C:\\BB_403ARegTr_403RegDe_407C2Tr_407C2De\\apis\\Rewind_Sim.exe"
+        # try:
+        #     print("salamm")
+        #     subprocess.Popen(
+        #         [exe_path]
+        #     )
+        #     print("Rewind Done")
+        # except:
+        #     print("Cannot open path file")
+        os.startfile(r"C:\\BB_403ARegTr_403RegDe_407C2Tr_407C2De\\apis\\Rewind_Sim.exe")
     
     @pyqtSlot()
     def readingdata(self):

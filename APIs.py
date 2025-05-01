@@ -10,6 +10,7 @@ class Aspen:
         self.message = ""
         self.lasterr = ""
         self.app1 = win32.GetObject(os.path.join(self.simdir,"DynamicsU407C2De.dynf"))
+        self.sims.append(self.app1)
         self.OpenSimulationFile()
     
     def OpenSimulationFile(self):
@@ -25,8 +26,25 @@ class Aspen:
 
     def Visibling(self,state:bool):
         self.app1.Application.Visible = state
+    
+    def PauseSim(self):
+        for simulation in self.sims:
+            simulation.Pause()
         
+    def RewindSim(self):
+        for sim in self.sims:
+            sim.Pause()
+            sim.Application.Simulation.Results.Refresh()
+            snapshots = sim.Results.SnapshotCount
+            last_snapshot = sim.Results.GetSnapshot(snapshots - 1)
+            print(type(snapshots))
+            sim.Results.Rewind(last_snapshot)
         
+
+
+
+
+
 import win32com.client as client
 
 
@@ -174,6 +192,6 @@ class AspenSimulatorManager:
 
 if __name__ == "__main__":
 
-    manager = AspenSimulatorManager(delta_time=0.000555)
+    manager = Aspen()
 
     manager.set_visibility(True)
