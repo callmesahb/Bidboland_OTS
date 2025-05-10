@@ -72,9 +72,12 @@ class valveEV(QWidget):
         #     self.store.timer.start(2000)
     def mousePressEvent(self, event: QMouseEvent):
         if event.button() == Qt.MouseButton.LeftButton:
-            self.faceplate.setWindowTitle(self.name)
-            self.faceplate.name.setText(self.name)
-            self.faceplate.show()
+            if self.name[2] == "P":
+                return
+            else:
+                self.faceplate.setWindowTitle(self.name)
+                self.faceplate.name.setText(self.name)
+                self.faceplate.show()
 if __name__ == '__main__':
         app = QApplication(sys.argv)
         

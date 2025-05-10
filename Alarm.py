@@ -3,17 +3,18 @@ from Store import Store
 import sys
 
 class Alarm(QtWidgets.QWidget):
+    alarmstatus = QtCore.pyqtSignal(str)
     alarmtriggered = QtCore.pyqtSignal(str)
     alarmresult = QtCore.pyqtSignal()
-    def __init__(self,variableid:str,store:Store):
+    def __init__(self,variableid:str,store:Store,id:str):
         super().__init__()
         self.variableid = variableid
         self.store = store
+        self.id = id
         self.status = QtWidgets.QLabel("NORMAL",self)
         self.status.setStyleSheet("color:#28da48;")
         self.status.move(18,3)
         self.setStyleSheet("background-color:#000000")
-        # self._InitUI()
         
     def _InitUI(self):
         self.vlayout = QtWidgets.QVBoxLayout()
@@ -28,6 +29,7 @@ class Alarm(QtWidgets.QWidget):
             self.status.setText("ALARM")
             self.status.setStyleSheet("color:red")
             self.alarmtriggered.emit("ALARM")
+            self.alarmstatus.emit(self.id)
         else:
             self.status.setText("NORMAL")
             self.status.setStyleSheet("color:#28da48")

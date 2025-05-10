@@ -106,3 +106,38 @@ class TriangleWidget(QWidget):
         if '.' in number_str:
             return len(number_str.split('.')[1])
         return 0
+    
+    def paintEvent(self, event):
+        qp = QPainter()
+        qp.begin(self)
+        self.draw_colorbar(qp)
+        # self.draw_guideline(qp)
+        self.draw_triangleR(qp)
+        qp.end()
+
+    def getRanges(self,min:float,LL:float,L:float,H:float,HH:float) -> list:
+        outlist = [min,LL,L,H,HH]
+        return outlist
+
+
+    def draw_colorbar(self, qp):
+        # مشخصات مستطیل رنگی
+        x = self.progress.geometry().right() + 3         # مکان افقی نوار رنگی
+        y = 15        # مکان عمودی شروع نوار
+        width = 5     # عرض نوار
+        height = 200  # ارتفاع کل نوار
+
+        section_height = height // 5
+
+        colors = [
+            QColor(255, 0, 0),     # قرمز پایین
+            QColor(255, 255, 0),   # زرد
+            QColor(0, 255, 0),     # سبز وسط
+            QColor(255, 255, 0),   # زرد
+            QColor(255, 0, 0)      # قرمز بالا
+        ]
+
+        for i, color in enumerate(colors):
+            qp.setBrush(color)
+            qp.setPen(Qt.PenStyle.NoPen)
+            qp.drawRect(x, y + i * section_height, width, section_height)

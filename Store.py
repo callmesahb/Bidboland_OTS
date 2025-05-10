@@ -138,7 +138,17 @@ class Store(QObject):
             varid_dict = next(item for item in self.tags if item['name'] == varId)
         
 
-    
+    def reset_to_initial(self):
+        for item in self.tags:
+            print(item)
+            tag_name = item["name"]
+            try:
+                initial_value = item["initial"]
+            except:
+                initial_value = item["value"]
+            self.finaltag[tag_name] = initial_value
+            self.opc.setValue(tag_name,initial_value)
+        self.updatevalues.emit()
     def read_json_file(self,file_path) -> dict:
         with open(file_path,"r") as file:
             data = json.load(file)

@@ -34,6 +34,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setCentralWidget(self.cntwidget)
         self.toolbar = Toolbar(self.store)
         self.addToolBar(self.toolbar)
+        self.toolbar.reset_signal.connect(self.cntwidget.reset_widgets)
         
     def drawFirstPage(self):
         self.centralWidget().createAllscenes(self.page)
@@ -123,6 +124,7 @@ class MainWindow(QtWidgets.QMainWindow):
             self.Currentindex = self.pageorder[pageId]
             desc = self.store.ListingDescs(self.Currentindex)["description"]
             self.cntwidget.updateDesc(desc)
+            self.update()
             self.centralWidget().SetActiveScene(self.Currentindex)
             
     def DeactiveChildFoucus(self):

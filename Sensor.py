@@ -11,6 +11,7 @@ class Sensor(QtWidgets.QWidget):
         self.name = name
         self.store = store
         self.variableid = variableid
+        self.setWindowFlags(QtCore.Qt.WindowType.WindowStaysOnTopHint)
         self.details = self.store.SettingDetailsofsensor(variableid)
         self.unit = self.store.GettingUnit(name)
         self.store.updatevalues.connect(self.updatingvalue)
@@ -24,7 +25,7 @@ class Sensor(QtWidgets.QWidget):
     
     def settingname(self):
         self.sensorname = QtWidgets.QLabel("",self)
-        self.vlayout.addWidget(self.sensorname)
+        self.vlayout.addWidget(self.sensorname,0,QtCore.Qt.AlignmentFlag.AlignVCenter)
         hline = QtWidgets.QFrame()
         hline.setFrameShape(QtWidgets.QFrame.Shape.HLine)
         hline.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)

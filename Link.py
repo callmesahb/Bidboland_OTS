@@ -15,7 +15,7 @@ class Link(QtWidgets.QWidget):
     def InitUi(self):
         self.setStyleSheet("background-color: rgb(0, 0, 0);")
         # self.setGeometry(99,99,1000,1000)
-        self.setWindowOpacity(0)
+        self.setWindowOpacity(0.5)
 
     def mousePressEvent(self, event: QtGui.QMouseEvent):
         super().mousePressEvent(event)

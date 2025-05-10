@@ -11,7 +11,7 @@ from Store import Store
 class ControllerValve(QWidget):
         ChangePosValve = pyqtSignal(float)
         updatevalues = pyqtSignal()
-        def __init__(self,name,rotated,pvvalues,variableid,store:Store):
+        def __init__(self,name,rotated,pvvalues,variableid:str,store:Store):
                 super().__init__()
                 self.setWindowTitle("controllerValve")
                 self.resize(50, 40)
@@ -86,15 +86,22 @@ class ControllerValve(QWidget):
                     
         def mousePressEvent(self, event: QMouseEvent):
             if event.button() == Qt.MouseButton.LeftButton:
-                # هر بار یک faceplate جدید بساز بدون parent
-                faceplate = ControllerPlate(self.name, self.pvvalues, self.variableid, self.store)
-                faceplate.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose, True)  # مهم: وقتی بسته شد، خودش جمع بشه
-                faceplate.setWindowFlag(Qt.WindowType.WindowStaysOnTopHint, True)
-                faceplate.show()
-
-                self.faceplates.append(faceplate)  # ذخیره کن تا از حافظه پاک نشه
+                if not hasattr(self, 'faceplate') or self.faceplate is None or not self.faceplate.isVisible():
+                    varid = self.variableid[:-2]
+                    self.faceplate = ControllerPlate(self.name, self.pvvalues, varid, self.store)
+                    self.faceplate.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose, True)
+                    self.faceplate.setWindowFlag(Qt.WindowType.WindowStaysOnTopHint, True)
+                    self.faceplate.destroyed.connect(self._faceplate_closed)
+                    self.faceplate.show()
+                else:
+                    self.faceplate.raise_()
+                    self.faceplate.activateWindow()
 
             return super().mousePressEvent(event)
+
+        def _faceplate_closed(self):
+            self.faceplate = None
+
 
         
         def Updatingvalue(self,data):

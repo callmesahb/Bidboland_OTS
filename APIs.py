@@ -35,9 +35,11 @@ class Aspen:
         for sim in self.sims:
             sim.Pause()
             sim.Application.Simulation.Results.Refresh()
+            print("Be inja Reside")
             snapshots = sim.Results.SnapshotCount
+            print("Be inja Reside2")
             last_snapshot = sim.Results.GetSnapshot(snapshots - 1)
-            print(type(snapshots))
+            print("Be inja Reside3")
             sim.Results.Rewind(last_snapshot)
         
 

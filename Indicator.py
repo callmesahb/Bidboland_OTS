@@ -11,7 +11,7 @@ class Indicator(QtWidgets.QWidget):
     updatevalues = QtCore.pyqtSignal(dict,list)
     TrendRequested = QtCore.pyqtSignal(str)
     
-    def __init__(self,name,value,itype,pvvalues,store:Store,variableid):
+    def __init__(self,name,value,itype,pvvalues,store:Store,variableid:str):
         super().__init__()
         self.setStyleSheet("background-color:black")
         self.name = name
@@ -20,19 +20,24 @@ class Indicator(QtWidgets.QWidget):
         self.pvvalues = pvvalues
         self.store = store
         self.variableid = variableid
+        # self.setMinimumSize(80,50)
+        self.setWindowFlags(Qt.WindowType.WindowStaysOnTopHint)
         self.InitUI()
         
         
     def InitUI(self):
-        self.hlayout = QtWidgets.QHBoxLayout()
-        
-        
-        self.setMinimumHeight(5)
+        self.hlayout = QtWidgets.QVBoxLayout()
         
         self.settingValue()
     def settingValue(self):
         self.Value = QtWidgets.QLabel("245",self)
         self.Value.move(8,0)
+        # self.Value.setAlignment(Qt.AlignmentFlag.AlignRight)
+        self.status = QtWidgets.QLabel("L",self)
+        # self.hlayout.addWidget(self.Value)
+        # self.Value.setAlignment(Qt.AlignmentFlag.AlignRight)
+        # self.hlayout.addWidget(self.status)
+        # self.setLayout(self.hlayout)
         if self.itype == "":
             self.Value.setText(str(round(self.value,2)))
         if self.itype == "controller":
@@ -46,8 +51,9 @@ class Indicator(QtWidgets.QWidget):
                 self.contplate.show()
             if self.itype == "":
                 self.sensor = Sensor(self.value,self.store,self.name,self.variableid)
-                self.sensor.setWindowTitle(self.name)
-                self.sensor.sensorname.setText(self.name)
+                self.sensor.setWindowTitle(self.variableid)
+                self.finaltext = " " + self.variableid
+                self.sensor.sensorname.setText(self.finaltext)
                 self.sensor.show()
     
     @QtCore.pyqtSlot()
@@ -85,13 +91,13 @@ class Indicator(QtWidgets.QWidget):
             if self.itype == "":
                 self.Value.setText(str(round(value,2)))
                 
-    # def contextMenuEvent(self, event):
-    #     menu = QtWidgets.QMenu(self)
-    #     trend_action = menu.addAction("Show Trend")
-    #     action = menu.exec(event.globalPos())
-    #     if action == trend_action:
-    #         self.trend = Trend(self.variableid,self.itype,self.store)
-    #         self.trend.show()
+    def contextMenuEvent(self, event):
+        menu = QtWidgets.QMenu(self)
+        trend_action = menu.addAction("Show Trend")
+        action = menu.exec(event.globalPos())
+        if action == trend_action:
+            self.trend = Trend(self.variableid,self.itype,self.store)
+            self.trend.show()
         
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

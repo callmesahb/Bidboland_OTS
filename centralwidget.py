@@ -18,6 +18,7 @@ from Slider import Slider
 from HAND import HAND
 from ActionText import TextAction
 from AlarmLine import AlarmLine
+from PSTs import PSTWidget
 from ESDAction import Action
 from ESDwidget import ESD
 from valvetest import valveEV
@@ -162,6 +163,9 @@ class MainWidget(QtWidgets.QWidget):
                 elif _type in {"sdv", "bdv"}:
                     valve = valveEV(self.store,variableid,name, value,rotated)
                     self.store.updatevalues.connect(valve.ReadingValue)
+                    pst = PSTWidget()
+                    pst.setGeometry(int(pos["l"]-25),int(pos["t"]),int(pos["w"]),int(pos["h"]))
+                    tempScene.addWidget(pst)
                     # valve.ChangingValveStatus.connect(self.CheckingvalueSDV)
                     # valve.set_status(value)
                 elif _type == "dosing":
@@ -250,7 +254,7 @@ class MainWidget(QtWidgets.QWidget):
                 variableid = _alarm["variableid"]
                 
 
-                alarm = Alarm(variableid, self.store)
+                alarm = Alarm(variableid, self.store,id)
                 alarm.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]), int(pos["h"]))
                 self.store.updatevalues.connect(alarm.updateAlarm)
                 tempScene.addWidget(alarm)
@@ -328,9 +332,13 @@ class MainWidget(QtWidgets.QWidget):
         trend = Trend(self)
     
     def resizeEvent(self, a0):
-        super().resizeEvent(a0)
+        # super().resizeEvent(a0)
         # self.graphicsview.fitInView(self.scenes[SceneIndex].sceneRect(), QtCore.Qt.AspectRatioMode.KeepAspectRatio)
-        self.graphicsview.fitInView(QtCore.QRectF(self.scaledImage.rect()), QtCore.Qt.AspectRatioMode.IgnoreAspectRatio)
+        self.graphicsview.fitInView(QtCore.QRectF(self.scaledImage.rect()), QtCore.Qt.AspectRatioMode.KeepAspectRatio or QtCore.Qt.AspectRatioMode.IgnoreAspectRatio)
+        
+    @pyqtSlot(bool)
+    def reset_widgets(self):
+        self.store.reset_to_initial()
         
         
 if __name__ == "__main__":

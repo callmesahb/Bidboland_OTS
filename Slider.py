@@ -64,15 +64,15 @@ class Slider(QtWidgets.QWidget):
     def updateSlider(self):
         value = self.store.finaltag[self.variableid]
         self.progress_bar.setValue(int(value))
-        self.valuelabel.setText(str(value))
+        self.valuelabel.setText(str(round(value,2)))
         if value > 100:
             value = 100
             self.progress_bar.setValue(int(value))
-            self.valuelabel.setText(str(value))
+            self.valuelabel.setText(str(round(value,2)))
         elif value < 0:
             value = 0
-            self.progress_bar.setValue(int(value))
-            self.valuelabel.setText(str(value))
+            self.progress_bar.setValue(int(round(value,2)))
+            self.valuelabel.setText(str(round(value,2)))
         self.update()
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)

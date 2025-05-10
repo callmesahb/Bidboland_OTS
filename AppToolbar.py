@@ -8,6 +8,7 @@ from Store import Store
 import sys
 
 class Toolbar(QtWidgets.QToolBar):
+    reset_signal = QtCore.pyqtSignal(bool)
     def __init__(self,store:Store):
         super().__init__()
         self.setWindowTitle("AppToolbar")
@@ -19,16 +20,20 @@ class Toolbar(QtWidgets.QToolBar):
         self.Pause = QtGui.QAction("Pause",self)
         self.Rewind = QtGui.QAction("Rewind",self)
         self.interupt = QtGui.QAction("Interupt",self)
+        self.alarmbar = QtGui.QAction("ALARM",self)
         self.Run.setIcon(QtGui.QIcon(os.path.join(self.icondir,"play.jpg")))
         self.Pause.setIcon(QtGui.QIcon(os.path.join(self.icondir,"Pause.png")))
         self.Rewind.setIcon(QtGui.QIcon(os.path.join(self.icondir,"Rewind.png")))
         self.interupt.setIcon(QtGui.QIcon(os.path.join(self.icondir,"stop.png")))
+        # self.alarmbar.setIcon(QtGui.QIcon(os.path.join(self.icondir,"Flash.png")))
         self.addAction(self.Run)
         self.addAction(self.Pause)
         self.addAction(self.Rewind)
         self.addAction(self.interupt)
         self.timer = QtWidgets.QLabel("Timer:",self)
         self.addWidget(self.timer)
+        self.addAction(self.alarmbar)
+        self.rewind = False
         self.Run.triggered.connect(self.RunAPI)
         self.Pause.triggered.connect(self.PauseAPI)
         self.Rewind.triggered.connect(self.RewindSim)
@@ -72,11 +77,24 @@ class Toolbar(QtWidgets.QToolBar):
         # except:
         #     print("Cannot open path file")
         os.startfile(r"C:\\BB_403ARegTr_403RegDe_407C2Tr_407C2De\\apis\\Rewind_Sim.exe")
+        self.rewind = True
+        self.store.reset_to_initial()
+        self.reset_signal.emit(self.rewind)
+    
+    # def listingAlarms(self):
+        
     
     @pyqtSlot()
     def readingdata(self):
         timerstc = datetime.timedelta(seconds=self.store.finaltag["407EDTIMER"])
         self.timer.setText("Timer:"+str(timerstc))
+        if self.rewind == True:
+            self.timer.setText("Timer:0:00:00")
+            self.store.opc.setValue("407EDTIMER",0)
+            self.rewind = False
+        elif self.rewind == False:
+            timerstc = datetime.timedelta(seconds=self.store.finaltag["407EDTIMER"])
+            self.timer.setText("Timer:"+str(timerstc))
         
         
 def window():

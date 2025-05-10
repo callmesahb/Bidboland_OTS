@@ -15,6 +15,7 @@ class ControllerPlate(QtWidgets.QWidget):
         self.pvvalues = pvvalue
         self.variableid = variableid
         self.store = store
+        self.setWindowFlags(QtCore.Qt.WindowType.WindowStaysOnTopHint)
         self.store.updatevalues.connect(self.upandsettingvaluesofcontroller)
         self.setWindowTitle("Controller")
         self.sp_edit_locked = False
@@ -106,7 +107,7 @@ class ControllerPlate(QtWidgets.QWidget):
         hlayout_md = QtWidgets.QHBoxLayout()
         self.MD = QtWidgets.QLabel("MD", self)
         self.MDComboBox = QtWidgets.QComboBox(self)
-        self.MDComboBox.addItems(["AUTO","MAN"])
+        # self.MDComboBox.addItems(["AUTO","MAN"])
         hlayout_md.addWidget(self.MD)
         hlayout_md.addWidget(self.MDComboBox)
 
@@ -139,7 +140,8 @@ class ControllerPlate(QtWidgets.QWidget):
     def on_op_edit_end(self):
         try:
             new_op_value = float(self.OPValue.text())
-            self.store.settingValueOPC(self.variableid, new_op_value)
+            op = self.variableid + "OP"
+            self.store.settingValueOPC(op, new_op_value)
             self.op_edit_lock_timer.start()
         except ValueError:
             QtWidgets.QMessageBox.warning(self, "خطا", "مقدار OP نامعتبر است.")
@@ -147,7 +149,8 @@ class ControllerPlate(QtWidgets.QWidget):
     def on_op_edit_end(self):
         try:
             new_op_value = float(self.OPValue.text())
-            self.store.settingValueOPC(self.variableid, new_op_value)
+            op = self.variableid + "OP"
+            self.store.settingValueOPC(op, new_op_value)
             self.op_edit_lock_timer.start()
         except ValueError:
             QtWidgets.QMessageBox.warning(self, "خطا", "مقدار OP نامعتبر است.")
@@ -156,8 +159,9 @@ class ControllerPlate(QtWidgets.QWidget):
     def on_sp_edit_end(self):
         try:
             new_sp_value = float(self.SPValue.text())
-            Varid = self.variableid.replace("OP", "")
-            sp = Varid + "SP"
+            print(self.variableid)
+            # Varid = self.variableid.replace("OP", "")
+            sp = self.variableid + "SP"
             self.store.settingValueOPC(sp, new_sp_value)
 
             self.sp_edit_lock_timer.start()
@@ -167,7 +171,10 @@ class ControllerPlate(QtWidgets.QWidget):
 
     def UpdateOP(self):
         new_op_value = float(self.OPValue.text())
-        self.store.settingValueOPC(self.variableid, new_op_value)
+        # print(new_op_value)
+        varid = self.variableid + "OP"
+        print(varid)
+        self.store.settingValueOPC(varid, new_op_value)
 
     def ChangingHandType(self):
         new_type = self.MD.text()
@@ -186,26 +193,68 @@ class ControllerPlate(QtWidgets.QWidget):
         tv = Varid + "TV"
         opm = Varid + "OPM"
         cas = Varid + "CAS"
-
+        
+        # self.MDComboBox.clear()
+        
         spvalue = self.store.finaltag[sp]
         pvvalue = self.store.finaltag[pv]
         opvalue = self.store.finaltag[op]
         tvvalue = self.store.finaltag[tv]
         casvalue = self.store.finaltag[cas]
+        
+        target_items = []
+        current_items = [self.MDComboBox.itemText(i) for i in range(self.MDComboBox.count())]
+        
+        
+        if casvalue == 1:
+            target_items = ["CAS", "AUTO", "MAN"]
+        elif tvvalue == 1:
+            target_items = ["MAN", "AUTO"]
+        elif tvvalue == 0:
+            target_items = ["AUTO", "MAN"]
+            
+        for item in current_items:
+            if item not in target_items:
+                index = self.MDComboBox.findText(item)
+                if index >= 0:
+                    self.MDComboBox.removeItem(index)
+            
+        # seen = set()
+        # unique_items = []
+        
+        for item in target_items:
+            if item not in current_items:
+                self.MDComboBox.addItem(item)
 
         if tvvalue == 1.0:
             self.OPValue.setReadOnly(False)
             self.Accept.setEnabled(True)
+        #     self.MDComboBox.addItems(["MAN","AUTO"])
+        #     manindex = self.MDComboBox.findText("MAN")
+        #     autindex = self.MDComboBox.findText("AUTO")
+        #     if manindex >= 0 or autindex >= 0:
+        #         self.MDComboBox.removeItem(manindex)
+        #         self.MDComboBox.removeItem(autindex)
         elif tvvalue == 0.0:
             self.OPValue.setReadOnly(True)
             self.Accept.setEnabled(False)
-        if casvalue == 1:
-            if "CAS" not in [self.MDComboBox.itemText(i) for i in range(self.MDComboBox.count())]:
-                self.MDComboBox.addItem("CAS")
-        else:
-            index = self.MDComboBox.findText("CAS")
-            if index >= 0:
-                self.MDComboBox.removeItem(index)
+        #     self.MDComboBox.addItems(["AUTO","MAN"])
+        #     manindex = self.MDComboBox.findText("MAN")
+        #     autindex = self.MDComboBox.findText("AUTO")
+            
+        # if casvalue == 1:
+        #     if "CAS" not in [self.MDComboBox.itemText(i) for i in range(self.MDComboBox.count())]:
+        #         self.MDComboBox.addItems(["CAS","AUTO"])
+        # else:
+        #     index = self.MDComboBox.findText("CAS")
+        #     manindex = self.MDComboBox.findText("MAN")
+        #     autindex = self.MDComboBox.findText("AUTO")
+        #     if index >= 0:
+        #         self.MDComboBox.removeItem(index)
+        #     elif manindex >=0:
+        #         self.MDComboBox.removeItem(manindex)
+        #     elif autindex >=0:
+        #         self.MDComboBox.removeItem(autindex)
         
 
         # self.SPValue.setText(str(round(spvalue, 2)))
