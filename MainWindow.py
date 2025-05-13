@@ -31,6 +31,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setWindowTitle("OTS 5")
         self.cntwidget = MainWidget(self.store)
         self.cntwidget.changePageSignal.connect(self.gotoPage)
+        self.cntwidget.changepagebyesd.connect(self.gotoPage)
         self.setCentralWidget(self.cntwidget)
         self.toolbar = Toolbar(self.store)
         self.addToolBar(self.toolbar)
@@ -78,14 +79,18 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.drawoverviews()
             if self.page[self.Currentindex]["parentId"] != 0:
                 old_id = self.page[self.Currentindex]["parentId"]
+                print(old_id)
                 self.Currentindex = self.Currentindex + 1
                 new_id = self.page[self.Currentindex]["parentId"]
+                print(new_id)
                 if old_id == new_id:
                     desc = self.store.ListingDescs(self.Currentindex)["description"]
                     page = self.store.ListingDescs(self.Currentindex)["page"]
                     self.cntwidget.updateDesc(desc)
                     self.cntwidget.updatepage(page)
                     self.nextpagenotoverview()
+                elif old_id != new_id:
+                    self.Currentindex = self.Currentindex - 1
             self.centralWidget().update()
 
     def exPage(self):
@@ -109,6 +114,8 @@ class MainWindow(QtWidgets.QMainWindow):
                     self.cntwidget.updateDesc(desc)
                     self.cntwidget.updatepage(page)
                     self.nextpagenotoverview()
+                elif old_id != new_id:
+                    self.Currentindex = self.Currentindex + 1
             self.centralWidget().update()
             # else:
             #     self.drawOtherPages()
@@ -166,6 +173,9 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.centralWidget().SetActiveScene(self.Currentindex)
             if id == 1:
                 self.Currentindex = 5
+                self.centralWidget().SetActiveScene(self.Currentindex)
+            if id == 90:
+                self.Currentindex = 6
                 self.centralWidget().SetActiveScene(self.Currentindex)
             
     @pyqtSlot()

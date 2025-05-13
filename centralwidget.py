@@ -30,6 +30,7 @@ class MainWidget(QtWidgets.QWidget):
     changePageSignal = pyqtSignal(int)
     ChangingValveStatus = pyqtSignal(int)
     updatevalues = pyqtSignal(dict,list)
+    changepagebyesd = pyqtSignal(int)
 
     def __init__(self, store: Store):
         super().__init__()
@@ -161,11 +162,13 @@ class MainWidget(QtWidgets.QWidget):
                     valve = ControllerValve(name, rotated, pvvalues,variableid,self.store)
                     self.store.updatevalues.connect(valve.settingValueController)
                 elif _type in {"sdv", "bdv"}:
+                    pststatus = _valve["pst"]
                     valve = valveEV(self.store,variableid,name, value,rotated)
                     self.store.updatevalues.connect(valve.ReadingValue)
-                    pst = PSTWidget()
-                    pst.setGeometry(int(pos["l"]-25),int(pos["t"]),int(pos["w"]),int(pos["h"]))
-                    tempScene.addWidget(pst)
+                    if pststatus:
+                        pst = PSTWidget()
+                        pst.setGeometry(int(pos["l"]-25),int(pos["t"]),int(pos["w"]),int(pos["h"]))
+                        tempScene.addWidget(pst)
                     # valve.ChangingValveStatus.connect(self.CheckingvalueSDV)
                     # valve.set_status(value)
                 elif _type == "dosing":
@@ -233,6 +236,7 @@ class MainWidget(QtWidgets.QWidget):
                 lineid = _line["id"]
                 connected = _line["connected"]
                 action = _line["action"]
+                print(f"{lineid}:{connected}")
                 self.line = AlarmLine(pos,connected,action,self.store,lineid)
                 self.line.lineid = lineid
                 self.line.signals.done_signal.connect(self.set_done)
@@ -271,18 +275,20 @@ class MainWidget(QtWidgets.QWidget):
                 pos = _esd["pos"]
                 id = _esd["id"]
                 kind = _esd["type"]
+                dest = _esd["to"]
                 variableid = _esd["variableid"]
-                esd = ESD(id)
-                esd.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]),
-                                   int(pos["h"]))
-                text = _esd["text"]
                 if kind == "logic_res":
+                    text = _esd["text"]
                     anslogic = TextAction(text,variableid,self.store)
                     self.textactions[id] = anslogic
                     anslogic.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]),
                                    int(pos["h"]))
                     tempScene.addWidget(anslogic)
                 else:
+                    esd = ESD(id,dest)
+                    esd.changepagebyesd.connect(self.ChangePageByESD)
+                    esd.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]),
+                                   int(pos["h"]))
                     tempScene.addWidget(esd)
             # for _action in page["anslogics"]:
             #     pos = _action["pos"]
@@ -327,6 +333,10 @@ class MainWidget(QtWidgets.QWidget):
     def ChangePageByLink(self, dest):
         self.changePageSignal.emit(dest)
     
+    @pyqtSlot(int)
+    def ChangePageByESD(self,dest):
+        self.changepagebyesd.emit(dest)
+    
     @pyqtSlot(str)
     def showingTrend(self):
         trend = Trend(self)
@@ -334,7 +344,7 @@ class MainWidget(QtWidgets.QWidget):
     def resizeEvent(self, a0):
         # super().resizeEvent(a0)
         # self.graphicsview.fitInView(self.scenes[SceneIndex].sceneRect(), QtCore.Qt.AspectRatioMode.KeepAspectRatio)
-        self.graphicsview.fitInView(QtCore.QRectF(self.scaledImage.rect()), QtCore.Qt.AspectRatioMode.KeepAspectRatio or QtCore.Qt.AspectRatioMode.IgnoreAspectRatio)
+        self.graphicsview.fitInView(QtCore.QRectF(self.scaledImage.rect()), QtCore.Qt.AspectRatioMode.KeepAspectRatio or QtCore.Qt.AspectRatioMode.KeepAspectRatio)
         
     @pyqtSlot(bool)
     def reset_widgets(self):
