@@ -25,7 +25,6 @@ class Alarm(QtWidgets.QWidget):
     @QtCore.pyqtSlot()
     def updateAlarm(self):
         value = self.store.finaltag[self.variableid]
-        print(f"{self.variableid}:{self.store.SettingDetailsofsensor(self.variableid)}")
         if value <= self.store.SettingDetailsofsensor(self.variableid)[2]: # Less than LL
             self.status.setText("ALARM")
             self.status.setStyleSheet("color:red")

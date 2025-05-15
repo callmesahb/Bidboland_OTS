@@ -2663,7 +2663,7 @@
             "type":"esd",
             "variableid":"",
             "text":"",
-            "to":0
+            "to":93
           },
           {
             "id": "0ESD3950     \n REGEN GAS TO     \nCOALES FILTER",
@@ -2671,7 +2671,7 @@
             "type":"esd",
             "variableid":"",
             "text":"",
-            "to":0
+            "to":93
           },
           {
             "id": "0ESD3951     \nCOALESFILTER     \n(CONDENSATE)",
@@ -2679,7 +2679,7 @@
             "type":"esd",
             "variableid":"",
             "text":"",
-            "to":0
+            "to":92
           },
           {
             "id": "0ESD3952     \nCOALES FILTER     \n(WATER)",
@@ -2687,7 +2687,7 @@
             "type":"esd",
             "variableid":"",
             "text":"",
-            "to":0
+            "to":92
           },
           {
             "id": "0ESD3953     \nCOALES FILTER     \nSTANDPIPE",
@@ -2695,7 +2695,7 @@
             "type":"esd",
             "variableid":"",
             "text":"",
-            "to":0
+            "to":92
           },
           {
             "id": "0ESD3954     \nREGEN GAS     \nSOLVENT CONT",
@@ -2703,7 +2703,7 @@
             "type":"esd",
             "variableid":"",
             "text":"",
-            "to":0
+            "to":93
           },
           {
             "id": "0ESD3955     \nREGEN GAS     \nKO DRUM",
@@ -2711,7 +2711,7 @@
             "type":"esd",
             "variableid":"",
             "text":"",
-            "to":0
+            "to":93
           },
           {
             "id": "   0ESD3956     \n   TREATED     \nREGEN GAS     ",
@@ -2719,7 +2719,7 @@
             "type":"esd",
             "variableid":"",
             "text":"",
-            "to":0
+            "to":93
           },
           {
             "id": "0ESD3990     \nREGEN GAS     \nAMINE TREATING",
@@ -2727,7 +2727,815 @@
             "type":"esd",
             "variableid":"",
             "text":"",
+            "to":93
+          }
+        ],
+        "logics": []
+      },
+      {
+        "id": 100,
+        "parentId": 0,
+        "width": 1650,
+        "height": 917,
+        "type": "plant",
+        "imageUrl":"images/fill.jpg",
+        "page":"SLS407-301",
+        "description":"UNIT 407 ESD3",
+        "overview":true,
+        "lines": [],
+        "valves": [],
+        "equipments": [],
+        "links": [],
+        "indicators": [],
+        "alarms": [],
+        "flares": [],
+        "sliders": [],
+        "esds": [
+          {
+            "id": "0ESD3108\nSD ETHANE\nDEPRES COMP A",
+            "type":"esd",
+            "pos": { "l": 37, "t": 63.5, "w": 145, "h": 60 },
+            "variableid":"",
             "to":0
+          },
+          {
+            "id": "0ESD3131\nSD ETHANE\nDEPRES COMP B",
+            "type":"esd",
+            "pos": { "l": 267, "t": 64.5, "w": 147, "h": 58 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3132\nSD ETHANE\nDEPRES COMP C",
+            "type":"esd",
+            "pos": { "l": 498, "t": 63.5, "w": 147, "h": 60 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3140\nPROPANE PROD.\nTREAT COOLER A",
+            "type":"esd",
+            "pos": { "l": 731, "t": 62.5, "w": 144, "h": 60 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3141\nPROPANE PROD.\nTREAT COOLER B",
+            "type":"esd",
+            "pos": { "l": 960, "t": 61.5, "w": 146, "h": 62 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3142\nSD REGEN GAS \nCOOLER FAN B",
+            "type":"esd",
+            "pos": { "l": 1193, "t": 62.5, "w": 145, "h": 60 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3143\nSD REGEN GAS\n COOLER FAN A",
+            "type":"esd",
+            "pos": { "l": 1425, "t": 62.5, "w": 146, "h": 62 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3144\nPROPANE PROD\n DRAIN DRUM",
+            "type":"esd",
+            "pos": { "l": 37, "t": 201.5, "w": 144, "h": 58 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3145\nBUTANE PROD\nDRAIN DRUM",
+            "type":"esd",
+            "pos": { "l": 267, "t": 201.5, "w": 146, "h": 61 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3147\nSD PROD TREAT\nREGEN GAS HEATER",
+            "type":"esd",
+            "pos": { "l": 503, "t": 203.5, "w": 141, "h": 59 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3153\nDILUT.CAUSTIC\nSTORAGE TANK",
+            "type":"esd",
+            "pos": { "l": 730, "t": 200.5, "w": 145, "h": 61 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3154\nFRESH COND\nCAUSTIC TREAT",
+            "type":"esd",
+            "pos": { "l": 962, "t": 201.5, "w": 145, "h": 59 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3651\nETHANE COMP A\nSUCTION SCRUB.",
+            "type":"esd",
+            "pos": { "l": 1191, "t": 199.5, "w": 149, "h": 62 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3652\nETHANE COMP B\nSUCTION SCRUB.",
+            "type":"esd",
+            "pos": { "l": 1424, "t": 201.5, "w": 147, "h": 59 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3653\nETHANE COMP C\nSUCTION SCRUB.",
+            "type":"esd",
+            "pos": { "l": 37, "t": 341.5, "w": 147, "h": 60 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3654\nPRODUCT ETHANE\nH.EX. COND DRUM",
+            "type":"esd",
+            "pos": { "l": 267, "t": 342.5, "w": 145, "h": 60 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3655\nCONDENSATE\nDRUM LEVEl",
+            "type":"esd",
+            "pos": { "l": 499, "t": 343.5, "w": 147, "h": 61 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3660\nSOLVENT REBOIL\nCOND DRUM",
+            "type":"esd",
+            "pos": { "l": 731, "t": 342.5, "w": 145, "h": 61 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3664\nPROPANE COS\n HYDROLYSIS",
+            "type":"esd",
+            "pos": { "l": 961, "t": 342.5, "w": 146, "h": 61 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3665\nPROPANE DEPROP\nREFLUX ACCUM",
+            "type":"esd",
+            "pos": { "l": 1193, "t": 343.5, "w": 147, "h": 60 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3666\nDISULFIDE\nSTORAGE TANK",
+            "type":"esd",
+            "pos": { "l": 1425, "t": 343.5, "w": 146, "h": 58 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3672\nETHANE WT DEPRES\nCOMP A TRIP",
+            "type":"esd",
+            "pos": { "l": 37, "t": 481.5, "w": 146, "h": 61 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3673\nETHANE WT DEPRES\nCOMP B TRIP",
+            "type":"esd",
+            "pos": { "l": 266, "t": 482.5, "w": 147, "h": 61 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3674\nETHANE WT DEPRES\nCOMP C TRIP",
+            "type":"esd",
+            "pos": { "l": 500, "t": 483.5, "w": 145, "h": 58 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3690\nREGEN GAS\nCOOLER OUTLET",
+            "type":"esd",
+            "pos": { "l": 730, "t": 481.5, "w": 145, "h": 61 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3720\nCATALYST\nSOLUTION TANK",
+            "type":"esd",
+            "pos": { "l": 962, "t": 483.5, "w": 148, "h": 59 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3850\nBUTANE EXTRAC.\nCOLUMN",
+            "type":"esd",
+            "pos": { "l": 1193, "t": 482.5, "w": 144, "h": 58 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3852\nCAUSTIC SOLU.\nDEGASSER",
+            "type":"esd",
+            "pos": { "l": 1425, "t": 482.5, "w": 145, "h": 58 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3853\nCAUSTIC HEATER\nCOND DRUM",
+            "type":"esd",
+            "pos": { "l": 38, "t": 623.5, "w": 145, "h": 58 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3854\n2ND DISULFIDE\nSEPARATOR",
+            "type":"esd",
+            "pos": { "l": 266, "t": 622.5, "w": 146, "h": 59 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3855\nCAUSTIC AIR\nSEPARATOR",
+            "type":"esd",
+            "pos": { "l": 499, "t": 623.5, "w": 144, "h": 58 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3856\nSPENT\nCAUSTIC TANK",
+            "type":"esd",
+            "pos": { "l": 730, "t": 622.5, "w": 146, "h": 60 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3857\n98% SULFURIC\nACID TANK",
+            "type":"esd",
+            "pos": { "l": 961, "t": 622.5, "w": 147, "h": 60 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3858\n98% SULFURIC\nACID TANK",
+            "type":"esd",
+            "pos": { "l": 1192, "t": 623.5, "w": 148, "h": 60 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3859\nNEUTRALIZATION\nTANK",
+            "type":"esd",
+            "pos": { "l": 1424, "t": 621.5, "w": 147, "h": 64 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3860\nNEUTRALIZATION\nVESSEL",
+            "type":"esd",
+            "pos": { "l": 38, "t": 762.5, "w": 143, "h": 63 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3861\nOILY CAUSTIC\nSUMP DRUM",
+            "type":"esd",
+            "pos": { "l": 267, "t": 770.5, "w": 146, "h": 60 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3862\nSD BUTANE\nCAUSTIC TREAT",
+            "type":"esd",
+            "pos": { "l": 500, "t": 761.5, "w": 145, "h": 60 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3863\nSD CONDENSATE\nCAUSTIC TREAT",
+            "type":"esd",
+            "pos": { "l": 731, "t": 771.5, "w": 145, "h": 58 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3864\nSD CAUSTIC\nREGENERATION",
+            "type":"esd",
+            "pos": { "l": 962, "t": 772.5, "w": 148, "h": 62 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3865\nCAUSTIC REGEN\nFLASH DRUM",
+            "type":"esd",
+            "pos": { "l": 1192, "t": 767.5, "w": 148, "h": 64 },
+            "variableid":"",
+            "to":0
+          },
+          {
+            "id": "0ESD3880\nC5+ TO COND\nSURGE DRUM",
+            "type":"esd",
+            "pos": { "l": 1425, "t": 759.5, "w": 146, "h": 65 },
+            "variableid":"",
+            "to":0
+          }
+        ],
+        "logics": []
+      },
+      {
+        "id": 101,
+        "parentId": 0,
+        "width": 1650,
+        "height": 917,
+        "type": "plant",
+        "lines": [],
+        "valves": [],
+        "imageUrl":"images/fill.jpg",
+        "page":"SLS407-301",
+        "description":"UNIT 407 ESD3",
+        "overview":true,
+        "equipments": [],
+        "links": [],
+        "indicators": [],
+        "alarms": [],
+        "flares": [],
+        "sliders": [],
+        "esds": [
+          {
+            "id": "0ESD3881\nCONDENSATE\nSURGE DRUM",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 64, "t": 90.5, "w": 145, "h": 59 }
+          },
+          {
+            "id": "0ESD3882\nCOND EXTRACTOR\nCOLUMN",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 295, "t": 91.5, "w": 147, "h": 60 }
+          },
+          {
+            "id": "0ESD3883\nC5+ HEAT EXCH\nCOND.DRUM",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 530, "t": 90.5, "w": 145, "h": 59 }
+          },
+          {
+            "id": "1ESD3884\nTO DE-RSH\nREACTOR TR1",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 761, "t": 88.5, "w": 147, "h": 62 }
+          },
+          {
+            "id": "2ESD3884\nTO DE-RSH\nREACTOR TR2",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 995, "t": 88.5, "w": 147, "h": 61 }
+          },
+          {
+            "id": "1ESD3887\nDE-RSH REACTOR\nTRAIN 1",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 1229, "t": 90.5, "w": 145, "h": 59 }
+          },
+          {
+            "id": "2ESD3887\nDE-RSH REACTOR\nTRAIN 2",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 1461, "t": 91.5, "w": 147, "h": 60 }
+          },
+          {
+            "id": "0ESD3880\n C5+ RO COND.\nSURGE DRUM",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 63, "t": 225.5, "w": 147, "h": 60 }
+          },
+          {
+            "id": "1ESD3888\nTR1  CONDNESATE\n SAND FILTER",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 296, "t": 225.5, "w": 147, "h": 60 }
+          },
+          {
+            "id": "2ESD3888\nTR2 CONDENSATE\nSAND FILTER",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 528, "t": 225.5, "w": 147, "h": 61 }
+          },
+          {
+            "id": "1ESD3889\nSD SWEET\nC5+ PUMPS",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 763, "t": 226.5, "w": 145, "h": 61 }
+          },
+          {
+            "id": "2ESD3889\nSD SWEET\nC5+ PUMPS",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 995, "t": 228.5, "w": 146, "h": 58 }
+          },
+          {
+            "id": "0ESD3930\nPROPANE PRODUCT\nBOOSTER PUMP A ",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 1228, "t": 225.5, "w": 149, "h": 62 }
+          },
+          {
+            "id": "0ESD3931\nPROPANE PRODUCT\nBOOSTER PUMP B",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 1462, "t": 225.5, "w": 148, "h": 59 }
+          },
+          {
+            "id": "0ESD3960\nLEAN SOLVENT\nSURGE TANK",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 63, "t": 363.5, "w": 149, "h": 59 }
+          },
+          {
+            "id": "0ESD3961\nSOLVENT\nREGENERATOR",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 295, "t": 363.5, "w": 149, "h": 62 }
+          },
+          {
+            "id": "0ESD3965\nETHANE SOLVENT\nCONTRACTOR",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 527, "t": 363.5, "w": 149, "h": 59 }
+          },
+          {
+            "id": "0ESD3966\nETHANE GAS\nFILT.STANDPIPE",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 762, "t": 363.5, "w": 146, "h": 59 }
+          },
+          {
+            "id": "0ESD3967\nETHANE GAS\nCOALES FILTER",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 994, "t": 363.5, "w": 147, "h": 58 }
+          },
+          {
+            "id": "0ESD3968\nSOLVENT REGEN\n& FLASH DRUM",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 1227, "t": 363.5, "w": 147, "h": 58 }
+          },
+          {
+            "id": "0ESD3969\nRICH SOLVENT\nFLASH DRUM",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 1461, "t": 364.5, "w": 150, "h": 60 }
+          },
+          {
+            "id": "0ESD3970\nRICH SOLVENT\nFLASH DRUM",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 63, "t": 498.5, "w": 148, "h": 60 }
+          },
+          {
+            "id": "0ESD3971\nSOLVENT\nREGENERATION",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 295, "t": 500.5, "w": 148, "h": 58 }
+          },
+          {
+            "id": "0ESD3973\nSD SOLVENT\nREFLUX PUMPS",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 527, "t": 498.5, "w": 149, "h": 60 }
+          },
+          {
+            "id": "0ESD3974\nSD SOLVENT\nREFLUX ACCUMULATOR",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 750, "t": 499.5, "w": 171, "h": 59 }
+          },
+          {
+            "id": "0ESD3975\nSOLVENT REFLUX\nACCUMULATOR",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 995, "t": 502.5, "w": 146, "h": 56 }
+          },
+          {
+            "id": "0ESD3976\nSD SOLVENT\nCHARGE PUMPS",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 1229, "t": 498.5, "w": 143, "h": 61 }
+          },
+          {
+            "id": "0ESD3977\nANTIFOAM\nSTORAGE TANK",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 1462, "t": 500.5, "w": 145, "h": 58 }
+          },
+          {
+            "id": "0ESD3978\nSD SOLVENT\nFILTR.PUMPS",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 62, "t": 637.5, "w": 150, "h": 58 }
+          },
+          {
+            "id": "0ESD3980\nENERGIZER\nMAKE-UP TANK",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 294, "t": 637.5, "w": 148, "h": 58 }
+          },
+          {
+            "id": "0ESD3981\nSOLVENT\nSUMP DRUM",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 529, "t": 638.5, "w": 146, "h": 57 }
+          },
+          {
+            "id": "0ESD3982\nETHANE GAS\nFILT.BOTTOM",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 761, "t": 636.5, "w": 148, "h": 60 }
+          },
+          {
+            "id": "0ESD3986\nSD SOLVENT\nCIRCULATION",
+            "type":"esd",
+            "to":102,
+            "variableid":"",
+            "pos": { "l": 994, "t": 638.5, "w": 147, "h": 57 }
+          },
+          {
+            "id": "0ESD3987\nSHUTDOWN\nREGENRATION",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 1228, "t": 635.5, "w": 147, "h": 61 }
+          },
+          {
+            "id": "0ESD3988\nSD ETHANE\nGAS SECTION",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 1461, "t": 637.5, "w": 148, "h": 60 }
+          },
+          {
+            "id": "0ESD3989\nSOLVENT TO ETH.\nSOLVENT CONT",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 62, "t": 769.5, "w": 147, "h": 59 }
+          },
+          {
+            "id": "0ESD3992\nSOLV TO REGEN\nGAS SOL CONT",
+            "type":"esd",
+            "to":0,
+            "variableid":"",
+            "pos": { "l": 294, "t": 771.5, "w": 147, "h": 60 }
+          }
+        ],
+        "logics": []
+      },
+      {
+        "id": 102,
+        "parentId": 100,
+        "width": 1650,
+        "height": 917,
+        "imageUrl":"images/fill.jpg",
+        "page":"CLS407-309",
+        "description":"UNIT 407 ESD3",
+        "overview":false,
+        "type": "plant",
+        "lines": [],
+        "valves": [
+          { "id": "0EV037", "pos": { "l": 595, "t": 311.5, "w": 24, "h": 24 },"type":"sdv","rotated":"","pst":false ,"variableId":"407ES0EV037"},
+          { "id": "0EV036", "pos": { "l": 1048, "t": 387.5, "w": 24, "h": 24 },"type":"sdv","rotated":"","pst":false,"variableId":"407ES0EV036" },
+          { "id": "0EV026", "pos": { "l": 1548, "t": 290.5, "w": 24, "h": 24 },"type":"sdv","rotated":"","pst":false,"variableId":"407ES0EV026" },
+          { "id": "0EV006", "pos": { "l": 1322, "t": 676.5, "w": 24, "h": 24 },"type":"sdv","rotated":"","pst":false,"variableId":"407ES0EV006" },
+          { "id": "0EV027", "pos": { "l": 1322, "t": 763.5, "w": 24, "h": 24 } ,"type":"sdv","rotated":"","pst":false,"variableId":"407ES0EV027"}
+        ],
+        "equipments": [],
+        "links": [],
+        "indicators": [
+          { "id": "0PB986", "pos": { "l": 90, "t": 137.5, "w": 80, "h": 20 },"variableId":"403ARS0TI033","type":"" }
+        ],
+        "alarms": [
+          { "id": "0LAHH010", "pos": { "l": 353, "t": 307.5, "w": 81, "h": 21 },"variableid":"407ES0LI010" },
+          { "id": "0LALL010", "pos": { "l": 356, "t": 675.5, "w": 79, "h": 20 },"variableid":"407ES0LI010" },
+          { "id": "0LALL028", "pos": { "l": 694, "t": 635.5, "w": 80, "h": 19 },"variableid":"407ES0LI028" },
+          { "id": "0LALL013", "pos": { "l": 1028, "t": 825.5, "w": 79, "h": 19 },"variableid":"407ES0LI013" },
+          { "id": "0PAHH010", "pos": { "l": 810, "t": 309.5, "w": 81, "h": 21 },"variableid":"407ES0PI010" },
+          { "id": "0LALL027", "pos": { "l": 1307, "t": 309.5, "w": 83, "h": 22 },"variableid":"407ES0LI027" },
+          { "id": "0LALL009", "pos": { "l": 1305, "t": 567.5, "w": 81, "h": 19 },"variableid":"407ES0LI009B" }
+        ],
+        "flares": [],
+        "sliders": [],
+        "esds": [
+          {
+            "id": "0ESD3986\nSD SOLVENT\nCIRCULATION",
+            "pos": { "l": 178, "t": 12.5, "w": 143, "h": 51 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
+          },
+          { "id": "0ESD3987", "pos": { "l": 28, "t": 82.5, "w": 144, "h": 21 },"type":"esd","to":0,"variableid":"" },
+          {
+            "id": "0ESD3977\nANTIFOAM\nSTORAGE TANK",
+            "pos": { "l": 440, "t": 12.5, "w": 144, "h": 50 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
+          },
+          {
+            "id": "0ESD3969\nRICH SOLVENT\nFLASH DRUM",
+            "pos": { "l": 440, "t": 203.5, "w": 144, "h": 52 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
+          },
+          {
+            "id": "0ESD3970\nRICH SOLVENT\nFLASH DRUM",
+            "pos": { "l": 897, "t": 202.5, "w": 143, "h": 52 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
+          },
+          {
+            "id": "0ESD3965\nETHANE SOLVENT\nCONTRACTOR",
+            "pos": { "l": 1395, "t": 204.5, "w": 142, "h": 49 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
+          },
+          { "id": "0ESD3955", "pos": { "l": 1048, "t": 297.5, "w": 140, "h": 24 },"type":"esd","to":0 ,"variableid":""},
+          { "id": "0ESD3954", "pos": { "l": 1046, "t": 334.5, "w": 143, "h": 23 },"type":"esd","to":0 ,"variableid":""},
+          {
+            "id": "0ESD3980\nENERGIZER\nMAKE-UP TANK",
+            "pos": { "l": 440, "t": 393.5, "w": 146, "h": 51 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
+          },
+          {
+            "id": "0ESD3966\nETHANE GAS\nFILT.STANDPIPE",
+            "pos": { "l": 780, "t": 484.5, "w": 143, "h": 51 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
+          },
+          {
+            "id": "0ESD3982\nETHANE FAS\nFILT.BOTTOM",
+            "pos": { "l": 1389, "t": 414.5, "w": 145, "h": 53 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
+          },
+          { "id": "0ESD2007", "pos": { "l": 1240, "t": 484.5, "w": 145, "h": 22 },"type":"esd","to":0,"variableid":"" },
+          { "id": "0ESD2307", "pos": { "l": 1241, "t": 520.5, "w": 146, "h": 25 },"type":"esd","to":0,"variableid":"" },
+          { "id": "0ESD2007", "pos": { "l": 630, "t": 551.5, "w": 144, "h": 22 },"type":"esd" ,"to":0,"variableid":""},
+          { "id": "0ESD2307", "pos": { "l": 630, "t": 587.5, "w": 144, "h": 21 },"type":"esd" ,"to":0,"variableid":""},
+          {
+            "id": "0ESD3971\nSOLVENT\nREGENERATOR",
+            "pos": { "l": 1113, "t": 637.5, "w": 143, "h": 52 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
+          },
+          {
+            "id": "0ESD3968\nSOLVENT REGEN\n& FLASH DRUM",
+            "pos": { "l": 440, "t": 569.5, "w": 143, "h": 52 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
+          },
+          {
+            "id": "4070YSLL014\nSHUTDOWN P-407-014",
+            "pos": { "l": 588, "t": 80.5, "w": 123, "h": 36 },
+            "type":"logic_res",
+            "to":0,
+            "text":"4070YSLL014\nSHUTDOWN P-407-014",
+            "variableid":""
+          },
+          {
+            "id": "4070YSLL041\nSHUTDOWN P-407-041",
+            "pos": { "l": 588, "t": 118.5, "w": 125, "h": 36 },
+            "type":"logic_res",
+            "to":0,
+            "text":"4070YSLL014\nSHUTDOWN P-407-041",
+            "variableid":""
+          },
+          {
+            "id": "4070YSLL040\nSHUTDOWN MX-407-040",
+            "pos": { "l": 587, "t": 156.5, "w": 131, "h": 33 },
+            "type":"logic_res",
+            "to":0,
+            "text":"4070YSLL014\nSHUTDOWN MX-407-040",
+            "variableid":""
+          },
+          {
+            "id": "Close 4070EV006",
+            "pos": { "l": 1316, "t": 722.5, "w": 100, "h": 17 },
+            "type":"logic_res",
+            "to":0,
+            "text":"Close 4070EV006",
+            "variableid":""
+          },
+          {
+            "id": "Close 4070EV27",
+            "pos": { "l": 1314, "t": 810.5, "w": 102, "h": 20 },
+            "type":"logic_res",
+            "to":0,
+            "text":"Close 4070EV027",
+            "variableid":""
+          },
+          {
+            "id": "4070LYV011\nCLOSE 4070LV011",
+            "pos": { "l": 1314, "t": 833.5, "w": 112, "h": 32 },
+            "type":"logic_res",
+            "to":0,
+            "text":"4070LYV011\nCLOSE 4070LV011",
+            "variableid":"407ES0LIC011OP"
+          },
+          {
+            "id": "4070LYV012\nCLOSE 4070LV012",
+            "pos": { "l": 1312, "t": 870.5, "w": 111, "h": 38 },
+            "type":"logic_res",
+            "to":0,
+            "text":"4070LYV012\nCLOSE 4070LV012",
+            "variableid":"407ES0LIC012OP"
+          },
+          {
+            "id": "4070YSLL015\nSHUTDOWN P-407-015",
+            "pos": { "l": 588, "t": 451.5, "w": 137, "h": 39 },
+            "type":"logic_res",
+            "to":0,
+            "text":"4070YSLL015\nCLOSE P-407-015",
+            "variableid":""
+          },
+          {
+            "id": "4070YSLL045\nSHUTDOWN MX-407-041",
+            "pos": { "l": 589, "t": 494.5, "w": 138, "h": 39 },
+            "type":"logic_res",
+            "to":0,
+            "text":"4070LYV045\nSHUTDOWN MX-407-041",
+            "variableid":""
+          },
+          {
+            "id": "4070LYV007\nCLOSE 4070LV007",
+            "pos": { "l": 1539, "t": 513.5, "w": 102, "h": 42 },
+            "type":"logic_res",
+            "to":0,
+            "text":"4070LYV007\nCLOSE 4070LV007",
+            "variableid":"407ES0LIC007OP"
+          },
+          {
+            "id": "Close 4070EV036",
+            "pos": { "l": 1045, "t": 432.5, "w": 104, "h": 19 },
+            "type":"logic_res",
+            "to":0,
+            "text":"Close 4070EV036",
+            "variableid":""
+          },
+          {
+            "id": "4070LYV029\nCLOSE 4070LV029",
+            "pos": { "l": 928, "t": 584.5, "w": 123, "h": 50 },
+            "type":"logic_res",
+            "to":0,
+            "text":"4070LYV029\nCLOSE 4070LV029",
+            "variableid":"407ES0LI029"
           }
         ],
         "logics": []
@@ -3299,6 +4107,7 @@
         "height": 917,
         "imageUrl":"images/403A-L2.png",
         "description":"UNIT 403A ESD3",
+        "overview":false,
         "page":"CLS403A-302",
         "type": "plant",
         "lines": [
@@ -3505,7 +4314,7 @@
         "valves": [
           {
             "id": "0EV010",
-            "pos": { "l": 633, "t": 700.5, "w": 24, "h": 24 },
+            "pos": { "l": 623, "t": 700.5, "w": 24, "h": 24 },
             "variableId": "403ARS0EV010",
             "type":"sdv",
             "rotated":"",
@@ -3519,7 +4328,7 @@
           { "id": "0VAHH004A", "pos": { "l": 394, "t": 266.5, "w": 79, "h": 19 } ,"variableid":"403ARS0TI033"},
           { "id": "0LALL018", "pos": { "l": 397, "t": 515.5, "w": 80, "h": 20 } ,"variableid":"403ARS0LI018"},
           { "id": "0LALL015", "pos": { "l": 396, "t": 791.5, "w": 81, "h": 20 } ,"variableid":"403ARS0LI015"},
-          { "id": "0LALL009", "pos": { "l": 1066, "t": 515.5, "w": 79, "h": 19 } ,"variableid":"403ARS0LI009"},
+          { "id": "0LALL009", "pos": { "l": 1069, "t": 515.5, "w": 79, "h": 19 } ,"variableid":"403ARS0LI009"},
           {
             "id": "0VAHH004B",
             "pos": { "l": 1068, "t": 266.5, "w": 78, "h": 19 },
@@ -3537,7 +4346,7 @@
             "variableid":""
           },
           {
-            "id": "0ESD2003A     \n          ",
+            "id": "0ESD2003A",
             "pos": { "l": 1004, "t": 172.5, "w": 144, "h": 22 },
             "type":"esd",
             "to":0,
@@ -3576,19 +4385,19 @@
           { "id": "0ESD2303A", "pos": { "l": 371, "t": 199.5, "w": 143, "h": 21 },"type":"esd","to":0,"variableid":"" },
           { "id": "0ESD2003A", "pos": { "l": 371, "t": 412.5, "w": 144, "h": 23 },"type":"esd","to":0,"variableid":"" },
           { "id": "0ESD2303A", "pos": { "l": 373, "t": 448.5, "w": 141, "h": 23 },"type":"esd","to":0,"variableid":"" },
-          { "id": "0ESD2003A", "pos": { "l": 371, "t": 673.5, "w": 145, "h": 22 },"type":"esd","to":0,"variableid":"" },
-          { "id": "0ESD2303A", "pos": { "l": 371, "t": 710.5, "w": 143, "h": 21 },"type":"esd","to":0,"variableid":"" },
-          { "id": "0ESD3301A", "pos": { "l": 371, "t": 746.5, "w": 143, "h": 20 },"type":"esd","to":0,"variableid":"" },
+          { "id": "0ESD2003A", "pos": { "l": 373, "t": 668.5, "w": 145, "h": 22 },"type":"esd","to":0,"variableid":"" },
+          { "id": "0ESD2303A", "pos": { "l": 373, "t": 705.5, "w": 143, "h": 21 },"type":"esd","to":0,"variableid":"" },
+          { "id": "0ESD3301A", "pos": { "l": 373, "t": 741.5, "w": 143, "h": 20 },"type":"esd","to":0,"variableid":"" },
           {
             "id": "0ESD2003A",
-            "pos": { "l": 1005, "t": 423.5, "w": 144, "h": 21 },
+            "pos": { "l": 1045, "t": 418.5, "w": 144, "h": 21 },
             "type":"esd",
             "to":0,
             "variableid":""
           },
           {
             "id": "0ESD2303A",
-            "pos": { "l": 1004, "t": 458.5, "w": 146, "h": 23 },
+            "pos": { "l": 1044, "t": 453.5, "w": 146, "h": 23 },
             "type":"esd",
             "to":0,
             "variableid":""
@@ -3632,6 +4441,325 @@
             "to":0,
             "variableid":"403ARS0EV010",
             "text":"CLOSE 403A0EV010"
+          }
+        ],
+        "logics": []
+      },
+
+      {
+        "id": 93,
+        "parentId": 90,
+        "width": 1650,
+        "height": 912,
+        "imageUrl":"images/403A-L3.png",
+        "page":"CLS403A-302",
+        "overview":false,
+        "description":"UNIT 403A ESD3",
+        "type": "plant",
+        "lines": [
+          {
+            "points": [
+              [516, 165, "M"],
+              [599, 165, "L"]
+            ],
+            "id": "0ESD2003AL",
+            "connected":"",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [515, 202, "M"],
+              [599, 202, "L"]
+            ],
+            "id": "0ESD2303AL",
+            "connected":"",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [515, 241, "M"],
+              [598, 241, "L"]
+            ],
+            "id": "0ESD3976L",
+            "connected":"",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [516, 293, "M"],
+              [599, 293, "L"]
+            ],
+            "id": "0PB990L",
+            "connected":"",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [604, 127, "M"],
+              [604, 407, "L"],
+              [604, 166, "L"],
+              [960, 166, "L"]
+            ],
+            "id": "0ESD3990L",
+            "connected":"0PB990L",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [605, 361, "M"],
+              [960, 361, "L"]
+            ],
+            "id": "0ESD3990L",
+            "connected":"0PB990L",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [877, 408, "M"],
+              [959, 408, "L"]
+            ],
+            "id": "0LAHH022L",
+            "connected":"",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [879, 212, "M"],
+              [962, 212, "L"]
+            ],
+            "id": "0TAHH009L",
+            "connected":"",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [966, 126, "M"],
+              [966, 241, "L"],
+              [966, 192, "L"],
+              [1050, 192, "L"]
+            ],
+            "id": "0ESD3950L",
+            "connected":"0TAHH009L",
+            "action":["403ARS0EV013","close"]
+          },
+          {
+            "points": [
+              [967, 322, "M"],
+              [967, 435, "L"],
+              [967, 386, "L"],
+              [1050, 386, "L"]
+            ],
+            "id": "0ESD3956L",
+            "connected":"0LAHH022L",
+            "action":["403ARS0EV012","close"]
+          },
+          {
+            "points": [
+              [519, 655, "M"],
+              [602, 655, "L"]
+            ],
+            "id": "0ESD2003AL",
+            "connected":"",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [519, 690, "M"],
+              [601, 690, "L"]
+            ],
+            "id": "0ESD2303AL",
+            "connected":"",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [520, 728, "M"],
+              [602, 728, "L"]
+            ],
+            "id": "0ESD3970L",
+            "connected":"",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [605, 561, "M"],
+              [605, 813, "L"],
+              [605, 590, "L"],
+              [962, 590, "L"]
+            ],
+            "id": "0ESD3970L",
+            "connected":"",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [607, 787, "M"],
+              [962, 787, "L"]
+            ],
+            "id": "0ESD3970L",
+            "connected":"",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [875, 637, "M"],
+              [962, 637, "L"]
+            ],
+            "id": "0LALL022L",
+            "connected":"",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [966, 553, "M"],
+              [966, 667, "L"],
+              [966, 614, "L"],
+              [1053, 614, "L"]
+            ],
+            "id": "0ESD3955L",
+            "connected":"0LALL022L",
+            "action":["403ARS0EV015","close"]
+          },
+          {
+            "points": [
+              [877, 832, "M"],
+              [963, 832, "L"]
+            ],
+            "id": "0LALL026L",
+            "connected":"",
+            "action":["",""]
+          },
+          {
+            "points": [
+              [965, 746, "M"],
+              [965, 858, "L"],
+              [965, 812, "L"],
+              [1051, 812, "L"]
+            ],
+            "id": "0ESD3954L",
+            "connected":"0LALL026L",
+            "action":["403ARS0EV005","close"]
+          }
+        ],
+        "valves": [
+          { "id": "0EV013", "pos": { "l": 1050, "t": 156, "w": 24, "h": 24 },"variableId":"403ARS0EV013" ,"type":"sdv","pst":false,"rotated":""},
+          { "id": "0EV012", "pos": { "l": 1050, "t": 349, "w": 24, "h": 24 },"variableId":"403ARS0EV012" ,"type":"sdv","pst":false,"rotated":""},
+          { "id": "0EV015", "pos": { "l": 1050, "t": 578, "w": 24, "h": 24 },"variableId":"403ARS0EV015" ,"type":"sdv","pst":false,"rotated":""},
+          { "id": "0EV005", "pos": { "l": 1050, "t": 774, "w": 24, "h": 24 },"variableId":"403ARS0EV005" ,"type":"sdv","pst":false,"rotated":""}
+        ],
+        "equipments": [],
+        "links": [],
+        "indicators": [],
+        "alarms": [
+          { "id": "0PB990", "pos": { "l": 423, "t": 283, "w": 91, "h": 19 },"variableid":"403ARS0TI033" },
+          {
+            "id": "0TAHH009",
+            "pos": { "l": 786, "t": 201, "w": 90, "h": 18 },
+            "variableid": "403ARS0TI009"
+          },
+          {
+            "id": "0LAHH022",
+            "pos": { "l": 786, "t": 401, "w": 90, "h": 18 },
+            "variableid": "403ARS0LI022"
+          },
+          {
+            "id": "0LALL026",
+            "pos": { "l": 786, "t": 820, "w": 92, "h": 18 },
+            "variableid": "403ARS0LI026"
+          },
+          {
+            "id": "0LALL022",
+            "pos": { "l": 786, "t": 630, "w": 92, "h": 18 },
+            "variableid": "403ARS0LI026"
+          }
+        ],
+        "flares": [],
+        "sliders": [],
+        "esds": [
+          {
+            "id": "CLOSE 403A0EV013",
+            "pos": { "l": 1048, "t": 200, "w": 131, "h": 31 },
+            "type":"logic_res",
+            "text":"CLOSE 403A0EV013",
+            "to":0,
+            "variableid":"403ARS0EV013"
+          },
+          {
+            "id": "CLOSE 403A0EV012",
+            "pos": { "l": 1048, "t": 393, "w": 134, "h": 36 },
+            "type":"logic_res",
+            "text":"CLOSE 403A0EV012",
+            "to":0,
+            "variableid":"403ARS0EV012"
+          },
+          {
+            "id": "CLOSE 403A0EV015",
+            "pos": { "l": 1049, "t": 623, "w": 135, "h": 32 },
+            "type":"logic_res",
+            "text":"CLOSE 403A0EV015",
+            "to":0,
+            "variableid":"403ARS0EV015"
+          },
+          {
+            "id": "CLOSE 403A0EV005",
+            "pos": { "l": 1045, "t": 817, "w": 142, "h": 34 },
+            "type":"logic_res",
+            "text":"CLOSE 403A0EV005",
+            "to":0,
+            "variableid":"403ARS0EV005"
+          },
+          {
+            "id": "0ESD3990\nREGEN GAS\nAMINE TREATING",
+            "pos": { "l": 523, "t": 75, "w": 163, "h": 51 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
+          },
+          {
+            "id": "0ESD3950\nREGEN GAS TO\nCOALES FILTER",
+            "pos": { "l": 885, "t": 76, "w": 162, "h": 51 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
+          },
+          {
+            "id": "0ESD3956\nTREATED\nREGEN GAS",
+            "pos": { "l": 885, "t": 270, "w": 163, "h": 50 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
+          },
+          { "id": "0ESD2003A", "pos": { "l": 351, "t": 155, "w": 166, "h": 22 },"type":"esd",
+            "to":0,
+            "variableid":"" },
+          { "id": "0ESD2303A", "pos": { "l": 351, "t": 193, "w": 165, "h": 19 },"type":"esd",
+            "to":0,
+            "variableid":"" },
+          { "id": "0ESD3976", "pos": { "l": 352, "t": 228, "w": 165, "h": 22 },"type":"esd",
+            "to":0,
+            "variableid":"" },
+          { "id": "0ESD2003A", "pos": { "l": 356, "t": 642, "w": 162, "h": 21 },"type":"esd",
+            "to":0,
+            "variableid":"" },
+          { "id": "0ESD2303A", "pos": { "l": 355, "t": 681, "w": 164, "h": 19 },"type":"esd",
+            "to":0,
+            "variableid":"" },
+          { "id": "0ESD3970", "pos": { "l": 355, "t": 716, "w": 163, "h": 22 },"type":"esd",
+            "to":0,
+            "variableid":"" },
+          {
+            "id": "0ESD3955\nREGEN GAS\nKO DRUM",
+            "pos": { "l": 884, "t": 499, "w": 164, "h": 51 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
+          },
+          {
+            "id": "0ESD3954\nREGEN GAS\n SOLVENT CONT",
+            "pos": { "l": 884, "t": 694, "w": 165, "h": 50 },
+            "type":"esd",
+            "to":0,
+            "variableid":""
           }
         ],
         "logics": []
