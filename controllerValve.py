@@ -11,13 +11,14 @@ from Store import Store
 class ControllerValve(QWidget):
         ChangePosValve = pyqtSignal(float)
         updatevalues = pyqtSignal()
-        def __init__(self,name,rotated,pvvalues,variableid:str,store:Store):
+        def __init__(self,name,rotated,pvvalues,variableid:str,store:Store,ranges:list):
                 super().__init__()
                 self.setWindowTitle("controllerValve")
                 self.resize(50, 40)
                 self.faceplates = []
                 self.rotated = rotated
                 self.name = name
+                self.ranges = ranges
                 self.pvvalues = pvvalues
                 self.variableid = variableid
                 current_path = os.getcwd()
@@ -25,7 +26,7 @@ class ControllerValve(QWidget):
                 self.equip_path = os.path.join(images, "equipment")
                 self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
                 self.image = {}
-                self.faceplate = ControllerPlate(name,pvvalues,variableid,store)
+                self.faceplate = ControllerPlate(name,pvvalues,variableid,store,ranges)
                 self.load_image()
 
                 self.image_label = QLabel(self)
@@ -88,7 +89,7 @@ class ControllerValve(QWidget):
             if event.button() == Qt.MouseButton.LeftButton:
                 if not hasattr(self, 'faceplate') or self.faceplate is None or not self.faceplate.isVisible():
                     varid = self.variableid[:-2]
-                    self.faceplate = ControllerPlate(self.name, self.pvvalues, varid, self.store)
+                    self.faceplate = ControllerPlate(self.name, self.pvvalues, varid, self.store,self.ranges)
                     self.faceplate.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose, True)
                     self.faceplate.setWindowFlag(Qt.WindowType.WindowStaysOnTopHint, True)
                     self.faceplate.destroyed.connect(self._faceplate_closed)

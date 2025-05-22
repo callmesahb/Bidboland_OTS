@@ -41,6 +41,16 @@ class Slider(QtWidgets.QWidget):
             self.progress_bar.setFixedSize(self.w,self.h)
             self.hlayout.addWidget(self.progress_bar)
             self.hlayout.addWidget(self.valuelabel)
+        if self.name == "0TIC034":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.hlayout.addWidget(self.valuelabel)
+            self.hlayout.addWidget(self.progress_bar)
+        if self.name == "0LIC705":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.hlayout.addWidget(self.valuelabel)
+            self.hlayout.addWidget(self.progress_bar)
         if self.rotated == "right":
             pass
         if self.name[0] == "S":
@@ -73,6 +83,15 @@ class Slider(QtWidgets.QWidget):
             value = 0
             self.progress_bar.setValue(int(round(value,2)))
             self.valuelabel.setText(str(round(value,2)))
+        if value > 0 and value <=5:
+            self.progress_bar.setStyleSheet("""
+                                            QProgressBar {
+                background-color: #2e2e2e;
+                color:#FF0000;
+                border: none;
+                border-radius: 2px;
+            }
+            """)
         self.update()
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)

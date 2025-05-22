@@ -11,6 +11,7 @@ class Valves(QtWidgets.QWidget):
         self.value = value
         self.variableid = variableid
         self.store = store
+        self.name = QtWidgets.QLabel("0EV001",self)
         self.setWindowFlags(QtCore.Qt.WindowType.Window | QtCore.Qt.WindowType.CustomizeWindowHint | QtCore.Qt.WindowType.WindowTitleHint | QtCore.Qt.WindowType.WindowCloseButtonHint)
         self._InitUi()
         store.updatevalues.connect(self.ReadingValue)
@@ -22,7 +23,8 @@ class Valves(QtWidgets.QWidget):
         self.setLayout(self.vlayout)
         
     def settingData(self):
-        self.name = QtWidgets.QLabel("0EV001",self)
+        name = "" + self.variableid 
+        self.name.setText(name)
         self.vlayout.addWidget(self.name)
         hline = QtWidgets.QFrame()
         hline.setFrameShape(QtWidgets.QFrame.Shape.HLine)
@@ -33,12 +35,15 @@ class Valves(QtWidgets.QWidget):
     def settingPV(self):
         self.radioGroupBox = QtWidgets.QGroupBox("PV",self)
         self.radioGroupBox.setStyleSheet("color:gray;")
+        self.radioGroupBox.setEnabled(False)
         self.radioLayout = QtWidgets.QVBoxLayout()
         self.Openradio= QtWidgets.QRadioButton("OPEN",self)
         self.Openradio.setStyleSheet("color:black;")
         self.Openradio.setChecked(True)
+        self.Openradio.setEnabled(False)
         self.Closeradio= QtWidgets.QRadioButton("CLOSE",self)
         self.Closeradio.setStyleSheet("color:black;")
+        self.Closeradio.setEnabled(False)
         self.radioLayout.addWidget(self.Openradio)
         self.radioLayout.addWidget(self.Closeradio)
         self.radioGroupBox.setLayout(self.radioLayout)

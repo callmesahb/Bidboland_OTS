@@ -11,7 +11,7 @@ class Indicator(QtWidgets.QWidget):
     updatevalues = QtCore.pyqtSignal(dict,list)
     TrendRequested = QtCore.pyqtSignal(str)
     
-    def __init__(self,name,value,itype,pvvalues,store:Store,variableid:str):
+    def __init__(self,name,value,itype,pvvalues,store:Store,variableid:str,ranges:list):
         super().__init__()
         self.setStyleSheet("background-color:black")
         self.name = name
@@ -20,6 +20,7 @@ class Indicator(QtWidgets.QWidget):
         self.pvvalues = pvvalues
         self.store = store
         self.variableid = variableid
+        self.ranges = ranges
         # self.setMinimumSize(80,50)
         self.setWindowFlags(Qt.WindowType.WindowStaysOnTopHint)
         self.InitUI()
@@ -47,13 +48,22 @@ class Indicator(QtWidgets.QWidget):
     def mousePressEvent(self, event: QtGui.QMouseEvent):
         if event.button() == Qt.MouseButton.LeftButton:
             if self.itype == "controller":
-                self.contplate = ControllerPlate(self.name,self.pvvalues,self.variableid,self.store)
+                self.finaltext = " " + self.variableid
+                self.contplate = ControllerPlate(self.name,self.pvvalues,self.variableid,self.store,self.ranges)
+                pvname = self.variableid + "PV"
+                unittag = self.store.GettingUnit(pvname)
+                unit = " " + unittag
+                self.contplate.Unittag.setText(unit)
+                self.contplate.namee.setText(self.finaltext)
                 self.contplate.show()
             if self.itype == "":
-                self.sensor = Sensor(self.value,self.store,self.name,self.variableid)
+                unittag = self.store.GettingUnit(self.variableid)
+                unit = " " + unittag
+                self.sensor = Sensor(self.value,self.store,self.name,self.variableid,self.ranges)
                 self.sensor.setWindowTitle(self.variableid)
                 self.finaltext = " " + self.variableid
                 self.sensor.sensorname.setText(self.finaltext)
+                # self.sensor.unittag.setText(unit)
                 self.sensor.show()
     
     @QtCore.pyqtSlot()

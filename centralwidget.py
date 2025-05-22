@@ -10,6 +10,7 @@ from AirCoolerElem import Aircooler
 from Menubar import Menu
 from BPS_elem import BPS
 from FilterElem import Filter
+from FilterElem2 import Filter2
 from Equipment import Equipment
 from Pump import NormalPump
 from controllerValve import ControllerValve
@@ -83,7 +84,7 @@ class MainWidget(QtWidgets.QWidget):
         img_width = img.size().width()
         img_height = img.size().height()
         screen_width = self.screen().size().width()
-        screen_height = 0.88 * self.screen().size().height()
+        screen_height = self.screen().size().height()
         width_scale = screen_width / img_width
         height_scale = screen_height / img_height
 
@@ -122,18 +123,27 @@ class MainWidget(QtWidgets.QWidget):
                 
             self.alarmlines = {}
             self.connectedlines = {}
-            tempScene.addPixmap(mainImage)
+            tempScene.addPixmap(self.scaledImage)
             for _ind in page["indicators"]:
                 pos = _ind["pos"]
                 name = _ind["id"]
                 variableid = _ind["variableId"]
-                itype = _ind["type"]
                 value = self.store.SettingInitial(variableid)
                 pvvalues = self.store.GettingControllerDetails(variableid)
+                itype = _ind["type"]
+                ranges = []
+                if itype == "":
+                    ranges = self.store.SettingDetailsofsensor(variableid)
+                    self.indi = Indicator(name, value, itype, pvvalues,self.store,variableid,ranges)
+                elif itype=="controller":
+                    varid = variableid + "PV"
+                    ranges = self.store.SettingDetailsofsensor(varid)
+                    self.indi = Indicator(name, value, itype, pvvalues,self.store,variableid,ranges)
+                
                 # value = self.store.opc.getValue(variableid)
                 # print(f"{name}:{variableid}:{value}")
-                self.indi = Indicator(name, value, itype, pvvalues,self.store,variableid)
-                self.indi.setGeometry(int(pos["l"]),int(pos["t"]),80,20)
+                # self.indi = Indicator(name, value, itype, pvvalues,self.store,variableid,ranges)
+                self.indi.setGeometry(int(pos["l"]),int(pos["t"]),int(pos["w"]),20)
                 self.store.updatevalues.connect(self.indi.updatinvalue)
                 self.indi.TrendRequested.connect(self.showingTrend)
                 # self.indi.Value.setText(str(round(value,2)))
@@ -159,7 +169,9 @@ class MainWidget(QtWidgets.QWidget):
                 if _type == "controller" and variableid in self.store.getting_names():
                     # print(self.store.getting_names())
                     pvvalues = self.store.GettingControllerDetails(variableid)
-                    valve = ControllerValve(name, rotated, pvvalues,variableid,self.store)
+                    Varid = variableid.replace("OP", "PV")
+                    ranges = self.store.SettingDetailsofsensor(Varid)
+                    valve = ControllerValve(name, rotated, pvvalues,variableid,self.store,ranges)
                     self.store.updatevalues.connect(valve.settingValueController)
                 elif _type in {"sdv", "bdv"}:
                     pststatus = _valve["pst"]
@@ -167,10 +179,13 @@ class MainWidget(QtWidgets.QWidget):
                     self.store.updatevalues.connect(valve.ReadingValue)
                     if pststatus:
                         pst = PSTWidget()
-                        pst.setGeometry(int(pos["l"]-25),int(pos["t"]),int(pos["w"]),int(pos["h"]))
+                        pst.setGeometry(int(pos["l"]-35),int(pos["t"]),int(pos["w"]),int(pos["h"]))
                         tempScene.addWidget(pst)
                     # valve.ChangingValveStatus.connect(self.CheckingvalueSDV)
                     # valve.set_status(value)
+                elif _type == "Filter2":
+                    valve = Filter2(name,self.store,variableid, value)
+                    self.store.updatevalues.connect(valve.settingValueController)
                 elif _type == "dosing":
                     valve =DosingPump(self.store,variableid, value,rotated)
                     self.store.updatevalues.connect(valve.ReadingValue)
@@ -226,7 +241,9 @@ class MainWidget(QtWidgets.QWidget):
                 variableid = hand["variableId"]
                 dtype = hand["type"]
                 if dtype == "controller":
-                    dast = HAND(self.store,variableid)
+                    Varid = variableid + "PV"
+                    ranges = self.store.SettingDetailsofsensor(Varid)
+                    dast = HAND(self.store,variableid,ranges)
                     dast.setGeometry(int(pos["l"])+80, int(pos["t"])-35, 15, 20)
                     tempScene.addWidget(dast)
                     # dast.set_status(1)
@@ -236,7 +253,6 @@ class MainWidget(QtWidgets.QWidget):
                 lineid = _line["id"]
                 connected = _line["connected"]
                 action = _line["action"]
-                print(f"{lineid}:{connected}")
                 self.line = AlarmLine(pos,connected,action,self.store,lineid)
                 self.line.lineid = lineid
                 self.line.signals.done_signal.connect(self.set_done)
@@ -344,7 +360,7 @@ class MainWidget(QtWidgets.QWidget):
     def resizeEvent(self, a0):
         # super().resizeEvent(a0)
         # self.graphicsview.fitInView(self.scenes[SceneIndex].sceneRect(), QtCore.Qt.AspectRatioMode.KeepAspectRatio)
-        self.graphicsview.fitInView(QtCore.QRectF(self.scaledImage.rect()), QtCore.Qt.AspectRatioMode.KeepAspectRatio or QtCore.Qt.AspectRatioMode.KeepAspectRatio)
+        self.graphicsview.fitInView(QtCore.QRectF(self.scaledImage.rect()),QtCore.Qt.AspectRatioMode.KeepAspectRatio)
         
     @pyqtSlot(bool)
     def reset_widgets(self):

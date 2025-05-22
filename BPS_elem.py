@@ -66,11 +66,11 @@ class BPS(QWidget):
         def ReadingValue(self):
             value = self.store.finaltag[self.variableid]
             self.set_status(value)
-        def mousePressEvent(self, event:QMouseEvent):
-            if event.button() == Qt.MouseButton.LeftButton:
-                self.faceplate.setWindowTitle(self.name)
-                self.faceplate.name.setText(self.name)
-                self.faceplate.show()
+        # def mousePressEvent(self, event:QMouseEvent):
+        #     if event.button() == Qt.MouseButton.LeftButton:
+        #         self.faceplate.setWindowTitle(self.name)
+        #         self.faceplate.name.setText(self.name)
+        #         self.faceplate.show()
 
 if __name__ == '__main__':
         app = QApplication(sys.argv)

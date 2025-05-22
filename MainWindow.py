@@ -130,7 +130,9 @@ class MainWindow(QtWidgets.QMainWindow):
         if pageId in self.pageorder:
             self.Currentindex = self.pageorder[pageId]
             desc = self.store.ListingDescs(self.Currentindex)["description"]
+            page = self.store.ListingDescs(self.Currentindex)["page"]
             self.cntwidget.updateDesc(desc)
+            self.cntwidget.updatepage(page)
             self.update()
             self.centralWidget().SetActiveScene(self.Currentindex)
             

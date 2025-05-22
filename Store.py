@@ -98,12 +98,14 @@ class Store(QObject):
             details.append(HH)
             details.append(L)
             details.append(H)
+        # print(details)
         return details
     def GettingUnit(self,varid) -> str:
         unit = ""
-        if varid in self.names:
-            varid_dict = next(item for item in self.tags if item['name'] == varid)
-            unit = varid_dict["unit"]
+        for item in self.tags:
+            if item["name"] == varid:
+                unit = item.get('unit',"")
+                return item.get('unit',"")
         return unit
 
     def GettingControllerDetails(self,varid:str) -> list:

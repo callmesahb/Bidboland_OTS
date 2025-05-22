@@ -856,7 +856,7 @@
     { "name": "407ES0PIC007BOPH", "unit": "%", "value": 100.0, "initial": 100.0 },
   
     { "name": "403ARS0LI019", "value": 11.4514, "initial": 11.4514, "unit": "%", "R": [0, 100], "HHR": [5, 90], "HR": [25, 75] },
-    { "name": "403ARS0TI033", "value": 39.7926, "initial": 39.7926, "unit": "C", "R": [28, 60], "HHR": [29.6, 56.8], "HR": [35, 45] },
+    { "name": "403ARS0TI033", "value": 39.7926, "initial": 39.7926, "unit": "C", "R": [28, 60], "HHR": [28, 56.8], "HR": [28, 45] },
     { "name": "403ARS0TI042", "value": 40.4824, "initial": 40.4824, "unit": "C", "R": [24, 67], "HHR": [26.15, 62.4], "HR": [30, 50] },
     { "name": "403ARS0AI001", "value": 3.14442, "initial": 3.14442, "unit": "ppmv", "R": [0, 7], "HHR": [-1, 6], "HR": [-1, 5] },
     { "name": "403ARS0LI023", "value": 2, "initial": 2, "unit": "%", "R": [0, 100], "HHR": [0, 100], "HR": [0, 100] },
@@ -1150,6 +1150,8 @@
   
     { "name": "407ES0EV002", "initial": 1, "defaultValue": 1, "errorValue": 2 },
     { "name": "407ES0EV002PV", "value": 1, "derived": { "variableIds": ["407ES0EV002"], "type": "timeDiff", "timeDiff": 1.0 } },
+    { "name": "407ES0EV008", "initial": 1, "defaultValue": 1, "errorValue": 2 },
+    { "name": "407ES0EV008PV", "value": 1, "derived": { "variableIds": ["407ES0EV008"], "type": "timeDiff", "timeDiff": 1.0 } },
     { "name": "407ES0EV035", "initial": 1, "defaultValue": 1, "errorValue": 2 },
     { "name": "407ES0EV035PV", "value": 1, "derived": { "variableIds": ["407ES0EV035"], "type": "timeDiff", "timeDiff": 1.0 } },
     { "name": "407ES0EV044", "initial": 1, "defaultValue": 1, "errorValue": 2 },
@@ -1961,7 +1963,7 @@
     { "name": "407ES0PI003", "value": 42.5868, "initial": 42.5868, "unit": "bar", "R": [0, 100], "HHR": [0, 100], "HR": [0, 100] },
     { "name": "407ES0TI132", "value": 47.2211, "initial": 47.2211, "unit": "C", "R": [0, 100], "HHR": [0, 100], "HR": [0, 100] },
     { "name": "407ES0FI016B", "value": 10.2739, "initial": 10.2739, "unit": "cum/hr", "R": [0, 100], "HHR": [0, 100], "HR": [0, 100] },
-    { "name": "407ES0FI014B", "value": 0.0, "initial": 0.0, "unit": "", "R": [0, 100], "HHR": [0, 100], "HR": [0, 100] },
+    { "name": "407ES0FI014B", "value": 10.0, "initial": 10.0, "unit": "", "R": [0, 100], "HHR": [0, 100], "HR": [0, 100] },
     { "name": "407ES0AI004A", "value": 961.871, "initial": 961.871, "unit": "ppmv", "R": [0, 100], "HHR": [0, 100], "HR": [0, 100] },
     { "name": "407ES0AI004B", "value": 0.887597, "initial": 0.887597, "unit": "mol%", "R": [0, 100], "HHR": [0, 100], "HR": [0, 100] },
     { "name": "407ES0AI004C", "value": 98.4091, "initial": 98.4091, "unit": "mol%", "R": [0, 100], "HHR": [0, 100], "HR": [0, 100] },
@@ -2704,5 +2706,8 @@
     { "name": "403GLFilter", "value": 1, "initial": 1 },
     { "name": "403GLFilter2", "value": 2, "initial": 2 },
     { "name": "407ES0BPZIC035", "initial": 2, "defaultValue": 1, "errorValue": 2 },
-    { "name": "407ES0BPZIC035PV", "value": 2, "derived": { "variableIds": ["407ES0BPZIC035"], "type": "timeDiff", "timeDiff": 1.0 } }
+    { "name": "407ES0BPZIC035PV", "value": 2, "derived": { "variableIds": ["407ES0BPZIC035"], "type": "timeDiff", "timeDiff": 1.0 } },
+    { "name": "CompFilter1", "value": 1, "initial": 1 },
+    { "name": "CompFilter2", "value": 2, "initial": 2 },
+    { "name": "CompFilter3", "value": 2, "initial": 2 }
   ]

@@ -57,6 +57,10 @@ class NormalPump(QWidget):
                     transform = QTransform().rotate(180)
                     self.image["p1g"] = self.image["p1g"].transformed(transform)
                     self.image["p1r"] = self.image["p1r"].transformed(transform)
+                elif self.rotated == "dy":
+                    transform = QTransform().scale(-1, 1)
+                    self.image["p1g"] = self.image["p1g"].transformed(transform, Qt.TransformationMode.SmoothTransformation)
+                    self.image["p1r"] = self.image["p1r"].transformed(transform, Qt.TransformationMode.SmoothTransformation)
 
                           
         @pyqtSlot()

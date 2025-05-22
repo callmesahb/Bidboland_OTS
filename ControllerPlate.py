@@ -9,12 +9,14 @@ class ControllerPlate(QtWidgets.QWidget):
     changeHandtype = QtCore.pyqtSignal(str)
     updatevalues = QtCore.pyqtSignal()
 
-    def __init__(self, name: str, pvvalue: list, variableid, store: Store):
+    def __init__(self, name: str, pvvalue: list, variableid, store: Store,ranges:list):
         super().__init__()
         self.name = name
         self.pvvalues = pvvalue
         self.variableid = variableid
         self.store = store
+        self.ranges = ranges
+        self.setFixedWidth(250)
         self.setWindowFlags(QtCore.Qt.WindowType.WindowStaysOnTopHint)
         self.store.updatevalues.connect(self.upandsettingvaluesofcontroller)
         self.setWindowTitle("Controller")
@@ -28,6 +30,9 @@ class ControllerPlate(QtWidgets.QWidget):
         self.op_edit_lock_timer.setInterval(3000)
         self.op_edit_lock_timer.setSingleShot(True)
         self.op_edit_lock_timer.timeout.connect(self.unlock_op_edit)
+        
+        self.unit = self.store.GettingUnit(self.variableid+"PV")
+        print(f"{self.variableid}:{ranges[0]}")
 
         self.is_editing_op = False
         self.handling_MD = False
@@ -46,7 +51,7 @@ class ControllerPlate(QtWidgets.QWidget):
         self.setLayout(self.vlayout)
 
         self.namee = QtWidgets.QLabel("", self)
-        self.namee.setText(str(self.variableid))
+        self.namee.setText(" " + str(self.variableid))
         hline = QtWidgets.QFrame()
         self.vlayout.addWidget(self.namee)
         hline.setFrameShape(QtWidgets.QFrame.Shape.HLine)
@@ -58,10 +63,12 @@ class ControllerPlate(QtWidgets.QWidget):
     def settingProgressbar(self):
         hlayout = QtWidgets.QHBoxLayout()
         self.Unittag = QtWidgets.QLabel("%", self)
+        unit = "" + self.unit
+        self.Unittag.setText(unit)
         hlayout.addWidget(self.Unittag)
 
-        self.Progressbar = TriangleWidget()
-        self.Progressbar.setminmaxvalue(0, 100)
+        self.Progressbar = TriangleWidget(self.ranges[2],self.ranges[4],self.ranges[5],self.ranges[3])
+        self.Progressbar.setminmaxvalue(self.ranges[0], self.ranges[1])
         hlayout.addWidget(self.Progressbar)
 
         self.vlayout.addLayout(hlayout)
@@ -74,7 +81,7 @@ class ControllerPlate(QtWidgets.QWidget):
 
     def SettingPlaceVariables(self):
         hlayout_sp = QtWidgets.QHBoxLayout()
-        self.SP = QtWidgets.QLabel("SP", self)
+        self.SP = QtWidgets.QLabel(" SP", self)
         self.SPValue = QtWidgets.QLineEdit("", self)
         self.validator = QtGui.QDoubleValidator()
         self.SPValue.setValidator(self.validator)
@@ -86,14 +93,14 @@ class ControllerPlate(QtWidgets.QWidget):
         self.SPValue.editingFinished.connect(self.on_sp_edit_end)
 
         hlayout_pv = QtWidgets.QHBoxLayout()
-        self.PV = QtWidgets.QLabel("PV", self)
+        self.PV = QtWidgets.QLabel(" PV", self)
         self.PVValue = QtWidgets.QLineEdit("", self)
         self.PVValue.setReadOnly(True)
         hlayout_pv.addWidget(self.PV)
         hlayout_pv.addWidget(self.PVValue)
 
         hlayout_op = QtWidgets.QHBoxLayout()
-        self.OP = QtWidgets.QLabel("OP(%)", self)
+        self.OP = QtWidgets.QLabel(" OP(%)", self)
         self.OPValue = QtWidgets.QLineEdit("", self)
         self.OPValue.setReadOnly(True)
         self.OPValue.setValidator(self.validator)
@@ -105,7 +112,7 @@ class ControllerPlate(QtWidgets.QWidget):
         hlayout_op.addWidget(self.OPValue)
 
         hlayout_md = QtWidgets.QHBoxLayout()
-        self.MD = QtWidgets.QLabel("MD", self)
+        self.MD = QtWidgets.QLabel(" MD", self)
         self.MDComboBox = QtWidgets.QComboBox(self)
         # self.MDComboBox.addItems(["AUTO","MAN"])
         hlayout_md.addWidget(self.MD)
@@ -260,8 +267,9 @@ class ControllerPlate(QtWidgets.QWidget):
         # self.SPValue.setText(str(round(spvalue, 2)))
         self.PVValue.setText(str(round(pvvalue, 2)))
 
-        self.Progressbar.progress.setValue(int(opvalue))
-        self.Progressbar.setRightValue(int(opvalue))
+        self.Progressbar.progress.setValue(int(pvvalue))
+        # self.Progressbar.setRightValue(int(pvvalue))
+        
         if not self.sp_edit_locked:
             self.SPValue.setText(str(round(spvalue, 2)))
         if not self.op_edit_locked:

@@ -3,7 +3,7 @@ from controllerbar import TriangleWidget
 import sys
 from Store import Store
 class Sensor(QtWidgets.QWidget):
-    def __init__(self,value,store:Store,name,variableid):
+    def __init__(self,value,store:Store,name,variableid,ranges):
         updatevalues = QtCore.pyqtSignal(dict,list)
         super().__init__()
         self.setWindowTitle("")
@@ -11,9 +11,12 @@ class Sensor(QtWidgets.QWidget):
         self.name = name
         self.store = store
         self.variableid = variableid
+        self.ranges = ranges
+        self.setFixedWidth(250)
         self.setWindowFlags(QtCore.Qt.WindowType.WindowStaysOnTopHint)
         self.details = self.store.SettingDetailsofsensor(variableid)
-        self.unit = self.store.GettingUnit(name)
+        self.unit = self.store.GettingUnit(variableid)
+        self.finalunit = " " + self.unit
         self.store.updatevalues.connect(self.updatingvalue)
         self._InitUI()
     def _InitUI(self):
@@ -34,13 +37,13 @@ class Sensor(QtWidgets.QWidget):
         
     def settingProgressbar(self):
         hlayout = QtWidgets.QHBoxLayout()
-        self.Unittag = QtWidgets.QLabel("barg",self)
+        self.Unittag = QtWidgets.QLabel("",self)
+        self.Unittag.setText(self.finalunit)
         hlayout.addWidget(self.Unittag)
-        self.Unittag.setText(self.unit)
-        self.Progressbar = TriangleWidget()
+        self.Progressbar = TriangleWidget(self.ranges[2],self.ranges[4],self.ranges[5],self.ranges[3])
         self.Progressbar.setminmaxvalue(self.details[0],self.details[1])
         self.Progressbar.progress.setValue(int(self.value))
-        self.Progressbar.setRightValue(int(self.value))
+        # self.Progressbar.setRightValue(int(self.value))
         hlayout.addWidget(self.Progressbar)
         self.vlayout.addLayout(hlayout)
         hline = QtWidgets.QFrame()
@@ -51,7 +54,7 @@ class Sensor(QtWidgets.QWidget):
     
     def SettingValue(self):
         hlayout_op = QtWidgets.QHBoxLayout()
-        self.PV = QtWidgets.QLabel("PV", self)
+        self.PV = QtWidgets.QLabel(" PV", self)
         self.PVValue = QtWidgets.QLabel("120", self)
         self.PVValue.setText(str(self.value))
         hlayout_op.addWidget(self.PV)
@@ -63,7 +66,8 @@ class Sensor(QtWidgets.QWidget):
         value = self.store.finaltag[self.variableid]
         self.PVValue.setText(str(round(value,2)))
         self.Progressbar.setCentervalue(int(value))
-        self.Progressbar.setRightValue(int(value))
+        self.Progressbar.progress.setValue(int(round(value,2)))
+        # self.Progressbar.setRightValue(int(value))
         
         
 if __name__ == "__main__":

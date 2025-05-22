@@ -22,7 +22,7 @@ class Menu(QtWidgets.QWidget):
         self.setPalette(palette)
         self.setAutoFillBackground(True)
         # self.setFixedSize(200,1080)
-        self.setFixedWidth(200)
+        self.setFixedWidth(180)
         self.SettingButtons()
         
     def SettingButtons(self):
