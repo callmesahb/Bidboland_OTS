@@ -20,6 +20,8 @@ class Slider(QtWidgets.QWidget):
         self.InitUI()
     def InitUI(self):
         self.hlayout = QtWidgets.QHBoxLayout()
+        self.vlayout = QtWidgets.QVBoxLayout()
+        self.vlayout.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
         self.ProgressBar()
         # self.settingRotation()
         
@@ -30,17 +32,17 @@ class Slider(QtWidgets.QWidget):
         self.progress_bar.setTextVisible(False)
         self.valuelabel = QtWidgets.QLabel(f"{self.op}")
         
-        self.setLayout(self.hlayout)
+        self.setLayout(self.vlayout)
         if self.rotated == "left":
             self.progress_bar.setOrientation(QtCore.Qt.Orientation.Horizontal)
             self.progress_bar.setFixedSize(self.w,self.h)
-            self.hlayout.addWidget(self.progress_bar)
-            self.hlayout.addWidget(self.valuelabel)
+            self.vlayout.addWidget(self.progress_bar,0,QtCore.Qt.AlignmentFlag.AlignBottom)
+            self.vlayout.addWidget(self.valuelabel,1,QtCore.Qt.AlignmentFlag.AlignTop)
         if self.rotated == "":
             self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
             self.progress_bar.setFixedSize(self.w,self.h)
-            self.hlayout.addWidget(self.progress_bar)
-            self.hlayout.addWidget(self.valuelabel)
+            self.vlayout.addWidget(self.progress_bar)
+            self.vlayout.addWidget(self.valuelabel)
         if self.name == "0TIC034":
             self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
             self.progress_bar.setFixedSize(self.w,self.h)

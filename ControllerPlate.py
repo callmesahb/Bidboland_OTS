@@ -32,7 +32,7 @@ class ControllerPlate(QtWidgets.QWidget):
         self.op_edit_lock_timer.timeout.connect(self.unlock_op_edit)
         
         self.unit = self.store.GettingUnit(self.variableid+"PV")
-        print(f"{self.variableid}:{ranges[0]}")
+        # print(f"{self.variableid}:{ranges[0]}")
 
         self.is_editing_op = False
         self.handling_MD = False

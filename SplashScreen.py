@@ -50,9 +50,10 @@ class SplashScreen(QtWidgets.QSplashScreen):
         self.worker.start()
     def StartSim(self):
         self.showMessage("Opening Simulation")
-        self.apis = Aspen()
-        self.apis.Visibling(True)
-        self.showMessage("Simulation Opened")
+        # self.apis = Aspen()
+        # self.apis.Visibling(True)
+        # self.showMessage("Simulation Opened")
+        pass
     def SimOpened(self):
         self._startThread(self.loadingData,self.DataLoaded)
         

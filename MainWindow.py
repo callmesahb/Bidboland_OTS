@@ -182,7 +182,7 @@ class MainWindow(QtWidgets.QMainWindow):
             
     @pyqtSlot()
     def update(self):
-        timerstc = datetime.timedelta(seconds=self.store.finaltag["407EDTIMER"])
+        timerstc = datetime.timedelta(seconds=self.store.finaltag["TIMER"])
         self.toolbar.timer.setText("Timer:"+str(timerstc))
         # self.cntwidget.update_widgets(data)
         

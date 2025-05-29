@@ -86,14 +86,14 @@ class Toolbar(QtWidgets.QToolBar):
     
     @pyqtSlot()
     def readingdata(self):
-        timerstc = datetime.timedelta(seconds=self.store.finaltag["407EDTIMER"])
+        timerstc = datetime.timedelta(seconds=self.store.finaltag["TIMER"])
         self.timer.setText("Timer:"+str(timerstc))
         if self.rewind == True:
             self.timer.setText("Timer:0:00:00")
-            self.store.opc.setValue("407EDTIMER",0)
+            self.store.opc.setValue("TIMER",0)
             self.rewind = False
         elif self.rewind == False:
-            timerstc = datetime.timedelta(seconds=self.store.finaltag["407EDTIMER"])
+            timerstc = datetime.timedelta(seconds=self.store.finaltag["TIMER"])
             self.timer.setText("Timer:"+str(timerstc))
         
         
