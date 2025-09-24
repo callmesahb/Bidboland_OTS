@@ -18,11 +18,10 @@
             "id": "1EV016",
             "pos": { "l": 177, "t": 162, "w": 24, "h": 24 },
             "type": "sdv",
-            "pst": true,
+            "pst": false,
             "title": "Sour Gas from V-401-002 to E-420-108 A/B",
             "variableId": "4201EV016",
-            "rotated": "",
-            "variableIdofpst": ["4201EV016LG"]
+            "rotated": ""
           },
           {
             "id": "1FV002",
@@ -344,7 +343,7 @@
               "h": 24
             },
             "type": "controller",
-            "variableId": "4201TIC017OPLG",
+            "variableId": "4201TIC017OP",
             "rotated": "",
             "title": "From V-420-104"
           },
@@ -548,7 +547,7 @@
             "title": "Solvent Charge Pump"
           },
           {
-            "id": "P102BA",
+            "id": "P102AB",
             "pos": { "l": 1099, "t": 804, "w": 24, "h": 24 },
             "type": "pump",
             "variableId": "420P102B",
@@ -1021,7 +1020,7 @@
             "id": "1TIC017",
             "pos": { "l": 388.5, "t": 220, "w": 24, "h": 10 },
             "rotated": "left",
-            "variableId": "4201TIC017OPLG"
+            "variableId": "4201TIC017OP"
           },
           {
             "id": "1PIC010",
@@ -1183,7 +1182,7 @@
             "type": "controller",
             "rotated": "",
             "title": "HPS From HPS Header To Desuperheater X-420-101",
-            "variableId": "4201PIC096OPLG"
+            "variableId": "4201PIC096OP"
           },
           {
             "id": "P103AB",
@@ -1273,7 +1272,7 @@
             "id": "1TIC023",
             "pos": { "l": 1279, "t": 476.5, "w": 24, "h": 24 },
             "type": "controller",
-            "variableId": "4201TIC023OPLG",
+            "variableId": "4201TIC023OP",
             "title": "BFW From Header To Desuperheater X-420-101",
             "rotated": ""
           },
@@ -1282,7 +1281,7 @@
             "pos": { "l": 1283, "t": 568.5, "w": 24, "h": 24 },
             "type": "controller",
             "title": "LP Condensate Drum",
-            "variableId": "4201LIC027OPLG",
+            "variableId": "4201LIC027OP",
             "rotated": ""
           }
         ],
@@ -1581,7 +1580,7 @@
             "id": "1PIC096",
             "pos": { "l": 1445, "t": 397.5, "w": 24, "h": 10 },
             "rotated": "left",
-            "variableId": "4201PIC096OPLG"
+            "variableId": "4201PIC096OP"
           },
           {
             "id": "1FIC047A",
@@ -1623,13 +1622,13 @@
             "id": "1LIC027",
             "pos": { "l": 1281, "t": 601.5, "w": 24, "h": 10 },
             "rotated": "left",
-            "variableId": "4201LIC027OPLG"
+            "variableId": "4201LIC027OP"
           },
           {
             "id": "1TIC023",
             "pos": { "l": 1277, "t": 508.5, "w": 25, "h": 10 },
             "rotated": "left",
-            "variableId": "4201TIC023OPLG"
+            "variableId": "4201TIC023OP"
           },
           {
             "id": "SLI009",
@@ -2324,24 +2323,6 @@
             "id": "1LIC026",
             "pos": { "l": 320.5, "t": 683.5, "w": 24, "h": 24 },
             "type": "controller",
-            "variableId": "4201LIC026OPLG",
-            "rotated": "",
-            "title": "LPS From \n V-420-111 To LPC"
-          },
-          {
-            "id": "1TIC051",
-            "pos": { "l": 1195.5, "t": 145.5, "w": 24, "h": 24 },
-            "type": "controller",
-            "variableId": "4201TIC051OP",
-            "rotated": "",
-            "title": "LPS From LPS Header To V-420-111"
-          }
-        ],
-        "equipments": [
-          {
-            "id": "1LIC026",
-            "pos": { "l": 320.5, "t": 683.5, "w": 24, "h": 24 },
-            "type": "controller",
             "variableId": "4201LIC026OP",
             "rotated": "",
             "title": "LPS From \n V-420-111 To LPC"
@@ -2355,6 +2336,7 @@
             "title": "LPS From LPS Header To V-420-111"
           }
         ],
+        "equipments": [],
         "links": [
           {
             "id": "V-420-101",
@@ -2420,7 +2402,7 @@
             "id": "1LIC026",
             "pos": { "l": 319, "t": 714, "w": 24, "h": 10 },
             "rotated": "left",
-            "variableId": "4201LIC026OPLG"
+            "variableId": "4201LIC026OP"
           },
           {
             "id": "1TIC051",
@@ -2495,7 +2477,7 @@
             "id": "1LIC019B",
             "pos": { "l": 431, "t": 692.5, "w": 24, "h": 24 },
             "type": "controller",
-            "variableId": "4201LIC019BOPLG",
+            "variableId": "4201LIC019BOP",
             "rotated": "",
             "title": "PLS From \n F-420-101 To \n E-402-007"
           },
@@ -2503,7 +2485,7 @@
             "id": "1LIC029B",
             "pos": { "l": 1190, "t": 614.5, "w": 24, "h": 24 },
             "type": "controller",
-            "variableId": "4201LIC029BOPLG",
+            "variableId": "4201LIC029BOP",
             "rotated": "right",
             "title": "PLS From \n F-420-101 To \n E-402-007"
           },
@@ -2519,37 +2501,12 @@
             "id": "1LIC021B",
             "pos": { "l": 925, "t": 635.5, "w": 24, "h": 24 },
             "type": "controller",
-            "variableId": "4201LIC021BOPLG",
-            "rotated": "",
-            "title": "PLS From \n F-420-101 To \n E-402-007"
-          }
-        ],
-        "equipments": [
-          {
-            "id": "1LIC019B",
-            "pos": { "l": 431, "t": 692.5, "w": 24, "h": 24 },
-            "type": "controller",
-            "variableId": "4201LIC019BOP",
-            "rotated": "",
-            "title": "PLS From \n F-420-101 To \n E-402-007"
-          },
-          {
-            "id": "1LIC021B",
-            "pos": { "l": 925, "t": 635.5, "w": 24, "h": 24 },
-            "type": "controller",
             "variableId": "4201LIC021BOP",
             "rotated": "",
             "title": "PLS From \n F-420-101 To \n E-402-007"
-          },
-          {
-            "id": "1LIC029B",
-            "pos": { "l": 1178, "t": 615.5, "w": 24, "h": 24 },
-            "type": "controller",
-            "variableId": "4201LIC029BOP",
-            "rotated": "right",
-            "title": "PLS From \n F-420-101 To \n E-402-007"
           }
         ],
+        "equipments": [],
         "links": [
           {
             "id": "HFL",
@@ -2637,7 +2594,7 @@
           {
             "id": "1TI453",
             "pos": { "l": 135, "t": 101.5, "w": 68, "h": 20 },
-            "variableId": "4200TI453",
+            "variableId": "4201TI453",
             "type": "",
             "title": "MEL From Methanol \n Header To \n 1BV-003 / 4BV-003"
           },
@@ -2806,7 +2763,9 @@
             "variableId": "4201EV006",
             "rotated": "",
             "pst": true,
-            "variableIdofpst": ["4201EV006LG"],
+            "variableIdofpst": [
+              "4201EV006LG"
+            ],
             "title": "AML From P-420-102 A/B \n To T-420-101"
           },
           {
@@ -2816,9 +2775,7 @@
             "variableId": "4201EV007",
             "rotated": "",
             "pst": true,
-            "variableIdofpst": [
-              "4201EV007LG"
-            ],
+            "variableIdofpst": ["4201EV007LG"],
             "title": "AMR From T-420-101 To V-420-102"
           },
           {
@@ -3093,9 +3050,7 @@
             "rotated": "left",
             "variableId": "4201EV005",
             "pst": true,
-            "variableIdofpst": [
-              "4201EV005LG"
-            ],
+            "variableIdofpst": ["4201EV005LG"],
             "title": "AMR From T-420-101 To Hydraulic \n  Turbine HT-420-101"
           },
           {
@@ -3129,7 +3084,8 @@
             "pos": { "l": 207, "t": 360, "w": 28, "h": 22 },
             "type": "handswitch",
             "buttons": ["4201LIC028B", "4201LIC028A"]
-          },{
+          },
+          {
             "id": "420P102A",
             "pos": { "l": 1057.5, "t": 677.5, "w": 24, "h": 24 },
             "type": "pump",
@@ -3188,7 +3144,7 @@
           },
           {
             "id": "1FI003B",
-            "pos": { "l": 635.5, "t": 176.5, "w": 95, "h": 20 },
+            "pos": { "l": 650.5, "t": 176.5, "w": 80, "h": 20 },
             "variableId": "4201FI003B",
             "type": "",
             "title": "AML From \n P-420-102A/B \n To T-420-101"
@@ -3209,7 +3165,7 @@
           },
           {
             "id": "1FI006",
-            "pos": { "l": 785.5, "t": 245.5, "w": 95, "h": 20 },
+            "pos": { "l": 800.5, "t": 245.5, "w": 80, "h": 20 },
             "type": "",
             "variableId": "4201FI006",
             "title": "AML From \n P-420-102A/B \n To T-420-101"
@@ -3397,9 +3353,7 @@
             "variableId": "4201EV008",
             "rotated": "",
             "type": "sdv",
-            "variableIdofpst": [
-              "4201EV008LG"
-            ],
+            "variableIdofpst": ["4201EV008LG"],
             "title": "AMR From V-420-102 To E-420-102A/B/C",
             "pst": true
           },
@@ -3596,7 +3550,7 @@
             "id": "1TIC017",
             "pos": { "l": 1147.5, "t": 172, "w": 24, "h": 24 },
             "rotated": "",
-            "variableId": "4201TIC017OPLG",
+            "variableId": "4201TIC017OP",
             "title": "CWR From E-420-105A/B To CWR",
             "type": "controller"
           }
@@ -3650,7 +3604,7 @@
               "h": 10
             },
             "rotated": "left",
-            "variableId": "4201TIC017OPLG"
+            "variableId": "4201TIC017OP"
           }
         ],
         "esds": [],
@@ -3752,9 +3706,7 @@
             "pst": true,
             "rotated": "",
             "type": "sdv",
-            "variableIdofpst": [
-              "4201EV017LG"
-            ],
+            "variableIdofpst": ["4201EV017LG"],
             "variableId": "4201EV017",
             "title": "AML From V-420-104 To V-420-102"
           },
@@ -4284,7 +4236,7 @@
             "type": "controller",
             "rotated": "",
             "title": "Solvent Regenerator",
-            "variableId": "4201LIC008OPLG"
+            "variableId": "4201LIC008OP"
           },
           {
             "id": "P104B",
@@ -4391,45 +4343,34 @@
             "variableId": "420E107FA03B"
           }
         ],
-        "equipments": [{
-          "id": "420P104B",
-          "pos": {
-            "l": 215.5,
-            "t": 782,
-            "w": 24,
-            "h": 24
+        "equipments": [
+          {
+            "id": "420P104B",
+            "pos": {
+              "l": 215.5,
+              "t": 782,
+              "w": 24,
+              "h": 24
+            },
+            "rotated": "",
+            "title": "Lean Solvent Circulation Pump",
+            "type": "pump",
+            "variableId": "420P104B"
           },
-          "rotated": "",
-          "title": "Lean Solvent Circulation Pump",
-          "type": "pump",
-          "variableId": "420P104B"
-        },
-        {
-          "id": "420P104A",
-          "pos": {
-            "l": 215.5,
-            "t": 628,
-            "w": 24,
-            "h": 24
-          },
-          "title": "Lean Solvent Circulation Pump",
-          "rotated": "",
-          "type": "pump",
-          "variableId": "420P104A"
-        },
-        {
-          "id": "1LIC008",
-          "pos": {
-            "l": 1200.5,
-            "t": 782,
-            "w": 24,
-            "h": 24
-          },
-          "type": "controller",
-          "rotated": "",
-          "title": "Solvent Regenerator",
-          "variableId": "4201LIC008OP"
-        }],
+          {
+            "id": "420P104A",
+            "pos": {
+              "l": 215.5,
+              "t": 628,
+              "w": 24,
+              "h": 24
+            },
+            "title": "Lean Solvent Circulation Pump",
+            "rotated": "",
+            "type": "pump",
+            "variableId": "420P104A"
+          }
+        ],
         "links": [
           {
             "id": "420-1LIC-008",
@@ -4595,7 +4536,7 @@
               "h": 10
             },
             "rotated": "left",
-            "variableId": "4201LIC008OPLG"
+            "variableId": "4201LIC008OP"
           },
           {
             "id": "1TV028AB",
@@ -4665,22 +4606,24 @@
             "variableId": "420P101A"
           }
         ],
-        "equipments": [{
-          "id": "420P101B",
-          "pos": { "l": 788.5, "t": 635, "w": 24, "h": 24 },
-          "type": "pump",
-          "rotated": "",
-          "title": "Solvent Booster Pump",
-          "variableId": "420P101B"
-        },
-        {
-          "id": "420P101A",
-          "pos": { "l": 784.5, "t": 505, "w": 24, "h": 24 },
-          "type": "pump",
-          "rotated": "",
-          "title": "Solvent Booster Pump",
-          "variableId": "420P101A"
-        }],
+        "equipments": [
+          {
+            "id": "420P101B",
+            "pos": { "l": 788.5, "t": 635, "w": 24, "h": 24 },
+            "type": "pump",
+            "rotated": "",
+            "title": "Solvent Booster Pump",
+            "variableId": "420P101B"
+          },
+          {
+            "id": "420P101A",
+            "pos": { "l": 784.5, "t": 505, "w": 24, "h": 24 },
+            "type": "pump",
+            "rotated": "",
+            "title": "Solvent Booster Pump",
+            "variableId": "420P101A"
+          }
+        ],
         "links": [
           {
             "id": "P-446-001 A/B/C",
@@ -4857,7 +4800,7 @@
             },
             "rotated": "",
             "type": "controller",
-            "variableId": "4201LIC007OPLG",
+            "variableId": "4201LIC007OP",
             "title": "Rich Solvent Flash Drum"
           },
           {
@@ -4874,19 +4817,7 @@
             "title": "FGL To T-420-102"
           }
         ],
-        "equipments": [{
-          "id": "1LIC007",
-          "pos": {
-            "l": 557.5,
-            "t": 210,
-            "w": 24,
-            "h": 24
-          },
-          "rotated": "",
-          "type": "controller",
-          "variableId": "4201LIC007OP",
-          "title": "Rich Solvent Flash Drum"
-        }],
+        "equipments": [],
         "links": [
           {
             "id": "FGL",
@@ -5197,7 +5128,7 @@
             },
             "rotated": "left",
 
-            "variableId": "4201LIC007OPLG"
+            "variableId": "4201LIC007OP"
           },
           {
             "id": "1PIC073",
@@ -5250,7 +5181,7 @@
             },
             "rotated": "",
             "type": "controller",
-            "variableId": "4201PIC096OPLG",
+            "variableId": "4201PIC096OP",
             "title": "HPS From HPS Header To Desuperheater X-420-101"
           },
           {
@@ -5263,7 +5194,7 @@
             },
             "rotated": "",
             "type": "controller",
-            "variableId": "4201LIC027OPLG",
+            "variableId": "4201LIC027OP",
             "title": "LP Condensate Drum"
           },
           {
@@ -5275,24 +5206,12 @@
               "h": 24
             },
             "rotated": "",
-            "variableId": "4201TIC023OPLG",
+            "variableId": "4201TIC023OP",
             "type": "controller",
             "title": "BFW From Header To Desuperheater X-420-101"
           }
         ],
-        "equipments": [{
-          "id": "1TIC023",
-          "pos": {
-            "l": 1199.5,
-            "t": 249,
-            "w": 24,
-            "h": 24
-          },
-          "rotated": "",
-          "variableId": "4201TIC023OPLG",
-          "type": "controller",
-          "title": "BFW From Header To Desuperheater X-420-101"
-        }],
+        "equipments": [],
         "links": [
           {
             "id": "420-1TIC-047",
@@ -5588,7 +5507,7 @@
               "w": 24,
               "h": 10
             },
-            "variableId": "4201PIC096OPLG",
+            "variableId": "4201PIC096OP",
             "rotated": "left"
           },
           {
@@ -5599,7 +5518,7 @@
               "w": 24,
               "h": 10
             },
-            "variableId": "4201LIC027OPLG",
+            "variableId": "4201LIC027OP",
             "rotated": "left"
           },
           {
@@ -5622,7 +5541,7 @@
               "h": 10
             },
             "rotated": "left",
-            "variableId": "4201TIC023OPLG",
+            "variableId": "4201TIC023OP",
             "type": ""
           }
         ],
@@ -5860,32 +5779,34 @@
             "variableId": "4201PV117BOP"
           }
         ],
-        "equipments": [{
-          "id": "420P103A",
-          "pos": {
-            "l": 911.5,
-            "t": 523,
-            "w": 24,
-            "h": 24
+        "equipments": [
+          {
+            "id": "420P103A",
+            "pos": {
+              "l": 911.5,
+              "t": 523,
+              "w": 24,
+              "h": 24
+            },
+            "type": "pump",
+            "variableId": "420P103A",
+            "rotated": "",
+            "title": "Solvent Reflux Pump"
           },
-          "type": "pump",
-          "variableId": "420P103A",
-          "rotated": "",
-          "title": "Solvent Reflux Pump"
-        },
-        {
-          "id": "420P103B",
-          "pos": {
-            "l": 911.5,
-            "t": 622,
-            "w": 24,
-            "h": 24
-          },
-          "type": "pump",
-          "variableId": "420P103B",
-          "rotated": "",
-          "title": "Solvent Reflux Pump"
-        }],
+          {
+            "id": "420P103B",
+            "pos": {
+              "l": 911.5,
+              "t": 622,
+              "w": 24,
+              "h": 24
+            },
+            "type": "pump",
+            "variableId": "420P103B",
+            "rotated": "",
+            "title": "Solvent Reflux Pump"
+          }
+        ],
         "links": [
           {
             "id": "E-420-106",

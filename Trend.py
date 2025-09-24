@@ -2,27 +2,74 @@ from PyQt6 import QtWidgets, QtCore
 import pyqtgraph as pg
 from datetime import datetime
 from Store import Store
+from SignalBus import SignalBus
 import sys
 import time
 
 class Trend(QtWidgets.QWidget):
-    def __init__(self,variableid:str,typelem:str,store:Store):
+    def __init__(self,variableid:str,typelem:str,store:Store,ranges):
         super().__init__()
         self.varid = variableid
         self.itype = typelem
+        self.ranges = ranges
         # print(self.varid)
         self.store = store
+        self.trend_enabled = True
         self.timestamps = []
         self.spvalues = []
+        self.opvalues = []
         self.values = []
+        self.signalbus = SignalBus()
+        self.signalbus.reset_all_trends.connect(self.resetTrend)
+        self.showyelem = ''
+        self.showyunit = ''
+        self.showy = ''
+        self.unit = ""
+        if typelem == "":
+            self.unit = self.store.GettingUnit(variableid)
+        elif typelem == "controller":
+            varid = variableid + "PV"
+            self.unit = self.store.GettingUnit(varid)
         self.setWindowFlags(QtCore.Qt.WindowType.WindowStaysOnTopHint)
-        self.zoom_window = 60
+        self.zoom_window = 600
         self.timer = QtCore.QTimer()
-        self.timer.timeout.connect(self.update)
+        self.timer.timeout.connect(self.updateTrend)
         self.timer.start(1000)
+        # self.store.updatevalues.connect(self.updateTrend)
         self.info_display = QtWidgets.QLineEdit()
         self.info_display.setReadOnly(True)
-        self.setWindowTitle(variableid)
+        self.setWindowTitle("Trend")
+        if variableid[4] == "T":
+            self.showyunit = "C"
+            self.showyelem = "Temperature"
+            self.showy = f'{self.showyelem}' + f' ({self.showyunit})'
+        elif variableid[4] == "P":
+            if variableid[4] == "P" and variableid[5] == "D":
+                self.showyunit = "bard"
+                self.showyelem = "Pressure"
+                self.showy = f'{self.showyelem}' + f' ({self.showyunit})'
+            else:
+                self.showyunit = "barg"
+                self.showyelem = "Pressure"
+                self.showy = f'{self.showyelem}' + f' ({self.showyunit})'
+        elif variableid[4] == "L":
+            self.showyunit = "%"
+            self.showyelem = "Level"
+            self.showy = f'{self.showyelem}' + f' ({self.showyunit})'
+        
+        elif variableid[4] == "F":
+            self.showyunit = f"{self.unit}"
+            self.showyelem = f"Flow"
+            self.showy = f'{self.showyelem}' + f' ({self.showyunit})'
+            
+        elif variableid[4] == "A":
+            self.showyunit = "PPMV"
+            self.showyelem = "Analyzer"
+            self.showy = f'{self.showyelem}' + f' ({self.showyunit})'
+        elif variableid[4] == "P" and len(variableid) == 10:
+            self.showyunit = "bard"
+            self.showyelem = "Pressure"
+            self.showy = f'{self.showyelem}' + f' ({self.showyunit})'
         self._InitUI()
     def _InitUI(self):
         self.mainlayout = QtWidgets.QVBoxLayout()
@@ -31,79 +78,172 @@ class Trend(QtWidgets.QWidget):
         self.mainlayout.addWidget(self.info_display)
         self.setLayout(self.mainlayout)
     
+    
+    def resetTrend(self, status: bool):
+        if status:
+            self.trend_enabled = False
+            # self.timer.stop()
+            try:
+                if self.itype == "controller":
+                    self.timer.stop()
+                    self.spvalues.clear()
+                    self.opvalues.clear()
+                    self.values.clear()
+                    self.curve.setData([], [])
+                    self.sp_curve.setData([], [])
+                    # self.op_curve.setData([], [])
+                    self.info_display.clear()
+                elif self.itype == "chtrend":
+                    self.timer.stop()
+                    self.spvalues.clear()
+                    self.opvalues.clear()
+                    self.values.clear()
+                    self.curve.setData([], [])
+                    # self.sp_curve.setData([], [])
+                    self.op_curve.setData([], [])
+                    self.info_display.clear()
+                else:
+                    self.timer.stop()
+                    self.values.clear()
+                    self.curve.setData([], [])
+                    self.info_display.clear()
+
+            except Exception as e:
+                print(f"Error during resetTrend (type={self.itype}):", e)
+        else:
+            self.trend_enabled = True  # فعال کردن دوباره
+            self.timer.start(1000)
+            self.updateTrend()
+            
+        self.update()
+
+    
+    
     def SettingPlot(self):
-        axis = pg.graphicsItems.DateAxisItem.DateAxisItem(orientation='bottom')
-        self.plotwidget = pg.PlotWidget(axisItems={'bottom': axis})
-        self.plotwidget.setYRange(0,100)
+        # axis = pg.graphicsItems.DateAxisItem.DateAxisItem(orientation='bottom')
+        x_axis = pg.AxisItem(orientation='bottom')
+        self.plotwidget = pg.PlotWidget(axisItems={'bottom': x_axis})
         self.plotwidget.setMouseEnabled(x=False,y=True)
-        self.curve = self.plotwidget.plot(pen='g')
-        self.sp_curve = self.plotwidget.plot(pen = 'r')
-        self.plotwidget.setLabel('left', 'Value(%)')
+        if self.itype == "controller":
+            self.plotwidget.addLegend()
+            self.curve = self.plotwidget.plot(pen='g', name=f"{self.varid}PV")
+            self.sp_curve = self.plotwidget.plot(pen='r', name=f"{self.varid}SP")
+            self.plotwidget.setYRange(self.ranges[0],self.ranges[1])
+            self.plotwidget.setLabel('left', self.showy)
+        if self.itype == "chtrend":
+            self.plotwidget.addLegend()
+            self.showyunit = "(%)"
+            self.plotwidget.setYRange(0,100)
+            self.showy = f'{self.showyelem}' + f'{self.showyunit}'
+            self.curve = self.plotwidget.plot(pen='g', name=f"{self.varid}PV")
+            self.op_curve = self.plotwidget.plot(pen='b', name=f"{self.varid}OP")
+            self.plotwidget.setLabel('left', f"{self.showy}")
+            
+        elif self.itype == "":
+            self.plotwidget.addLegend()
+            self.plotwidget.setYRange(self.ranges[0],self.ranges[1])
+            self.plotwidget.setLabel('left', self.showy)
+            self.curve = self.plotwidget.plot(pen='g',name=f"{self.varid}PV")
         self.plotwidget.showGrid(x=False, y=True)
-        
-    def update(self):
+
+
+    def updateTrend(self):
+        if not self.trend_enabled:
+            return
         try:
             global raw_value
-            # raw_value = self.store.finaltag[self.varid]
-                # raw_value = self.store.finaltag[]
+            now = self.store.finaltag.get("420TIMER", 0)
+
+            if now <= 0:
+                return  # از رسم جلوگیری کن
+
             if self.itype == "controller":
                 pvname = self.varid + "PV"
                 spname = self.varid + "SP"
-                raw_value = self.store.finaltag[pvname]
-                raw_sp = self.store.finaltag[spname]
-                min_r = self.store.SettingDetailsofsensor(pvname)[0]
-                max_r = self.store.SettingDetailsofsensor(pvname)[1]
-                scaled_value = ((raw_value - min_r) / (max_r - min_r)) * 100
-                scaled_value = max(0, min(100, scaled_value))
-                scaled_sp = ((raw_sp - min_r) / (max_r - min_r)) * 100
-                scaled_sp = max(0, min(100, scaled_sp))
-            else:
-                raw_value = self.store.finaltag[self.varid]
-                min_r = self.store.SettingDetailsofsensor(self.varid)[0]
-                max_r = self.store.SettingDetailsofsensor(self.varid)[1]
-                scaled_value = ((raw_value - min_r) / (max_r - min_r)) * 100
-                scaled_value = max(0, min(100, scaled_value))
-            now = time.time()
 
-            # min_r = self.store.SettingDetailsofsensor(self.varid)[0]
-            # max_r = self.store.SettingDetailsofsensor(self.varid)[1]
-            # scaled_value = ((raw_value - min_r) / (max_r - min_r)) * 100
-            # scaled_value = max(0, min(100, scaled_value))
+                if not self.timestamps:
+                    spdata = self.store.history.get(spname, [])
+                    pvdata = self.store.history.get(pvname, [])
+                    if pvdata and spdata:
+                        self.timestamps = [item[0] for item in pvdata if item[0] > 0]
+                        self.values = [item[1] for item in pvdata if item[0] > 0]
+                        self.spvalues = [item[1] for item in spdata if item[0] > 0]
 
-            print(f"{datetime.fromtimestamp(now).strftime('%H:%M:%S')} | مقدار اصلی: {raw_value} | مقیاس‌شده: {scaled_value:.2f}%")
+                raw_value = self.store.finaltag.get(pvname, 0)
+                raw_sp = self.store.finaltag.get(spname, 0)
 
-            self.timestamps.append(now)
-            self.values.append(scaled_value)
-            if self.itype == "controller":
-                self.spvalues.append(scaled_sp)
+                self.timestamps.append(now)
+                self.values.append(raw_value)
+                self.spvalues.append(raw_sp)
 
-            while self.timestamps and self.timestamps[0] < now - 600:
-                self.timestamps.pop(0)
-                self.values.pop(0)
-                if self.itype == "controller":
+                while self.timestamps and self.timestamps[0] < now - 300:
+                    self.timestamps.pop(0)
+                    self.values.pop(0)
                     self.spvalues.pop(0)
 
-            if self.values:
-                all_values = self.values[:]
-                if self.itype == "controller":
-                    all_values += self.spvalues  # SP رو هم اضافه کن به مقادیر
-                
-                min_y = min(all_values)
-                max_y = max(all_values)
+                if len(self.timestamps) == len(self.spvalues):
+                    self.sp_curve.setData(self.timestamps, self.spvalues)
+                    self.curve.setData(self.timestamps, self.values)
 
-                # اختلاف زیاد یا خارج شدن از محدوده → Y-range رو تنظیم کن
-                margin = 5
-                if abs(max_y - min_y) > 5:  # یعنی تغییر زیادی بوده
-                    self.plotwidget.setYRange(min_y - margin, max_y + margin)
+            elif self.itype == "chtrend":
+                pvname = self.varid + "PVs"
+                opname = self.varid + "OP"
 
-            self.plotwidget.setXRange(now - self.zoom_window, now)
-            self.curve.setData(self.timestamps, self.values)
-            if self.itype == "controller":
-                self.sp_curve.setData(self.timestamps, self.spvalues)
-            self.info_display.setText(f"{datetime.fromtimestamp(now).strftime('%H:%M:%S')}:{raw_value}")
-            
+                if not self.timestamps:
+                    opdata = self.store.history.get(opname, [])
+                    pvdata = self.store.history.get(pvname, [])
+                    if pvdata and opdata:
+                        self.timestamps = [item[0] for item in pvdata if item[0] > 0]
+                        self.values = [item[1] for item in pvdata if item[0] > 0]
+                        self.opvalues = [item[1] for item in opdata if item[0] > 0]
+
+                raw_value = self.store.finaltag.get(pvname, 0)
+                raw_op = self.store.finaltag.get(opname, 0)
+
+                self.timestamps.append(now)
+                self.values.append(raw_value)
+                self.opvalues.append(raw_op)
+
+                while self.timestamps and self.timestamps[0] < now - 300:
+                    self.timestamps.pop(0)
+                    self.values.pop(0)
+                    self.opvalues.pop(0)
+
+                if len(self.timestamps) == len(self.opvalues):
+                    self.op_curve.setData(self.timestamps, self.opvalues)
+                    self.curve.setData(self.timestamps, self.values)
+
+            else:
+                if not self.timestamps:
+                    data = self.store.history.get(self.varid, [])
+                    if data:
+                        self.timestamps = [item[0] for item in data if item[0] > 0]
+                        self.values = [item[1] for item in data if item[0] > 0]
+
+                raw_value = self.store.finaltag.get(self.varid, 0)
+
+                self.timestamps.append(now)
+                self.values.append(raw_value)
+
+                while self.timestamps and self.timestamps[0] < now - 300:
+                    self.timestamps.pop(0)
+                    self.values.pop(0)
+
+                self.curve.setData(self.timestamps, self.values)
+
+            # if now >= self.zoom_window:
+            #     self.plotwidget.setXRange(now - self.zoom_window, now)
+            # else:
+            #     self.plotwidget.setXRange(0, self.zoom_window)
+
+            self.info_display.setText(f"{now} : {raw_value}")
+
+            if self.itype == "chtrend":
+                self.info_display.setHidden(True)
+
         except Exception as e:
-            print(f"e")
+            print(f"Error in updateTrend: {e}")
+
             
 def win():
     app = QtWidgets.QApplication(sys.argv)

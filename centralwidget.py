@@ -2,11 +2,17 @@ from PyQt6 import QtWidgets, QtGui, QtCore
 from PyQt6.QtCore import Qt, pyqtSignal, pyqtSlot,QTimer
 from Store import Store
 from Link import Link
+import subprocess
 from Indicator import Indicator
 # from valveEV import valveEV
 from dosing import DosingPump
+from PumpLG import NormalPumpLG
+from ControllerLG import ControllerLogic
 from Store import Store
+from APIs import Aspen
+from ESDPushbutton import Button
 from AirCoolerElem import Aircooler
+from AlarmLineWidget import AlarmLineWidget
 from Menubar import Menu
 from BPS_elem import BPS
 from FilterElem import Filter
@@ -32,11 +38,19 @@ class MainWidget(QtWidgets.QWidget):
     ChangingValveStatus = pyqtSignal(int)
     updatevalues = pyqtSignal(dict,list)
     changepagebyesd = pyqtSignal(int)
+    changepagecnt = pyqtSignal(str)
+    prdindreader = pyqtSignal(list)
+    rewindingtrend = pyqtSignal(bool)
+    addToTabRequested = QtCore.pyqtSignal(int)
+    connectionbetweenvalueandesd = pyqtSignal(str)
+    emittingnameofbutton = pyqtSignal(str)
 
     def __init__(self, store: Store):
         super().__init__()
         self.rootdir = os.getcwd()
         self.imgdir = os.path.join(self.rootdir, "images")
+        self.simdir = os.path.join(self.rootdir,"sim")
+        self.apis = Aspen(self.simdir)
         self.store = store
         self.cache = {}
         
@@ -47,20 +61,49 @@ class MainWidget(QtWidgets.QWidget):
         self.action_mapping = {}
         self.done_status = {}
         self.textactions = {}
-        self.timer = QtCore.QTimer()
-        self.timer.timeout.connect(self.check_alarm_status)
-        self.timer.start(1000)
+        # self.timer = QtCore.QTimer()
+        # self.timer.timeout.connect(self.check_alarm_status)
+        # self.timer.start(1000)
+        QtWidgets.QApplication.instance().aboutToQuit.connect(self.apis.QuitSim)
+
 
     def _initUi(self):
         self.mainlayout = QtWidgets.QHBoxLayout()
         self.mainlayout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self.mainlayout)
 
+
+    
+    def rewinding(self,status:str):
+        # print(status)
+        self.rewindingtrend.emit(status)
+
+
     def _addMenu(self):
         self.menu = Menu(self.store)
         self.mainlayout.addWidget(self.menu)
+        self.menu.left.clicked.connect(self.changingpage)
+        self.menu.right.clicked.connect(self.changingpage1)
+        self.menu.up.clicked.connect(self.changingpage2)
+        self.menu.PRC.clicked.connect(self.changingpage3)
+        # self.menu.ESD.clicked.connect(self.changingpage4)
+        # self.menu.changepage.connect(self.changingpage)
         # self.menu.left.clicked.connect(self.Printing)
     
+    def changingpage(self):
+        self.changepagecnt.emit("Back")
+        
+    def changingpage1(self):
+        self.changepagecnt.emit("Next")
+    def changingpage2(self):
+        self.changepagecnt.emit("Up")
+        
+    def changingpage3(self):
+        self.changepagecnt.emit("First")
+    # def changingpage4(self):
+    #     self.changepagecnt.emit("ESD")        
+    # def changingpage(self):
+    #     self.changepagecnt.emit("Up")
     def updateDesc(self,desc:str):
         # print(f"Updating to {desc}")
         self.menu.desc.setText(desc)
@@ -97,15 +140,16 @@ class MainWidget(QtWidgets.QWidget):
         newImg = img.scaled(newimg_width, newimg_height)
 
         return img
+    def on_alarm_triggered(status, line, connected_lines, all_lines):
+            line.settting_color(status)
+            if status == "ALARM":
+                line.propagate_alarm(connected_lines, all_lines)
     def createAllscenes(self, pages: list):
         self.scenes = []
         screen_width = self.screen().size().width()
         screen_height = 0.88 * self.screen().size().height()
         scales = []
-        def on_alarm_triggered(status, line, connected_lines, all_lines):
-            line.settting_color(status)
-            if status == "ALARM":
-                line.propagate_alarm(connected_lines, all_lines)
+        
         for page in pages:
             tempScene = QtWidgets.QGraphicsScene()
             img_path = os.path.join(self.rootdir, page["imageUrl"])
@@ -127,18 +171,24 @@ class MainWidget(QtWidgets.QWidget):
             for _ind in page["indicators"]:
                 pos = _ind["pos"]
                 name = _ind["id"]
+                w = pos["w"]
+                h = pos["h"]
                 variableid = _ind["variableId"]
                 value = self.store.SettingInitial(variableid)
                 pvvalues = self.store.GettingControllerDetails(variableid)
                 itype = _ind["type"]
+                title = _ind["title"]
                 ranges = []
                 if itype == "":
                     ranges = self.store.SettingDetailsofsensor(variableid)
-                    self.indi = Indicator(name, value, itype, pvvalues,self.store,variableid,ranges)
+                    self.indi = Indicator(name, value, itype, pvvalues,self.store,variableid,ranges,title,w)
+                    self.rewindingtrend.connect(self.indi.changestatus)
                 elif itype=="controller":
                     varid = variableid + "PV"
                     ranges = self.store.SettingDetailsofsensor(varid)
-                    self.indi = Indicator(name, value, itype, pvvalues,self.store,variableid,ranges)
+                    self.indi = Indicator(name, value, itype, pvvalues,self.store,variableid,ranges,title,w)
+                    self.rewindingtrend.connect(self.indi.changestatus)
+                    self.indi.prdstatussignal.connect(self.prdreading)
                 
                 # value = self.store.opc.getValue(variableid)
                 # print(f"{name}:{variableid}:{value}")
@@ -153,11 +203,39 @@ class MainWidget(QtWidgets.QWidget):
                 # l,t,w,h = self.normalize_pos(pos,img_width,img_height)
                 dest = _link["to"]
                 link = Link(dest)
+                link.requestAddToTab.connect(self.handleAddToTab)
                 link.setGeometry(int(pos["l"]),int(pos["t"]),int(pos["w"]),int(pos["h"]))
                 link.changePageSignal.connect(self.ChangePageByLink)
                 tempScene.addWidget(link)
+                
+            for _eqn in page["equipments"]:
+                _id = _eqn["id"]
+                pos = _eqn["pos"]
+                htype = _eqn["type"]
+                if htype == "handswitch":
+                    btns = _eqn["buttons"]
+                    eqn = Equipment(_id,htype,btns,self.store)
+                    self.store.updatevalues.connect(eqn.ReadingValue)
+                    eqn.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]),
+                                    int(pos["h"]))
+                elif htype == "btn":
+                    variableid = _eqn["variableid"]
+                    eqn = Button(id,self.store,variableid)
+                    eqn.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]),
+                                    int(pos["h"]))
+                elif htype == "pump":
+                    eqn = NormalPumpLG(self.store,_id,_id,"")
+                    eqn.setGeometry(int(pos["l"])-2, int(pos["t"])-6, 65,
+                                    67)
+                elif htype == "controller":
+                    eqn = ControllerLogic(_id,self.store,rotated)
+                    wi,he = eqn.ChangeStyle()
+                    eqn.setGeometry(int(pos["l"])-4, int(pos["t"])-6, wi,
+                                    he)
+                tempScene.addWidget(eqn)
             for _valve in page["valves"]:
                 pos = _valve["pos"]
+                title = _valve["title"]
                 variableid = _valve["variableId"]
                 name = _valve["id"]
                 _type = _valve["type"]
@@ -171,15 +249,19 @@ class MainWidget(QtWidgets.QWidget):
                     pvvalues = self.store.GettingControllerDetails(variableid)
                     Varid = variableid.replace("OP", "PV")
                     ranges = self.store.SettingDetailsofsensor(Varid)
-                    valve = ControllerValve(name, rotated, pvvalues,variableid,self.store,ranges)
+                    valve = ControllerValve(name, rotated, pvvalues,variableid,self.store,ranges,title,_type)
                     self.store.updatevalues.connect(valve.settingValueController)
                 elif _type in {"sdv", "bdv"}:
                     pststatus = _valve["pst"]
-                    valve = valveEV(self.store,variableid,name, value,rotated)
+                    valve = valveEV(self.store,variableid,name, value,rotated,title)
                     self.store.updatevalues.connect(valve.ReadingValue)
                     if pststatus:
-                        pst = PSTWidget()
-                        pst.setGeometry(int(pos["l"]-35),int(pos["t"]),int(pos["w"]),int(pos["h"]))
+                        name = _valve["id"]
+                        variableid = _valve["variableId"]
+                        variableIdofpst = _valve["variableIdofpst"]
+                        pst = PSTWidget(variableIdofpst,self.store)
+                        self.store.updatevalues.connect(pst.readingvalue)
+                        pst.setGeometry(int(pos["l"]-40),int(pos["t"]-5),int(pos["w"]),int(pos["h"]))
                         tempScene.addWidget(pst)
                     # valve.ChangingValveStatus.connect(self.CheckingvalueSDV)
                     # valve.set_status(value)
@@ -191,18 +273,18 @@ class MainWidget(QtWidgets.QWidget):
                     self.store.updatevalues.connect(valve.ReadingValue)
                     # valve.set_status(value)
                 elif _type == "fan":
-                    valve = Aircooler(self.store,variableid,name, value)
+                    valve = Aircooler(self.store,variableid,name, value,title)
                     self.store.updatevalues.connect(valve.ReadingValue)
                     # valve.set_status(value)
                 elif _type == "bps":
-                    valve = BPS(self.store,variableid,name, value)
+                    valve = BPS(self.store,variableid,name, value,rotated,title)
                     valve.set_status(value)
                 elif _type == "Filter":
                     valve =Filter(self.store,variableid,name, value)
                     # valve.toggle_images(value)
                     self.store.updatevalues.connect(valve.settingValueController)
                 elif _type == "pump":
-                    valve =NormalPump(self.store,variableid,name, value,rotated)
+                    valve =NormalPump(self.store,variableid,name, value,rotated,title)
                     # valve.set_status(value)
                     self.store.updatevalues.connect(valve.ReadingValue)
 
@@ -226,45 +308,51 @@ class MainWidget(QtWidgets.QWidget):
                 slider.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]),
                                    int(pos["h"]))
                 self.store.updatevalues.connect(slider.updateSlider)
+                self.prdindreader.connect(slider.prdupdateslider)
                 tempScene.addWidget(slider)
-            for _eqn in page["equipments"]:
-                _id = _eqn["id"]
-                pos = _eqn["pos"]
-                htype = _eqn["type"]
-                btns = _eqn["buttons"]
-                eqn = Equipment(_id,htype,btns)
-                eqn.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]),
-                                   int(pos["h"]))
-                tempScene.addWidget(eqn)
             for hand in page["indicators"]:
                 pos = hand["pos"]
                 variableid = hand["variableId"]
                 dtype = hand["type"]
+                title = hand["title"]
                 if dtype == "controller":
                     Varid = variableid + "PV"
                     ranges = self.store.SettingDetailsofsensor(Varid)
-                    dast = HAND(self.store,variableid,ranges)
-                    dast.setGeometry(int(pos["l"])+80, int(pos["t"])-35, 15, 20)
+                    dast = HAND(self.store,variableid,ranges,title,dtype)
+                    dast.setGeometry(int(pos["l"])+70, int(pos["t"])-35, 15, 20)
                     tempScene.addWidget(dast)
                     # dast.set_status(1)
                     self.store.updatevalues.connect(dast.ReadingValue)
             for _line in page["lines"]:
+                ltype = _line["type"]               
                 pos = _line["points"]
                 lineid = _line["id"]
-                connected = _line["connected"]
+                # connected = _line["connected"]
                 action = _line["action"]
-                self.line = AlarmLine(pos,connected,action,self.store,lineid)
-                self.line.lineid = lineid
-                self.line.signals.done_signal.connect(self.set_done)
-                tempScene.addItem(self.line)
-                if lineid:
-                    self.line.lineid = lineid
-                    self.alarmlines[lineid] = lineid
-                if hasattr(self.line, "arrow_item"):
-                    tempScene.addItem(self.line.arrow_item)
-                    
-                self.alarmlines[lineid] = self.line
-                self.connectedlines[lineid] = connected
+                connection = _line["connection"]
+                typeelem = _line["type"]
+                # if not isinstance(connected, list):
+                #     connected = [connected]
+                line = AlarmLineWidget(pos,self.store,lineid,connection,action)
+                # self.store.updatevalues.connect(line.updateLine)
+                self.emittingnameofbutton.connect(line.updatebuttoncolor)
+                # self.line_dict.append(line)
+                # if lineid not in self.lineactions:
+                #     self.lineactions[lineid] = []
+
+                # self.lineactions[lineid].append({
+                #     "variableid": action[0],
+                #     "action": action[1]
+                # })
+                # for conn_id in connected:
+                #     if conn_id not in self.connectedlines:
+                #         self.connectedlines[conn_id] = []
+                #     self.connectedlines[conn_id].append(lineid)
+                # if connected == "":
+                #     self.connectedlines[lineid] = connected
+                # self.connectionbetweenalarmandline.connect(line.set_color)
+
+                tempScene.addWidget(line)
 
                     
             
@@ -295,13 +383,14 @@ class MainWidget(QtWidgets.QWidget):
                 variableid = _esd["variableid"]
                 if kind == "logic_res":
                     text = _esd["text"]
-                    anslogic = TextAction(text,variableid,self.store)
+                    anslogic = TextAction(text,variableid,self.store,id)
+                    self.store.updatevalues.connect(anslogic.updatevalue)
                     self.textactions[id] = anslogic
                     anslogic.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]),
                                    int(pos["h"]))
                     tempScene.addWidget(anslogic)
                 else:
-                    esd = ESD(id,dest)
+                    esd = ESD(id,dest,self.store)
                     esd.changepagebyesd.connect(self.ChangePageByESD)
                     esd.setGeometry(int(pos["l"]), int(pos["t"]), int(pos["w"]),
                                    int(pos["h"]))
@@ -323,6 +412,21 @@ class MainWidget(QtWidgets.QWidget):
                 
                 # tempScene.addWidget(actionobj)
             self.scenes.append(tempScene)
+    def closeEvent(self, a0: QtGui.QCloseEvent | None) -> None:
+        self.apis.QuitSim()
+        # os.kill("taskkill /im OTS2_30Min.exe /F")
+        for window in QtWidgets.QApplication.topLevelWidgets():
+            window.close()
+            # try:
+            #     exe_path = r"C:\\BB_U420\\API\\Quit_Sim.exe"
+            #     subprocess.Popen(
+            #         [exe_path],
+            #         creationflags=subprocess.CREATE_NO_WINDOW,
+            #         stdout=subprocess.DEVNULL,
+            #         stderr=subprocess.DEVNULL
+            #     )
+            # except:
+            #     print("Cannot open path file")
     def SetActiveScene(self, SceneIndex: int):
         self.graphicsview.setScene(self.scenes[SceneIndex])
         
@@ -330,7 +434,10 @@ class MainWidget(QtWidgets.QWidget):
         self.graphicsview.setTransform(QtGui.QTransform().scale(self.scale, self.scale))
         super().resizeEvent(a0)
         
-        
+    
+    @pyqtSlot(list)
+    def prdreading(self,status:list):
+        self.prdindreader.emit(status)
     def check_alarm_status(self):
         for line,action in self.action_mapping.items():
             if line.status == "ALARM":
@@ -344,7 +451,9 @@ class MainWidget(QtWidgets.QWidget):
             # print()
             pass
             
-
+    
+    def emittingnameofbuttn(self,name:str):
+        self.emittingnameofbutton.emit(name)
     @pyqtSlot(int)
     def ChangePageByLink(self, dest):
         self.changePageSignal.emit(dest)
@@ -360,13 +469,27 @@ class MainWidget(QtWidgets.QWidget):
     def resizeEvent(self, a0):
         # super().resizeEvent(a0)
         # self.graphicsview.fitInView(self.scenes[SceneIndex].sceneRect(), QtCore.Qt.AspectRatioMode.KeepAspectRatio)
-        self.graphicsview.fitInView(QtCore.QRectF(self.scaledImage.rect()),QtCore.Qt.AspectRatioMode.KeepAspectRatio)
+        self.graphicsview.fitInView(QtCore.Qt.AspectRatioMode.KeepAspectRatio)
         
     @pyqtSlot(bool)
     def reset_widgets(self):
         self.store.reset_to_initial()
         
+    def handleAddToTab(self, dest):
+        self.addToTabRequested.emit(dest)
         
+        
+        
+        
+        
+        
+    def Closing(self,state:bool):
+        # print("Closing all widgets inside MainWidget")
+        # if state:
+        #     for widget in QtWidgets.QApplication.topLevelWidgets():
+        #         if widget.windowTitle() == "Trend":
+        #             widget.close()
+        pass
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
     window = MainWidget()

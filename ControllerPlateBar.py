@@ -1,13 +1,11 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QProgressBar, QLabel
 from PyQt6.QtGui import QPainter, QPolygon, QColor, QPalette
-from PyQt6.QtCore import QTimer, QPoint, Qt,pyqtSignal
+from PyQt6.QtCore import QTimer, QPoint, Qt
 import random
-from Store import Store
 
 class TriangleWidget(QWidget):
-    gettingrangevalues = pyqtSignal(float,float)
-    def __init__(self, LL:None,L:None,H:None,HH:None,variableid,store:Store,ranges,parent=None):
+    def __init__(self, LL:None,L:None,H:None,HH:None,variableid,store,ranges,parent=None):
         super().__init__()
         self.minval = 0
         self.maxval = 100
@@ -17,14 +15,10 @@ class TriangleWidget(QWidget):
         self.lowlow = LL
         self.high = H
         self.highhigh = HH
-        self.ranges = ranges
         self.store = store
         self.variableid = variableid
+        self.ranges = ranges
         self.setThresholds(self.lowlow,self.low,self.high,self.highhigh)
-        
-        # self.timer_range = QTimer()
-        # self.timer_range.timeout.connect(self.settingrangesensor)
-        # self.timer_range.start(1000)
         self.progress = QProgressBar(self)
         self.progress.setTextVisible(False)
         self.progress.setOrientation(Qt.Orientation.Vertical)
@@ -32,12 +26,12 @@ class TriangleWidget(QWidget):
         self.leftvalue = 0.0
         self.rightProgress.setOrientation(Qt.Orientation.Vertical)
         self.rightProgress.setTextVisible(False)
-        self.rightProgress.setGeometry(80, 15, 20, 300)
+        self.rightProgress.setGeometry(70, 15, 20, 200)
         self.progress.show()
         palette = QPalette()
         palette.setColor(QPalette.ColorRole.Highlight, QColor(0, 255, 0))
         self.progress.setPalette(palette)
-        self.progress.setGeometry(40, 15, 20, 200)
+        self.progress.setGeometry(30, 15, 20, 200)
         self.progress.setStyleSheet("""
             QProgressBar {
                 border: 2px solid grey;
@@ -58,10 +52,10 @@ class TriangleWidget(QWidget):
                 background-color: rgb(0,255,1);
             }
         """)
-        self.gettingrangevalues.connect(self.settingranges)
+
         self.initUI()
 
-
+    
     def settingrangesensor(self):
         pvh = self.variableid + "PVH"
         pvl = self.variableid + "PVL"
@@ -72,10 +66,6 @@ class TriangleWidget(QWidget):
         pvhhv = self.store.finaltag[pvhh]
         pvllv = self.store.finaltag[pvll]
         self.setThresholds(pvllv,pvlv,pvhv,pvhhv)
-    def gettinglvalues(self,h,l):
-        self.gettingrangevalues.emit(h,l)
-    def settingranges(self,h,l):
-        pass
     def initUI(self):
         self.setWindowFlags(Qt.WindowType.FramelessWindowHint)
         self.setGeometry(100, 100, 110, 220)
@@ -125,6 +115,22 @@ class TriangleWidget(QWidget):
     # def setRightValue(self, value):
     #     self.rightValue = value
     #     self.update()
+    
+    def draw_triangleL(self, qp):
+        if not hasattr(self, 'leftValue'):
+            return
+
+        percent = self.value_to_percent(self.leftValue)
+        y = int(self.progress.geometry().y()) + self.progress.height() - int(percent / 100 * self.progress.height())
+
+        qp.setBrush(QColor(0, 0, 255))  # آبی
+        points = [
+            QPoint(30, y),
+            QPoint(17, y - 8),
+            QPoint(17, y + 8)
+        ]
+        triangle = QPolygon(points)
+        qp.drawPolygon(triangle)
 
     def draw_triangleL(self, qp):
         if not hasattr(self, 'leftValue'):
@@ -151,11 +157,11 @@ class TriangleWidget(QWidget):
     def setminmaxvalue(self, min_val, max_val):
         self.minval = min_val
         self.maxval = max_val
-        firstdiv = int(round(min_val,1))
-        seconddiv = round(min_val + (max_val - min_val) / 4,1)
-        thirddiv = round(min_val + (max_val - min_val) / 2,1)
-        forthdiv = round(min_val + (max_val - min_val) * 3 / 4,1)
-        fifthdiv = round(max_val,1)
+        firstdiv = float(round(min_val, 1))
+        seconddiv = float(round(min_val + (max_val - min_val) / 4,2))
+        thirddiv = float(round(min_val + (max_val - min_val) / 2,2))
+        forthdiv = float(round(min_val + (max_val - min_val) * 3 / 4,2))
+        fifthdiv = float(round(max_val,2))
 
         self.label5.setText(str(firstdiv))
         self.label4.setText(str(seconddiv))
@@ -209,7 +215,7 @@ class TriangleWidget(QWidget):
 
 
     def draw_colorbar(self, qp, **kwargs):
-        x = self.progress.geometry().right() + 3  # مکان افقی نوار رنگی
+        x = self.progress.geometry().right() + 2  # مکان افقی نوار رنگی
         y_top = self.progress.geometry().y()      # مبدا Y
         height = self.progress.height()
         width = 8
@@ -223,22 +229,14 @@ class TriangleWidget(QWidget):
 
         # ناحیه LL تا L
         if kwargs.get('LL') is not None and kwargs.get('L') is not None:
-            if kwargs['LL'] == kwargs['L']:
-                y1 = value_to_y(kwargs['LL'])
-                y2 = value_to_y(self.ranges[0])  # استفاده از حداقل رنج
-            else:
-                y1 = value_to_y(kwargs['LL'])
-                y2 = value_to_y(kwargs['L'])
+            y1 = value_to_y(kwargs['LL'])
+            y2 = value_to_y(kwargs['L'])
             qp.drawRect(x, min(y1, y2), width, abs(y2 - y1))
 
         # ناحیه H تا HH
         if kwargs.get('H') is not None and kwargs.get('HH') is not None:
-            if kwargs['H'] == kwargs['HH']:
-                y1 = value_to_y(kwargs['H'])
-                y2 = value_to_y(self.ranges[1])  # استفاده از حداکثر رنج
-            else:
-                y1 = value_to_y(kwargs['H'])
-                y2 = value_to_y(kwargs['HH'])
+            y1 = value_to_y(kwargs['H'])
+            y2 = value_to_y(kwargs['HH'])
             qp.drawRect(x, min(y1, y2), width, abs(y2 - y1))
 
 

@@ -5,13 +5,33 @@ import sys
 
 class Link(QtWidgets.QWidget):
     changePageSignal = pyqtSignal(int)
+    requestAddToTab = QtCore.pyqtSignal(int)
 
     def __init__(self,dest):
         super().__init__()
         self.dest = dest
+        self.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
+        self.customContextMenuRequested.connect(self.openContextMenu)
         # self.distination = distination
         self.InitUi()
 
+    def openContextMenu(self, pos):
+        menu = QtWidgets.QMenu(self)
+        menu.setStyleSheet("""
+        QMenu {
+            background-color: black;
+            color: white;  /* متن آیتم‌ها */
+            border: 1px solid #ccc;
+        }
+        QMenu::item:selected {
+            background-color: #505050;
+            color: white;  /* رنگ متن هنگام هاور */
+        }
+    """)
+        add_tab_action = menu.addAction("Add to tab")
+        action = menu.exec(self.mapToGlobal(pos))
+        if action == add_tab_action:
+            self.requestAddToTab.emit(self.dest)
     def InitUi(self):
         self.setStyleSheet("background-color: rgb(0, 0, 0);")
         # self.setGeometry(99,99,1000,1000)

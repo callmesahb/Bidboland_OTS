@@ -1,3 +1,4 @@
+
 from PyQt6 import QtWidgets, QtGui, QtCore
 from PyQt6.QtCore import Qt, pyqtSignal
 from Store import Store
@@ -7,13 +8,15 @@ import sys
 
 class TextAction(QtWidgets.QWidget):
 
-    def __init__(self,text,variableid,store:Store):
+    def __init__(self,text,variableid,store:Store,id):
         super().__init__()
         self.resize(200, 200)
         self.color = "#fff"
         self.text = text
         self.variableid = variableid
+        self.id = id
         self.store = store
+        self.setFixedHeight(32)
         self.setStyleSheet("background-color:#666666")
         self.label = QtWidgets.QLabel("",self)
         self.InitUi()
@@ -30,7 +33,8 @@ class TextAction(QtWidgets.QWidget):
     def mousePressEvent(self, event: QtGui.QMouseEvent):
         super().mousePressEvent(event)
         if event.button() == Qt.MouseButton.LeftButton:
-            print("SALAM")
+            # print("SALAM")
+            pass
             
     def Updatingvalue(self,data):
         self.value = data.get(self.value)
@@ -48,16 +52,19 @@ class TextAction(QtWidgets.QWidget):
         painter.setPen(QtGui.QPen(QtGui.QColor(self.color), 3))
         painter.drawRect(self.rect())
     
+    
     @QtCore.pyqtSlot()
     def updatevalue(self):
         value = self.store.finaltag[self.variableid]
+        # print(f"{id}:{value}")
+        # print(f"[TextAction] updatevalue called for id={id}, value={value}")
+
+        # print(f"[DEBUG] updatevalue called for id={id}, value={value}")
         if value == 2:
-            print(value)
             self.label.setStyleSheet("color:red;")
+            # print(self.id)
             self.color = "red"
-            print(value)
-        # print(value)
-        else:
+        elif value == 1:
             self.label.setStyleSheet("color:#fff;")
-            self.color = "#fff"
-            print(value)
+            # print(self.id)
+            self.color = "white"

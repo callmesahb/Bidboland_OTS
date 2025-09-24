@@ -2,10 +2,12 @@ from PyQt6.QtCore import QObject, pyqtSignal, pyqtSlot,QTimer,QMetaObject,QRunna
 from OpcClient import OpcClient as opc
 from workerThread import Worker
 from StoreThread import StoreThread
+import time
 import pandas as pd
 import os
 import sys
 import json
+from APIs import Aspen
 
 
 class Store(QObject):
@@ -17,10 +19,12 @@ class Store(QObject):
         current_path = os.getcwd()
         opc_path = os.path.join(current_path,"new opc")
         tags_path = os.path.join(current_path,"data")
+        sim_path = os.path.join(current_path,"sim")
         self.tagsfile = os.path.join(tags_path,"tags.json")
         self.certfile = os.path.join(opc_path,"cert.json")
         self.csvpath = os.path.join(opc_path,"tags.csv")
         self.csvfile = pd.read_csv(self.csvpath)
+        self.aspen = Aspen(sim_path)
         self.opcSettings = self.read_json_file(self.certfile)
         url = self.opcSettings["endPointUrl"]
         self.opc = opc(url)
@@ -36,7 +40,9 @@ class Store(QObject):
         self.variables = self.getting_names()
         self.gettingvalvedata()
         self.tag = self.ReadingtagsFile()
-        
+        self.state_timer = QTimer(self)
+        self.state_timer.timeout.connect(self.getsimstate)
+        self.state_timer.start(1000)
         # self.worker.data_ready.connect(self.update_data)
         # self.worker.start()
         # self.ReadingTagClient()
@@ -44,8 +50,29 @@ class Store(QObject):
         self.worker = StoreThread(self.opc,self.csvfile,self.tag)
         self.worker.start()
         self.timer.timeout.connect(self.ReadingTagClient)
-        self.timer.start(1000)
-    
+        # self.timer.start(1000)
+        self.history = {}
+        self.timertrend = QTimer()
+        self.timer.timeout.connect(self.collect_data)
+        self.timertrend.start(1000)
+        
+        
+        
+    def getsimstate(self):
+        state = self.aspen.ReadingSimulationState()
+        # print(state)
+        if state == "Running":
+            self.timer.start(1000)
+        else:
+            self.timer.stop()
+        
+    def collect_data(self):
+        now = self.finaltag["420TIMER"]
+        for tag, value in self.finaltag.items():
+            if tag not in self.history:
+                self.history[tag] = []
+            self.history[tag].append((now, value))
+            self.history[tag] = [item for item in self.history[tag] if item[0] > now - 300]
     def update_data(self,newtags):
         self.updatevalues.emit(newtags,self.tag)
     def ReadingtagsFile(self) -> list:
@@ -114,22 +141,68 @@ class Store(QObject):
         pv = Varid + "PV"
         op = Varid + "OP"
         tv = Varid + "TV"
+        spadvalue = 0.0
+        spnames = ["4201TV028SP","4201PV117ASP","4201PV117BSP","4201LV028BSP","4201LV028CSP"]
         spvalue = 0.0
         pvvalue = 0.0
         opvalue = 0.0
         tvvalue = 1.0
         if sp in self.names or pv in self.names or op in self.names:
-            varid_dict = next(item for item in self.tags if item['name'] == sp)
-            varid_dict1 = next(item for item in self.tags if item['name'] == pv)
-            varid_dict2 = next(item for item in self.tags if item['name'] == op)
-            varid_dict3 = next(item for item in self.tags if item['name'] == tv)
-            spvalue = varid_dict["initial"]
-            pvvalue = varid_dict1["initial"]
-            opvalue = varid_dict2["initial"]
-            tvvalue = varid_dict3["initial"]
+            if sp in spnames:
+                pass
+            else:
+                varid_dict = next(item for item in self.tags if item['name'] == sp)
+                varid_dict1 = next(item for item in self.tags if item['name'] == pv)
+                varid_dict2 = next(item for item in self.tags if item['name'] == op)
+                varid_dict3 = next(item for item in self.tags if item['name'] == tv)
+                spvalue = varid_dict["initial"]
+                pvvalue = varid_dict1["initial"]
+                opvalue = varid_dict2["initial"]
+                tvvalue = varid_dict3["initial"]
+            
         oplist = [spvalue,pvvalue,opvalue , tvvalue]
+        if sp == "4201FV002SP":
+            print(oplist)
         return oplist
+    def spadfinder(self,varid:str):
+        spadvalue = 0.0
+        if varid[0] == "4":
+            spad = varid + "SPAd"
+            varid_dict = next(item for item in self.tags if item['name'] == spad)
+            spadvalue = varid_dict["initial"]
+        return spadvalue
     
+    def spfinder(self,varid:str):
+        spvalue = 0.0
+        if varid[0] == "4":
+            sp = varid + "SP"
+            varid_dict = next(item for item in self.tags if item['name'] == sp)
+            spvalue = varid_dict["initial"]
+        return spvalue
+    
+    def gainfinder(self,varid:str):
+        gainvalue = 0.0
+        if varid[0] == "4":
+            gain = varid + "KC"
+            varid_dict = next(item for item in self.tags if item['name'] == gain)
+            gainvalue = varid_dict["initial"]
+        return gainvalue
+    
+    def tifinder(self,varid:str):
+        tivalue = 0.0
+        if varid[0] == "4":
+            ti = varid + "TI"
+            varid_dict = next(item for item in self.tags if item['name'] == ti)
+            tivalue = varid_dict["initial"]
+        return tivalue
+    
+    def gainvalueextraction(self,varid:str):
+        actionvalue = 0.0
+        if varid[0] == "4":
+            action = varid + "AC"
+            varid_dict = next(item for item in self.tags if item['name'] == action)
+            actionvalue = varid_dict["initial"]
+        return actionvalue
     def ListingDescs(self,index:int) -> dict:
         page = self.data["layout"]["sections"][index]
         return page
@@ -142,7 +215,6 @@ class Store(QObject):
 
     def reset_to_initial(self):
         for item in self.tags:
-            print(item)
             tag_name = item["name"]
             try:
                 initial_value = item["initial"]

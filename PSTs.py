@@ -4,13 +4,15 @@ from ESDAction import Action
 import sys
 
 class PSTWidget(QtWidgets.QWidget):
-    def __init__(self):
+    def __init__(self,variableid:list,store):
         super().__init__()
+        self.variableid = variableid
+        self.store = store
         self.setAttribute(QtCore.Qt.WidgetAttribute.WA_TranslucentBackground)
         self.setStyleSheet("""
             QWidget {
                 background: #676767;
-                border: 2px solid #000;
+                border: 2px solid #ffffff;
                 border-radius: 3px;
             }
         """)
@@ -24,9 +26,31 @@ class PSTWidget(QtWidgets.QWidget):
     
     def settingname(self):
         self.text = QtWidgets.QLabel("PST",self)
-        self.text.setStyleSheet("color:black;font-size:14px")
+        self.text.setStyleSheet("color:#ffffff;font-size:14px")
         self.mainlayout.addWidget(self.text,0,QtCore.Qt.AlignmentFlag.AlignCenter)
         
+    def readingvalue(self):
+        value = self.store.finaltag[self.variableid[0]]
+        rrvar = self.variableid[0].replace("LG","")
+        if value == 2:
+            self.store.settingValueOPC(rrvar,2)
+            self.text.setStyleSheet("color:#ff0000;font-size:14px")
+            self.setStyleSheet("""
+                QWidget {
+                    background: #676767;
+                    border: 2px solid #ff0000;
+                    border-radius: 3px;
+                }
+            """)
+        else:
+            self.text.setStyleSheet("color:#ffffff;font-size:14px")
+            self.setStyleSheet("""
+                QWidget {
+                    background: #676767;
+                    border: 2px solid #ffffff;
+                    border-radius: 3px;
+                }
+            """)
         
         
 def window():

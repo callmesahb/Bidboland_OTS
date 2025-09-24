@@ -30,7 +30,7 @@ class SplashScreen(QtWidgets.QSplashScreen):
         
     def _setImage(self):
         self.splshimg = QtGui.QPixmap(
-            os.path.join(self.imgdir,"loading_2.jpg"))
+            os.path.join(self.imgdir,"Loading420.png"))
         if self.newScale != 1:
             newWidth = int(self.splshimg.size().width() * self.newScale)
             newHeight = int(self.splshimg.size().height() * self.newScale)
@@ -50,10 +50,9 @@ class SplashScreen(QtWidgets.QSplashScreen):
         self.worker.start()
     def StartSim(self):
         self.showMessage("Opening Simulation")
-        # self.apis = Aspen()
-        # self.apis.Visibling(True)
-        # self.showMessage("Simulation Opened")
-        pass
+        self.apis = Aspen(self.simdir)
+        self.apis.Visibling(False)
+        self.showMessage("Simulation Opened")
     def SimOpened(self):
         self._startThread(self.loadingData,self.DataLoaded)
         
@@ -63,10 +62,11 @@ class SplashScreen(QtWidgets.QSplashScreen):
             open(os.path.join(self.datadir, "data.json"), "r").read())
         self.tags = json.loads(
             open(os.path.join(self.datadir, "tags.json"), "r").read())
+        self.tag_names = [tag["name"] for tag in self.tags]
     def DataLoaded(self):
         self.showMessage("Data Loaded...")
         self.store = Store(self.data,self.tags)
-        self.mainWidget = MainWindow(self.data,self.store)
+        self.mainWidget = MainWindow(self.data,self.store,self.tag_names)
         self.finish(self.mainWidget)
         self.mainWidget.showMaximized()
         

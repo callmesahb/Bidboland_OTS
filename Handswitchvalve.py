@@ -1,4 +1,3 @@
-
 from PyQt6.QtWidgets import QLabel, QLineEdit, QApplication, QVBoxLayout, QWidget
 from PyQt6.QtGui import QPixmap,QTransform,QMouseEvent , QPainter
 from PyQt6.QtCore import Qt,pyqtSignal,pyqtSlot
@@ -11,24 +10,17 @@ from Store import Store
 class ControllerValve(QWidget):
         ChangePosValve = pyqtSignal(float)
         updatevalues = pyqtSignal()
-        def __init__(self,name,rotated,pvvalues,variableid:str,store:Store,ranges:list,title:str,type):
+        def __init__(self):
                 super().__init__()
                 self.setWindowTitle("controllerValve")
                 self.resize(50, 40)
                 self.faceplates = []
-                self.rotated = rotated
-                self.name = name
-                self.type = type
-                self.title = title
-                self.ranges = ranges
-                self.pvvalues = pvvalues
-                self.variableid = variableid
+                
                 current_path = os.getcwd()
                 images = os.path.join(current_path, "images")
                 self.equip_path = os.path.join(images, "equipment")
                 self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
                 self.image = {}
-                # self.faceplate = ControllerPlate(name,pvvalues,variableid,store,ranges,title,self.type)
                 self.load_image()
 
                 self.image_label = QLabel(self)
@@ -44,9 +36,8 @@ class ControllerValve(QWidget):
                 # for i in range(repeat_count):
                 #     random_number=random.choice([1,2])
                 #     print(f"{random_number}")
-                self.store=store
 
-                self.set_status(pvvalues[2])
+                self.set_status(0.5)
                 
                 
                 
@@ -56,14 +47,7 @@ class ControllerValve(QWidget):
                 "Controller_g": QPixmap(f"{self.equip_path}/contg2.png")
             }
 
-            if self.rotated == "left":
-                transform = QTransform().rotate(-90)
-                self.image["Controller_g"] = self.image["Controller_g"].transformed(transform)
-                self.image["Controller_r"] = self.image["Controller_r"].transformed(transform)
-            if self.rotated == "right":
-                transform = QTransform().rotate(90)
-                self.image["Controller_g"] = self.image["Controller_g"].transformed(transform)
-                self.image["Controller_r"] = self.image["Controller_r"].transformed(transform)
+            
         # def paintEvent(self, event):
         #     painter = QPainter(self)
         #     painter.setRenderHint(QPainter.RenderHint.Antialiasing)
@@ -81,26 +65,26 @@ class ControllerValve(QWidget):
                     pass
             self.update()
                 
-        @pyqtSlot()
-        def settingValueController(self):
-            value =self.store.finaltag[self.variableid]
-            self.set_status(value)
-            # print(value)
+        # @pyqtSlot()
+        # def settingValueController(self):
+        #     value =self.store.finaltag[self.variableid]
+        #     self.set_status(value)
+        #     # print(value)
                     
-        # def mousePressEvent(self, event: QMouseEvent):
-        #     if event.button() == Qt.MouseButton.LeftButton:
-        #         if not hasattr(self, 'faceplate') or self.faceplate is None or not self.faceplate.isVisible():
-        #             varid = self.variableid[:-2]
-        #             self.faceplate = ControllerPlate(self.name, self.pvvalues, varid, self.store,self.ranges,self.title,self.type)
-        #             self.faceplate.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose, True)
-        #             self.faceplate.setWindowFlag(Qt.WindowType.WindowStaysOnTopHint, True)
-        #             self.faceplate.destroyed.connect(self._faceplate_closed)
-        #             self.faceplate.show()
-        #         else:
-        #             self.faceplate.raise_()
-        #             self.faceplate.activateWindow()
+        def mousePressEvent(self, event: QMouseEvent):
+            if event.button() == Qt.MouseButton.LeftButton:
+                if not hasattr(self, 'faceplate') or self.faceplate is None or not self.faceplate.isVisible():
+                    varid = self.variableid[:-2]
+                    self.faceplate = ControllerPlate(self.name, self.pvvalues, varid, self.store,self.ranges,self.title,self.type)
+                    self.faceplate.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose, True)
+                    self.faceplate.setWindowFlag(Qt.WindowType.WindowStaysOnTopHint, True)
+                    self.faceplate.destroyed.connect(self._faceplate_closed)
+                    self.faceplate.show()
+                else:
+                    self.faceplate.raise_()
+                    self.faceplate.activateWindow()
 
-        #     return super().mousePressEvent(event)
+            return super().mousePressEvent(event)
 
         def _faceplate_closed(self):
             self.faceplate = None
@@ -117,6 +101,6 @@ class ControllerValve(QWidget):
              
 if __name__ == '__main__':
         app = QApplication(sys.argv)
-        window = ControllerValve("0LIC","left")
+        window = ControllerValve()
         window.show()
         sys.exit(app.exec())

@@ -75,9 +75,6 @@ class valveEV(QWidget):
             if self.name[2] == "P":
                 return
             else:
-                namef = "" + self.variableid
-                self.faceplate.setWindowTitle(self.name)
-                self.faceplate.name.setText(namef)
                 self.faceplate.show()
 if __name__ == '__main__':
         app = QApplication(sys.argv)

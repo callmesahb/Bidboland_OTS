@@ -10,14 +10,14 @@ import os
 class valveEV(QWidget):
     ChangingValveStatus = pyqtSignal(int)
 
-    def __init__(self,store:Store, variableid,name, value,rotated ):
+    def __init__(self,store:Store, variableid,name, value,rotated,title ):
         super().__init__()
         self.value = value
         self.name = name
         self.rotated = rotated
         self.variableid = variableid
         self.setWindowTitle("valveEV")
-        self.faceplate = Valves(store,variableid,value)
+        self.faceplate = Valves(store,variableid,value,title)
         self.resize(50, 40)
         current_path = os.getcwd()
         images = os.path.join(current_path, "images")
@@ -33,6 +33,7 @@ class valveEV(QWidget):
         layout.addWidget(self.image_label)
         self.setLayout(layout)
         self.faceplate.ValveChangingPos.connect(self.set_status)
+        self.set_status(value)
 
     def load_image(self):
         self.image = {
@@ -68,8 +69,7 @@ class valveEV(QWidget):
         self.set_status(value)
     def mousePressEvent(self, event: QMouseEvent):
         if event.button() == Qt.MouseButton.LeftButton:
-            self.faceplate.setWindowTitle(self.name)
-            self.faceplate.name.setText(self.name)
+            # self.faceplate.name.setText(self.name)
             self.faceplate.show()
         return super().mousePressEvent(event)
 if __name__ == '__main__':

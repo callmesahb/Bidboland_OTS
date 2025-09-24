@@ -1,13 +1,12 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QProgressBar, QLabel
 from PyQt6.QtGui import QPainter, QPolygon, QColor, QPalette
-from PyQt6.QtCore import QTimer, QPoint, Qt,pyqtSignal
-import random
+from PyQt6.QtCore import QTimer, QPoint, Qt
 from Store import Store
+import random
 
-class TriangleWidget(QWidget):
-    gettingrangevalues = pyqtSignal(float,float)
-    def __init__(self, LL:None,L:None,H:None,HH:None,variableid,store:Store,ranges,parent=None):
+class TriangleWidgetNew(QWidget):
+    def __init__(self, LL:None,L:None,H:None,HH:None,variableid,store:Store,parent=None):
         super().__init__()
         self.minval = 0
         self.maxval = 100
@@ -17,14 +16,12 @@ class TriangleWidget(QWidget):
         self.lowlow = LL
         self.high = H
         self.highhigh = HH
-        self.ranges = ranges
-        self.store = store
         self.variableid = variableid
-        self.setThresholds(self.lowlow,self.low,self.high,self.highhigh)
-        
+        self.store = store
         # self.timer_range = QTimer()
         # self.timer_range.timeout.connect(self.settingrangesensor)
         # self.timer_range.start(1000)
+        # self.setThresholds(self.lowlow,self.low,self.high,self.highhigh)
         self.progress = QProgressBar(self)
         self.progress.setTextVisible(False)
         self.progress.setOrientation(Qt.Orientation.Vertical)
@@ -58,10 +55,10 @@ class TriangleWidget(QWidget):
                 background-color: rgb(0,255,1);
             }
         """)
-        self.gettingrangevalues.connect(self.settingranges)
+
         self.initUI()
 
-
+    
     def settingrangesensor(self):
         pvh = self.variableid + "PVH"
         pvl = self.variableid + "PVL"
@@ -72,10 +69,6 @@ class TriangleWidget(QWidget):
         pvhhv = self.store.finaltag[pvhh]
         pvllv = self.store.finaltag[pvll]
         self.setThresholds(pvllv,pvlv,pvhv,pvhhv)
-    def gettinglvalues(self,h,l):
-        self.gettingrangevalues.emit(h,l)
-    def settingranges(self,h,l):
-        pass
     def initUI(self):
         self.setWindowFlags(Qt.WindowType.FramelessWindowHint)
         self.setGeometry(100, 100, 110, 220)
@@ -151,11 +144,11 @@ class TriangleWidget(QWidget):
     def setminmaxvalue(self, min_val, max_val):
         self.minval = min_val
         self.maxval = max_val
-        firstdiv = int(round(min_val,1))
-        seconddiv = round(min_val + (max_val - min_val) / 4,1)
-        thirddiv = round(min_val + (max_val - min_val) / 2,1)
-        forthdiv = round(min_val + (max_val - min_val) * 3 / 4,1)
-        fifthdiv = round(max_val,1)
+        firstdiv = int(round(min_val))
+        seconddiv = round(min_val + (max_val - min_val) / 4)
+        thirddiv = round(min_val + (max_val - min_val) / 2)
+        forthdiv = round(min_val + (max_val - min_val) * 3 / 4)
+        fifthdiv = round(max_val)
 
         self.label5.setText(str(firstdiv))
         self.label4.setText(str(seconddiv))
@@ -223,23 +216,32 @@ class TriangleWidget(QWidget):
 
         # ناحیه LL تا L
         if kwargs.get('LL') is not None and kwargs.get('L') is not None:
-            if kwargs['LL'] == kwargs['L']:
-                y1 = value_to_y(kwargs['LL'])
-                y2 = value_to_y(self.ranges[0])  # استفاده از حداقل رنج
-            else:
-                y1 = value_to_y(kwargs['LL'])
-                y2 = value_to_y(kwargs['L'])
+            y1 = value_to_y(kwargs['LL'])
+            y2 = value_to_y(kwargs['L'])
             qp.drawRect(x, min(y1, y2), width, abs(y2 - y1))
 
         # ناحیه H تا HH
         if kwargs.get('H') is not None and kwargs.get('HH') is not None:
-            if kwargs['H'] == kwargs['HH']:
-                y1 = value_to_y(kwargs['H'])
-                y2 = value_to_y(self.ranges[1])  # استفاده از حداکثر رنج
-            else:
-                y1 = value_to_y(kwargs['H'])
-                y2 = value_to_y(kwargs['HH'])
+            y1 = value_to_y(kwargs['H'])
+            y2 = value_to_y(kwargs['HH'])
             qp.drawRect(x, min(y1, y2), width, abs(y2 - y1))
+        if kwargs.get('L') == kwargs.get('LL') and  kwargs.get('L') is not None:
+            # dfm = kwargs.get('LL') - self.minval
+            # print(f":{dfm}")
+            # qp.drawRect(x, min(dfm), width, abs(dfm))
+            y1 = value_to_y(kwargs['LL'])
+            y2 = value_to_y(self.minval)
+            qp.drawRect(x, min(y1, y2), width, abs(y2 - y1))
+        if kwargs.get('H') == kwargs.get('HH') and  kwargs.get('H') is not None:
+            # dfm = kwargs.get('LL') - self.minval
+            # print(f":{dfm}")
+            # qp.drawRect(x, min(dfm), width, abs(dfm))
+            y1 = value_to_y(kwargs['HH'])
+            y2 = value_to_y(self.maxval)
+            qp.drawRect(x, min(y1, y2), width, abs(y2 - y1))
+
+
+
 
 
     def setThresholds(self, LL=None, L=None, H=None, HH=None):

@@ -12,7 +12,7 @@ from Store import Store
 class Aircooler(QWidget):
     PumpChangingPos = pyqtSignal(str)
     updatevalues = pyqtSignal()
-    def __init__(self,store:Store,variableid,name,value):
+    def __init__(self,store:Store,variableid,name,value,title):
         super().__init__()
         self.setWindowTitle("Aircooler")
         self.value=value
@@ -20,6 +20,7 @@ class Aircooler(QWidget):
         self.name = name
         self.variableid=variableid
         self.store=store
+        self.title = title
         current_path = os.getcwd()
         images = os.path.join(current_path, "images")
         self.equip_path = os.path.join(images, "equipment")
@@ -31,7 +32,6 @@ class Aircooler(QWidget):
         self.image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
 
-        self.faceplate = PumpFacePlate(variableid,store)
         # self.faceplate.PumpChangingPos.connect(self.set_status)
         self.store.updatevalues.connect(self.ReadingValue)
   
@@ -40,7 +40,7 @@ class Aircooler(QWidget):
         self.setLayout(layout)
 
    
-        self.set_status("RUN")  
+        self.set_status(value)
 
     def load_image(self):
         self.image = {
@@ -62,6 +62,8 @@ class Aircooler(QWidget):
             
     def mousePressEvent(self, event:QMouseEvent):
         if event.button() == Qt.MouseButton.LeftButton:
+            print(self.variableid)
+            self.faceplate = PumpFacePlate(self.variableid,self.store,self.title)
             self.faceplate.setWindowTitle(self.name)
             self.faceplate.pname.setText(self.name)
             self.faceplate.show()

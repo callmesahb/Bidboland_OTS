@@ -21,44 +21,43 @@ class Slider(QtWidgets.QWidget):
     def InitUI(self):
         self.hlayout = QtWidgets.QHBoxLayout()
         self.vlayout = QtWidgets.QVBoxLayout()
+        self.vlayout.setSpacing(0)
         self.vlayout.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
         self.ProgressBar()
         # self.settingRotation()
         
     def ProgressBar(self):
         self.progress_bar = QtWidgets.QProgressBar()
+        self.progress_bar.setFixedSize(self.w + 4, self.h + 4)
         self.progress_bar.setRange(0,100)
         self.progress_bar.setValue(int(self.op))
         self.progress_bar.setTextVisible(False)
         self.valuelabel = QtWidgets.QLabel(f"{self.op}")
+        self.valuelabel.setStyleSheet("color:white")
         
         self.setLayout(self.vlayout)
         if self.rotated == "left":
             self.progress_bar.setOrientation(QtCore.Qt.Orientation.Horizontal)
             self.progress_bar.setFixedSize(self.w,self.h)
             self.vlayout.addWidget(self.progress_bar,0,QtCore.Qt.AlignmentFlag.AlignBottom)
-            self.vlayout.addWidget(self.valuelabel,1,QtCore.Qt.AlignmentFlag.AlignTop)
+            self.vlayout.addWidget(self.valuelabel,1,QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.progress_bar.setStyleSheet("""
+            QProgressBar {
+                background-color: #666666;
+                border: 2px solid #fff;
+                border-radius: 1px;
+            }
+            QProgressBar::chunk {
+                background-color: white;
+                margin: 0px;
+            }
+        """)
         if self.rotated == "":
             self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
             self.progress_bar.setFixedSize(self.w,self.h)
             self.vlayout.addWidget(self.progress_bar)
             self.vlayout.addWidget(self.valuelabel)
-        if self.name == "0TIC034":
-            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
-            self.progress_bar.setFixedSize(self.w,self.h)
-            self.hlayout.addWidget(self.valuelabel)
-            self.hlayout.addWidget(self.progress_bar)
-        if self.name == "0LIC705":
-            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
-            self.progress_bar.setFixedSize(self.w,self.h)
-            self.hlayout.addWidget(self.valuelabel)
-            self.hlayout.addWidget(self.progress_bar)
-        if self.rotated == "right":
-            pass
-        if self.name[0] == "S":
-            self.valuelabel.setHidden(True)
-        self.progress_bar.setFixedSize(self.w, self.h)
-        self.progress_bar.setStyleSheet("""
+            self.progress_bar.setStyleSheet("""
             QProgressBar {
                 background-color: #2e2e2e;
                 border: none;
@@ -69,8 +68,220 @@ class Slider(QtWidgets.QWidget):
                 margin: 0px;
             }
         """)
+        if self.name == "0TIC034":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.hlayout.addWidget(self.valuelabel)
+            self.hlayout.addWidget(self.progress_bar)
+        if self.name == "0LIC705":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.hlayout.addWidget(self.valuelabel)
+            self.hlayout.addWidget(self.progress_bar)
+            
+        if self.name == "1LIC015" and self.rotated == "":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.vlayout.addWidget(self.progress_bar,0,QtCore.Qt.AlignmentFlag.AlignBottom)
+            self.vlayout.addWidget(self.valuelabel,1,QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.progress_bar.setStyleSheet("""
+            QProgressBar {
+                background-color: #666666;
+                border: 2px solid #fff;
+                border-radius: 1px;
+            }
+            QProgressBar::chunk {
+                background-color: white;
+                margin: 0px;
+            }
+        """)
+        if self.name == "1FIC003":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.vlayout.addWidget(self.progress_bar,0,QtCore.Qt.AlignmentFlag.AlignBottom)
+            self.vlayout.addWidget(self.valuelabel,1,QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.progress_bar.setStyleSheet("""
+            QProgressBar {
+                background-color: #666666;
+                border: 2px solid #fff;
+                border-radius: 1px;
+            }
+            QProgressBar::chunk {
+                background-color: white;
+                margin: 0px;
+            }
+        """)
+        if self.name == "1LIC029B":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.vlayout.addWidget(self.progress_bar,0,QtCore.Qt.AlignmentFlag.AlignBottom)
+            self.vlayout.addWidget(self.valuelabel,1,QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.progress_bar.setStyleSheet("""
+            QProgressBar {
+                background-color: #666666;
+                border: 2px solid #fff;
+                border-radius: 1px;
+            }
+            QProgressBar::chunk {
+                background-color: white;
+                margin: 0px;
+            }
+        """)
+        if self.name == "1LV028C":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.vlayout.addWidget(self.progress_bar,0,QtCore.Qt.AlignmentFlag.AlignBottom)
+            self.vlayout.addWidget(self.valuelabel,1,QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.progress_bar.setStyleSheet("""
+            QProgressBar {
+                background-color: #666666;
+                border: 2px solid #fff;
+                border-radius: 1px;
+            }
+            QProgressBar::chunk {
+                background-color: white;
+                margin: 0px;
+            }
+        """)
+        if self.name == "1LIC007":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.vlayout.addWidget(self.progress_bar,0,QtCore.Qt.AlignmentFlag.AlignBottom)
+            self.vlayout.addWidget(self.valuelabel,1,QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.progress_bar.setStyleSheet("""
+            QProgressBar {
+                background-color: #666666;
+                border: 2px solid #fff;
+                border-radius: 1px;
+            }
+            QProgressBar::chunk {
+                background-color: white;
+                margin: 0px;
+            }
+        """)
+        if self.name == "1LIC007" and self.rotated == "left":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Horizontal)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.vlayout.addWidget(self.progress_bar,0,QtCore.Qt.AlignmentFlag.AlignBottom)
+            self.vlayout.addWidget(self.valuelabel,1,QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.progress_bar.setStyleSheet("""
+            QProgressBar {
+                background-color: #666666;
+                border: 2px solid #fff;
+                border-radius: 1px;
+            }
+            QProgressBar::chunk {
+                background-color: white;
+                margin: 0px;
+            }
+        """)
+            
+        if self.name == "1LV028C"  and self.rotated == "left":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Horizontal)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.vlayout.addWidget(self.progress_bar,0,QtCore.Qt.AlignmentFlag.AlignBottom)
+            self.vlayout.addWidget(self.valuelabel,1,QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.progress_bar.setStyleSheet("""
+            QProgressBar {
+                background-color: #666666;
+                border: 2px solid #fff;
+                border-radius: 1px;
+            }
+            QProgressBar::chunk {
+                background-color: white;
+                margin: 0px;
+            }
+        """)
+        if self.name == "1FIC003"  and self.rotated == "left":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Horizontal)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.vlayout.addWidget(self.progress_bar,0,QtCore.Qt.AlignmentFlag.AlignBottom)
+            self.vlayout.addWidget(self.valuelabel,1,QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.progress_bar.setStyleSheet("""
+            QProgressBar {
+                background-color: #666666;
+                border: 2px solid #fff;
+                border-radius: 1px;
+            }
+            QProgressBar::chunk {
+                background-color: white;
+                margin: 0px;
+            }
+        """)
+            
+        if self.name == "1LIC021B":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.vlayout.addWidget(self.progress_bar,0,QtCore.Qt.AlignmentFlag.AlignBottom)
+            self.vlayout.addWidget(self.valuelabel,1,QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.progress_bar.setStyleSheet("""
+            QProgressBar {
+                background-color: #666666;
+                border: 2px solid #fff;
+                border-radius: 1px;
+            }
+            QProgressBar::chunk {
+                background-color: white;
+                margin: 0px;
+            }
+        """)
+        if self.name == "1LIC019B":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.vlayout.addWidget(self.progress_bar,0,QtCore.Qt.AlignmentFlag.AlignBottom)
+            self.vlayout.addWidget(self.valuelabel,1,QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.progress_bar.setStyleSheet("""
+            QProgressBar {
+                background-color: #666666;
+                border: 2px solid #fff;
+                border-radius: 1px;
+            }
+            QProgressBar::chunk {
+                background-color: white;
+                margin: 0px;
+            }
+        """)
+        if self.name == "1PIC010":
+            self.progress_bar.setOrientation(QtCore.Qt.Orientation.Vertical)
+            self.progress_bar.setFixedSize(self.w,self.h)
+            self.vlayout.addWidget(self.progress_bar,0,QtCore.Qt.AlignmentFlag.AlignBottom)
+            self.vlayout.addWidget(self.valuelabel,1,QtCore.Qt.AlignmentFlag.AlignCenter)
+            self.progress_bar.setStyleSheet("""
+            QProgressBar {
+                background-color: #666666;
+                border: 2px solid #fff;
+                border-radius: 1px;
+            }
+            QProgressBar::chunk {
+                background-color: white;
+                margin: 0px;
+            }
+        """)
+        if self.rotated == "right":
+            pass
+        if self.name[0] == "S":
+            self.valuelabel.setHidden(True)
+        self.progress_bar.setFixedSize(self.w, self.h)
+        # self.progress_bar.setStyleSheet("""
+        #     QProgressBar {
+        #         background-color: black;
+        #         border: 2px solid #AAAAAA;
+        #         color: white
+        #         border-radius: 2px;
+        #     }
+        #     QProgressBar::chunk {
+        #         background-color: white;
+        #         margin: 0px;
+        #     }
+        # """)
 
-
+    @QtCore.pyqtSlot(list)
+    def prdupdateslider(self,status:list):
+        if status[2] == True:
+            self.store.settingValueOPC("4201TIC047PRDOP",float(status[1]))
+        else:
+            value = self.store.finaltag["4201FIC047AOP"]
+            self.store.settingValueOPC("4201TIC047PRDOP",float(value))
             
     @QtCore.pyqtSlot()
     def updateSlider(self):
@@ -85,15 +296,7 @@ class Slider(QtWidgets.QWidget):
             value = 0
             self.progress_bar.setValue(int(round(value,2)))
             self.valuelabel.setText(str(round(value,2)))
-        if value > 0 and value <=5:
-            self.progress_bar.setStyleSheet("""
-                                            QProgressBar {
-                background-color: #2e2e2e;
-                color:#FF0000;
-                border: none;
-                border-radius: 2px;
-            }
-            """)
+        
         self.update()
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
