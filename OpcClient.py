@@ -19,7 +19,7 @@ class OpcClient:
             self.client.get_node(
                 f"ns=2;s={nodeTag}").set_value(float(newValue))
         except Exception as e:
-            print(f"new value must be integer or float. : {e}")
+            pass
 
     def getValue(self, nodeTag: str) -> float:
         return self.client.get_node(f"ns=2;s={nodeTag}").get_value()

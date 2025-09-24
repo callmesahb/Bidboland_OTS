@@ -1,21 +1,29 @@
 import win32com.client as win32
 import os
+import shutil
 
 class Aspen:
-    def __init__(self):
+    def __init__(self,path):
         super().__init__()
         self.sims = []
-        path = os.getcwd()
-        self.simdir = os.path.join(path, "sim")
+        self.path = path
+        # self.simdir = os.path.join(path, "sim")
         self.message = ""
         self.lasterr = ""
-        self.app1 = win32.GetObject(os.path.join(self.simdir,"DynamicsU407C2De.dynf"))
+        self.app1 = win32.GetObject(os.path.join(self.path,"DynamicsU403ARegTr-U407C2Tr.dynf"))
+        self.app2 = win32.GetObject(os.path.join(self.path,"DynamicsU407C2De.dynf"))
+        self.app3 = win32.GetObject(os.path.join(self.path,"Unit 403RegDe_Final.dynf"))
+        
         self.sims.append(self.app1)
+        self.sims.append(self.app2)
+        self.sims.append(self.app3)
         self.OpenSimulationFile()
     
     def OpenSimulationFile(self):
         try:
-            self.app1 = win32.GetObject(os.path.join(self.simdir,"DynamicsU407C2De.dynf"))
+            self.app1 = win32.GetObject(os.path.join(self.path,"DynamicsU403ARegTr-U407C2Tr.dynf"))
+            self.app2 = win32.GetObject(os.path.join(self.path,"DynamicsU407C2De.dynf"))
+            self.app3 = win32.GetObject(os.path.join(self.path,"Unit 403RegDe_Final.dynf"))
             # self.app2 = win32.GetObject(os.path.join(self.simdir,"DynamicsU407C2De.dynf"))
             self.message = "Simulation Openned"
             return True
@@ -26,21 +34,78 @@ class Aspen:
 
     def Visibling(self,state:bool):
         self.app1.Application.Visible = state
+        return state
+    def QuitSim(self):
+        for sim in self.sims:
+            sim.Application.Quit()
+        simdir = os.path.join(os.path.join(self.path,"AM_DynamicsU403ARegTr-U407C2Tr"))
+        simdir2 = os.path.join(os.path.join(self.path,"AM_DynamicsU407C2De"))
+        simdir3 = os.path.join(os.path.join(self.path,"AM_Unit 403RegDe_Final"))
+        # amdir = os.path.join(os.path.join(simdir,"AM_Final_dyn_U420"))
+        if os.path.exists(simdir):
+            try:
+                shutil.rmtree(simdir)
+                shutil.rmtree(simdir2)
+                shutil.rmtree(simdir3)
+            except Exception as e:
+                print(f"Error deleting folder {simdir}: {e}")
+        else:
+            print("Directory not found")
+    def Visibling(self,state:bool):
+        self.app1.Application.Visible = state
+        self.app3.Application.Visible = state
+        self.app2.Application.Visible = state
     
     def PauseSim(self):
         for simulation in self.sims:
             simulation.Pause()
+    def interrupt_all(self, state: bool):
+        for simulation in self.sims:
+            simulation.Interrupt(state)
+            
+    def get_last_message1(self):
+        last_index = self.app1.Application.Simulation.OutputLogger.MessageCount
+        message = self.app1.Application.Simulation.OutputLogger.Messages(last_index)
+        return message
+    def get_last_message2(self):
+        last_index = self.app2.Application.Simulation.OutputLogger.MessageCount
+        message = self.app2.Application.Simulation.OutputLogger.Messages(last_index)
+        return message
+    def get_last_message3(self):
+        last_index = self.app3.Application.Simulation.OutputLogger.MessageCount
+        message = self.app3.Application.Simulation.OutputLogger.Messages(last_index)
+        return message
+    def ReadingSimulationState(self) -> str:
+        state = self.app1.Application.Simulation.State
+        return state
+    def ReadingSimulationState2(self) -> str:
+        state = self.app2.Application.Simulation.State
+        return state
+    def ReadingSimulationState3(self) -> str:
+        state = self.app3.Application.Simulation.State
+        return state
+    def GetSimTimer(self):
+        time = self.app1.Application.Simulation.Time
+        return time
+    def GetSimTimer2(self):
+        time = self.app2.Application.Simulation.Time
+        return time
+    def GetSimTimer3(self):
+        time = self.app3.Application.Simulation.Time
+        return time
         
     def RewindSim(self):
         for sim in self.sims:
             sim.Pause()
             sim.Application.Simulation.Results.Refresh()
-            print("Be inja Reside")
             snapshots = sim.Results.SnapshotCount
-            print("Be inja Reside2")
             last_snapshot = sim.Results.GetSnapshot(snapshots - 1)
-            print("Be inja Reside3")
             sim.Results.Rewind(last_snapshot)
+            
+    def get_last_message(self):
+        last_index = self.app1.Application.Simulation.OutputLogger.MessageCount
+        message = self.app1.Application.Simulation.OutputLogger.Messages(last_index)
+        return message
         
 
 

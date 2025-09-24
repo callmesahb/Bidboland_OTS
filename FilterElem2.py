@@ -36,6 +36,7 @@ class Filter2(QWidget):
         layout.addWidget(self.label)
         layout.addWidget(self.checkBoxf)
         self.setLayout(layout)
+        self.toggle_images(value)
         
         
     def toggle_images(self ,state):

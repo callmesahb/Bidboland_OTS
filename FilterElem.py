@@ -33,6 +33,8 @@ class Filter(QWidget):
         layout.addWidget(self.checkBoxf)
         self.setLayout(layout)
         self.store.updatevalues.connect(self.settingValueController)
+        print(f"{name}:{value}")
+        self.toggle_images(value)
         
         
     def toggle_images(self ,state):

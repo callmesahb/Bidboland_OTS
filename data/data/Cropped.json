@@ -1,0 +1,173 @@
+{
+    "layout": {
+        "sections": [
+        {
+            "id": 20,
+            "parentId": 0,
+            "width": 1690,
+            "height": 921,
+            "imageUrl": "images/403A-1.png",
+            "type": "plant",
+            "lines": [],
+            "valves": [
+            { "id": "0EV021", "pos": { "l": 226, "t": 107.5, "w": 24, "h": 24 }, "type": "sdv", "variableId": "403ARS0EV021" },
+            { "id": "0TIC012", "pos": { "l": 221, "t": 306.5, "w": 24, "h": 24 }, "type": "controller", "variableId": "403ARS0TIC012OP" },
+            { "id": "0EV013", "pos": { "l": 295, "t": 515.5, "w": 24, "h": 24 }, "type": "sdv", "variableId": "403ARS0EV013" },
+            { "id": "0PIC049", "pos": { "l": 170, "t": 647.5, "w": 24, "h": 24 }, "type": "controller", "variableId": "403ARS0PIC049OP" },
+            { "id": "0EV010", "pos": { "l": 226, "t": 740.5, "w": 24, "h": 24 }, "type": "sdv", "variableId": "403ARS0EV010" },
+            { "id": "0LIC011", "pos": { "l": 316, "t": 740.5, "w": 24, "h": 24 }, "type": "controller", "variableId": "403ARS0LIC011OP" },
+            { "id": "0EV011", "pos": { "l": 209, "t": 865.5, "w": 24, "h": 24 }, "type": "sdv", "variableId": "403ARS0EV011" },
+            {
+                "id": "0LIC010",
+                "pos": { "l": 469, "t": 797.5, "w": 24, "h": 24 },
+                "rotated": "left",
+                "type": "controller",
+                "namePos": "NN",
+                "variableId": "403ARS0LIC011OP"
+            },
+            {
+                "id": "0LIC019",
+                "pos": { "l": 601, "t": 798.5, "w": 24, "h": 24 },
+                "rotated": "left",
+                "type": "controller",
+                "namePos": "NN",
+                "name": "0LIC019",
+                "variableId": "403ARS0LI019"
+            },
+            { "id": "0EV005", "pos": { "l": 869, "t": 796.5, "w": 24, "h": 24 }, "type": "sdv", "variableId": "403ARS0EV005" },
+            {
+                "id": "0LIC003",
+                "pos": { "l": 1047, "t": 796.5, "w": 24, "h": 24 },
+                "type": "controller",
+                "variableId": "403ARS0LIC003OP",
+                "namePos": "N"
+            },
+            { "id": "0EV008", "pos": { "l": 922, "t": 553.5, "w": 24, "h": 24 }, "type": "sdv", "variableId": "403ARS0EV008" },
+            { "id": "0EV015", "pos": { "l": 1081, "t": 395.5, "w": 24, "h": 24 }, "type": "sdv", "variableId": "403ARS0EV015" },
+            {
+                "id": "0LIC023",
+                "pos": { "l": 1178, "t": 396.5, "w": 24, "h": 24 },
+                "type": "controller",
+                "variableId": "403ARS0LIC023OP",
+                "namePos": "N"
+            },
+            {
+                "id": "0TIC040",
+                "pos": { "l": 1452, "t": 485.5, "w": 24, "h": 24 },
+                "type": "controller",
+                "variableId": "403ARS0TIC040OP",
+                "namePos": "N"
+            },
+            { "id": "0EV012", "pos": { "l": 1434, "t": 187.5, "w": 24, "h": 24 }, "type": "sdv", "variableId": "403ARS0EV012" },
+            {
+                "id": "0PIC007",
+                "pos": { "l": 1429, "t": 58.5, "w": 24, "h": 24 },
+                "type": "controller",
+                "variableId": "403ARS0PIC007OP",
+                "namePos": "N"
+            }
+            ],
+            "equipments": [],
+            "links": [
+            { "id": "D-403-101 A~E", "pos": { "l": 10, "t": 47.5, "w": 130, "h": 36 } },
+            { "id": "D-407-001A/B/C &  \nD-407-003A/B", "pos": { "l": 9, "t": 108.5, "w": 133, "h": 39 } },
+            { "id": "CWR", "pos": { "l": 7, "t": 305.5, "w": 134, "h": 41 } },
+            { "id": "HFL", "pos": { "l": 7, "t": 646.5, "w": 134, "h": 42 } },
+            { "id": "V-422-001", "pos": { "l": 9, "t": 741.5, "w": 132, "h": 38 } },
+            { "id": "E-402-007", "pos": { "l": 6, "t": 864.5, "w": 134, "h": 39 } },
+            { "id": "CWS", "pos": { "l": 247, "t": 423.5, "w": 134, "h": 40 } },
+            { "id": "F-403A-003A/B", "pos": { "l": 304, "t": 197.5, "w": 109, "h": 21 }, "to": 25 },
+            { "id": "E-403A-001", "pos": { "l": 504, "t": 73.5, "w": 108, "h": 25 }, "to": 21 },
+            { "id": "E-403A-002A/B", "pos": { "l": 336, "t": 374.5, "w": 117, "h": 24 }, "to": 21 },
+            { "id": "F-403A-007", "pos": { "l": 401, "t": 517.5, "w": 108, "h": 22 }, "to": 22 },
+            { "id": "T-403A-001", "pos": { "l": 720, "t": 418.5, "w": 111, "h": 22 }, "to": 23 },
+            { "id": "V-407-005", "pos": { "l": 1537, "t": 796.5, "w": 134, "h": 36 } },
+            { "id": "CWS", "pos": { "l": 1535, "t": 649.5, "w": 135, "h": 43 } },
+            { "id": "P-407-012A/B", "pos": { "l": 1534, "t": 547.5, "w": 135, "h": 42 } },
+            { "id": "CWR", "pos": { "l": 1535, "t": 487.5, "w": 133, "h": 42 } },
+            { "id": "V-407-005", "pos": { "l": 1535, "t": 392.5, "w": 135, "h": 41 } },
+            { "id": "V-403-002", "pos": { "l": 1536, "t": 188.5, "w": 132, "h": 37 }, "to": 3 },
+            { "id": "HP FLARE", "pos": { "l": 1534, "t": 59.5, "w": 136, "h": 36 } },
+            { "id": "V-403A-010", "pos": { "l": 945, "t": 144.5, "w": 110, "h": 23 }, "to": 24 },
+            { "id": "E-403A-008A/B", "pos": { "l": 1310, "t": 554.5, "w": 119, "h": 27 }, "to": 23 }
+            ],
+            "indicators": [
+            { "id": "0TIC011", "pos": { "l": 576, "t": 262.5, "w": 80, "h": 20 }, "variableId": "403ARS0TIC011PV" },
+            { "id": "0TIC012", "pos": { "l": 119, "t": 409.5, "w": 80, "h": 20 }, "variableId": "403ARS0TIC012PV" },
+            { "id": "0PIC049", "pos": { "l": 146, "t": 576.5, "w": 80, "h": 20 }, "variableId": "403ARS0PIC049PV" },
+            { "id": "0LI010", "pos": { "l": 384, "t": 679.5, "w": 80, "h": 20 }, "variableId": "403ARS0LI010" },
+            { "id": "0LI019", "pos": { "l": 541, "t": 652.5, "w": 80, "h": 20 }, "variableId": "403ARS0LI019" },
+            { "id": "0TI033", "pos": { "l": 541, "t": 435.5, "w": 80, "h": 20 }, "variableId": "403ARS0TI033" },
+            { "id": "0LIC003", "pos": { "l": 761, "t": 613.5, "w": 80, "h": 20 }, "variableId": "403ARS0LIC003PV" },
+            { "id": "0TIC040", "pos": { "l": 1184, "t": 545.5, "w": 80, "h": 20 }, "variableId": "403ARS0TIC040PV" },
+            { "id": "0TI042", "pos": { "l": 1020, "t": 48.5, "w": 80, "h": 20 }, "variableId": "403ARS0TI042" },
+            { "id": "0AI001", "pos": { "l": 1139, "t": 48.5, "w": 80, "h": 20 }, "variableId": "403ARS0AI001" },
+            { "id": "0PIC007", "pos": { "l": 1265, "t": 50.5, "w": 80, "h": 20 }, "variableId": "403ARS0PIC007PV" },
+            { "id": "0LIC011", "pos": { "l": 384, "t": 627.5, "w": 80, "h": 20 }, "variableId": "403ARS0LIC011PV" },
+            { "id": "0LIC023", "pos": { "l": 972, "t": 254.5, "w": 80, "h": 20 }, "variableId": "403ARS0LIC023PV" }
+            ],
+            "alarms": [],
+            "flares": [],
+            "sliders": [
+            { "id": "0SLI011", "pos": { "l": 497, "t": 595.5, "w": 18, "h": 90 }, "variableId": "403ARS0LIC011PV", "color": "#03d204" },
+            { "id": "0SLI019", "pos": { "l": 645, "t": 593.5, "w": 18, "h": 90 }, "variableId": "403ARS0LI019", "color": "#03d204" },
+            { "id": "0SLI003", "pos": { "l": 734, "t": 500.5, "w": 18, "h": 90 }, "variableId": "403ARS0LIC003PV", "color": "#03d204" },
+            { "id": "0SLI023", "pos": { "l": 950, "t": 224.5, "w": 18, "h": 90 }, "variableId": "403ARS0LIC023PV", "color": "#03d204" },
+            {
+                "id": "0TIC012",
+                "pos": { "l": 218, "t": 332.5, "w": 28, "h": 12 },
+                "variableId": "403ARS0TIC012OP",
+                "rotated": "left",
+                "color": "#03d204"
+            },
+            {
+                "id": "0PIC049",
+                "pos": { "l": 170, "t": 675.5, "w": 27, "h": 10 },
+                "variableId": "403ARS0PIC049OP",
+                "color": "#03d204",
+                "rotated": "left"
+            },
+            {
+                "id": "0LIC011",
+                "pos": { "l": 313, "t": 770.5, "w": 28, "h": 10 },
+                "variableId": "403ARS0LIC011OP",
+                "color": "#03d204",
+                "rotated": "left"
+            },
+            { "id": "0LIC010", "pos": { "l": 498, "t": 796.5, "w": 10, "h": 25 }, "variableId": "407ES0LI010", "color": "#03d204" },
+            { "id": "0LIC010", "pos": { "l": 629, "t": 796.5, "w": 10, "h": 23 }, "variableId": "403ARS0LI019", "color": "#03d204" },
+            {
+                "id": "0LIC003",
+                "pos": { "l": 1045, "t": 824.5, "w": 28, "h": 10 },
+                "variableId": "403ARS0LIC003OP",
+                "color": "#03d204",
+                "rotated": "left"
+            },
+            {
+                "id": "0LIC023",
+                "pos": { "l": 1177, "t": 423.5, "w": 27, "h": 11 },
+                "variableId": "403ARS0LIC023OP",
+                "color": "#03d204",
+                "rotated": "left"
+            },
+            {
+                "id": "0TIC040",
+                "pos": { "l": 1450, "t": 510.5, "w": 28, "h": 12 },
+                "variableId": "403ARS0TIC040OP",
+                "color": "#03d204",
+                "rotated": "left"
+            },
+            {
+                "id": "0PIC007",
+                "pos": { "l": 1426, "t": 90.5, "w": 30, "h": 12 },
+                "variableId": "403ARS0PIC007OP",
+                "color": "#03d204",
+                "rotated": "left"
+            }
+            ],
+            "esds": [],
+            "logics": []
+        }
+        ]
+}
+}

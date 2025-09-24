@@ -11,17 +11,18 @@ import random
 
 class HAND(QWidget):
         changeHandtype = pyqtSignal(str)
-        def __init__(self,store:Store,varid,ranges:list):
+        def __init__(self,store:Store,varid,ranges:list,title:str,dtype):
                 super().__init__()
                 self.setWindowTitle("HAND")
                 self.store = store
                 self.varid = varid
+                self.title = title
                 self.resize(50, 40)
                 current = os.getcwd()
                 path = os.path.join(current,"images")
                 self.eqpath = os.path.join(path,"equipment")
                 self.list = self.store.GettingControllerDetails(varid)
-                self.plate = ControllerPlate(varid,self.list,varid,store,ranges)
+                self.plate = ControllerPlate(varid,self.list,varid,store,ranges,title,dtype)
                 # self.plate.changeHandtype.connect(self.set_status)
 
                 self.image = {}

@@ -1,6 +1,6 @@
 
 from PyQt6.QtWidgets import QLabel, QLineEdit, QApplication, QVBoxLayout, QWidget
-from PyQt6.QtGui import QPixmap,QMouseEvent
+from PyQt6.QtGui import QPixmap,QMouseEvent,QTransform
 from PyQt6.QtCore import Qt,pyqtSignal,pyqtSlot
 import sys
 from SDVPlate import Valves
@@ -13,12 +13,13 @@ from Store import Store
 class BPS(QWidget):
         ValveChangingPos = pyqtSignal(int)
         updatevalues = pyqtSignal()
-        def __init__(self,store:Store,variableid,name,value):
+        def __init__(self,store:Store,variableid,name,value,rotated,title):
                 super().__init__()
                 
                 self.resize(50, 40)
                 self.value = value
                 self.name = name
+                self.rotated = rotated
                 self.setWindowTitle(name)
                 current_path = os.getcwd()
                 images = os.path.join(current_path, "images")
@@ -27,7 +28,7 @@ class BPS(QWidget):
                 self.image = {}
                 self.load_image()
                 self.variableid = variableid
-                self.faceplate = Valves(store,variableid,value)
+                self.faceplate = Valves(store,variableid,value,title)
                 self.faceplate.ValveChangingPos.connect(self.set_status)
                 self.store=store
                 self.image_label = QLabel(self)
@@ -52,6 +53,10 @@ class BPS(QWidget):
                     "bpsg": QPixmap(os.path.join(self.equip_path,"bpsg.png")),
                     "bpsr": QPixmap(os.path.join(self.equip_path,"bpsr.png"))
                 }
+                if self.rotated == "left":
+                    transform = QTransform().rotate(-90)
+                    self.image["bpsg"] = self.image["bpsg"].transformed(transform)
+                    self.image["bpsr"] = self.image["bpsr"].transformed(transform)
 
         def set_status(self, status):
             match status:

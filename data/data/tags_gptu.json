@@ -1,0 +1,2097 @@
+[
+  { "name": "tags:GPTU S1S2_1_P", "value": 16.9883, "initial": 16.9883 },
+  { "name": "tags:GPTU S1S2_2_P", "value": 24.1133, "initial": 24.1133 },
+  { "name": "tags:GPTU S1S2_3_P", "value": 23.4133, "initial": 23.4133 },
+  { "name": "tags:GPTUS1S4_P", "value": 10.0132, "initial": 10.0132 },
+  { "name": "tags:GPTUS2S1_Fm", "value": 107095.0, "initial": 107095.0 },
+  { "name": "tags:GPTUS2S1_T", "value": 173.318, "initial": 173.318 },
+  { "name": "tags:GPTUS4S1_Fm", "value": 13.2837, "initial": 13.2837 },
+  { "name": "tags:GPTUS4S1_T", "value": 38.0832, "initial": 38.0832 },
+  { "name": "tags:GPTUSS4S1(1C5=)", "value": 0.0327679, "initial": 0.0327679 },
+  { "name": "tags:GPTUSS4S1(2MC4)", "value": 0.067264, "initial": 0.067264 },
+  { "name": "tags:GPTUSS4S1(A6)", "value": 0.0100173, "initial": 0.0100173 },
+  { "name": "tags:GPTUSS4S1(A7)", "value": 0.0709704, "initial": 0.0709704 },
+  { "name": "tags:GPTUSS4S1(A8)", "value": 0.0780518, "initial": 0.0780518 },
+  { "name": "tags:GPTUSS4S1(A9)", "value": 0.0615434, "initial": 0.0615434 },
+  { "name": "tags:GPTUSS4S1(A10)", "value": 0.041949, "initial": 0.041949 },
+  { "name": "tags:GPTUSS4S1(A11)", "value": 0.0263376, "initial": 0.0263376 },
+  { "name": "tags:GPTUSS4S1(A12)", "value": 0.0156845, "initial": 0.0156845 },
+  { "name": "tags:GPTUSS4S1(A13)", "value": 0.00900223, "initial": 0.00900223 },
+  { "name": "tags:GPTUSS4S1(A14)", "value": 0.00502822, "initial": 0.00502822 },
+  { "name": "tags:GPTUSS4S1(BNIT5)", "value": 3.21e-6, "initial": 3.21e-6 },
+  { "name": "tags:GPTUSS4S1(C2C5=)", "value": 0.0626713, "initial": 0.0626713 },
+  { "name": "tags:GPTUSS4S1(DO4)", "value": 7.03171e-6, "initial": 7.03171e-6 },
+  {
+    "name": "tags:GPTUSS4S1(DO5)",
+    "value": 0.000359466,
+    "initial": 0.000359466
+  },
+  { "name": "tags:GPTUSS4S1(DO6)", "value": 2.32603e-5, "initial": 2.32603e-5 },
+  { "name": "tags:GPTUSS4S1(DO7)", "value": 1.90969e-5, "initial": 1.90969e-5 },
+  { "name": "tags:GPTUSS4S1(H2)", "value": 1.5574e-7, "initial": 1.5574e-7 },
+  {
+    "name": "tags:GPTUSS4S1(H2S)",
+    "value": 9.91922e-12,
+    "initial": 9.91922e-12
+  },
+  {
+    "name": "tags:GPTUSS4S1(IP4)",
+    "value": 0.000403908,
+    "initial": 0.000403908
+  },
+  { "name": "tags:GPTUSS4S1(IP6)", "value": 0.0983197, "initial": 0.0983197 },
+  { "name": "tags:GPTUSS4S1(IP7)", "value": 0.0597827, "initial": 0.0597827 },
+  { "name": "tags:GPTUSS4S1(IP8)", "value": 0.0310468, "initial": 0.0310468 },
+  { "name": "tags:GPTUSS4S1(IP9)", "value": 0.0156404, "initial": 0.0156404 },
+  {
+    "name": "tags:GPTUSS4S1(IP10)",
+    "value": 0.00763715,
+    "initial": 0.00763715
+  },
+  { "name": "tags:GPTUSS4S1(IP11)", "value": 0.0036601, "initial": 0.0036601 },
+  { "name": "tags:GPTUSS4S1(N5)", "value": 0.00291274, "initial": 0.00291274 },
+  { "name": "tags:GPTUSS4S1(N6)", "value": 0.016378, "initial": 0.016378 },
+  { "name": "tags:GPTUSS4S1(N7)", "value": 0.0234944, "initial": 0.0234944 },
+  { "name": "tags:GPTUSS4S1(N8)", "value": 0.0243061, "initial": 0.0243061 },
+  { "name": "tags:GPTUSS4S1(N9)", "value": 0.0216163, "initial": 0.0216163 },
+  { "name": "tags:GPTUSS4S1(N10)", "value": 0.0176102, "initial": 0.0176102 },
+  { "name": "tags:GPTUSS4S1(N11)", "value": 0.0135481, "initial": 0.0135481 },
+  { "name": "tags:GPTUSS4S1(N12)", "value": 0.01001, "initial": 0.01001 },
+  { "name": "tags:GPTUSS4S1(N13)", "value": 0.0071773, "initial": 0.0071773 },
+  { "name": "tags:GPTUSS4S1(N14)", "value": 0.00502822, "initial": 0.00502822 },
+  {
+    "name": "tags:GPTUSS4S1(NH3)",
+    "value": 4.77176e-13,
+    "initial": 4.77176e-13
+  },
+  {
+    "name": "tags:GPTUSS4S1(NIT5)",
+    "value": 6.77686e-6,
+    "initial": 6.77686e-6
+  },
+  { "name": "tags:GPTUSS4S1(NP1)", "value": 1.0165e-5, "initial": 1.0165e-5 },
+  { "name": "tags:GPTUSS4S1(NP2)", "value": 3.03559e-5, "initial": 3.03559e-5 },
+  { "name": "tags:GPTUSS4S1(NP3)", "value": 5.0792e-5, "initial": 5.0792e-5 },
+  { "name": "tags:GPTUSS4S1(NP4)", "value": 0.00106481, "initial": 0.00106481 },
+  { "name": "tags:GPTUSS4S1(NP5)", "value": 0.0211532, "initial": 0.0211532 },
+  { "name": "tags:GPTUSS4S1(NP6)", "value": 0.0235388, "initial": 0.0235388 },
+  { "name": "tags:GPTUSS4S1(NP7)", "value": 0.0173696, "initial": 0.0173696 },
+  { "name": "tags:GPTUSS4S1(NP8)", "value": 0.0120537, "initial": 0.0120537 },
+  { "name": "tags:GPTUSS4S1(NP9)", "value": 0.00733271, "initial": 0.00733271 },
+  {
+    "name": "tags:GPTUSS4S1(NP10)",
+    "value": 0.00480278,
+    "initial": 0.00480278
+  },
+  {
+    "name": "tags:GPTUSS4S1(NP11)",
+    "value": 0.00307235,
+    "initial": 0.00307235
+  },
+  { "name": "tags:GPTUSS4S1(O6)", "value": 0.0249666, "initial": 0.0249666 },
+  { "name": "tags:GPTUSS4S1(O7)", "value": 0.0161546, "initial": 0.0161546 },
+  { "name": "tags:GPTUSS4S1(O8)", "value": 0.00863696, "initial": 0.00863696 },
+  { "name": "tags:GPTUSS4S1(O9)", "value": 0.00471033, "initial": 0.00471033 },
+  { "name": "tags:GPTUSS4S1(O10)", "value": 0.00249038, "initial": 0.00249038 },
+  { "name": "tags:GPTUSS4S1(O11)", "value": 0.0012923, "initial": 0.0012923 },
+  { "name": "tags:GPTUSS4S1(SU3)", "value": 8.93855e-9, "initial": 8.93855e-9 },
+  { "name": "tags:GPTUSS4S1(SU4)", "value": 3.06952e-5, "initial": 3.06952e-5 },
+  { "name": "tags:GPTUSS4S1(SU5)", "value": 4.92081e-6, "initial": 4.92081e-6 },
+  { "name": "tags:GPTUSS4S1(SU7)", "value": 2.79085e-6, "initial": 2.79085e-6 },
+  { "name": "tags:GPTUSS4S1(SU8)", "value": 8.6714e-6, "initial": 8.6714e-6 },
+  { "name": "tags:GPTUSS4S1(T2C4=)", "value": 0.0109137, "initial": 0.0109137 },
+  { "name": "tags:GPTUSS4S1(TH4)", "value": 6.02411e-7, "initial": 6.02411e-7 },
+  { "name": "tags:GPTUSS4S1(TH5)", "value": 7.9153e-6, "initial": 7.9153e-6 },
+  { "name": "tags:GPTUSS4S1(TH6)", "value": 1.07717e-5, "initial": 1.07717e-5 },
+  { "name": "tags:GPTUSS4S1(TH7)", "value": 1.05237e-5, "initial": 1.05237e-5 },
+  { "name": "tags:GPTUS1S4_T", "value": 107.491, "initial": 107.491 },
+  { "name": "tags:GPTUSS1S4(1C5=)", "value": 0.172966, "initial": 0.172966 },
+  { "name": "tags:GPTUSS1S4(2MC4)", "value": 0.353652, "initial": 0.353652 },
+  { "name": "tags:GPTUSS1S4(A6)", "value": 4.45944e-8, "initial": 4.45944e-8 },
+  {
+    "name": "tags:GPTUSS1S4(A7)",
+    "value": 1.81083e-16,
+    "initial": 1.81083e-16
+  },
+  {
+    "name": "tags:GPTUSS1S4(A8)",
+    "value": 2.15085e-24,
+    "initial": 2.15085e-24
+  },
+  {
+    "name": "tags:GPTUSS1S4(A9)",
+    "value": 1.03729e-32,
+    "initial": 1.03729e-32
+  },
+  {
+    "name": "tags:GPTUSS1S4(A10)",
+    "value": 3.93858e-25,
+    "initial": 3.93858e-25
+  },
+  {
+    "name": "tags:GPTUSS1S4(A11)",
+    "value": 9.47066e-50,
+    "initial": 9.47066e-50
+  },
+  {
+    "name": "tags:GPTUSS1S4(A12)",
+    "value": 9.47699e-25,
+    "initial": 9.47699e-25
+  },
+  {
+    "name": "tags:GPTUSS1S4(A13)",
+    "value": 4.92507e-60,
+    "initial": 4.92507e-60
+  },
+  {
+    "name": "tags:GPTUSS1S4(A14)",
+    "value": 1.02418e-66,
+    "initial": 1.02418e-66
+  },
+  {
+    "name": "tags:GPTUSS1S4(BNIT5)",
+    "value": 1.09905e-16,
+    "initial": 1.09905e-16
+  },
+  { "name": "tags:GPTUSS1S4(C2C5=)", "value": 0.32606, "initial": 0.32606 },
+  { "name": "tags:GPTUSS1S4(DO4)", "value": 3.71687e-5, "initial": 3.71687e-5 },
+  { "name": "tags:GPTUSS1S4(DO5)", "value": 0.00187107, "initial": 0.00187107 },
+  { "name": "tags:GPTUSS1S4(DO6)", "value": 3.47894e-9, "initial": 3.47894e-9 },
+  {
+    "name": "tags:GPTUSS1S4(DO7)",
+    "value": 1.08284e-16,
+    "initial": 1.08284e-16
+  },
+  { "name": "tags:GPTUSS1S4(H2)", "value": 8.12506e-7, "initial": 8.12506e-7 },
+  {
+    "name": "tags:GPTUSS1S4(H2S)",
+    "value": 5.23704e-11,
+    "initial": 5.23704e-11
+  },
+  { "name": "tags:GPTUSS1S4(IP4)", "value": 0.00213477, "initial": 0.00213477 },
+  {
+    "name": "tags:GPTUSS1S4(IP6)",
+    "value": 0.000218684,
+    "initial": 0.000218684
+  },
+  {
+    "name": "tags:GPTUSS1S4(IP7)",
+    "value": 2.14534e-12,
+    "initial": 2.14534e-12
+  },
+  { "name": "tags:GPTUSS1S4(IP8)", "value": 9.4384e-20, "initial": 9.4384e-20 },
+  { "name": "tags:GPTUSS1S4(IP9)", "value": 3.4715e-27, "initial": 3.4715e-27 },
+  {
+    "name": "tags:GPTUSS1S4(IP10)",
+    "value": 3.07833e-34,
+    "initial": 3.07833e-34
+  },
+  {
+    "name": "tags:GPTUSS1S4(IP11)",
+    "value": 1.20581e-40,
+    "initial": 1.20581e-40
+  },
+  { "name": "tags:GPTUSS1S4(N5)", "value": 0.00661274, "initial": 0.00661274 },
+  { "name": "tags:GPTUSS1S4(N6)", "value": 1.44e-7, "initial": 1.44e-7 },
+  {
+    "name": "tags:GPTUSS1S4(N7)",
+    "value": 8.22787e-15,
+    "initial": 8.22787e-15
+  },
+  {
+    "name": "tags:GPTUSS1S4(N8)",
+    "value": 4.08824e-21,
+    "initial": 4.08824e-21
+  },
+  {
+    "name": "tags:GPTUSS1S4(N9)",
+    "value": 1.89685e-27,
+    "initial": 1.89685e-27
+  },
+  {
+    "name": "tags:GPTUSS1S4(N10)",
+    "value": 1.28954e-34,
+    "initial": 1.28954e-34
+  },
+  {
+    "name": "tags:GPTUSS1S4(N11)",
+    "value": 9.54387e-44,
+    "initial": 9.54387e-44
+  },
+  {
+    "name": "tags:GPTUSS1S4(N12)",
+    "value": 4.11379e-48,
+    "initial": 4.11379e-48
+  },
+  {
+    "name": "tags:GPTUSS1S4(N13)",
+    "value": 1.67351e-54,
+    "initial": 1.67351e-54
+  },
+  { "name": "tags:GPTUSS1S4(N14)", "value": 9.01e-64, "initial": 9.01e-64 },
+  {
+    "name": "tags:GPTUSS1S4(NH3)",
+    "value": 2.50714e-12,
+    "initial": 2.50714e-12
+  },
+  {
+    "name": "tags:GPTUSS1S4(NIT5)",
+    "value": 8.9577e-23,
+    "initial": 8.9577e-23
+  },
+  { "name": "tags:GPTUSS1S4(NP1)", "value": 5.36288e-5, "initial": 5.36288e-5 },
+  {
+    "name": "tags:GPTUSS1S4(NP2)",
+    "value": 0.000160104,
+    "initial": 0.000160104
+  },
+  {
+    "name": "tags:GPTUSS1S4(NP3)",
+    "value": 0.000267875,
+    "initial": 0.000267875
+  },
+  { "name": "tags:GPTUSS1S4(NP4)", "value": 0.0053211, "initial": 0.0053211 },
+  { "name": "tags:GPTUSS1S4(NP5)", "value": 0.0726857, "initial": 0.0726857 },
+  { "name": "tags:GPTUSS1S4(NP6)", "value": 4.11619e-7, "initial": 4.11619e-7 },
+  {
+    "name": "tags:GPTUSS1S4(NP7)",
+    "value": 4.82563e-15,
+    "initial": 4.82563e-15
+  },
+  {
+    "name": "tags:GPTUSS1S4(NP8)",
+    "value": 4.43403e-23,
+    "initial": 4.43403e-23
+  },
+  {
+    "name": "tags:GPTUSS1S4(NP9)",
+    "value": 9.29443e-31,
+    "initial": 9.29443e-31
+  },
+  {
+    "name": "tags:GPTUSS1S4(NP10)",
+    "value": 2.23386e-38,
+    "initial": 2.23386e-38
+  },
+  {
+    "name": "tags:GPTUSS1S4(NP11)",
+    "value": 3.15157e-45,
+    "initial": 3.15157e-45
+  },
+  { "name": "tags:GPTUSS1S4(O6)", "value": 8.49068e-5, "initial": 8.49068e-5 },
+  {
+    "name": "tags:GPTUSS1S4(O7)",
+    "value": 4.55226e-12,
+    "initial": 4.55226e-12
+  },
+  {
+    "name": "tags:GPTUSS1S4(O8)",
+    "value": 1.87986e-19,
+    "initial": 1.87986e-19
+  },
+  { "name": "tags:GPTUSS1S4(O9)", "value": 0.043399, "initial": 0.043399 },
+  {
+    "name": "tags:GPTUSS1S4(O10)",
+    "value": 1.49283e-34,
+    "initial": 1.49283e-34
+  },
+  {
+    "name": "tags:GPTUSS1S4(O11)",
+    "value": 7.42161e-41,
+    "initial": 7.42161e-41
+  },
+  { "name": "tags:GPTUSS1S4(SU3)", "value": 4.62228e-8, "initial": 4.62228e-8 },
+  {
+    "name": "tags:GPTUSS1S4(SU4)",
+    "value": 0.000156404,
+    "initial": 0.000156404
+  },
+  {
+    "name": "tags:GPTUSS1S4(SU5)",
+    "value": 3.78688e-23,
+    "initial": 3.78688e-23
+  },
+  {
+    "name": "tags:GPTUSS1S4(SU7)",
+    "value": 2.72513e-39,
+    "initial": 2.72513e-39
+  },
+  {
+    "name": "tags:GPTUSS1S4(SU8)",
+    "value": 3.64184e-46,
+    "initial": 3.64184e-46
+  },
+  { "name": "tags:GPTUSS1S4(T2C4=)", "value": 0.0577157, "initial": 0.0577157 },
+  {
+    "name": "tags:GPTUSS1S4(TH4)",
+    "value": 9.49471e-10,
+    "initial": 9.49471e-10
+  },
+  {
+    "name": "tags:GPTUSS1S4(TH5)",
+    "value": 3.62454e-17,
+    "initial": 3.62454e-17
+  },
+  {
+    "name": "tags:GPTUSS1S4(TH6)",
+    "value": 2.24573e-25,
+    "initial": 2.24573e-25
+  },
+  {
+    "name": "tags:GPTUSS1S4(TH7)",
+    "value": 2.51264e-30,
+    "initial": 2.51264e-30
+  },
+  { "name": "tags:GPTUS1S4_Fm", "value": 25019.2, "initial": 25019.2 },
+  { "name": "tags:GPTUS1S2_1_T", "value": 127.198, "initial": 127.198 },
+  { "name": "tags:GPTUS1S2_1_Fm", "value": 107095.0, "initial": 107095.0 },
+  { "name": "tags:GPTUS1S2_2_T", "value": 200.501, "initial": 200.501 },
+  { "name": "tags:GPTUS1S2_2_Fm", "value": 107866.0, "initial": 107866.0 },
+  {
+    "name": "tags:GPTUSS1S2_2(1C5=)",
+    "value": 0.000864948,
+    "initial": 0.000864948
+  },
+  { "name": "tags:GPTUSS1S2_2(2MC4)", "value": 0.001201, "initial": 0.001201 },
+  { "name": "tags:GPTUSS1S2_2(A6)", "value": 0.0123602, "initial": 0.0123602 },
+  { "name": "tags:GPTUSS1S2_2(A7)", "value": 0.0872814, "initial": 0.0872814 },
+  { "name": "tags:GPTUSS1S2_2(A8)", "value": 0.0959505, "initial": 0.0959505 },
+  { "name": "tags:GPTUSS1S2_2(A9)", "value": 0.0756477, "initial": 0.0756477 },
+  { "name": "tags:GPTUSS1S2_2(A10)", "value": 0.051561, "initial": 0.051561 },
+  { "name": "tags:GPTUSS1S2_2(A11)", "value": 0.0323721, "initial": 0.0323721 },
+  { "name": "tags:GPTUSS1S2_2(A12)", "value": 0.0192782, "initial": 0.0192782 },
+  { "name": "tags:GPTUSS1S2_2(A13)", "value": 0.0110649, "initial": 0.0110649 },
+  { "name": "tags:GPTUSS1S2_2(A14)", "value": 0.0061803, "initial": 0.0061803 },
+  {
+    "name": "tags:GPTUSS1S2_2(BNIT5)",
+    "value": 0.000116317,
+    "initial": 0.000116317
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(C2C5=)",
+    "value": 0.00636225,
+    "initial": 0.00636225
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(DO4)",
+    "value": 1.75906e-10,
+    "initial": 1.75906e-10
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(DO5)",
+    "value": 0.000385551,
+    "initial": 0.000385551
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(DO6)",
+    "value": 0.000842587,
+    "initial": 0.000842587
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(DO7)",
+    "value": 0.000642502,
+    "initial": 0.000642502
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(H2)",
+    "value": 5.8314e-28,
+    "initial": 5.8314e-28
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(H2S)",
+    "value": 2.23702e-20,
+    "initial": 2.23702e-20
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(IP4)",
+    "value": 3.90196e-9,
+    "initial": 3.90196e-9
+  },
+  { "name": "tags:GPTUSS1S2_2(IP6)", "value": 0.0732279, "initial": 0.0732279 },
+  { "name": "tags:GPTUSS1S2_2(IP7)", "value": 0.0436798, "initial": 0.0436798 },
+  { "name": "tags:GPTUSS1S2_2(IP8)", "value": 0.0226443, "initial": 0.0226443 },
+  { "name": "tags:GPTUSS1S2_2(IP9)", "value": 0.0109191, "initial": 0.0109191 },
+  {
+    "name": "tags:GPTUSS1S2_2(IP10)",
+    "value": 0.00502812,
+    "initial": 0.00502812
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(IP11)",
+    "value": 0.00224482,
+    "initial": 0.00224482
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(N5)",
+    "value": 0.00217385,
+    "initial": 0.00217385
+  },
+  { "name": "tags:GPTUSS1S2_2(N6)", "value": 0.0201786, "initial": 0.0201786 },
+  { "name": "tags:GPTUSS1S2_2(N7)", "value": 0.0288974, "initial": 0.0288974 },
+  { "name": "tags:GPTUSS1S2_2(N8)", "value": 0.0298844, "initial": 0.0298844 },
+  { "name": "tags:GPTUSS1S2_2(N9)", "value": 0.0265726, "initial": 0.0265726 },
+  { "name": "tags:GPTUSS1S2_2(N10)", "value": 0.0216464, "initial": 0.0216464 },
+  { "name": "tags:GPTUSS1S2_2(N11)", "value": 0.0166524, "initial": 0.0166524 },
+  { "name": "tags:GPTUSS1S2_2(N12)", "value": 0.0123036, "initial": 0.0123036 },
+  {
+    "name": "tags:GPTUSS1S2_2(N13)",
+    "value": 0.00882179,
+    "initial": 0.00882179
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(N14)",
+    "value": 0.00618031,
+    "initial": 0.00618031
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(NH3)",
+    "value": 1.90417e-21,
+    "initial": 1.90417e-21
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(NIT5)",
+    "value": 0.000238565,
+    "initial": 0.000238565
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(NP1)",
+    "value": 3.66941e-20,
+    "initial": 3.66941e-20
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(NP2)",
+    "value": 3.39797e-15,
+    "initial": 3.39797e-15
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(NP3)",
+    "value": 6.48055e-12,
+    "initial": 6.48055e-12
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(NP4)",
+    "value": 5.65614e-8,
+    "initial": 5.65614e-8
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(NP5)",
+    "value": 0.00118727,
+    "initial": 0.00118727
+  },
+  { "name": "tags:GPTUSS1S2_2(NP6)", "value": 0.0157712, "initial": 0.0157712 },
+  { "name": "tags:GPTUSS1S2_2(NP7)", "value": 0.013761, "initial": 0.013761 },
+  { "name": "tags:GPTUSS1S2_2(NP8)", "value": 0.0105776, "initial": 0.0105776 },
+  {
+    "name": "tags:GPTUSS1S2_2(NP9)",
+    "value": 0.00754754,
+    "initial": 0.00754754
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(NP10)",
+    "value": 0.00513406,
+    "initial": 0.00513406
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(NP11)",
+    "value": 0.00337856,
+    "initial": 0.00337856
+  },
+  { "name": "tags:GPTUSS1S2_2(O6)", "value": 0.0885664, "initial": 0.0885664 },
+  { "name": "tags:GPTUSS1S2_2(O7)", "value": 0.0536822, "initial": 0.0536822 },
+  { "name": "tags:GPTUSS1S2_2(O8)", "value": 0.0285699, "initial": 0.0285699 },
+  { "name": "tags:GPTUSS1S2_2(O9)", "value": 0.0154106, "initial": 0.0154106 },
+  { "name": "tags:GPTUSS1S2_2(O10)", "value": 0.0081172, "initial": 0.0081172 },
+  {
+    "name": "tags:GPTUSS1S2_2(O11)",
+    "value": 0.00420597,
+    "initial": 0.00420597
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(SU3)",
+    "value": 1.14207e-8,
+    "initial": 1.14207e-8
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(SU4)",
+    "value": 0.000227144,
+    "initial": 0.000227144
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(SU5)",
+    "value": 0.00111872,
+    "initial": 0.00111872
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(SU7)",
+    "value": 0.000623035,
+    "initial": 0.000623035
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(SU8)",
+    "value": 0.00193444,
+    "initial": 0.00193444
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(T2C4=)",
+    "value": 5.66208e-7,
+    "initial": 5.66208e-7
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(TH4)",
+    "value": 0.000151828,
+    "initial": 0.000151828
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(TH5)",
+    "value": 0.00183668,
+    "initial": 0.00183668
+  },
+  {
+    "name": "tags:GPTUSS1S2_2(TH6)",
+    "value": 0.00243307,
+    "initial": 0.00243307
+  },
+  { "name": "tags:GPTUSS1S2_2(TH7)", "value": 0.0023593, "initial": 0.0023593 },
+  { "name": "tags:GPTUS1S2_3_T", "value": 200.491, "initial": 200.491 },
+  { "name": "tags:GPTUSS1S2_3(1C5=)", "value": 0.000865, "initial": 0.000865 },
+  {
+    "name": "tags:GPTUSS1S2_3(2MC4)",
+    "value": 0.00120102,
+    "initial": 0.00120102
+  },
+  { "name": "tags:GPTUSS1S2_3(A6)", "value": 0.0123602, "initial": 0.0123602 },
+  { "name": "tags:GPTUSS1S2_3(A7)", "value": 0.0872814, "initial": 0.0872814 },
+  { "name": "tags:GPTUSS1S2_3(A8)", "value": 0.0959505, "initial": 0.0959505 },
+  { "name": "tags:GPTUSS1S2_3(A9)", "value": 0.0756477, "initial": 0.0756477 },
+  { "name": "tags:GPTUSS1S2_3(A10)", "value": 0.051561, "initial": 0.051561 },
+  { "name": "tags:GPTUSS1S2_3(A11)", "value": 0.0323721, "initial": 0.0323721 },
+  { "name": "tags:GPTUSS1S2_3(A12)", "value": 0.0192782, "initial": 0.0192782 },
+  { "name": "tags:GPTUSS1S2_3(A13)", "value": 0.0110649, "initial": 0.0110649 },
+  {
+    "name": "tags:GPTUSS1S2_3(A14)",
+    "value": 0.00618031,
+    "initial": 0.00618031
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(BNIT5)",
+    "value": 0.000116317,
+    "initial": 0.000116317
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(C2C5=)",
+    "value": 0.00636225,
+    "initial": 0.00636225
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(DO4)",
+    "value": 1.75906e-10,
+    "initial": 1.75906e-10
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(DO5)",
+    "value": 0.000385551,
+    "initial": 0.000385551
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(DO6)",
+    "value": 0.000842587,
+    "initial": 0.000842587
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(DO7)",
+    "value": 0.000642502,
+    "initial": 0.000642502
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(H2)",
+    "value": 5.8314e-28,
+    "initial": 5.8314e-28
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(H2S)",
+    "value": 2.23702e-20,
+    "initial": 2.23702e-20
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(IP4)",
+    "value": 3.90196e-9,
+    "initial": 3.90196e-9
+  },
+  { "name": "tags:GPTUSS1S2_3(IP6)", "value": 0.0732279, "initial": 0.0732279 },
+  { "name": "tags:GPTUSS1S2_3(IP7)", "value": 0.0436798, "initial": 0.0436798 },
+  { "name": "tags:GPTUSS1S2_3(IP8)", "value": 0.0226443, "initial": 0.0226443 },
+  { "name": "tags:GPTUSS1S2_3(IP9)", "value": 0.0109191, "initial": 0.0109191 },
+  {
+    "name": "tags:GPTUSS1S2_3(IP10)",
+    "value": 0.00502812,
+    "initial": 0.00502812
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(IP11)",
+    "value": 0.00224482,
+    "initial": 0.00224482
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(N5)",
+    "value": 0.00217385,
+    "initial": 0.00217385
+  },
+  { "name": "tags:GPTUSS1S2_3(N6)", "value": 0.0201786, "initial": 0.0201786 },
+  { "name": "tags:GPTUSS1S2_3(N7)", "value": 0.0288974, "initial": 0.0288974 },
+  { "name": "tags:GPTUSS1S2_3(N8)", "value": 0.0298844, "initial": 0.0298844 },
+  { "name": "tags:GPTUSS1S2_3(N9)", "value": 0.0265726, "initial": 0.0265726 },
+  { "name": "tags:GPTUSS1S2_3(N10)", "value": 0.0216464, "initial": 0.0216464 },
+  { "name": "tags:GPTUSS1S2_3(N11)", "value": 0.0166524, "initial": 0.0166524 },
+  { "name": "tags:GPTUSS1S2_3(N12)", "value": 0.0123036, "initial": 0.0123036 },
+  {
+    "name": "tags:GPTUSS1S2_3(N13)",
+    "value": 0.00882179,
+    "initial": 0.00882179
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(N14)",
+    "value": 0.00618031,
+    "initial": 0.00618031
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(NH3)",
+    "value": 1.90417e-21,
+    "initial": 1.90417e-21
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(NIT5)",
+    "value": 0.000238565,
+    "initial": 0.000238565
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(NP1)",
+    "value": 3.66941e-20,
+    "initial": 3.66941e-20
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(NP2)",
+    "value": 3.39797e-15,
+    "initial": 3.39797e-15
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(NP3)",
+    "value": 6.48055e-12,
+    "initial": 6.48055e-12
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(NP4)",
+    "value": 5.65614e-8,
+    "initial": 5.65614e-8
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(NP5)",
+    "value": 0.00118727,
+    "initial": 0.00118727
+  },
+  { "name": "tags:GPTUSS1S2_3(NP6)", "value": 0.0157712, "initial": 0.0157712 },
+  { "name": "tags:GPTUSS1S2_3(NP7)", "value": 0.013761, "initial": 0.013761 },
+  { "name": "tags:GPTUSS1S2_3(NP8)", "value": 0.0105776, "initial": 0.0105776 },
+  {
+    "name": "tags:GPTUSS1S2_3(NP9)",
+    "value": 0.00754754,
+    "initial": 0.00754754
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(NP10)",
+    "value": 0.00513406,
+    "initial": 0.00513406
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(NP11)",
+    "value": 0.00337856,
+    "initial": 0.00337856
+  },
+  { "name": "tags:GPTUSS1S2_3(O6)", "value": 0.0885664, "initial": 0.0885664 },
+  { "name": "tags:GPTUSS1S2_3(O7)", "value": 0.0536822, "initial": 0.0536822 },
+  { "name": "tags:GPTUSS1S2_3(O8)", "value": 0.0285699, "initial": 0.0285699 },
+  { "name": "tags:GPTUSS1S2_3(O9)", "value": 0.0154106, "initial": 0.0154106 },
+  { "name": "tags:GPTUSS1S2_3(O10)", "value": 0.0081172, "initial": 0.0081172 },
+  {
+    "name": "tags:GPTUSS1S2_3(O11)",
+    "value": 0.00420597,
+    "initial": 0.00420597
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(SU3)",
+    "value": 1.14207e-8,
+    "initial": 1.14207e-8
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(SU4)",
+    "value": 0.000227144,
+    "initial": 0.000227144
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(SU5)",
+    "value": 0.00111872,
+    "initial": 0.00111872
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(SU7)",
+    "value": 0.000623035,
+    "initial": 0.000623035
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(SU8)",
+    "value": 0.00193444,
+    "initial": 0.00193444
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(T2C4=)",
+    "value": 5.66208e-7,
+    "initial": 5.66208e-7
+  },
+  { "name": "tags:GPTUSS1S2_3(TH4)", "value": 0.000152, "initial": 0.000152 },
+  {
+    "name": "tags:GPTUSS1S2_3(TH5)",
+    "value": 0.00183668,
+    "initial": 0.00183668
+  },
+  {
+    "name": "tags:GPTUSS1S2_3(TH6)",
+    "value": 0.00243307,
+    "initial": 0.00243307
+  },
+  { "name": "tags:GPTUSS1S2_3(TH7)", "value": 0.0023593, "initial": 0.0023593 },
+  { "name": "tags:GPTUS1S2_3_Fm", "value": 112.592, "initial": 112.592 },
+  { "name": "tags:GPTUS2S1_P", "value": 17.3833, "initial": 17.3833 },
+  { "name": "tags:GPTUS4S1_P", "value": 7.01325, "initial": 7.01325 },
+  { "name": "tags:GPTUS2S1_Fm", "value": 107101.0, "initial": 107101.0 },
+  { "name": "tags:GPTUS2S1_T", "value": 173.325, "initial": 173.325 },
+  {
+    "name": "tags:GPTUSS2S1(1C5=)",
+    "value": 0.000709149,
+    "initial": 0.000709149
+  },
+  { "name": "tags:GPTUSS2S1(2MC4)", "value": 0.0017042, "initial": 0.0017042 },
+  { "name": "tags:GPTUSS2S1(A6)", "value": 0.011794, "initial": 0.011794 },
+  { "name": "tags:GPTUSS2S1(A7)", "value": 0.0703344, "initial": 0.0703344 },
+  { "name": "tags:GPTUSS2S1(A8)", "value": 0.0653773, "initial": 0.0653773 },
+  { "name": "tags:GPTUSS2S1(A9)", "value": 0.041188, "initial": 0.041188 },
+  { "name": "tags:GPTUSS2S1(A10)", "value": 0.0209735, "initial": 0.0209735 },
+  { "name": "tags:GPTUSS2S1(A11)", "value": 0.0084695, "initial": 0.0084695 },
+  { "name": "tags:GPTUSS2S1(A12)", "value": 0.0047071, "initial": 0.0047071 },
+  { "name": "tags:GPTUSS2S1(A13)", "value": 0.0018027, "initial": 0.0018027 },
+  {
+    "name": "tags:GPTUSS2S1(A14)",
+    "value": 0.000701513,
+    "initial": 0.000701513
+  },
+  {
+    "name": "tags:GPTUSS2S1(BNIT5)",
+    "value": 1.62306e-5,
+    "initial": 1.62306e-5
+  },
+  { "name": "tags:GPTUSS2S1(C2C5=)", "value": 0.0043622, "initial": 0.0043622 },
+  {
+    "name": "tags:GPTUSS2S1(DO4)",
+    "value": 3.54732e-11,
+    "initial": 3.54732e-11
+  },
+  { "name": "tags:GPTUSS2S1(DO5)", "value": 6.89285e-5, "initial": 6.89285e-5 },
+  {
+    "name": "tags:GPTUSS2S1(DO6)",
+    "value": 0.000141592,
+    "initial": 0.000141592
+  },
+  { "name": "tags:GPTUSS2S1(DO7)", "value": 9.93115e-5, "initial": 9.93115e-5 },
+  { "name": "tags:GPTUSS2S1(H2)", "value": 0.0259534, "initial": 0.0259534 },
+  { "name": "tags:GPTUSS2S1(H2O)", "value": 0.0042411, "initial": 0.0042411 },
+  { "name": "tags:GPTUSS2S1(H2S)", "value": 0.0029638, "initial": 0.0029638 },
+  { "name": "tags:GPTUSS2S1(IP4)", "value": 9.11129e-9, "initial": 9.11129e-9 },
+  { "name": "tags:GPTUSS2S1(IP6)", "value": 0.111975, "initial": 0.111975 },
+  { "name": "tags:GPTUSS2S1(IP7)", "value": 0.0568694, "initial": 0.0568694 },
+  { "name": "tags:GPTUSS2S1(IP8)", "value": 0.0259352, "initial": 0.0259352 },
+  { "name": "tags:GPTUSS2S1(IP9)", "value": 0.0109742, "initial": 0.0109742 },
+  { "name": "tags:GPTUSS2S1(IP10)", "value": 0.0044913, "initial": 0.0044913 },
+  { "name": "tags:GPTUSS2S1(IP11)", "value": 0.001734, "initial": 0.001734 },
+  {
+    "name": "tags:GPTUSS2S1(MDEA)",
+    "value": 7.87862e-7,
+    "initial": 7.87862e-7
+  },
+  { "name": "tags:GPTUSS2S1(N5)", "value": 0.0024511, "initial": 0.0024511 },
+  { "name": "tags:GPTUSS2S1(N6)", "value": 0.019751, "initial": 0.019751 },
+  { "name": "tags:GPTUSS2S1(N7)", "value": 0.0245592, "initial": 0.0245592 },
+  { "name": "tags:GPTUSS2S1(N8)", "value": 0.0225188, "initial": 0.0225188 },
+  { "name": "tags:GPTUSS2S1(N9)", "value": 0.0175389, "initial": 0.0175389 },
+  { "name": "tags:GPTUSS2S1(N10)", "value": 0.011447, "initial": 0.011447 },
+  { "name": "tags:GPTUSS2S1(N11)", "value": 0.006448, "initial": 0.006448 },
+  { "name": "tags:GPTUSS2S1(N12)", "value": 0.0037872, "initial": 0.0037872 },
+  { "name": "tags:GPTUSS2S1(N13)", "value": 0.0021126, "initial": 0.0021126 },
+  {
+    "name": "tags:GPTUSS2S1(N14)",
+    "value": 0.000867482,
+    "initial": 0.000867482
+  },
+  { "name": "tags:GPTUSS2S1(NH3)", "value": 7.14049e-5, "initial": 7.14049e-5 },
+  {
+    "name": "tags:GPTUSS2S1(NIT5)",
+    "value": 3.08154e-5,
+    "initial": 3.08154e-5
+  },
+  { "name": "tags:GPTUSS2S1(NP1)", "value": 0.166349, "initial": 0.166349 },
+  { "name": "tags:GPTUSS2S1(NP2)", "value": 0.0503913, "initial": 0.0503913 },
+  { "name": "tags:GPTUSS2S1(NP3)", "value": 0.0106808, "initial": 0.0106808 },
+  { "name": "tags:GPTUSS2S1(NP4)", "value": 0.00538853, "initial": 0.00538853 },
+  { "name": "tags:GPTUSS2S1(NP5)", "value": 0.0113811, "initial": 0.0113811 },
+  { "name": "tags:GPTUSS2S1(NP6)", "value": 0.0252702, "initial": 0.0252702 },
+  { "name": "tags:GPTUSS2S1(NP7)", "value": 0.0168356, "initial": 0.0168356 },
+  { "name": "tags:GPTUSS2S1(NP8)", "value": 0.0103528, "initial": 0.0103528 },
+  { "name": "tags:GPTUSS2S1(NP9)", "value": 0.00536628, "initial": 0.00536628 },
+  {
+    "name": "tags:GPTUSS2S1(NP10)",
+    "value": 0.00284471,
+    "initial": 0.00284471
+  },
+  {
+    "name": "tags:GPTUSS2S1(NP11)",
+    "value": 0.00142605,
+    "initial": 0.00142605
+  },
+  { "name": "tags:GPTUSS2S1(O6)", "value": 0.0519485, "initial": 0.0519485 },
+  { "name": "tags:GPTUSS2S1(O7)", "value": 0.0285699, "initial": 0.0285699 },
+  { "name": "tags:GPTUSS2S1(O8)", "value": 0.0134456, "initial": 0.0134456 },
+  { "name": "tags:GPTUSS2S1(O9)", "value": 0.00630516, "initial": 0.00630516 },
+  { "name": "tags:GPTUSS2S1(O10)", "value": 0.00267505, "initial": 0.00267505 },
+  { "name": "tags:GPTUSS2S1(O11)", "value": 0.00118479, "initial": 0.00118479 },
+  {
+    "name": "tags:GPTUSS2S1(SU3)",
+    "value": 6.55173e-10,
+    "initial": 6.55173e-10
+  },
+  { "name": "tags:GPTUSS2S1(SU4)", "value": 1.22545e-5, "initial": 1.22545e-5 },
+  { "name": "tags:GPTUSS2S1(SU5)", "value": 5.08344e-5, "initial": 5.08344e-5 },
+  { "name": "tags:GPTUSS2S1(SU7)", "value": 1.82595e-5, "initial": 1.82595e-5 },
+  { "name": "tags:GPTUSS2S1(SU8)", "value": 4.17313e-5, "initial": 4.17313e-5 },
+  {
+    "name": "tags:GPTUSS2S1(T2C4=)",
+    "value": 4.48842e-7,
+    "initial": 4.48842e-7
+  },
+  { "name": "tags:GPTUSS2S1(TH4)", "value": 8.32092e-6, "initial": 8.32092e-6 },
+  { "name": "tags:GPTUSS2S1(TH5)", "value": 9.06131e-5, "initial": 9.06131e-5 },
+  { "name": "tags:GPTUSS2S1(TH6)", "value": 0.000102, "initial": 0.000102 },
+  { "name": "tags:GPTUSS2S1(TH7)", "value": 8.76926e-5, "initial": 8.76926e-5 },
+  { "name": "tags:GPTUS2S4_Fm", "value": 142579.0, "initial": 142579.0 },
+  { "name": "tags:GPTUS2S4_T", "value": 136.786, "initial": 136.786 },
+  {
+    "name": "tags:GPTUSS2S4(1C5=)",
+    "value": 0.00033659,
+    "initial": 0.00033659
+  },
+  {
+    "name": "tags:GPTUSS2S4(2MC4)",
+    "value": 0.00128942,
+    "initial": 0.00128942
+  },
+  { "name": "tags:GPTUSS2S4(A6)", "value": 0.010075, "initial": 0.010075 },
+  { "name": "tags:GPTUSS2S4(A7)", "value": 0.0677792, "initial": 0.0677792 },
+  { "name": "tags:GPTUSS2S4(A8)", "value": 0.0733203, "initial": 0.0733203 },
+  { "name": "tags:GPTUSS2S4(A9)", "value": 0.0574702, "initial": 0.0574702 },
+  { "name": "tags:GPTUSS2S4(A10)", "value": 0.0390977, "initial": 0.0390977 },
+  { "name": "tags:GPTUSS2S4(A11)", "value": 0.0245257, "initial": 0.0245257 },
+  { "name": "tags:GPTUSS2S4(A12)", "value": 0.0146052, "initial": 0.0146052 },
+  { "name": "tags:GPTUSS2S4(A13)", "value": 0.00838085, "initial": 0.00838085 },
+  { "name": "tags:GPTUSS2S4(A14)", "value": 0.00468082, "initial": 0.00468082 },
+  {
+    "name": "tags:GPTUSS2S4(BNIT5)",
+    "value": 3.08569e-6,
+    "initial": 3.08569e-6
+  },
+  {
+    "name": "tags:GPTUSS2S4(C2C5=)",
+    "value": 0.00205035,
+    "initial": 0.00205035
+  },
+  {
+    "name": "tags:GPTUSS2S4(DO4)",
+    "value": 4.09366e-12,
+    "initial": 4.09366e-12
+  },
+  { "name": "tags:GPTUSS2S4(DO5)", "value": 1.02114e-5, "initial": 1.02114e-5 },
+  { "name": "tags:GPTUSS2S4(DO6)", "value": 2.35825e-5, "initial": 2.35825e-5 },
+  { "name": "tags:GPTUSS2S4(DO7)", "value": 1.83923e-5, "initial": 1.83923e-5 },
+  { "name": "tags:GPTUSS2S4(H2)", "value": 0.0199384, "initial": 0.0199384 },
+  { "name": "tags:GPTUSS2S4(H2O)", "value": 0.00711249, "initial": 0.00711249 },
+  {
+    "name": "tags:GPTUSS2S4(H2S)",
+    "value": 0.000173452,
+    "initial": 0.000173452
+  },
+  { "name": "tags:GPTUSS2S4(IP4)", "value": 6.38633e-9, "initial": 6.38633e-9 },
+  { "name": "tags:GPTUSS2S4(IP6)", "value": 0.104835, "initial": 0.104835 },
+  { "name": "tags:GPTUSS2S4(IP7)", "value": 0.0586343, "initial": 0.0586343 },
+  { "name": "tags:GPTUSS2S4(IP8)", "value": 0.0295478, "initial": 0.0295478 },
+  { "name": "tags:GPTUSS2S4(IP9)", "value": 0.0146935, "initial": 0.0146935 },
+  {
+    "name": "tags:GPTUSS2S4(IP10)",
+    "value": 0.00713814,
+    "initial": 0.00713814
+  },
+  {
+    "name": "tags:GPTUSS2S4(IP11)",
+    "value": 0.00341354,
+    "initial": 0.00341354
+  },
+  {
+    "name": "tags:GPTUSS2S4(MDEA)",
+    "value": 6.61516e-6,
+    "initial": 6.61516e-6
+  },
+  { "name": "tags:GPTUSS2S4(N5)", "value": 0.00195255, "initial": 0.00195255 },
+  { "name": "tags:GPTUSS2S4(N6)", "value": 0.0166839, "initial": 0.0166839 },
+  { "name": "tags:GPTUSS2S4(N7)", "value": 0.0226858, "initial": 0.0226858 },
+  { "name": "tags:GPTUSS2S4(N8)", "value": 0.0230335, "initial": 0.0230335 },
+  { "name": "tags:GPTUSS2S4(N9)", "value": 0.0202851, "initial": 0.0202851 },
+  { "name": "tags:GPTUSS2S4(N10)", "value": 0.0164646, "initial": 0.0164646 },
+  { "name": "tags:GPTUSS2S4(N11)", "value": 0.012625, "initial": 0.012625 },
+  { "name": "tags:GPTUSS2S4(N12)", "value": 0.00932525, "initial": 0.00932525 },
+  { "name": "tags:GPTUSS2S4(N13)", "value": 0.00668312, "initial": 0.00668312 },
+  { "name": "tags:GPTUSS2S4(N14)", "value": 0.00468106, "initial": 0.00468106 },
+  { "name": "tags:GPTUSS2S4(NH3)", "value": 1.65797e-5, "initial": 1.65797e-5 },
+  {
+    "name": "tags:GPTUSS2S4(NIT5)",
+    "value": 6.40064e-6,
+    "initial": 6.40064e-6
+  },
+  { "name": "tags:GPTUSS2S4(NP1)", "value": 0.12385, "initial": 0.12385 },
+  { "name": "tags:GPTUSS2S4(NP2)", "value": 0.0399749, "initial": 0.0399749 },
+  { "name": "tags:GPTUSS2S4(NP3)", "value": 0.00965736, "initial": 0.00965736 },
+  { "name": "tags:GPTUSS2S4(NP4)", "value": 0.00600539, "initial": 0.00600539 },
+  { "name": "tags:GPTUSS2S4(NP5)", "value": 0.0119009, "initial": 0.0119009 },
+  { "name": "tags:GPTUSS2S4(NP6)", "value": 0.0242365, "initial": 0.0242365 },
+  { "name": "tags:GPTUSS2S4(NP7)", "value": 0.0168041, "initial": 0.0168041 },
+  { "name": "tags:GPTUSS2S4(NP8)", "value": 0.0113856, "initial": 0.0113856 },
+  { "name": "tags:GPTUSS2S4(NP9)", "value": 0.00686523, "initial": 0.00686523 },
+  {
+    "name": "tags:GPTUSS2S4(NP10)",
+    "value": 0.00448116,
+    "initial": 0.00448116
+  },
+  {
+    "name": "tags:GPTUSS2S4(NP11)",
+    "value": 0.00286299,
+    "initial": 0.00286299
+  },
+  { "name": "tags:GPTUSS2S4(O6)", "value": 0.0263449, "initial": 0.0263449 },
+  { "name": "tags:GPTUSS2S4(O7)", "value": 0.0157944, "initial": 0.0157944 },
+  { "name": "tags:GPTUSS2S4(O8)", "value": 0.00823215, "initial": 0.00823215 },
+  { "name": "tags:GPTUSS2S4(O9)", "value": 0.00442462, "initial": 0.00442462 },
+  { "name": "tags:GPTUSS2S4(O10)", "value": 0.00232742, "initial": 0.00232742 },
+  { "name": "tags:GPTUSS2S4(O11)", "value": 0.00120515, "initial": 0.00120515 },
+  {
+    "name": "tags:GPTUSS2S4(SU3)",
+    "value": 4.55956e-11,
+    "initial": 4.55956e-11
+  },
+  { "name": "tags:GPTUSS2S4(SU4)", "value": 9.19944e-7, "initial": 9.19944e-7 },
+  { "name": "tags:GPTUSS2S4(SU5)", "value": 4.6479e-6, "initial": 4.6479e-6 },
+  { "name": "tags:GPTUSS2S4(SU7)", "value": 2.60425e-6, "initial": 2.60425e-6 },
+  { "name": "tags:GPTUSS2S4(SU8)", "value": 8.0828e-6, "initial": 8.0828e-6 },
+  {
+    "name": "tags:GPTUSS2S4(T2C4=)",
+    "value": 1.82618e-7,
+    "initial": 1.82618e-7
+  },
+  { "name": "tags:GPTUSS2S4(TH4)", "value": 6.05907e-7, "initial": 6.05907e-7 },
+  { "name": "tags:GPTUSS2S4(TH5)", "value": 7.5718e-6, "initial": 7.5718e-6 },
+  { "name": "tags:GPTUSS2S4(TH6)", "value": 1.01318e-5, "initial": 1.01318e-5 },
+  { "name": "tags:GPTUSS2S4(TH7)", "value": 9.84874e-6, "initial": 9.84874e-6 },
+  { "name": "tags:GPTUS2S3_Fm", "value": 37438.3, "initial": 37438.3 },
+  { "name": "tags:GPTUS2S3_T", "value": 49.7217, "initial": 49.7217 },
+  { "name": "tags:GPTUSS2S3(1C5=)", "value": 0.000776, "initial": 0.000776 },
+  {
+    "name": "tags:GPTUSS2S3(2MC4)",
+    "value": 0.00199808,
+    "initial": 0.00199808
+  },
+  { "name": "tags:GPTUSS2S3(A6)", "value": 0.00394485, "initial": 0.00394485 },
+  { "name": "tags:GPTUSS2S3(A7)", "value": 0.00808192, "initial": 0.00808192 },
+  { "name": "tags:GPTUSS2S3(A8)", "value": 0.00269494, "initial": 0.00269494 },
+  {
+    "name": "tags:GPTUSS2S3(A9)",
+    "value": 0.000593012,
+    "initial": 0.000593012
+  },
+  { "name": "tags:GPTUSS2S3(A10)", "value": 0.00012, "initial": 0.00012 },
+  { "name": "tags:GPTUSS2S3(A11)", "value": 1.46555e-5, "initial": 1.46555e-5 },
+  { "name": "tags:GPTUSS2S3(A12)", "value": 7.63088e-6, "initial": 7.63088e-6 },
+  { "name": "tags:GPTUSS2S3(A13)", "value": 1.05493e-6, "initial": 1.05493e-6 },
+  { "name": "tags:GPTUSS2S3(A14)", "value": 1.87979e-7, "initial": 1.87979e-7 },
+  {
+    "name": "tags:GPTUSS2S3(BNIT5)",
+    "value": 2.28368e-6,
+    "initial": 2.28368e-6
+  },
+  {
+    "name": "tags:GPTUSS2S3(C2C5=)",
+    "value": 0.00410275,
+    "initial": 0.00410275
+  },
+  {
+    "name": "tags:GPTUSS2S3(DO4)",
+    "value": 6.83184e-11,
+    "initial": 6.83184e-11
+  },
+  { "name": "tags:GPTUSS2S3(DO5)", "value": 6.00634e-5, "initial": 6.00634e-5 },
+  { "name": "tags:GPTUSS2S3(DO6)", "value": 5.15085e-5, "initial": 5.15085e-5 },
+  { "name": "tags:GPTUSS2S3(DO7)", "value": 1.48794e-5, "initial": 1.48794e-5 },
+  { "name": "tags:GPTUSS2S3(H2)", "value": 0.0844449, "initial": 0.0844449 },
+  { "name": "tags:GPTUSS2S3(H2O)", "value": 0.0110962, "initial": 0.0110962 },
+  { "name": "tags:GPTUSS2S3(H2S)", "value": 0.00857518, "initial": 0.00857518 },
+  { "name": "tags:GPTUSS2S3(IP4)", "value": 1.92433e-8, "initial": 1.92433e-8 },
+  { "name": "tags:GPTUSS2S3(IP6)", "value": 0.0606575, "initial": 0.0606575 },
+  { "name": "tags:GPTUSS2S3IP7)", "value": 0.0129487, "initial": 0.0129487 },
+  { "name": "tags:GPTUSS2S3(IP8)", "value": 0.00254705, "initial": 0.00254705 },
+  {
+    "name": "tags:GPTUSS2S3(IP9)",
+    "value": 0.000451338,
+    "initial": 0.000451338
+  },
+  { "name": "tags:GPTUSS2S3(IP10)", "value": 8.2042e-5, "initial": 8.2042e-5 },
+  {
+    "name": "tags:GPTUSS2S3(IP11)",
+    "value": 1.49762e-5,
+    "initial": 1.49762e-5
+  },
+  {
+    "name": "tags:GPTUSS2S3(MDEA)",
+    "value": 2.28174e-10,
+    "initial": 2.28174e-10
+  },
+  { "name": "tags:GPTUSS2S3(N5)", "value": 0.00173684, "initial": 0.00173684 },
+  { "name": "tags:GPTUSS2S3(N6)", "value": 0.00757582, "initial": 0.00757582 },
+  { "name": "tags:GPTUSS2S3(N7)", "value": 0.00398159, "initial": 0.00398159 },
+  { "name": "tags:GPTUSS2S3(N8)", "value": 0.00179645, "initial": 0.00179645 },
+  {
+    "name": "tags:GPTUSS2S3(N9)",
+    "value": 0.000634534,
+    "initial": 0.000634534
+  },
+  {
+    "name": "tags:GPTUSS2S3(N10)",
+    "value": 0.000223395,
+    "initial": 0.000223395
+  },
+  { "name": "tags:GPTUSS2S3(N11)", "value": 3.12509e-5, "initial": 3.12509e-5 },
+  { "name": "tags:GPTUSS2S3(N12)", "value": 1.33787e-5, "initial": 1.33787e-5 },
+  { "name": "tags:GPTUSS2S3(N13)", "value": 2.96889e-6, "initial": 2.96889e-6 },
+  { "name": "tags:GPTUSS2S3(N14)", "value": 4.26118e-7, "initial": 4.26118e-7 },
+  {
+    "name": "tags:GPTUSS2S3(NH3)",
+    "value": 0.000132604,
+    "initial": 0.000132604
+  },
+  {
+    "name": "tags:GPTUSS2S3(NIT5)",
+    "value": 1.97975e-6,
+    "initial": 1.97975e-6
+  },
+  { "name": "tags:GPTUSS2S3(NP1)", "value": 0.529289, "initial": 0.529289 },
+  { "name": "tags:GPTUSS2S3(NP2)", "value": 0.152955, "initial": 0.152955 },
+  { "name": "tags:GPTUSS2S3(NP3)", "value": 0.028539, "initial": 0.028539 },
+  { "name": "tags:GPTUSS2S3(NP4)", "value": 0.00995674, "initial": 0.00995674 },
+  { "name": "tags:GPTUSS2S3(NP5)", "value": 0.0110803, "initial": 0.0110803 },
+  { "name": "tags:GPTUSS2S3(NP6)", "value": 0.0106796, "initial": 0.0106796 },
+  { "name": "tags:GPTUSS2S3(NP7)", "value": 0.00284924, "initial": 0.00284924 },
+  {
+    "name": "tags:GPTUSS2S3(NP8)",
+    "value": 0.000673434,
+    "initial": 0.000673434
+  },
+  {
+    "name": "tags:GPTUSS2S3(NP9)",
+    "value": 0.000138281,
+    "initial": 0.000138281
+  },
+  {
+    "name": "tags:GPTUSS2S3(NP10)",
+    "value": 2.97642e-5,
+    "initial": 2.97642e-5
+  },
+  {
+    "name": "tags:GPTUSS2S3(NP11)",
+    "value": 6.87642e-6,
+    "initial": 6.87642e-6
+  },
+  { "name": "tags:GPTUSS2S3(O6)", "value": 0.0265239, "initial": 0.0265239 },
+  { "name": "tags:GPTUSS2S3(O7)", "value": 0.00612833, "initial": 0.00612833 },
+  { "name": "tags:GPTUSS2S3(O8)", "value": 0.00140094, "initial": 0.00140094 },
+  {
+    "name": "tags:GPTUSS2S3(O9)",
+    "value": 0.000252331,
+    "initial": 0.000252331
+  },
+  { "name": "tags:GPTUSS2S3(O10)", "value": 4.64578e-5, "initial": 4.64578e-5 },
+  { "name": "tags:GPTUSS2S3(O11)", "value": 9.2037e-6, "initial": 9.2037e-6 },
+  {
+    "name": "tags:GPTUSS2S3(SU3)",
+    "value": 3.06545e-10,
+    "initial": 3.06545e-10
+  },
+  { "name": "tags:GPTUSS2S3(SU4)", "value": 3.36639e-6, "initial": 3.36639e-6 },
+  { "name": "tags:GPTUSS2S3(SU5)", "value": 3.2299e-6, "initial": 3.2299e-6 },
+  { "name": "tags:GPTUSS2S3(SU7)", "value": 1.58818e-7, "initial": 1.58818e-7 },
+  { "name": "tags:GPTUSS2S3(SU8)", "value": 1.50098e-7, "initial": 1.50098e-7 },
+  { "name": "tags:GPTUSS2S3(T2C4=)", "value": 8.1009e-7, "initial": 8.1009e-7 },
+  { "name": "tags:GPTUSS2S3(TH4)", "value": 2.78759e-6, "initial": 2.78759e-6 },
+  { "name": "tags:GPTUSS2S3(TH5)", "value": 1.09342e-5, "initial": 1.09342e-5 },
+  { "name": "tags:GPTUSS2S3(TH6)", "value": 4.60267e-6, "initial": 4.60267e-6 },
+  { "name": "tags:GPTUSS2S3(TH7)", "value": 1.94373e-6, "initial": 1.94373e-6 },
+  { "name": "tags:GPTU S1S2_1_P", "value": 16.9882, "initial": 16.9882 },
+  { "name": "tags:GPTU S1S2_2_P", "value": 24.1132, "initial": 24.1132 },
+  { "name": "tags:GPTU S1S2_3_P", "value": 23.4133, "initial": 23.4133 },
+  { "name": "tags:GPTU S3S2_P", "value": 23.4133, "initial": 23.4133 },
+  { "name": "tags:GPTU S3S2_P", "value": 25.7198, "initial": 25.7198 },
+  { "name": "tags:GPTUS2S3_Fm", "value": 37439.6, "initial": 37439.6 },
+  { "name": "tags:GPTUS2S3_T", "value": 49.7216, "initial": 49.7216 },
+  {
+    "name": "tags:GPTUSS2S3(1C5=)",
+    "value": 0.000776345,
+    "initial": 0.000776345
+  },
+  {
+    "name": "tags:GPTUSS2S3(2MC4)",
+    "value": 0.00199807,
+    "initial": 0.00199807
+  },
+  { "name": "tags:GPTUSS2S3(A6)", "value": 0.00394482, "initial": 0.00394482 },
+  { "name": "tags:GPTUSS2S3(A7)", "value": 0.00808185, "initial": 0.00808185 },
+  { "name": "tags:GPTUSS2S3(A8)", "value": 0.00269491, "initial": 0.00269491 },
+  {
+    "name": "tags:GPTUSS2S3(A9)",
+    "value": 0.000593004,
+    "initial": 0.000593004
+  },
+  {
+    "name": "tags:GPTUSS2S3(A10)",
+    "value": 0.000120209,
+    "initial": 0.000120209
+  },
+  { "name": "tags:GPTUSS2S3(A11)", "value": 1.46553e-5, "initial": 1.46553e-5 },
+  { "name": "tags:GPTUSS2S3(A12)", "value": 7.63076e-6, "initial": 7.63076e-6 },
+  { "name": "tags:GPTUSS2S3(A13)", "value": 1.05e-6, "initial": 1.05e-6 },
+  { "name": "tags:GPTUSS2S3(A14)", "value": 1.87976e-7, "initial": 1.87976e-7 },
+  {
+    "name": "tags:GPTUSS2S3(BNIT5)",
+    "value": 2.28366e-6,
+    "initial": 2.28366e-6
+  },
+  {
+    "name": "tags:GPTUSS2S3(C2C5=)",
+    "value": 0.00410272,
+    "initial": 0.00410272
+  },
+  {
+    "name": "tags:GPTUSS2S3(DO4)",
+    "value": 6.83185e-11,
+    "initial": 6.83185e-11
+  },
+  { "name": "tags:GPTUSS2S3(DO5)", "value": 6.00631e-5, "initial": 6.00631e-5 },
+  { "name": "tags:GPTUSS2S3(DO6)", "value": 5.15082e-5, "initial": 5.15082e-5 },
+  { "name": "tags:GPTUSS2S3(DO7)", "value": 1.48793e-5, "initial": 1.48793e-5 },
+  { "name": "tags:GPTUSS2S3(H2)", "value": 0.0844451, "initial": 0.0844451 },
+  { "name": "tags:GPTUSS2S3(H2O)", "value": 0.0110961, "initial": 0.0110961 },
+  { "name": "tags:GPTUSS2S3(H2S)", "value": 0.00857519, "initial": 0.00857519 },
+  { "name": "tags:GPTUSS2S3(IP4)", "value": 1.9243e-8, "initial": 1.9243e-8 },
+  { "name": "tags:GPTUSS2S3(IP6)", "value": 0.0606571, "initial": 0.0606571 },
+  { "name": "tags:GPTUSS2S3(IP7)", "value": 0.0129485, "initial": 0.0129485 },
+  { "name": "tags:GPTUSS2S3(IP8)", "value": 0.00254702, "initial": 0.00254702 },
+  {
+    "name": "tags:GPTUSS2S3(IP9)",
+    "value": 0.000451333,
+    "initial": 0.000451333
+  },
+  {
+    "name": "tags:GPTUSS2S3(IP10)",
+    "value": 8.20409e-5,
+    "initial": 8.20409e-5
+  },
+  {
+    "name": "tags:GPTUSS2S3(IP11)",
+    "value": 1.49759e-5,
+    "initial": 1.49759e-5
+  },
+  {
+    "name": "tags:GPTUSS2S3(MDEA)",
+    "value": 2.2817e-10,
+    "initial": 2.2817e-10
+  },
+  { "name": "tags:GPTUSS2S3(N5)", "value": 0.00173682, "initial": 0.00173682 },
+  { "name": "tags:GPTUSS2S3(N6)", "value": 0.00757577, "initial": 0.00757577 },
+  { "name": "tags:GPTUSS2S3(N7)", "value": 0.00398156, "initial": 0.00398156 },
+  { "name": "tags:GPTUSS2S3(N8)", "value": 0.00179643, "initial": 0.00179643 },
+  {
+    "name": "tags:GPTUSS2S3(N9)",
+    "value": 0.000634527,
+    "initial": 0.000634527
+  },
+  {
+    "name": "tags:GPTUSS2S3(N10)",
+    "value": 0.000223393,
+    "initial": 0.000223393
+  },
+  { "name": "tags:GPTUSS2S3(N11)", "value": 3.12504e-5, "initial": 3.12504e-5 },
+  { "name": "tags:GPTUSS2S3(N12)", "value": 1.33786e-5, "initial": 1.33786e-5 },
+  { "name": "tags:GPTUSS2S3(N13)", "value": 2.96884e-6, "initial": 2.96884e-6 },
+  { "name": "tags:GPTUSS2S3(N14)", "value": 4.26e-7, "initial": 4.26e-7 },
+  {
+    "name": "tags:GPTUSS2S3(NH3)",
+    "value": 0.000132604,
+    "initial": 0.000132604
+  },
+  {
+    "name": "tags:GPTUSS2S3(NIT5)",
+    "value": 1.97973e-6,
+    "initial": 1.97973e-6
+  },
+  { "name": "tags:GPTUSS2S3(NP1)", "value": 0.52929, "initial": 0.52929 },
+  { "name": "tags:GPTUSS2S3(NP2)", "value": 0.152955, "initial": 0.152955 },
+  { "name": "tags:GPTUSS2S3(NP3)", "value": 0.0285391, "initial": 0.0285391 },
+  { "name": "tags:GPTUSS2S3(NP4)", "value": 0.00995672, "initial": 0.00995672 },
+  { "name": "tags:GPTUSS2S3(NP5)", "value": 0.0110802, "initial": 0.0110802 },
+  { "name": "tags:GPTUSS2S3(NP6)", "value": 0.0106795, "initial": 0.0106795 },
+  { "name": "tags:GPTUSS2S3(NP7)", "value": 0.00284921, "initial": 0.00284921 },
+  {
+    "name": "tags:GPTUSS2S3(NP8)",
+    "value": 0.000673427,
+    "initial": 0.000673427
+  },
+  {
+    "name": "tags:GPTUSS2S3(NP9)",
+    "value": 0.000138279,
+    "initial": 0.000138279
+  },
+  {
+    "name": "tags:GPTUSS2S3(NP10)",
+    "value": 2.97638e-5,
+    "initial": 2.97638e-5
+  },
+  {
+    "name": "tags:GPTUSS2S3(NP11)",
+    "value": 6.87631e-6,
+    "initial": 6.87631e-6
+  },
+  { "name": "tags:GPTUSS2S3(O6)", "value": 0.0265237, "initial": 0.0265237 },
+  { "name": "tags:GPTUSS2S3(O7)", "value": 0.00612828, "initial": 0.00612828 },
+  { "name": "tags:GPTUSS2S3(O8)", "value": 0.00140093, "initial": 0.00140093 },
+  {
+    "name": "tags:GPTUSS2S3(O9)",
+    "value": 0.000252328,
+    "initial": 0.000252328
+  },
+  { "name": "tags:GPTUSS2S3(O10)", "value": 4.64572e-5, "initial": 4.64572e-5 },
+  { "name": "tags:GPTUSS2S3(O11)", "value": 9.20357e-6, "initial": 9.20357e-6 },
+  {
+    "name": "tags:GPTUSS2S3(SU3)",
+    "value": 3.06545e-10,
+    "initial": 3.06545e-10
+  },
+  { "name": "tags:GPTUSS2S3(SU4)", "value": 3.36638e-6, "initial": 3.36638e-6 },
+  { "name": "tags:GPTUSS2S3(SU5)", "value": 3.22987e-6, "initial": 3.22987e-6 },
+  { "name": "tags:GPTUSS2S3(SU7)", "value": 1.58816e-7, "initial": 1.58816e-7 },
+  { "name": "tags:GPTUSS2S3(SU8)", "value": 1.50096e-7, "initial": 1.50096e-7 },
+  {
+    "name": "tags:GPTUSS2S3(T2C4=)",
+    "value": 8.10086e-7,
+    "initial": 8.10086e-7
+  },
+  { "name": "tags:GPTUSS2S3(TH4)", "value": 2.78758e-6, "initial": 2.78758e-6 },
+  { "name": "tags:GPTUSS2S3(TH5)", "value": 1.09341e-5, "initial": 1.09341e-5 },
+  { "name": "tags:GPTUSS2S3(TH6)", "value": 4.60263e-6, "initial": 4.60263e-6 },
+  { "name": "tags:GPTUSS2S3(TH7)", "value": 1.94371e-6, "initial": 1.94371e-6 },
+  { "name": "tags:GPTUS4S3_Fm", "value": 31715.7, "initial": 31715.7 },
+  { "name": "tags:GPTUS4S3_T", "value": 49.8793, "initial": 49.8793 },
+  {
+    "name": "tags:GPTUSS4S3(1C5=)",
+    "value": 0.000385334,
+    "initial": 0.000385334
+  },
+  {
+    "name": "tags:GPTUSS4S3(2MC4)",
+    "value": 0.00159199,
+    "initial": 0.00159199
+  },
+  { "name": "tags:GPTUSS4S3(A6)", "value": 0.00335507, "initial": 0.00335507 },
+  { "name": "tags:GPTUSS4S3(A7)", "value": 0.00771289, "initial": 0.00771289 },
+  { "name": "tags:GPTUSS4S3(A8)", "value": 0.0029905, "initial": 0.0029905 },
+  {
+    "name": "tags:GPTUSS4S3(A9)",
+    "value": 0.000819635,
+    "initial": 0.000819635
+  },
+  {
+    "name": "tags:GPTUSS4S3(A10)",
+    "value": 0.000222124,
+    "initial": 0.000222124
+  },
+  { "name": "tags:GPTUSS4S3(A11)", "value": 4.19362e-5, "initial": 4.19362e-5 },
+  { "name": "tags:GPTUSS4S3(A12)", "value": 2.35087e-5, "initial": 2.35087e-5 },
+  { "name": "tags:GPTUSS4S3(A13)", "value": 4.89724e-6, "initial": 4.89724e-6 },
+  { "name": "tags:GPTUSS4S3(A14)", "value": 1.25602e-6, "initial": 1.25602e-6 },
+  {
+    "name": "tags:GPTUSS4S3(BNIT5)",
+    "value": 4.26756e-7,
+    "initial": 4.26756e-7
+  },
+  {
+    "name": "tags:GPTUSS4S3(C2C5=)",
+    "value": 0.00199593,
+    "initial": 0.00199593
+  },
+  {
+    "name": "tags:GPTUSS4S3(DO4)",
+    "value": 8.75343e-12,
+    "initial": 8.75343e-12
+  },
+  { "name": "tags:GPTUSS4S3(DO5)", "value": 9.2249e-6, "initial": 9.2249e-6 },
+  { "name": "tags:GPTUSS4S3(DO6)", "value": 8.61144e-6, "initial": 8.61144e-6 },
+  { "name": "tags:GPTUSS4S3(DO7)", "value": 2.74794e-6, "initial": 2.74794e-6 },
+  { "name": "tags:GPTUSS4S3(H2)", "value": 0.0893029, "initial": 0.0893029 },
+  { "name": "tags:GPTUSS4S3(H2O)", "value": 0.01157, "initial": 0.01157 },
+  {
+    "name": "tags:GPTUSS4S3(H2S)",
+    "value": 0.000640493,
+    "initial": 0.000640493
+  },
+  { "name": "tags:GPTUSS4S3(IP4)", "value": 1.52955e-8, "initial": 1.52955e-8 },
+  { "name": "tags:GPTUSS4S3(IP6)", "value": 0.0577998, "initial": 0.0577998 },
+  { "name": "tags:GPTUSS4S3(IP7)", "value": 0.0134212, "initial": 0.0134212 },
+  { "name": "tags:GPTUSS4S3(IP8)", "value": 0.00291365, "initial": 0.00291365 },
+  {
+    "name": "tags:GPTUSS4S3(IP9)",
+    "value": 0.000606035,
+    "initial": 0.000606035
+  },
+  {
+    "name": "tags:GPTUSS4S3(IP10)",
+    "value": 0.000131462,
+    "initial": 0.000131462
+  },
+  {
+    "name": "tags:GPTUSS4S3(IP11)",
+    "value": 2.97758e-5,
+    "initial": 2.97758e-5
+  },
+  { "name": "tags:GPTUSS4S3(MDEA)", "value": 1.8e-9, "initial": 1.8e-9 },
+  { "name": "tags:GPTUSS4S3(N5)", "value": 0.00140935, "initial": 0.00140935 },
+  { "name": "tags:GPTUSS4S3(N6)", "value": 0.0064287, "initial": 0.0064287 },
+  { "name": "tags:GPTUSS4S3(N7)", "value": 0.00366747, "initial": 0.00366747 },
+  { "name": "tags:GPTUSS4S3(N8)", "value": 0.00183422, "initial": 0.00183422 },
+  {
+    "name": "tags:GPTUSS4S3(N9)",
+    "value": 0.000734289,
+    "initial": 0.000734289
+  },
+  { "name": "tags:GPTUSS4S3(N10)", "value": 0.00032372, "initial": 0.00032372 },
+  { "name": "tags:GPTUSS4S3(N11)", "value": 6.14423e-5, "initial": 6.14423e-5 },
+  { "name": "tags:GPTUSS4S3(N12)", "value": 3.31938e-5, "initial": 3.31938e-5 },
+  { "name": "tags:GPTUSS4S3(N13)", "value": 9.48119e-6, "initial": 9.48119e-6 },
+  { "name": "tags:GPTUSS4S3(N14)", "value": 2.32553e-6, "initial": 2.32553e-6 },
+  { "name": "tags:GPTUSS4S3(NH3)", "value": 3.28461e-5, "initial": 3.28461e-5 },
+  {
+    "name": "tags:GPTUSS4S3(NIT5)",
+    "value": 4.06665e-7,
+    "initial": 4.06665e-7
+  },
+  { "name": "tags:GPTUSS4S3(NP1)", "value": 0.542931, "initial": 0.542931 },
+  { "name": "tags:GPTUSS4S3(NP2)", "value": 0.159183, "initial": 0.159183 },
+  { "name": "tags:GPTUSS4S3(NP3)", "value": 0.0311327, "initial": 0.0311327 },
+  { "name": "tags:GPTUSS4S3(NP4)", "value": 0.0122739, "initial": 0.0122739 },
+  { "name": "tags:GPTUSS4S3(NP5)", "value": 0.0120288, "initial": 0.0120288 },
+  { "name": "tags:GPTUSS4S3(NP6)", "value": 0.0103593, "initial": 0.0103593 },
+  { "name": "tags:GPTUSS4S3(NP7)", "value": 0.00285731, "initial": 0.00285731 },
+  {
+    "name": "tags:GPTUSS4S3(NP8)",
+    "value": 0.000743594,
+    "initial": 0.000743594
+  },
+  {
+    "name": "tags:GPTUSS4S3(NP9)",
+    "value": 0.000177985,
+    "initial": 0.000177985
+  },
+  {
+    "name": "tags:GPTUSS4S3(NP10)",
+    "value": 4.72865e-5,
+    "initial": 4.72865e-5
+  },
+  {
+    "name": "tags:GPTUSS4S3(NP11)",
+    "value": 1.39732e-5,
+    "initial": 1.39732e-5
+  },
+  { "name": "tags:GPTUSS4S3(O6)", "value": 0.0136456, "initial": 0.0136456 },
+  { "name": "tags:GPTUSS4S3(O7)", "value": 0.00339497, "initial": 0.00339497 },
+  {
+    "name": "tags:GPTUSS4S3(O8)",
+    "value": 0.000861551,
+    "initial": 0.000861551
+  },
+  {
+    "name": "tags:GPTUSS4S3(O9)",
+    "value": 0.000178011,
+    "initial": 0.000178011
+  },
+  { "name": "tags:GPTUSS4S3(O10)", "value": 4.06244e-5, "initial": 4.06244e-5 },
+  { "name": "tags:GPTUSS4S3(O11)", "value": 9.46305e-6, "initial": 9.46305e-6 },
+  {
+    "name": "tags:GPTUSS4S3(SU3)",
+    "value": 2.12976e-11,
+    "initial": 2.12976e-11
+  },
+  { "name": "tags:GPTUSS4S3(SU4)", "value": 2.50578e-7, "initial": 2.50578e-7 },
+  { "name": "tags:GPTUSS4S3(SU5)", "value": 2.92429e-7, "initial": 2.92429e-7 },
+  { "name": "tags:GPTUSS4S3(SU7)", "value": 2.24904e-8, "initial": 2.24904e-8 },
+  { "name": "tags:GPTUSS4S3(SU8)", "value": 2.89222e-8, "initial": 2.89222e-8 },
+  {
+    "name": "tags:GPTUSS4S3(T2C4=)",
+    "value": 3.61859e-7,
+    "initial": 3.61859e-7
+  },
+  { "name": "tags:GPTUSS4S3(TH4)", "value": 2.01232e-7, "initial": 2.01232e-7 },
+  { "name": "tags:GPTUSS4S3(TH5)", "value": 8.99226e-7, "initial": 8.99226e-7 },
+  { "name": "tags:GPTUSS4S3(TH6)", "value": 4.48837e-7, "initial": 4.48837e-7 },
+  { "name": "tags:GPTUSS4S3(TH7)", "value": 2.14655e-7, "initial": 2.14655e-7 },
+  { "name": "tags:GPTUS3S2_T", "value": 107.851, "initial": 107.851 },
+  {
+    "name": "tags:GPTUSS3S2(1C5=)",
+    "value": 0.000572184,
+    "initial": 0.000572184
+  },
+  { "name": "tags:GPTUSS3S2(2MC4)", "value": 0.0017365, "initial": 0.0017365 },
+  { "name": "tags:GPTUSS3S2(A6)", "value": 0.0034863, "initial": 0.0034863 },
+  { "name": "tags:GPTUSS3S2(A7)", "value": 0.00756969, "initial": 0.00756969 },
+  { "name": "tags:GPTUSS3S2(A8)", "value": 0.00271136, "initial": 0.00271136 },
+  {
+    "name": "tags:GPTUSS3S2(A9)",
+    "value": 0.000667893,
+    "initial": 0.000667893
+  },
+  {
+    "name": "tags:GPTUSS3S2(A10)",
+    "value": 0.000160005,
+    "initial": 0.000160005
+  },
+  { "name": "tags:GPTUSS3S2(A11)", "value": 2.60366e-5, "initial": 2.60366e-5 },
+  { "name": "tags:GPTUSS3S2(A12)", "value": 1.42928e-5, "initial": 1.42928e-5 },
+  { "name": "tags:GPTUSS3S2(A13)", "value": 2.69997e-6, "initial": 2.69997e-6 },
+  { "name": "tags:GPTUSS3S2(A14)", "value": 6.49625e-7, "initial": 6.49625e-7 },
+  {
+    "name": "tags:GPTUSS3S2(BNIT5)",
+    "value": 1.17212e-6,
+    "initial": 1.17212e-6
+  },
+  {
+    "name": "tags:GPTUSS3S2(C2C5=)",
+    "value": 0.00300595,
+    "initial": 0.00300595
+  },
+  {
+    "name": "tags:GPTUSS3S2(DO4)",
+    "value": 3.92854e-11,
+    "initial": 3.92854e-11
+  },
+  { "name": "tags:GPTUSS3S2(DO5)", "value": 3.52187e-5, "initial": 3.52187e-5 },
+  { "name": "tags:GPTUSS3S2(DO6)", "value": 3.05101e-5, "initial": 3.05101e-5 },
+  { "name": "tags:GPTUSS3S2(DO7)", "value": 8.92823e-6, "initial": 8.92823e-6 },
+  { "name": "tags:GPTUSS3S2(H2)", "value": 0.0891328, "initial": 0.0891328 },
+  { "name": "tags:GPTUSS3S2(H2O)", "value": 0.013921, "initial": 0.013921 },
+  { "name": "tags:GPTUSS3S2(H2S)", "value": 0.000124, "initial": 0.000124 },
+  { "name": "tags:GPTUSS3S2(IP4)", "value": 1.67e-8, "initial": 1.67e-8 },
+  { "name": "tags:GPTUSS3S2(IP6)", "value": 0.0568798, "initial": 0.0568798 },
+  { "name": "tags:GPTUSS3S2(IP7)", "value": 0.0126181, "initial": 0.0126181 },
+  { "name": "tags:GPTUSS3S2(IP8)", "value": 0.00260231, "initial": 0.00260231 },
+  { "name": "tags:GPTUSS3S2(IP9)", "value": 0.000501, "initial": 0.000501 },
+  {
+    "name": "tags:GPTUSS3S2(IP10)",
+    "value": 0.000100354,
+    "initial": 0.000100354
+  },
+  {
+    "name": "tags:GPTUSS3S2(IP11)",
+    "value": 2.08588e-5,
+    "initial": 2.08588e-5
+  },
+  {
+    "name": "tags:GPTUSS3S2(MDEA)",
+    "value": 1.35819e-5,
+    "initial": 1.35819e-5
+  },
+  { "name": "tags:GPTUSS3S2(N5)", "value": 0.0015185, "initial": 0.0015185 },
+  { "name": "tags:GPTUSS3S2(N6)", "value": 0.0067553, "initial": 0.0067553 },
+  { "name": "tags:GPTUSS3S2(N7)", "value": 0.00367772, "initial": 0.00367772 },
+  { "name": "tags:GPTUSS3S2(N8)", "value": 0.00173836, "initial": 0.00173836 },
+  {
+    "name": "tags:GPTUSS3S2(N9)",
+    "value": 0.000652003,
+    "initial": 0.000652003
+  },
+  {
+    "name": "tags:GPTUSS3S2(N10)",
+    "value": 0.000258206,
+    "initial": 0.000258206
+  },
+  { "name": "tags:GPTUSS3S2(N11)", "value": 4.32224e-5, "initial": 4.32224e-5 },
+  { "name": "tags:GPTUSS3S2(N12)", "value": 2.15323e-5, "initial": 2.15323e-5 },
+  { "name": "tags:GPTUSS3S2(N13)", "value": 5.70796e-6, "initial": 5.70796e-6 },
+  { "name": "tags:GPTUSS3S2(N14)", "value": 1.24329e-6, "initial": 1.24329e-6 },
+  { "name": "tags:GPTUSS3S2(NH3)", "value": 3.02344e-5, "initial": 3.02344e-5 },
+  { "name": "tags:GPTUSS3S2(NIT5)", "value": 1.2051e-6, "initial": 1.2051e-6 },
+  { "name": "tags:GPTUSS3S2(NP1)", "value": 0.523564, "initial": 0.523564 },
+  { "name": "tags:GPTUSS3S2(NP2)", "value": 0.159632, "initial": 0.159632 },
+  { "name": "tags:GPTUSS3S2(NP3)", "value": 0.0341619, "initial": 0.0341619 },
+  { "name": "tags:GPTUSS3S2(NP4)", "value": 0.016792, "initial": 0.016792 },
+  { "name": "tags:GPTUSS3S2(NP5)", "value": 0.0156889, "initial": 0.0156889 },
+  { "name": "tags:GPTUSS3S2(NP6)", "value": 0.0100948, "initial": 0.0100948 },
+  { "name": "tags:GPTUSS3S2(NP7)", "value": 0.00273434, "initial": 0.00273434 },
+  {
+    "name": "tags:GPTUSS3S2(NP8)",
+    "value": 0.000676278,
+    "initial": 0.000676278
+  },
+  {
+    "name": "tags:GPTUSS3S2(NP9)",
+    "value": 0.000149984,
+    "initial": 0.000149984
+  },
+  {
+    "name": "tags:GPTUSS3S2(NP10)",
+    "value": 3.62288e-5,
+    "initial": 3.62288e-5
+  },
+  {
+    "name": "tags:GPTUSS3S2(NP11)",
+    "value": 9.70997e-6,
+    "initial": 9.70997e-6
+  },
+  { "name": "tags:GPTUSS3S2(O6)", "value": 0.0197605, "initial": 0.0197605 },
+  { "name": "tags:GPTUSS3S2(O7)", "value": 0.0046721, "initial": 0.0046721 },
+  { "name": "tags:GPTUSS3S2(O8)", "value": 0.00110561, "initial": 0.00110561 },
+  {
+    "name": "tags:GPTUSS3S2(O9)",
+    "value": 0.000209174,
+    "initial": 0.000209174
+  },
+  { "name": "tags:GPTUSS3S2(O10)", "value": 4.19624e-5, "initial": 4.19624e-5 },
+  { "name": "tags:GPTUSS3S2(O11)", "value": 8.94e-6, "initial": 8.94e-6 },
+  { "name": "tags:GPTUSS3S2(SU3)", "value": 1.68e-10, "initial": 1.68e-10 },
+  { "name": "tags:GPTUSS3S2(SU4)", "value": 1.86e-6, "initial": 1.86e-6 },
+  { "name": "tags:GPTUSS3S2(SU5)", "value": 1.8e-6, "initial": 1.8e-6 },
+  { "name": "tags:GPTUSS3S2(SU7)", "value": 9.22918e-8, "initial": 9.22918e-8 },
+  { "name": "tags:GPTUSS3S2(SU8)", "value": 9.05947e-8, "initial": 9.05947e-8 },
+  {
+    "name": "tags:GPTUSS3S2(T2C4=)",
+    "value": 5.79294e-7,
+    "initial": 5.79294e-7
+  },
+  { "name": "tags:GPTUSS3S2(TH4)", "value": 1.45567e-6, "initial": 1.45567e-6 },
+  { "name": "tags:GPTUSS3S2(TH5)", "value": 5.88927e-6, "initial": 5.88927e-6 },
+  { "name": "tags:GPTUSS3S2(TH6)", "value": 2.57497e-6, "initial": 2.57497e-6 },
+  { "name": "tags:GPTUSS3S2(TH7)", "value": 1.09607e-6, "initial": 1.09607e-6 },
+  { "name": "tags:GPTUS3S2_Fm", "value": 71577.7, "initial": 71577.7 },
+  { "name": "tags:GPTUS2S3_P", "value": 15.9883, "initial": 15.9883 },
+  { "name": "tags:GPTUS4S3_P", "value": 15.9883, "initial": 15.9883 },
+  { "name": "tags:GPTUS4S1_P", "value": 7.01325, "initial": 7.01325 },
+  { "name": "tags:GPTUS4S3_P", "value": 15.9883, "initial": 15.9883 },
+  { "name": "tags:GPTUS2S4_Fm", "value": 142579.0, "initial": 142579.0 },
+  { "name": "tags:GPTUS2S4_T", "value": 136.822, "initial": 136.822 },
+  {
+    "name": "tags:GPTUSS2S4(1C5=)",
+    "value": 0.000336408,
+    "initial": 0.000336408
+  },
+  { "name": "tags:GPTUSS2S4(2MC4)", "value": 0.0012873, "initial": 0.0012873 },
+  { "name": "tags:GPTUSS2S4(A6)", "value": 0.0100733, "initial": 0.0100733 },
+  { "name": "tags:GPTUSS2S4(A7)", "value": 0.0677748, "initial": 0.0677748 },
+  { "name": "tags:GPTUSS2S4(A8)", "value": 0.0733178, "initial": 0.0733178 },
+  { "name": "tags:GPTUSS2S4(A9)", "value": 0.0574689, "initial": 0.0574689 },
+  { "name": "tags:GPTUSS2S4(A10)", "value": 0.039097, "initial": 0.039097 },
+  { "name": "tags:GPTUSS2S4(A11)", "value": 0.0245255, "initial": 0.0245255 },
+  { "name": "tags:GPTUSS2S4(A12)", "value": 0.014605, "initial": 0.014605 },
+  { "name": "tags:GPTUSS2S4(A13)", "value": 0.00838082, "initial": 0.00838082 },
+  { "name": "tags:GPTUSS2S4(A14)", "value": 0.00468082, "initial": 0.00468082 },
+  {
+    "name": "tags:GPTUSS2S4(BNIT5)",
+    "value": 3.09277e-6,
+    "initial": 3.09277e-6
+  },
+  {
+    "name": "tags:GPTUSS2S4(C2C5=)",
+    "value": 0.00204928,
+    "initial": 0.00204928
+  },
+  { "name": "tags:GPTUSS2S4(DO4)", "value": 4.1031e-12, "initial": 4.1031e-12 },
+  { "name": "tags:GPTUSS2S4(DO5)", "value": 1.02339e-5, "initial": 1.02339e-5 },
+  { "name": "tags:GPTUSS2S4(DO6)", "value": 2.36446e-5, "initial": 2.36446e-5 },
+  { "name": "tags:GPTUSS2S4(DO7)", "value": 1.84393e-5, "initial": 1.84393e-5 },
+  { "name": "tags:GPTUSS2S4(H2)", "value": 0.0198435, "initial": 0.0198435 },
+  { "name": "tags:GPTUSS2S4(H2O)", "value": 0.00710359, "initial": 0.00710359 },
+  {
+    "name": "tags:GPTUSS2S4(H2S)",
+    "value": 0.000173851,
+    "initial": 0.000173851
+  },
+  { "name": "tags:GPTUSS2S4(IP4)", "value": 6.40588e-9, "initial": 6.40588e-9 },
+  { "name": "tags:GPTUSS2S4(IP6)", "value": 0.104788, "initial": 0.104788 },
+  { "name": "tags:GPTUSS2S4(IP7)", "value": 0.0586171, "initial": 0.0586171 },
+  { "name": "tags:GPTUSS2S4(IP8)", "value": 0.0295411, "initial": 0.0295411 },
+  { "name": "tags:GPTUSS2S4(IP9)", "value": 0.0146904, "initial": 0.0146904 },
+  {
+    "name": "tags:GPTUSS2S4(IP10)",
+    "value": 0.00713662,
+    "initial": 0.00713662
+  },
+  {
+    "name": "tags:GPTUSS2S4(IP11)",
+    "value": 0.00341278,
+    "initial": 0.00341278
+  },
+  {
+    "name": "tags:GPTUSS2S4(MDEA)",
+    "value": 6.60231e-6,
+    "initial": 6.60231e-6
+  },
+  { "name": "tags:GPTUSS2S4(N5)", "value": 0.00194946, "initial": 0.00194946 },
+  { "name": "tags:GPTUSS2S4(N6)", "value": 0.0166808, "initial": 0.0166808 },
+  { "name": "tags:GPTUSS2S4(N7)", "value": 0.0226839, "initial": 0.0226839 },
+  { "name": "tags:GPTUSS2S4(N8)", "value": 0.0230324, "initial": 0.0230324 },
+  { "name": "tags:GPTUSS2S4(N9)", "value": 0.0202844, "initial": 0.0202844 },
+  { "name": "tags:GPTUSS2S4(N10)", "value": 0.0164642, "initial": 0.0164642 },
+  { "name": "tags:GPTUSS2S4(N11)", "value": 0.0126247, "initial": 0.0126247 },
+  { "name": "tags:GPTUSS2S4(N12)", "value": 0.00932513, "initial": 0.00932513 },
+  { "name": "tags:GPTUSS2S4(N13)", "value": 0.00668306, "initial": 0.00668306 },
+  { "name": "tags:GPTUSS2S4(N14)", "value": 0.00468105, "initial": 0.00468105 },
+  { "name": "tags:GPTUSS2S4(NH3)", "value": 1.65354e-5, "initial": 1.65354e-5 },
+  {
+    "name": "tags:GPTUSS2S4(NIT5)",
+    "value": 6.41513e-6,
+    "initial": 6.41513e-6
+  },
+  { "name": "tags:GPTUSS2S4(NP1)", "value": 0.124071, "initial": 0.124071 },
+  { "name": "tags:GPTUSS2S4(NP2)", "value": 0.0399851, "initial": 0.0399851 },
+  { "name": "tags:GPTUSS2S4(NP3)", "value": 0.00963222, "initial": 0.00963222 },
+  { "name": "tags:GPTUSS2S4(NP4)", "value": 0.00599887, "initial": 0.00599887 },
+  { "name": "tags:GPTUSS2S4(NP5)", "value": 0.0118825, "initial": 0.0118825 },
+  { "name": "tags:GPTUSS2S4(NP6)", "value": 0.0242269, "initial": 0.0242269 },
+  { "name": "tags:GPTUSS2S4(NP7)", "value": 0.0168007, "initial": 0.0168007 },
+  { "name": "tags:GPTUSS2S4(NP8)", "value": 0.0113842, "initial": 0.0113842 },
+  { "name": "tags:GPTUSS2S4(NP9)", "value": 0.00686459, "initial": 0.00686459 },
+  {
+    "name": "tags:GPTUSS2S4(NP10)",
+    "value": 0.00448083,
+    "initial": 0.00448083
+  },
+  {
+    "name": "tags:GPTUSS2S4(NP11)",
+    "value": 0.00286282,
+    "initial": 0.00286282
+  },
+  { "name": "tags:GPTUSS2S4(O6)", "value": 0.0263626, "initial": 0.0263626 },
+  { "name": "tags:GPTUSS2S4(O7)", "value": 0.0158048, "initial": 0.0158048 },
+  { "name": "tags:GPTUSS2S4(O8)", "value": 0.00823754, "initial": 0.00823754 },
+  { "name": "tags:GPTUSS2S4(O9)", "value": 0.0044275, "initial": 0.0044275 },
+  { "name": "tags:GPTUSS2S4(O10)", "value": 0.00232893, "initial": 0.00232893 },
+  { "name": "tags:GPTUSS2S4(O11)", "value": 0.00120593, "initial": 0.00120593 },
+  {
+    "name": "tags:GPTUSS2S4(SU3)",
+    "value": 4.56645e-11,
+    "initial": 4.56645e-11
+  },
+  { "name": "tags:GPTUSS2S4(SU4)", "value": 9.23231e-7, "initial": 9.23231e-7 },
+  { "name": "tags:GPTUSS2S4(SU5)", "value": 4.66449e-6, "initial": 4.66449e-6 },
+  { "name": "tags:GPTUSS2S4(SU7)", "value": 2.61341e-6, "initial": 2.61341e-6 },
+  { "name": "tags:GPTUSS2S4(SU8)", "value": 8.11128e-6, "initial": 8.11128e-6 },
+  {
+    "name": "tags:GPTUSS2S4(T2C4=)",
+    "value": 1.82568e-7,
+    "initial": 1.82568e-7
+  },
+  { "name": "tags:GPTUSS2S4(TH4)", "value": 6.08131e-7, "initial": 6.08131e-7 },
+  { "name": "tags:GPTUSS2S4(TH5)", "value": 7.59901e-6, "initial": 7.59901e-6 },
+  { "name": "tags:GPTUSS2S4(TH6)", "value": 1.01678e-5, "initial": 1.01678e-5 },
+  { "name": "tags:GPTUSS2S4(TH7)", "value": 9.88363e-6, "initial": 9.88363e-6 },
+  { "name": "tags:GPTUS1S4_Fm", "value": 25004.0, "initial": 25004.0 },
+  { "name": "tags:GPTUS1S4_T", "value": 107.429, "initial": 107.429 },
+  { "name": "tags:GPTUSS1S4(1C5=)", "value": 0.173034, "initial": 0.173034 },
+  { "name": "tags:GPTUSS1S4(2MC4)", "value": 0.353885, "initial": 0.353885 },
+  { "name": "tags:GPTUSS1S4(A6)", "value": 4.65391e-8, "initial": 4.65391e-8 },
+  {
+    "name": "tags:GPTUSS1S4(A7)",
+    "value": 1.88708e-16,
+    "initial": 1.88708e-16
+  },
+  { "name": "tags:GPTUSS1S4(A8)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(A9)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(A10)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(A11)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(A12)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(A13)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(A14)", "value": 0.0, "initial": 0.0 },
+  {
+    "name": "tags:GPTUSS1S4(BNIT5)",
+    "value": 1.14619e-16,
+    "initial": 1.14619e-16
+  },
+  { "name": "tags:GPTUSS1S4(C2C5=)", "value": 0.325588, "initial": 0.325588 },
+  { "name": "tags:GPTUSS1S4(DO4)", "value": 3.73146e-5, "initial": 3.73146e-5 },
+  { "name": "tags:GPTUSS1S4(DO5)", "value": 0.0018659, "initial": 0.0018659 },
+  { "name": "tags:GPTUSS1S4(DO6)", "value": 3.62615e-9, "initial": 3.62615e-9 },
+  {
+    "name": "tags:GPTUSS1S4(DO7)",
+    "value": 1.12705e-16,
+    "initial": 1.12705e-16
+  },
+  { "name": "tags:GPTUSS1S4(H2)", "value": 8.26708e-7, "initial": 8.26708e-7 },
+  {
+    "name": "tags:GPTUSS1S4(H2S)",
+    "value": 5.26167e-11,
+    "initial": 5.26167e-11
+  },
+  { "name": "tags:GPTUSS1S4(IP4)", "value": 0.00214448, "initial": 0.00214448 },
+  {
+    "name": "tags:GPTUSS1S4(IP6)",
+    "value": 0.000226676,
+    "initial": 0.000226676
+  },
+  {
+    "name": "tags:GPTUSS1S4(IP7)",
+    "value": 2.23631e-12,
+    "initial": 2.23631e-12
+  },
+  { "name": "tags:GPTUSS1S4(IP8)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(IP9)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(IP10)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(IP11)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(N5)", "value": 0.00661327, "initial": 0.00661327 },
+  { "name": "tags:GPTUSS1S4(N6)", "value": 1.50008e-7, "initial": 1.50008e-7 },
+  {
+    "name": "tags:GPTUSS1S4(N7)",
+    "value": 8.57031e-15,
+    "initial": 8.57031e-15
+  },
+  { "name": "tags:GPTUSS1S4(N8)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(N9)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(N10)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(N11)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(N12)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(N13)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(N14)", "value": 0.0, "initial": 0.0 },
+  {
+    "name": "tags:GPTUSS1S4(NH3)",
+    "value": 2.51959e-12,
+    "initial": 2.51959e-12
+  },
+  { "name": "tags:GPTUSS1S4(NIT5)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(NP1)", "value": 5.39726e-5, "initial": 5.39726e-5 },
+  {
+    "name": "tags:GPTUSS1S4(NP2)",
+    "value": 0.000161215,
+    "initial": 0.000161215
+  },
+  {
+    "name": "tags:GPTUSS1S4(NP3)",
+    "value": 0.000269742,
+    "initial": 0.000269742
+  },
+  { "name": "tags:GPTUSS1S4(NP4)", "value": 0.00534722, "initial": 0.00534722 },
+  { "name": "tags:GPTUSS1S4(NP5)", "value": 0.0725882, "initial": 0.0725882 },
+  { "name": "tags:GPTUSS1S4(NP6)", "value": 4.28366e-7, "initial": 4.28366e-7 },
+  {
+    "name": "tags:GPTUSS1S4(NP7)",
+    "value": 5.01637e-15,
+    "initial": 5.01637e-15
+  },
+  { "name": "tags:GPTUSS1S4(NP8)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(NP9)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(NP10)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(NP11)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(O6)", "value": 8.82068e-5, "initial": 8.82068e-5 },
+  {
+    "name": "tags:GPTUSS1S4(O7)",
+    "value": 4.74355e-12,
+    "initial": 4.74355e-12
+  },
+  { "name": "tags:GPTUSS1S4(O8)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(O9)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(O10)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(O11)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(SU3)", "value": 4.72348e-8, "initial": 4.72348e-8 },
+  {
+    "name": "tags:GPTUSS1S4(SU4)",
+    "value": 0.000158011,
+    "initial": 0.000158011
+  },
+  { "name": "tags:GPTUSS1S4(SU5)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(SU7)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(SU8)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(T2C4=)", "value": 0.0579371, "initial": 0.0579371 },
+  {
+    "name": "tags:GPTUSS1S4(TH4)",
+    "value": 9.91734e-10,
+    "initial": 9.91734e-10
+  },
+  { "name": "tags:GPTUSS1S4(TH5)", "value": 3.7802e-17, "initial": 3.7802e-17 },
+  { "name": "tags:GPTUSS1S4(TH6)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUSS1S4(TH7)", "value": 0.0, "initial": 0.0 },
+  { "name": "tags:GPTUS4S1_T", "value": 38.0859, "initial": 38.0859 },
+  { "name": "tags:GPTUS4S1_Fm", "value": 13.2912, "initial": 13.2912 },
+  { "name": "tags:GPTUSS4S1(1C5=)", "value": 0.0327355, "initial": 0.0327355 },
+  { "name": "tags:GPTUSS4S1(2MC4)", "value": 0.0671962, "initial": 0.0671962 },
+  { "name": "tags:GPTUSS4S1(A6)", "value": 0.0100059, "initial": 0.0100059 },
+  { "name": "tags:GPTUSS4S1(A7)", "value": 0.0708894, "initial": 0.0708894 },
+  { "name": "tags:GPTUSS4S1(A8)", "value": 0.0779621, "initial": 0.0779621 },
+  { "name": "tags:GPTUSS4S1(A9)", "value": 0.0614723, "initial": 0.0614723 },
+  { "name": "tags:GPTUSS4S1(A10)", "value": 0.0419005, "initial": 0.0419005 },
+  { "name": "tags:GPTUSS4S1(A11)", "value": 0.0263072, "initial": 0.0263072 },
+  { "name": "tags:GPTUSS4S1(A12)", "value": 0.0156664, "initial": 0.0156664 },
+  { "name": "tags:GPTUSS4S1(A13)", "value": 0.00899194, "initial": 0.00899194 },
+  { "name": "tags:GPTUSS4S1(A14)", "value": 0.00502249, "initial": 0.00502249 },
+  {
+    "name": "tags:GPTUSS4S1(BNIT5)",
+    "value": 3.21658e-6,
+    "initial": 3.21658e-6
+  },
+  { "name": "tags:GPTUSS4S1(C2C5=)", "value": 0.0626078, "initial": 0.0626078 },
+  { "name": "tags:GPTUSS4S1(DO4)", "value": 7.02191e-6, "initial": 7.02191e-6 },
+  { "name": "tags:GPTUSS4S1(DO5)", "value": 0.00035913, "initial": 0.00035913 },
+  { "name": "tags:GPTUSS4S1(DO6)", "value": 2.33047e-5, "initial": 2.33047e-5 },
+  { "name": "tags:GPTUSS4S1(DO7)", "value": 1.91301e-5, "initial": 1.91301e-5 },
+  { "name": "tags:GPTUSS4S1(H2)", "value": 1.55571e-7, "initial": 1.55571e-7 },
+  {
+    "name": "tags:GPTUSS4S1(H2S)",
+    "value": 9.90864e-12,
+    "initial": 9.90864e-12
+  },
+  {
+    "name": "tags:GPTUSS4S1(IP4)",
+    "value": 0.000403551,
+    "initial": 0.000403551
+  },
+  { "name": "tags:GPTUSS4S1(IP6)", "value": 0.0981727, "initial": 0.0981727 },
+  { "name": "tags:GPTUSS4S1(IP7)", "value": 0.059703, "initial": 0.059703 },
+  { "name": "tags:GPTUSS4S1(IP8)", "value": 0.0310054, "initial": 0.0310054 },
+  { "name": "tags:GPTUSS4S1(IP9)", "value": 0.0156193, "initial": 0.0156193 },
+  { "name": "tags:GPTUSS4S1(IP10)", "value": 0.0076267, "initial": 0.0076267 },
+  {
+    "name": "tags:GPTUSS4S1(IP11)",
+    "value": 0.00365502,
+    "initial": 0.00365502
+  },
+  { "name": "tags:GPTUSS4S1(N5)", "value": 0.002906, "initial": 0.002906 },
+  { "name": "tags:GPTUSS4S1(N6)", "value": 0.0163592, "initial": 0.0163592 },
+  { "name": "tags:GPTUSS4S1(N7)", "value": 0.0234677, "initial": 0.0234677 },
+  { "name": "tags:GPTUSS4S1(N8)", "value": 0.0242783, "initial": 0.0242783 },
+  { "name": "tags:GPTUSS4S1(N9)", "value": 0.0215915, "initial": 0.0215915 },
+  { "name": "tags:GPTUSS4S1(N10)", "value": 0.0175899, "initial": 0.0175899 },
+  { "name": "tags:GPTUSS4S1(N11)", "value": 0.0135324, "initial": 0.0135324 },
+  { "name": "tags:GPTUSS4S1(N12)", "value": 0.0099985, "initial": 0.0099985 },
+  { "name": "tags:GPTUSS4S1(N13)", "value": 0.00716905, "initial": 0.00716905 },
+  { "name": "tags:GPTUSS4S1(N14)", "value": 0.00502248, "initial": 0.00502248 },
+  {
+    "name": "tags:GPTUSS4S1(NH3)",
+    "value": 4.76638e-13,
+    "initial": 4.76638e-13
+  },
+  { "name": "tags:GPTUSS4S1(NIT5)", "value": 6.7867e-6, "initial": 6.7867e-6 },
+  { "name": "tags:GPTUSS4S1(NP1)", "value": 1.01566e-5, "initial": 1.01566e-5 },
+  { "name": "tags:GPTUSS4S1(NP2)", "value": 3.03377e-5, "initial": 3.03377e-5 },
+  { "name": "tags:GPTUSS4S1(NP3)", "value": 5.0761e-5, "initial": 5.0761e-5 },
+  { "name": "tags:GPTUSS4S1(NP4)", "value": 0.00106387, "initial": 0.00106387 },
+  { "name": "tags:GPTUSS4S1(NP5)", "value": 0.0211088, "initial": 0.0211088 },
+  { "name": "tags:GPTUSS4S1(NP6)", "value": 0.0235066, "initial": 0.0235066 },
+  { "name": "tags:GPTUSS4S1(NP7)", "value": 0.0173477, "initial": 0.0173477 },
+  { "name": "tags:GPTUSS4S1(NP8)", "value": 0.0120389, "initial": 0.0120389 },
+  { "name": "tags:GPTUSS4S1(NP9)", "value": 0.00732371, "initial": 0.00732371 },
+  {
+    "name": "tags:GPTUSS4S1(NP10)",
+    "value": 0.00479693,
+    "initial": 0.00479693
+  },
+  {
+    "name": "tags:GPTUSS4S1(NP11)",
+    "value": 0.00306865,
+    "initial": 0.00306865
+  },
+  { "name": "tags:GPTUSS4S1(O6)", "value": 0.0249611, "initial": 0.0249611 },
+  { "name": "tags:GPTUSS4S1(O7)", "value": 0.01615, "initial": 0.01615 },
+  { "name": "tags:GPTUSS4S1(O8)", "value": 0.00863399, "initial": 0.00863399 },
+  { "name": "tags:GPTUSS4S1(O9)", "value": 0.00470854, "initial": 0.00470854 },
+  { "name": "tags:GPTUSS4S1(O10)", "value": 0.00248939, "initial": 0.00248939 },
+  { "name": "tags:GPTUSS4S1(O11)", "value": 0.00129178, "initial": 0.00129178 },
+  { "name": "tags:GPTUSS4S1(SU3)", "value": 8.92983e-9, "initial": 8.92983e-9 },
+  { "name": "tags:GPTUSS4S1(SU4)", "value": 3.06609e-5, "initial": 3.06609e-5 },
+  { "name": "tags:GPTUSS4S1(SU5)", "value": 4.93533e-6, "initial": 4.93533e-6 },
+  { "name": "tags:GPTUSS4S1(SU7)", "value": 2.79897e-6, "initial": 2.79897e-6 },
+  { "name": "tags:GPTUSS4S1(SU8)", "value": 8.69695e-6, "initial": 8.69695e-6 },
+  { "name": "tags:GPTUSS4S1(T2C4=)", "value": 0.0109027, "initial": 0.0109027 },
+  { "name": "tags:GPTUSS4S1(TH4)", "value": 6.04331e-7, "initial": 6.04331e-7 },
+  { "name": "tags:GPTUSS4S1(TH5)", "value": 7.93909e-6, "initial": 7.93909e-6 },
+  { "name": "tags:GPTUSS4S1(TH6)", "value": 1.08033e-5, "initial": 1.08033e-5 },
+  { "name": "tags:GPTUSS4S1(TH7)", "value": 1.05544e-5, "initial": 1.05544e-5 },
+  { "name": "tags:GPTUS4S3_T", "value": 49.8608, "initial": 49.8608 },
+  { "name": "tags:GPTUS4S3_Fm", "value": 31715.1, "initial": 31715.1 },
+  {
+    "name": "tags:GPTUSS4S3(1C5=)",
+    "value": 0.000384488,
+    "initial": 0.000384488
+  },
+  {
+    "name": "tags:GPTUSS4S3(2MC4)",
+    "value": 0.00158804,
+    "initial": 0.00158804
+  },
+  { "name": "tags:GPTUSS4S3(A6)", "value": 0.00334769, "initial": 0.00334769 },
+  { "name": "tags:GPTUSS4S3(A7)", "value": 0.00769531, "initial": 0.00769531 },
+  { "name": "tags:GPTUSS4S3(A8)", "value": 0.00298367, "initial": 0.00298367 },
+  { "name": "tags:GPTUSS4S3(A9)", "value": 0.00081776, "initial": 0.00081776 },
+  {
+    "name": "tags:GPTUSS4S3(A10)",
+    "value": 0.000221615,
+    "initial": 0.000221615
+  },
+  { "name": "tags:GPTUSS4S3(A11)", "value": 4.18388e-5, "initial": 4.18388e-5 },
+  { "name": "tags:GPTUSS4S3(A12)", "value": 2.34549e-5, "initial": 2.34549e-5 },
+  { "name": "tags:GPTUSS4S3(A13)", "value": 4.88601e-6, "initial": 4.88601e-6 },
+  { "name": "tags:GPTUSS4S3(A14)", "value": 1.25314e-6, "initial": 1.25314e-6 },
+  {
+    "name": "tags:GPTUSS4S3(BNIT5)",
+    "value": 4.26934e-7,
+    "initial": 4.26934e-7
+  },
+  {
+    "name": "tags:GPTUSS4S3(C2C5=)",
+    "value": 0.00199116,
+    "initial": 0.00199116
+  },
+  {
+    "name": "tags:GPTUSS4S3(DO4)",
+    "value": 8.76029e-12,
+    "initial": 8.76029e-12
+  },
+  { "name": "tags:GPTUSS4S3(DO5)", "value": 9.22576e-6, "initial": 9.22576e-6 },
+  { "name": "tags:GPTUSS4S3(DO6)", "value": 8.61902e-6, "initial": 8.61902e-6 },
+  { "name": "tags:GPTUSS4S3(DO7)", "value": 2.74978e-6, "initial": 2.74978e-6 },
+  { "name": "tags:GPTUSS4S3(H2)", "value": 0.0888745, "initial": 0.0888745 },
+  { "name": "tags:GPTUSS4S3(H2O)", "value": 0.0115396, "initial": 0.0115396 },
+  {
+    "name": "tags:GPTUSS4S3(H2S)",
+    "value": 0.000640857,
+    "initial": 0.000640857
+  },
+  { "name": "tags:GPTUSS4S3(IP4)", "value": 1.53625e-8, "initial": 1.53625e-8 },
+  { "name": "tags:GPTUSS4S3(IP6)", "value": 0.0576637, "initial": 0.0576637 },
+  { "name": "tags:GPTUSS4S3(IP7)", "value": 0.0133896, "initial": 0.0133896 },
+  { "name": "tags:GPTUSS4S3(IP8)", "value": 0.00290675, "initial": 0.00290675 },
+  {
+    "name": "tags:GPTUSS4S3(IP9)",
+    "value": 0.000604584,
+    "initial": 0.000604584
+  },
+  {
+    "name": "tags:GPTUSS4S3(IP10)",
+    "value": 0.000131143,
+    "initial": 0.000131143
+  },
+  {
+    "name": "tags:GPTUSS4S3(IP11)",
+    "value": 2.97029e-5,
+    "initial": 2.97029e-5
+  },
+  {
+    "name": "tags:GPTUSS4S3(MDEA)",
+    "value": 1.79424e-9,
+    "initial": 1.79424e-9
+  },
+  { "name": "tags:GPTUSS4S3(N5)", "value": 0.00140467, "initial": 0.00140467 },
+  { "name": "tags:GPTUSS4S3(N6)", "value": 0.00641481, "initial": 0.00641481 },
+  { "name": "tags:GPTUSS4S3(N7)", "value": 0.00365946, "initial": 0.00365946 },
+  { "name": "tags:GPTUSS4S3(N8)", "value": 0.00183021, "initial": 0.00183021 },
+  {
+    "name": "tags:GPTUSS4S3(N9)",
+    "value": 0.000732666,
+    "initial": 0.000732666
+  },
+  {
+    "name": "tags:GPTUSS4S3(N10)",
+    "value": 0.000323024,
+    "initial": 0.000323024
+  },
+  { "name": "tags:GPTUSS4S3(N11)", "value": 6.13041e-5, "initial": 6.13041e-5 },
+  { "name": "tags:GPTUSS4S3(N12)", "value": 3.31212e-5, "initial": 3.31212e-5 },
+  { "name": "tags:GPTUSS4S3(N13)", "value": 9.45994e-6, "initial": 9.45994e-6 },
+  { "name": "tags:GPTUSS4S3(N14)", "value": 2.32036e-6, "initial": 2.32036e-6 },
+  { "name": "tags:GPTUSS4S3(NH3)", "value": 3.2714e-5, "initial": 3.2714e-5 },
+  {
+    "name": "tags:GPTUSS4S3(NIT5)",
+    "value": 4.06798e-7,
+    "initial": 4.06798e-7
+  },
+  { "name": "tags:GPTUSS4S3(NP1)", "value": 0.543871, "initial": 0.543871 },
+  { "name": "tags:GPTUSS4S3(NP2)", "value": 0.159177, "initial": 0.159177 },
+  { "name": "tags:GPTUSS4S3(NP3)", "value": 0.0310266, "initial": 0.0310266 },
+  { "name": "tags:GPTUSS4S3(NP4)", "value": 0.0122459, "initial": 0.0122459 },
+  { "name": "tags:GPTUSS4S3(NP5)", "value": 0.0119953, "initial": 0.0119953 },
+  { "name": "tags:GPTUSS4S3(NP6)", "value": 0.0103347, "initial": 0.0103347 },
+  { "name": "tags:GPTUSS4S3(NP7)", "value": 0.0028507, "initial": 0.0028507 },
+  {
+    "name": "tags:GPTUSS4S3(NP8)",
+    "value": 0.000741883,
+    "initial": 0.000741883
+  },
+  {
+    "name": "tags:GPTUSS4S3(NP9)",
+    "value": 0.000177573,
+    "initial": 0.000177573
+  },
+  {
+    "name": "tags:GPTUSS4S3(NP10)",
+    "value": 4.71775e-5,
+    "initial": 4.71775e-5
+  },
+  {
+    "name": "tags:GPTUSS4S3(NP11)",
+    "value": 1.39415e-5,
+    "initial": 1.39415e-5
+  },
+  { "name": "tags:GPTUSS4S3(O6)", "value": 0.0136301, "initial": 0.0136301 },
+  { "name": "tags:GPTUSS4S3(O7)", "value": 0.00339045, "initial": 0.00339045 },
+  {
+    "name": "tags:GPTUSS4S3(O8)",
+    "value": 0.000860374,
+    "initial": 0.000860374
+  },
+  {
+    "name": "tags:GPTUSS4S3(O9)",
+    "value": 0.000177755,
+    "initial": 0.000177755
+  },
+  { "name": "tags:GPTUSS4S3(O10)", "value": 4.05657e-5, "initial": 4.05657e-5 },
+  { "name": "tags:GPTUSS4S3(O11)", "value": 9.44903e-6, "initial": 9.44903e-6 },
+  {
+    "name": "tags:GPTUSS4S3(SU3)",
+    "value": 2.12996e-11,
+    "initial": 2.12996e-11
+  },
+  { "name": "tags:GPTUSS4S3(SU4)", "value": 2.51115e-7, "initial": 2.51115e-7 },
+  { "name": "tags:GPTUSS4S3(SU5)", "value": 2.92972e-7, "initial": 2.92972e-7 },
+  { "name": "tags:GPTUSS4S3(SU7)", "value": 2.25304e-8, "initial": 2.25304e-8 },
+  { "name": "tags:GPTUSS4S3(SU8)", "value": 2.89747e-8, "initial": 2.89747e-8 },
+  {
+    "name": "tags:GPTUSS4S3(T2C4=)",
+    "value": 3.61505e-7,
+    "initial": 3.61505e-7
+  },
+  { "name": "tags:GPTUSS4S3(TH4)", "value": 2.01659e-7, "initial": 2.01659e-7 },
+  { "name": "tags:GPTUSS4S3(TH5)", "value": 9.0094e-7, "initial": 9.0094e-7 },
+  { "name": "tags:GPTUSS4S3(TH6)", "value": 4.49658e-7, "initial": 4.49658e-7 },
+  { "name": "tags:GPTUSS4S3(TH7)", "value": 2.15035e-7, "initial": 2.15035e-7 },
+  { "name": "tags:GPTUS1S4_P", "value": 10.0132, "initial": 10.0132 },
+  { "name": "tags:GPTUS2S4_P", "value": 16.7883, "initial": 16.7883 }
+]

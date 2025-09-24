@@ -1,0 +1,3400 @@
+[
+    { "name": "420TIMER", "value": 0, "initial": 0, "unit": "s" },
+    
+    
+    { "name": "4201PIC002SP", "unit": "barg", "value": 90.68, "initial": 90.68 },
+    { "name": "4201PIC002SPAd", "unit": "barg", "value": 90.8, "initial": 90.8 },
+    { "name": "4201PIC002TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC002AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201PIC002CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC002KC", "value": 4.0, "initial": 4.0 },
+    { "name": "4201PIC002TI", "unit": "min", "value": 0.5, "initial": 0.5 },
+    { "name": "4201PIC002OPM", "unit": "%", "value": 50, "initial": 50  },
+    { "name": "4201PIC002OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201PIC002OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201PIC002OP","unit": "%","value": 49.7367,"initial": 49.7367,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201PIC002PV","unit": "barg","value": 90.6799,"initial": 90.6799,"R": [0, 120],"HR": [0, 140],"HHR": [0, 140]},
+    
+    
+    { "name": "4201FIC002SP", "unit": "T/hr", "value": 482.9218, "initial": 482.9218 },
+    { "name": "4201FIC002SPAd", "unit": "T/hr", "value": 482.9218, "initial": 482.9218 },
+    { "name": "4201FIC002TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FIC002AC", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FIC002CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FIC002KC", "value": 2.0, "initial": 2.0 },
+    { "name": "4201FIC002TI", "unit": "min", "value": 1, "initial": 1 },
+    { "name": "4201FIC002OPM", "unit": "%", "value": 49.9909, "initial": 49.9909  },
+    { "name": "4201FIC002OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201FIC002OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201FIC002OP","unit": "%","value": 49.9909,"initial": 49.9909,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201FIC002PV","unit": "T/hr","value": 482.9218,"initial": 482.9218,"R": [0, 600],"HR": [0, 700],"HHR": [0, 700]},
+    
+    
+    { "name": "4201LIC025SP", "unit": "%", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC025AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC025SPAd", "unit": "%", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC025TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC025CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC025KC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC025TI", "unit": "min", "value": 20.0, "initial": 20.0 },
+    { "name": "4201LIC025OPM", "unit": "%", "value": -1, "initial": -1  },
+    { "name": "4201LIC025OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201LIC025OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201LIC025OP","unit": "%","value": 0.0,"initial": 0.0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201LIC025PV","unit": "%","value": 0,"initial": 0,"R": [0, 100],"HR": [36.9, 61.5],"HHR": [0, 100]},
+    
+    
+    { "name": "4201TIC051SP", "unit": "C", "value": 40, "initial": 40 },
+    { "name": "4201TIC051SPAd", "unit": "C", "value": 40, "initial": 40 },
+    { "name": "4201TIC051TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC051AC", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC051CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC051KC", "value": 2.5, "initial": 2.5 },
+    { "name": "4201TIC051TI", "unit": "min", "value": 0.75, "initial": 0.75 },
+    { "name": "4201TIC051OPM", "unit": "%", "value": 2.6200, "initial": 2.6200  },
+    { "name": "4201TIC051OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201TIC051OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201TIC051OP","unit": "%","value": 2.6200,"initial": 2.6200,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201TIC051PV","unit": "C","value": 40,"initial": 40,"R": [0, 100],"HR": [35, 45],"HHR": [0, 100]},
+    
+    
+    {"name": "4201EV016", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV016PV", "value": 1, "derived": {"variableIds": ["4201EV016"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV001", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV001PV", "value": 2, "derived": {"variableIds": ["4201EV001"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV012", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV012PV", "value": 1, "derived": {"variableIds": ["4201EV012"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV015", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV015PV", "value": 2, "derived": {"variableIds": ["4201EV015"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV420", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV420PV", "value": 2, "derived": {"variableIds": ["4201EV420"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV007", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV007PV", "value": 1, "derived": {"variableIds": ["4201EV007"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV005", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV005PV", "value": 1, "derived": {"variableIds": ["4201EV005"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV017", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV017PV", "value": 1, "derived": {"variableIds": ["4201EV017"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name":"4201AI001A", "value":43.2104, "initial":43.2104, "unit":"PPMV", "HR":[0,100], "HHR":[0,150], "R": [0,150]},
+    {"name":"4201AI001B", "value":1.5424, "initial":1.5424, "unit":"PPMV", "HR":[0,2], "HHR":[0,5], "R": [0,5]},
+    {"name":"4201AI001APVLL", "value":0, "initial":0},
+    {"name":"4201AI001APVL", "value":0, "initial":0},
+    {"name":"4201AI001APVH", "value":100, "initial":100},
+    {"name":"4201AI001APVHH", "value":150, "initial":150},
+
+    {"name":"4201AI001BPVLL", "value":0, "initial":0},
+    {"name":"4201AI001BPVL", "value":0, "initial":0},
+    {"name":"4201AI001BPVH", "value":2, "initial":2},
+    {"name":"4201AI001BPVHH", "value":5, "initial":5},
+    
+    
+    
+    { "name": "4201PIC010SP", "unit": "barg", "value": 87.5, "initial": 87.5 },
+    { "name": "4201PIC010SPAd", "unit": "barg", "value": 87.5, "initial": 87.5 },
+    { "name": "4201PIC010TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC010AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201PIC010CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC010KC", "value": 4.0, "initial": 4.0 },
+    { "name": "4201PIC010TI", "unit": "min", "value": 0.7, "initial": 0.7 },
+    { "name": "4201PIC010OPM", "unit": "%", "value": -1, "initial": -1  },
+    { "name": "4201PIC010OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201PIC010OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201PIC010OP","unit": "%","value": 0.0,"initial": 0.0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201PIC010PV","unit": "barg","value": 86.0868,"initial": 86.0868,"R": [0, 120],"HR": [0, 88],"HHR": [0, 120]},
+    
+    
+    
+    { "name": "4201TIC017SP", "unit": "C", "value": 40.0, "initial": 40.0 },
+    { "name": "4201TIC017SPAd", "unit": "C", "value": 40.0, "initial": 40.0 },
+    { "name": "4201TIC017TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC017AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201TIC017CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC017KC", "value": 3.0, "initial": 3.0 },
+    { "name": "4201TIC017TI", "unit": "min", "value": 0.8, "initial": 0.8 },
+    { "name": "4201TIC017OPM", "unit": "%", "value": 49.5583, "initial": 49.5583  },
+    { "name": "4201TIC017OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201TIC017OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201TIC017OP","unit": "%","value": 49.5583,"initial": 49.5583,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201TIC017PV","unit": "C","value": 40.0,"initial": 40.0,"R": [0, 100],"HR": [35, 50],"HHR": [0, 100]},
+    
+    
+    { "name": "4201LIC015SP", "unit": "%", "value": 37.1102, "initial": 37.1102 },
+    { "name": "4201LIC015SPAd", "unit": "%", "value": 71.08, "initial": 71.08 },
+    { "name": "4201LIC015AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC015TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC015CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC015KC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC015TI", "unit": "min", "value": 10, "initial": 10 },
+    { "name": "4201LIC015OPM", "unit": "%", "value": 49.5107, "initial": 49.5107  },
+    { "name": "4201LIC015OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201LIC015OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201LIC015OP","unit": "%","value": 49.5107,"initial": 49.5107,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201LIC015PV","unit": "%","value": 37.0715,"initial": 37.0715,"R": [0, 100],"HR": [13.67, 76.54],"HHR": [0, 100]},
+    
+    
+    
+    { "name": "4201LIC007SP", "unit": "%", "value": 49.9999, "initial": 49.9999 },
+    { "name": "4201LIC007SPAd", "unit": "%", "value": 57.41, "initial": 57.41 },
+    { "name": "4201LIC007TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC007AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC007CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC007KC", "value": 2.0, "initial": 2.0 },
+    { "name": "4201LIC007TI", "unit": "min", "value": 5, "initial": 5 },
+    { "name": "4201LIC007OPM", "unit": "%", "value": 49.8584, "initial": 49.8584  },
+    { "name": "4201LIC007OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201LIC007OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201LIC007OP","unit": "%","value": 49.8584,"initial": 49.8584,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201LIC007PV","unit": "%","value": 49.9998,"initial": 49.9998,"R": [0, 100],"HR": [21.87, 92.95],"HHR": [0, 100]},
+    
+    
+    { "name": "4201FIC003SP", "unit": "T/hr", "value": 366.4279, "initial": 366.4279 },
+    { "name": "4201FIC003SPAd", "unit": "T/hr", "value": 366.821, "initial": 366.821 },
+    { "name": "4201FIC003TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FIC003AC", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FIC003CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FIC003KC", "value": 2.0, "initial": 2.0 },
+    { "name": "4201FIC003TI", "unit": "min", "value": 1, "initial": 1 },
+    { "name": "4201FIC003OPM", "unit": "%", "value": 50.0522, "initial": 50.0522  },
+    { "name": "4201FIC003OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201FIC003OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201FIC003OP","unit": "%","value": 50.0522,"initial": 50.0522,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201FIC003PV","unit": "T/hr","value": 366.4279,"initial": 366.4279,"R": [0, 444],"HR": [0, 450],"HHR": [0, 450]},
+    
+    
+    { "name": "4201FIC010SP", "unit": "T/hr", "value": 180.0, "initial": 180.0 },
+    { "name": "4201FIC010SPAd", "unit": "T/hr", "value": 180.0, "initial": 180.0 },
+    { "name": "4201FIC010TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FIC010AC", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FIC010CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FIC010KC", "value": 2.0, "initial": 2.0 },
+    { "name": "4201FIC010TI", "unit": "min", "value": 1, "initial": 1 },
+    { "name": "4201FIC010OPM", "unit": "%", "value": -1, "initial": -1  },
+    { "name": "4201FIC010OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201FIC010OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201FIC010OP","unit": "%","value": 0.0,"initial": 0.0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201FIC010PV","unit": "T/hr","value": 366.4296,"initial": 366.4296,"R": [0, 444],"HR": [0, 450],"HHR": [0, 450]},
+    
+    
+    
+    { "name": "4201LIC019BSP", "unit": "%", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC019BSPAd", "unit": "%", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC019BTV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC019BAC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC019BCAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC019BKC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC019BTI", "unit": "min", "value": 20, "initial": 20 },
+    { "name": "4201LIC019BOPM", "unit": "%", "value": -1, "initial": -1  },
+    { "name": "4201LIC019BOPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201LIC019BOPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201LIC019BOP","unit": "%","value": 0.0,"initial": 0.0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201LIC019BPV","unit": "%","value": 0,"initial": 0,"R": [0, 100],"HR": [12.5, 83.5],"HHR": [0, 100]},
+    
+    
+    { "name": "4201LIC021BSP", "unit": "%", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC021BSPAd", "unit": "%", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC021BTV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC021BAC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC021BCAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC021BKC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC021BTI", "unit": "min", "value": 20, "initial": 20 },
+    { "name": "4201LIC021BOPM", "unit": "%", "value": -1, "initial": -1  },
+    { "name": "4201LIC021BOPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201LIC021BOPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201LIC021BOP","unit": "%","value": 0.0,"initial": 0.0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201LIC021BPV","unit": "%","value": 0,"initial": 0,"R": [0, 100],"HR": [38.5, 75.5],"HHR": [0, 100]},
+    
+    
+    
+    {"name":"4201PDI004", "value":0.418, "initial":0.418, "unit":"bar(d)", "HR":[0, 0.5], "HHR":[0, 0.8], "R": [0, 0.8]},
+    {
+        "name": "4201PDI004PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PDI004PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PDI004PVH",
+        "value": 0.5,
+        "initial": 0.5
+    },
+    {
+        "name": "4201PDI004PVHH",
+        "value": 0.8,
+        "initial": 0.8
+    },
+    
+    
+    {"name": "4201EV009", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV009PV", "value": 1, "derived": {"variableIds": ["4201EV009"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV010", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV010PV", "value": 1, "derived": {"variableIds": ["4201EV010"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name":"4201PDI013", "value":0.1965, "initial":0.1965, "unit":"bar(d)", "HR":[0, 0.35], "HHR":[0, 0.4], "R": [0, 0.4]},
+    {
+        "name": "4201PDI013PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PDI013PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PDI013PVH",
+        "value": 0.35,
+        "initial": 0.35
+    },
+    {
+        "name": "4201PDI013PVHH",
+        "value": 0.4,
+        "initial": 0.4
+    },
+    {"name":"4201FI011", "value":12.6424, "initial":12.6424, "unit":"T/hr", "HR":[0, 21.5], "HHR":[0, 21.5], "R": [0, 19.5]},
+
+    {"name":"4201FI007", "value":0, "initial":0, "unit":"kg/hr", "HR":[-1, 1000], "HHR":[-0.8, 1000], "R": [-0.2, 1000]},
+
+    {"name":"4201FI008", "value":28.4853, "initial":28.4853, "unit":"T/hr", "HR":[0, 38], "HHR":[0, 38], "R": [0, 37]},
+
+    {"name":"4201FI009", "value":0, "initial":0, "unit":"kg/hr", "HR":[-1, 1000], "HHR":[-0.8, 1000], "R": [-0.2, 1000]},
+    {
+        "name": "4201FI011PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI011PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI011PVH",
+        "value": 21.5,
+        "initial": 21.5
+    },
+    {
+        "name": "4201FI011PVHH",
+        "value": 21.5,
+        "initial": 21.5
+    },
+    {
+        "name": "4201FI007PVLL",
+        "value": -0.8,
+        "initial": -0.8
+    },
+    {
+        "name": "4201FI007PVL",
+        "value": -1,
+        "initial": -1
+    },
+    {
+        "name": "4201FI007PVH",
+        "value": 1000,
+        "initial": 1000
+    },
+    {
+        "name": "4201FI007PVHH",
+        "value": 1000,
+        "initial": 1000
+    },
+    {
+        "name": "4201FI008PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI008PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI008PVH",
+        "value": 38,
+        "initial": 38
+    },
+    {
+        "name": "4201FI008PVHH",
+        "value": 38,
+        "initial": 38
+    },
+    {
+        "name": "4201FI009PVLL",
+        "value": -0.8,
+        "initial": -0.8
+    },
+    {
+        "name": "4201FI009PVL",
+        "value": -1,
+        "initial": -1
+    },
+    {
+        "name": "4201FI009PVH",
+        "value": 1000,
+        "initial": 1000
+    },
+    {
+        "name": "4201FI009PVHH",
+        "value": 1000,
+        "initial": 1000
+    },
+    
+    
+    { "name": "4201LIC008SP", "unit": "%", "value": 55.2587, "initial": 55.2587 },
+    { "name": "4201LIC008SPAd", "unit": "%", "value": 51.47, "initial": 51.47 },
+    { "name": "4201LIC008TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC008CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC008AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC008KC", "value": 2.0, "initial": 2.0 },
+    { "name": "4201LIC008TI", "unit": "min", "value": 5, "initial": 5 },
+    { "name": "4201LIC008OPM", "unit": "%", "value": 49.8937, "initial": 49.8937  },
+    { "name": "4201LIC008OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201LIC008OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201LIC008OP","unit": "%","value": 49.8937,"initial": 49.8937,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201LIC008PV","unit": "%","value": 55.2587,"initial": 55.2587,"R": [0, 100],"HR": [24.56, 78.36],"HHR": [0, 100]},
+    
+    
+    
+    { "name": "4201LIC027SP", "unit": "%", "value": 49.10565, "initial": 49.10565 },
+    { "name": "4201LIC027SPAd", "unit": "%", "value": 48.88, "initial": 48.88 },
+    { "name": "4201LIC027TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC027CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC027AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC027KC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC027TI", "unit": "min", "value": 10, "initial": 10 },
+    { "name": "4201LIC027OPM", "unit": "%", "value": 49.6648, "initial": 49.6648  },
+    { "name": "4201LIC027OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201LIC027OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201LIC027OP","unit": "%","value": 49.6648,"initial": 49.6648,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201LIC027PV","unit": "%","value": 49.1056,"initial": 49.1056,"R": [0, 100],"HR": [2.4, 95.35],"HHR": [0, 100]},
+    
+    
+    { "name": "4201TIC023SP", "unit": "C", "value": 152.9781, "initial": 152.9781 },
+    { "name": "4201TIC023SPAd", "unit": "C", "value": 147.9, "initial": 147.9 },
+    { "name": "4201TIC023TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC023AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201TIC023CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC023KC", "value": 2.0, "initial": 2.0 },
+    { "name": "4201TIC023TI", "unit": "min", "value": 0.75, "initial": 0.75 },
+    { "name": "4201TIC023OPM", "unit": "%", "value": 49.6605, "initial": 49.6605  },
+    { "name": "4201TIC023OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201TIC023OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201TIC023OP","unit": "%","value": 49.6605,"initial": 49.6605,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201TIC023PV","unit": "C","value": 152.9782,"initial": 152.9782,"R": [0, 250],"HR": [139, 156],"HHR": [0, 250]},
+    
+    
+    { "name": "4201TIC042SP", "unit": "C", "value": 58.2203, "initial": 58.2203 },
+    { "name": "4201TIC042SPAd", "unit": "C", "value": 58.0, "initial": 58.0 },
+    { "name": "4201TIC042TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC042AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201TIC042CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC042KC", "value": 4.0, "initial": 4.0 },
+    { "name": "4201TIC042TI", "unit": "min", "value": 0.75, "initial": 0.75 },
+    { "name": "4201TIC042OPM", "unit": "%", "value": 47.6809, "initial": 47.6809  },
+    { "name": "4201TIC042OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201TIC042OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201TIC042OP","unit": "%","value": 47.6809,"initial": 47.6809,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201TIC042PV","unit": "C","value": 58.2201,"initial": 58.2201,"R": [0, 100],"HR": [53, 63],"HHR": [0, 100]},
+    
+    
+    { "name": "4201LIC011SP", "unit": "%", "value": 25.7657, "initial": 25.7657 },
+    { "name": "4201LIC011SPAd", "unit": "%", "value": 45.93, "initial": 45.93 },
+    { "name": "4201LIC011TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC011CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC011KC", "value": 2.0, "initial": 2.0 },
+    { "name": "4201LIC011AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC011TI", "unit": "min", "value": 5.0, "initial": 5.0 },
+    { "name": "4201LIC011OPM", "unit": "%", "value": 49.8417, "initial": 49.8417  },
+    { "name": "4201LIC011OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201LIC011OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201LIC011OP","unit": "%","value": 49.8417,"initial": 49.8417,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201LIC011PV","unit": "%","value": 25.7657,"initial": 25.7657,"R": [0, 100],"HR": [27.89, 63.98],"HHR": [0, 100]},
+    
+    
+    { "name": "4201FIC047ASP", "unit": "T/hr", "value": 43.8002, "initial": 43.8002 },
+    { "name": "4201FIC047ASPAd", "unit": "T/hr", "value": 39.885, "initial": 39.885 },
+    { "name": "4201FIC047AAC", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FIC047ATV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FIC047ACAS", "value": 1.0, "initial": 1.0 },
+    { "name": "4201FIC047ACTAM", "value": 4, "initial": 4 },
+    { "name": "4201FIC047AKC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201FIC047ATI", "unit": "min", "value": 1, "initial": 1 },
+    { "name": "4201FIC047AOPM", "unit": "%", "value": 49.6432, "initial": 49.6432  },
+    { "name": "4201FIC047AOPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201FIC047AOPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201FIC047AOP","unit": "%","value": 49.6432,"initial": 49.6432,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201FIC047APV","unit": "T/hr","value": 43.7998,"initial": 43.7998,"R": [0, 50],"HR": [0, 50],"HHR": [0, 50]},
+    
+    
+    { "name": "4201PIC096SP", "unit": "barg", "value": 4.9, "initial": 4.9 },
+    { "name": "4201PIC096SPAd", "unit": "barg", "value": 4.9, "initial": 4.9 },
+    { "name": "4201PIC096TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC096AC", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC096CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC096KC", "value": 4.0, "initial": 4.0 },
+    { "name": "4201PIC096TI", "unit": "min", "value": 0.5, "initial": 0.5 },
+    { "name": "4201PIC096OPM", "unit": "%", "value": 50, "initial": 50  },
+    { "name": "4201PIC096OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201PIC096OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201PIC096OP","unit": "%","value": 49.6658,"initial": 49.6658,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201PIC096PV","unit": "barg","value": 4.8999,"initial": 4.8999,"R": [0, 10],"HR": [0, 12],"HHR": [0, 12]},
+    
+    { "name": "4201PIC117SP", "unit": "barg", "value": 1.15, "initial": 1.15 },
+    { "name": "4201PIC117SPAd", "unit": "barg", "value": 1.15, "initial": 1.15 },
+    { "name": "4201PIC117TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC117AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201PIC117CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC117KC", "value": 4.0, "initial": 4.0 },
+    { "name": "4201PIC117TI", "unit": "min", "value": 0.5, "initial": 0.5 },
+    { "name": "4201PIC117OPM", "unit": "%", "value": -1, "initial": -1  },
+    { "name": "4201PIC117OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201PIC117OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201PIC117OP","unit": "%","value": 0.0,"initial": 0.0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201PIC117PV","unit": "barg","value": 0.9865,"initial": 0.9865,"R": [0, 2],"HR": [0, 1.25],"HHR": [0, 2]},
+    
+    
+    { "name": "4201PIC073SP", "unit": "barg", "value": 0.6, "initial": 0.6 },
+    { "name": "4201PIC073SPAd", "unit": "barg", "value": 0.6, "initial": 0.6 },
+    { "name": "4201PIC073TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC073AC", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC073CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC073KC", "value": 4.0, "initial": 4.0 },
+    { "name": "4201PIC073TI", "unit": "min", "value": 0.5, "initial": 0.5 },
+    { "name": "4201PIC073OPM", "unit": "%", "value": -1, "initial": -1  },
+    { "name": "4201PIC073OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201PIC073OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201PIC073OP","unit": "%","value": 0.0,"initial": 0.0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201PIC073PV","unit": "barg","value": 1.2250,"initial": 1.2250,"R": [0, 2],"HR": [0.2, 3],"HHR": [0, 3]},
+    
+    
+    { "name": "4201TIC047SP", "unit": "C", "value": 103.6244, "initial": 103.6244 },
+    { "name": "4201TIC047SPAd", "unit": "C", "value": 104.9, "initial": 104.9 },
+    { "name": "4201TIC047TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC047PRD", "value": 1.0, "initial": 1.0 },
+    { "name": "4201TIC047AC", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC047CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC047KC", "value": 2.0, "initial": 2.0 },
+    { "name": "4201TIC047TI", "unit": "min", "value": 0.75, "initial": 0.75 },
+    { "name": "4201TIC047OPM", "unit": "%", "value": 43.8006, "initial": 43.8006  },
+    { "name": "4201TIC047OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201TIC047OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201TIC047OP","unit": "%","value": 49.6666,"initial": 49.6666,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201TIC047PV","unit": "C","value": 103.6340,"initial": 103.6340,"R": [0, 250],"HR": [100, 115],"HHR": [0, 250]},
+    
+    
+    { "name": "4201FIC005ASP", "unit": "T/hr", "value": 120.0, "initial": 120.0 },
+    { "name": "4201FIC005ASPAd", "unit": "T/hr", "value": 120.0, "initial": 120.0 },
+    { "name": "4201FIC005ATV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FIC005AAC", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FIC005ACAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FIC005AKC", "value": 2.0, "initial": 2.0 },
+    { "name": "4201FIC005ATI", "unit": "min", "value": 1, "initial": 1 },
+    { "name": "4201FIC005AOPM", "unit": "%", "value": -1, "initial": -1  },
+    { "name": "4201FIC005AOPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201FIC005AOPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201FIC005AOP","unit": "%","value": 0.0,"initial": 0.0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201FIC005APV","unit": "T/hr","value": 366.1352,"initial": 366.1352,"R": [0, 444],"HR": [0, 450],"HHR": [0, 450]},
+    
+    
+    
+    { "name": "4201PIC008SP", "unit": "barg", "value": 0.9865, "initial": 0.9865 },
+    { "name": "4201PIC008SPAd", "unit": "barg", "value": 1, "initial": 1 },
+    { "name": "4201PIC008TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC008AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201PIC008CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC008KC", "value": 4.0, "initial": 4.0 },
+    { "name": "4201PIC008TI", "unit": "min", "value": 0.8, "initial": 0.8 },
+    { "name": "4201PIC008OPM", "unit": "%", "value": 49.7382, "initial": 49.7382  },
+    { "name": "4201PIC008OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201PIC008OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201PIC008OP","unit": "%","value": 49.7382,"initial": 49.7382,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201PIC008PV","unit": "barg","value": 0.9865,"initial": 0.9865,"R": [0, 2],"HR": [0.85, 1.2],"HHR": [0, 2]},
+    
+    
+    { "name": "4201TIC057SP", "unit": "C", "value": 39.9001, "initial": 39.9001 },
+    { "name": "4201TIC057SPAd", "unit": "C", "value": 40, "initial": 40 },
+    { "name": "4201TIC057TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC057AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201TIC057CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC057KC", "value": 2.5, "initial": 2.5 },
+    { "name": "4201TIC057TI", "unit": "min", "value": 0.8, "initial": 0.8 },
+    { "name": "4201TIC057OPM", "unit": "%", "value": 49.9988, "initial": 49.9988  },
+    { "name": "4201TIC057OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201TIC057OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201TIC057OP","unit": "%","value": 49.9988,"initial": 49.9988,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201TIC057PV","unit": "C","value": 39.9001,"initial": 39.9001,"R": [0, 100],"HR": [35, 45],"HHR": [0, 100]},
+    
+    
+    {"name":"4201PI101", "value":7.7867, "initial":7.7867, "unit":"barg", "HR":[0, 9], "HHR":[0, 15], "R": [0, 15]},
+    {
+        "name": "4201PI101PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI101PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI101PVH",
+        "value": 9,
+        "initial": 9
+    },
+    {
+        "name": "4201PI101PVHH",
+        "value": 15,
+        "initial": 15
+    },
+    
+    {"name":"4201LI022", "value":61.9505, "initial":61.9505, "unit":"%", "HR":[0, 100], "HHR":[15, 80], "R": [0, 100]},
+    {
+        "name": "4201LI022PVLL",
+        "value": 15,
+        "initial": 15
+    },
+    {
+        "name": "4201LI022PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI022PVH",
+        "value": 100,
+        "initial": 100
+    },
+    {
+        "name": "4201LI022PVHH",
+        "value": 80,
+        "initial": 80
+    },
+    {"name":"4201LI028", "value":45.0714, "initial":45.0714, "unit":"%", "HR":[15, 80], "HHR":[0, 100], "R": [0, 100]},
+    {
+        "name": "4201LI028PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI028PVL",
+        "value": 15,
+        "initial": 15
+    },
+    {
+        "name": "4201LI028PVH",
+        "value": 80,
+        "initial": 80
+    },
+    {
+        "name": "4201LI028PVHH",
+        "value": 100,
+        "initial": 100
+    },
+    {"name":"4201LI020", "value":61.958, "initial":61.958, "unit":"%", "HR":[15, 80], "HHR":[0, 100], "R": [0, 100]},
+    {
+        "name": "4201LI020PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI020PVL",
+        "value": 15,
+        "initial": 15
+    },
+    {
+        "name": "4201LI020PVH",
+        "value": 80,
+        "initial": 80
+    },
+    {
+        "name": "4201LI020PVHH",
+        "value": 100,
+        "initial": 100
+    },
+    {"name":"4201LI024", "value":0, "initial":0, "unit":"%", "HR":[0, 110], "HHR":[5, 110], "R": [0, 100]},
+    {
+        "name": "4201LI024PVLL",
+        "value": 5,
+        "initial": 5
+    },
+    {
+        "name": "4201LI024PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI024PVH",
+        "value": 110,
+        "initial": 110
+    },
+    {
+        "name": "4201LI024PVHH",
+        "value": 110,
+        "initial": 110
+    },
+    
+    {"name":"4201PI091", "value":88.6992, "initial":88.6992, "unit":"barg", "HR":[0, 90.3], "HHR":[0, 120], "R": [0, 120]},
+    {
+        "name": "4201PI091PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI091PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI091PVH",
+        "value": 90.3,
+        "initial": 90.3
+    },
+    {
+        "name": "4201PI091PVHH",
+        "value": 120,
+        "initial": 120
+    },
+    {"name":"4201PI170", "value":6.2879, "initial":6.2879, "unit":"barg", "HR":[0, 18], "HHR":[0, 18], "R": [0, 15]},
+    {
+        "name": "4201PI170PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI170PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI170PVH",
+        "value": 18,
+        "initial": 18
+    },
+    {
+        "name": "4201PI170PVHH",
+        "value": 18,
+        "initial": 18
+    },
+    
+    {"name":"1LI024", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"4201FI020", "value":74.4417, "initial":74.4417, "unit":"kg/hr", "HR":[0, 5800], "HHR":[0, 5800], "R": [0, 5500]},
+    {
+        "name": "4201FI020PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI020PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI020PVH",
+        "value": 5800,
+        "initial": 5800
+    },
+    {
+        "name": "4201FI020PVHH",
+        "value": 5800,
+        "initial": 5800
+    },
+    {
+        "name": "4201FI026PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI026PVL",
+        "value": 9000,
+        "initial": 9000
+    },
+    {
+        "name": "4201FI026PVH",
+        "value": 25000,
+        "initial": 25000
+    },
+    {
+        "name": "4201FI026PVHH",
+        "value": 25000,
+        "initial": 25000
+    },
+    {"name":"4201FI026", "value":12642.4479, "initial":12642.4479, "unit":"kg/hr", "HR":[9000, 25000], "HHR":[0, 25000], "R": [0, 24000]},
+    {"name":"4201FI027A", "value":12667.293, "initial":12667.293, "unit":"kg/hr", "HR":[9000, 24000], "HHR":[9000, 24000], "R": [0, 24000]},
+    {
+        "name": "4201FI027APVLL",
+        "value": 9000,
+        "initial": 9000
+    },
+    {
+        "name": "4201FI027APVL",
+        "value": 9000,
+        "initial": 9000
+    },
+    {
+        "name": "4201FI027APVH",
+        "value": 24000,
+        "initial": 24000
+    },
+    {
+        "name": "4201FI027APVHH",
+        "value": 24000,
+        "initial": 24000
+    },
+    {"name": "4201EV002", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV002PV", "value": 1, "derived": {"variableIds": ["4201EV002"], "type": "timeDiff", "timeDiff": 1.0}},
+    
+    
+    
+    { "name": "4201LIC023SP", "unit": "%", "value": 33.7056, "initial": 33.7056 },
+    { "name": "4201LIC023SPAd", "unit": "%", "value": 47.83, "initial": 47.83 },
+    { "name": "4201LIC023TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC023CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC023AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC023KC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC023TI", "unit": "min", "value": 5, "initial": 5 },
+    { "name": "4201LIC023OPM", "unit": "%", "value": 50.1243, "initial": 50.1243  },
+    { "name": "4201LIC023OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201LIC023OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201LIC023OP","unit": "%","value": 50.1243,"initial": 50.1243,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201LIC023PV","unit": "%","value": 33.7014,"initial": 33.7014,"R": [0, 100],"HR": [31.42, 64.24],"HHR": [0, 100]},
+    
+
+    {"name": "4201BV006", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201BV006PV", "value": 2, "derived": {"variableIds": ["4201BV006"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201BV003", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201BV003PV", "value": 2, "derived": {"variableIds": ["4201BV003"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201UV023", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201UV023PV", "value": 2, "derived": {"variableIds": ["4201UV023"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV019", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV019PV", "value": 2, "derived": {"variableIds": ["4201EV019"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV013", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV013PV", "value": 2, "derived": {"variableIds": ["4201EV013"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV011", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV011PV", "value": 1, "derived": {"variableIds": ["4201EV011"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "1BPZIC013", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "1BPZIC013PV", "value": 2, "derived": {"variableIds": ["1BPZIC013"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "1BPZIC012", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "1BPZIC012PV", "value": 2, "derived": {"variableIds": ["1BPZIC012"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name":"4201LI019A", "value":0.0, "initial":0.0, "unit":"%", "HR":[0, 110], "HHR":[5.617778, 110], "R": [0, 100]},
+    {
+        "name": "4201LI019APVLL",
+        "value": 5.617778,
+        "initial": 5.617778
+    },
+    {
+        "name": "4201LI019APVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI019APVH",
+        "value": 110,
+        "initial": 110
+    },
+    {
+        "name": "4201LI019APVHH",
+        "value": 110,
+        "initial": 110
+    },
+    {"name":"4201LI016", "value":25.8993, "initial":25.8993, "unit":"%", "HR":[0, 100], "HHR":[1.91, 84.98854], "R": [0, 100]},
+    {
+        "name": "4201LI016PVLL",
+        "value": 1.91,
+        "initial": 1.91
+    },
+    {
+        "name": "4201LI016PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI016PVH",
+        "value": 100,
+        "initial": 100
+    },
+    {
+        "name": "4201LI016PVHH",
+        "value": 84.98854,
+        "initial": 84.98854
+    },
+    
+    {"name":"4201PI094", "value":86.0868, "initial":86.0868, "unit":"barg", "HR":[81.8, 140], "HHR":[0, 140], "R": [0, 120]},
+    {
+        "name": "4201PI094PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI094PVL",
+        "value": 81.8,
+        "initial": 81.8
+    },
+    {
+        "name": "4201PI094PVH",
+        "value": 140,
+        "initial": 140
+    },
+    {
+        "name": "4201PI094PVHH",
+        "value": 140,
+        "initial": 140
+    },
+    
+    {"name":"4201LI052", "value":0.9899, "initial":0.9899, "unit":"%", "HR":[0, 110], "HHR":[0, 110], "R": [0, 100]},
+    {
+        "name": "4201LI052PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI052PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI052PVH",
+        "value": 110,
+        "initial": 110
+    },
+    {
+        "name": "4201LI052PVHH",
+        "value": 110,
+        "initial": 110
+    },
+    {
+        "name": "4201LI012PVLL",
+        "value": 8,
+        "initial": 8
+    },
+    {
+        "name": "4201LI012PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI012PVH",
+        "value": 100,
+        "initial": 100
+    },
+    {
+        "name": "4201LI012PVHH",
+        "value": 77,
+        "initial": 77
+    },
+    {"name":"4201LI012", "value":46.8846, "initial":46.8846, "unit":"%", "HR":[0, 100], "HHR":[8, 77], "R": [0, 100]},
+    {"name":"1CI002", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+
+    {"name":"4201TI110", "value":40.0, "initial":40.0, "unit":"C", "HR":[0, 120], "HHR":[0, 120], "R": [0, 100]},
+
+    {
+        "name": "4201TI110PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI110PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI110PVH",
+        "value": 120,
+        "initial": 120
+    },
+    {
+        "name": "4201TI110PVHH",
+        "value": 120,
+        "initial": 120
+    },
+
+    {"name":"4201TI112", "value":40.0, "initial":40.0, "unit":"C", "HR":[0, 120], "HHR":[0, 120], "R": [0, 100]},
+
+    {
+        "name": "4201TI112PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI112PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI112PVH",
+        "value": 120,
+        "initial": 120
+    },
+    {
+        "name": "4201TI112PVHH",
+        "value": 120,
+        "initial": 120
+    },
+    {"name":"4201TI453", "value":25.0, "initial":25.0, "unit":"C", "HR":[0, 50], "HHR":[0, 50], "R": [0, 50]},
+    {
+        "name": "4201TI453PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI453PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI453PVH",
+        "value": 50,
+        "initial": 50
+    },
+    {
+        "name": "4201TI453PVHH",
+        "value": 50,
+        "initial": 50
+    },
+    {"name":"4200FI467", "value":1 , "initial":1, "unit":"kg/hr", "HR":[0, 5], "HHR":[0 ,  5], "R": [0, 5]},
+    {
+        "name": "4200FI467PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4200FI467PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4200FI467PVH",
+        "value": 5,
+        "initial": 5
+    },
+    {
+        "name": "4200FI467PVHH",
+        "value": 5,
+        "initial": 5
+    },
+    
+    {"name":"4201PDI027", "value":0.0199, "initial":0.0199, "unit":"bar(d)", "HR":[0, 0.35], "HHR":[0, 0.5], "R": [0, 0.5]},
+    {
+        "name": "4201PDI027PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PDI027PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PDI027PVH",
+        "value": 0.35,
+        "initial": 0.35
+    },
+    {
+        "name": "4201PDI027PVHH",
+        "value": 0.5,
+        "initial": 0.5
+    },
+    
+    {"name":"4201PDI028", "value":0.2726, "initial":0.2726, "unit":"bar(d)", "HR":[0, 0.35], "HHR":[0, 0.5], "R": [0, 0.5]},
+    {
+        "name": "4201PDI028PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PDI028PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PDI028PVH",
+        "value": 0.35,
+        "initial": 0.35
+    },
+    {
+        "name": "4201PDI028PVHH",
+        "value": 0.5,
+        "initial": 0.5
+    },
+    
+    {"name":"4201LI021A", "value":0.0, "initial":0.0, "unit":"%", "HR":[0, 100], "HHR":[13.89914, 87.69988], "R": [0, 100]},
+    {
+        "name": "4201LI021APVLL",
+        "value": 13.89914,
+        "initial": 13.89914
+    },
+    {
+        "name": "4201LI021APVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI021APVH",
+        "value": 100,
+        "initial": 100
+    },
+    {
+        "name": "4201LI021APVHH",
+        "value": 87.69988,
+        "initial": 87.69988
+    },
+    {"name":"4201LI029A", "value":0.0, "initial":0.0, "unit":"%", "HR":[0, 100], "HHR":[1.58557, 94.5325], "R": [0, 100]},
+
+    {
+        "name": "4201LI029APVLL",
+        "value": 1.58557,
+        "initial": 1.58557
+    },
+    {
+        "name": "4201LI029APVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI029APVH",
+        "value": 100,
+        "initial": 100
+    },
+    {
+        "name": "4201LI029APVHH",
+        "value": 94.5325,
+        "initial": 94.5325
+    },
+    
+    
+    { "name": "4201LIC029BSP", "unit": "%", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC029BSPAd", "unit": "%", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC029BTV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC029BCAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC029BAC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC029BKC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC029BTI", "unit": "min", "value": 20.0, "initial": 20.0 },
+    { "name": "4201LIC029BOPM", "unit": "%", "value": -1, "initial": -1  },
+    { "name": "4201LIC029BOPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201LIC029BOPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201LIC029BOP","unit": "%","value": 0.0,"initial": 0.0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201LIC029BPV","unit": "%","value": 0,"initial": 0,"R": [0, 100],"HR": [12.5, 83.5],"HHR": [0, 100]},
+    
+    
+    
+    {"name":"1LI001", "value":50.0, "initial":0.182036, "unit":"%", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    
+    {"name":"4201PI043", "value":3.0866, "initial":3.0866, "unit":"barg", "HR":[0, 5], "HHR":[0, 10], "R": [0, 10]},
+    {
+        "name": "4201PI043PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI043PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI043PVH",
+        "value": 5,
+        "initial": 5
+    },
+    {
+        "name": "4201PI043PVHH",
+        "value": 10,
+        "initial": 10
+    },
+    
+    
+    { "name": "4201LIC026SP", "unit": "%", "value": 40.6456, "initial": 40.6456 },
+    { "name": "4201LIC026SPAd", "unit": "%", "value": 53.57, "initial": 53.57 },
+    { "name": "4201LIC026TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC026CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC026AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC026KC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC026TI", "unit": "min", "value": 5.0, "initial": 5.0 },
+    { "name": "4201LIC026OPM", "unit": "%", "value": 0.1256, "initial": 0.1256  },
+    { "name": "4201LIC026OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201LIC026OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201LIC026OP","unit": "%","value": 0.1256,"initial": 0.1256,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201LIC026PV","unit": "%","value": 40.6456,"initial": 40.6456,"R": [0, 100],"HR": [18, 89.75],"HHR": [0, 100]},
+    
+    
+    { "name": "1TIC051SP", "unit": "cum/hr", "value": 40.0, "initial": 40.0 },
+    { "name": "1TIC051TV", "value": 0.0, "initial": 0.0 },
+    { "name": "1TIC051CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "1TIC051KC", "value": 2.5, "initial": 2.5 },
+    { "name": "1TIC051TI", "unit": "min", "value": 0.75, "initial": 0.75 },
+    { "name": "1TIC051OPM", "unit": "%", "value": 2.62, "initial": 2.62  },
+    { "name": "1TIC051OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "1TIC051OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "1TIC051OP","unit": "%","value": 2.62,"initial": 2.62,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "1TIC051PV","unit": "cum/hr","value": 40.0,"initial": 40.0,"R": [0, 500],"HR": [125, 375],"HHR": [50, 450]},
+    
+    
+    {"name":"4201TI016", "value":39.7397, "initial":39.7397, "unit":"C", "HR":[35, 45], "HHR":[0, 100], "R": [0, 100]},
+    {
+        "name": "4201TI016PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI016PVL",
+        "value": 35,
+        "initial": 35
+    },
+    {
+        "name": "4201TI016PVH",
+        "value": 45,
+        "initial": 45
+    },
+    {
+        "name": "4201TI016PVHH",
+        "value": 100,
+        "initial": 100
+    },
+    {"name":"4201TI047A", "value":187.9147, "initial":187.9147, "unit":"C", "HR":[0, 115], "HHR":[100, 250], "R": [0, 250]},
+    {
+        "name": "4201TI047APVLL",
+        "value": 100,
+        "initial": 100
+    },
+    {
+        "name": "4201TI047APVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI047APVH",
+        "value": 115,
+        "initial": 115
+    },
+    {
+        "name": "4201TI047APVHH",
+        "value": 250,
+        "initial": 250
+    },
+    {"name":"4201TI005", "value":58.0824, "initial":58.0824, "unit":"bar", "HR":[0, 100], "HHR":[0, 68], "R": [0, 100]},
+    {
+        "name": "4201TI005PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI005PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI005PVH",
+        "value": 100,
+        "initial": 100
+    },
+    {
+        "name": "4201TI005PVHH",
+        "value": 68,
+        "initial": 68
+    },
+    {"name":"4201TI008", "value":58.2201, "initial":58.2201, "unit":"C",  "HR":[53, 63], "HHR":[0, 100], "R": [0, 100]},
+    {
+        "name": "4201TI008PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI008PVL",
+        "value": 53,
+        "initial": 53
+    },
+    {
+        "name": "4201TI008PVH",
+        "value": 63,
+        "initial": 63
+    },
+    {
+        "name": "4201TI008PVHH",
+        "value": 100,
+        "initial": 100
+    },
+    {"name":"1LI028", "value":50.0, "initial":0.182036, "unit":"%", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"1T070", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"1T071", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"1T072", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"4201LI010", "value":57.9709, "initial":57.9709, "unit":"%", "HR":[0, 100], "HHR":[14.11043, 93.86503], "R": [0, 100]},
+    {
+        "name": "4201LI010PVLL",
+        "value": 14.11043,
+        "initial": 14.11043
+    },
+    {
+        "name": "4201LI010PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI010PVH",
+        "value": 100,
+        "initial": 100
+    },
+    {
+        "name": "4201LI010PVHH",
+        "value": 93.86503,
+        "initial": 93.86503
+    },
+    
+    {"name":"4201TI011", "value":93.0714, "initial":93.0714, "unit":"C",  "HR":[0, 120], "HHR":[0, 120], "R": [0, 100]},
+    {
+        "name": "4201TI011PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI011PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI011PVH",
+        "value": 120,
+        "initial": 120
+    },
+    {
+        "name": "4201TI011PVHH",
+        "value": 120,
+        "initial": 120
+    },
+    
+    {"name":"4201TI004", "value":91.3398, "initial":91.3398, "unit":"C",  "HR":[0, 120], "HHR":[0, 120], "R": [0, 100]},
+    {
+        "name": "4201TI004PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI004PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI004PVH",
+        "value": 120,
+        "initial": 120
+    },
+    {
+        "name": "4201TI004PVHH",
+        "value": 120,
+        "initial": 120
+    },
+    
+    {"name":"4201TI003", "value":89.561, "initial":89.561, "unit":"C",  "HR":[0, 120], "HHR":[0, 120], "R": [0, 100]},
+    {
+        "name": "4201TI003PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI003PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI003PVH",
+        "value": 120,
+        "initial": 120
+    },
+    {
+        "name": "4201TI003PVHH",
+        "value": 120,
+        "initial": 120
+    },
+    
+    {"name":"FEED_RATIO", "value":50.0, "initial":0.182036, "unit":" ", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {
+        "name": "FEED_RATIOPVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "FEED_RATIOPVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "FEED_RATIOPVH",
+        "value": 120,
+        "initial": 120
+    },
+    {
+        "name": "FEED_RATIOPVHH",
+        "value": 120,
+        "initial": 120
+    },
+    {"name":"4201TI066", "value":81.5396, "initial":81.5396, "unit":"C", "HR":[0, 120], "HHR":[0, 120], "R": [0, 100]},
+    {
+        "name": "4201TI066PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI066PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI066PVH",
+        "value": 120,
+        "initial": 120
+    },
+    {
+        "name": "4201TI066PVHH",
+        "value": 120,
+        "initial": 120
+    },
+    {"name":"4201TI063", "value":135.0362, "initial":135.0362, "unit":"C", "HR":[0, 180], "HHR":[0, 180], "R": [0, 160]},
+    {
+        "name": "4201TI063PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI063PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI063PVH",
+        "value": 180,
+        "initial": 180
+    },
+    {
+        "name": "4201TI063PVHH",
+        "value": 180,
+        "initial": 180
+    },
+    {"name":"4201TI062", "value":136.0195, "initial":136.0195, "unit":"C", "HR":[0, 180], "HHR":[0, 180], "R": [0, 160]},
+    {
+        "name": "4201TI062PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI062PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI062PVH",
+        "value": 180,
+        "initial": 180
+    },
+    {
+        "name": "4201TI062PVHH",
+        "value": 180,
+        "initial": 180
+    },
+    {"name":"4201TI075", "value":135.0362, "initial":135.0362, "unit":"C", "HR":[0, 180], "HHR":[0, 180], "R": [0, 160]},
+    {
+        "name": "4201TI075PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI075PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI075PVH",
+        "value": 180,
+        "initial": 180
+    },
+    {
+        "name": "4201TI075PVHH",
+        "value": 180,
+        "initial": 180
+    },
+    
+    {"name":"4201TI013", "value":135.6195, "initial":135.6195, "unit":"C", "HR":[126, 134], "HHR":[0, 160], "R": [0, 160]},
+    {
+        "name": "4201TI013PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI013PVL",
+        "value": 126,
+        "initial": 126
+    },
+    {
+        "name": "4201TI013PVH",
+        "value": 134,
+        "initial": 134
+    },
+    {
+        "name": "4201TI013PVHH",
+        "value": 160,
+        "initial": 160
+    },
+    
+    {"name":"4201TI073", "value":136.0195, "initial":136.0195, "unit":"C", "HR":[0, 180], "HHR":[0, 180], "R": [0, 160]},
+    {
+        "name": "4201TI073PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI073PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI073PVH",
+        "value": 180,
+        "initial": 180
+    },
+    {
+        "name": "4201TI073PVHH",
+        "value": 180,
+        "initial": 180
+    },
+    {"name":"4201TI067", "value":58.0824, "initial":58.0824, "unit":"C", "HR":[0, 120], "HHR":[0, 120], "R": [0, 100]},
+    {
+        "name": "4201TI067PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI067PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI067PVH",
+        "value": 120,
+        "initial": 120
+    },
+    {
+        "name": "4201TI067PVHH",
+        "value": 120,
+        "initial": 120
+    },
+    
+    {"name":"4201TI002", "value":70.1729, "initial":70.1729, "unit":"C", "HR":[0, 120], "HHR":[0, 120], "R": [0, 100]},
+
+    {
+        "name": "4201TI002PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI002PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI002PVH",
+        "value": 120,
+        "initial": 120
+    },
+    {
+        "name": "4201TI002PVHH",
+        "value": 120,
+        "initial": 120
+    },
+    
+    {"name":"4201LI004", "value":45.0714, "initial":45.0714, "unit":"%", "HR":[0, 100], "HHR":[4.6, 93.85], "R": [0, 100]},
+    {
+        "name": "4201LI004PVLL",
+        "value": 4.6,
+        "initial": 4.6
+    },
+    {
+        "name": "4201LI004PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI004PVH",
+        "value": 100,
+        "initial": 100
+    },
+    {
+        "name": "4201LI004PVHH",
+        "value": 93.85,
+        "initial": 93.85
+    },
+    {"name":"4201TI038", "value":64.0210, "initial":64.0210, "unit":"C", "HR":[58, 70], "HHR":[0, 100], "R": [0, 100]},
+    {
+        "name": "4201TI038PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI038PVL",
+        "value": 58,
+        "initial": 58
+    },
+    {
+        "name": "4201TI038PVH",
+        "value": 70,
+        "initial": 70
+    },
+    {
+        "name": "4201TI038PVHH",
+        "value": 100,
+        "initial": 100
+    },
+    {"name":"1CI003", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"4201TI072", "value":133.9796, "initial":133.9796, "unit":"C", "HR":[0, 220], "HHR":[0, 220], "R": [0, 200]},
+    {
+        "name": "4201TI072PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI072PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI072PVH",
+        "value": 220,
+        "initial": 220
+    },
+    {
+        "name": "4201TI072PVHH",
+        "value": 220,
+        "initial": 220
+    },
+    {"name":"4201TI077", "value":135.6195, "initial":135.6195, "unit":"C", "HR":[126, 134], "HHR":[0, 160], "R": [0, 160]},
+    {
+        "name": "4201TI077PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI077PVL",
+        "value": 126,
+        "initial": 126
+    },
+    {
+        "name": "4201TI077PVH",
+        "value": 134,
+        "initial": 134
+    },
+    {
+        "name": "4201TI077PVHH",
+        "value": 160,
+        "initial": 160
+    },
+    
+    {"name":"4201TI071", "value":131.39752, "initial":131.39752, "unit":"c", "HR":[0 , 220], "HHR":[0 , 220], "R": [0 , 200]},
+    {
+        "name": "4201TI071PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI071PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI071PVH",
+        "value": 220,
+        "initial": 220
+    },
+    {
+        "name": "4201TI071PVHH",
+        "value": 220,
+        "initial": 220
+    },
+    {"name":"4201TI070", "value":128.7529, "initial":128.7529, "unit":"bar", "HR":[0, 220], "HHR":[0, 220], "R": [0, 200]},
+    {
+        "name": "4201TI070PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI070PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI070PVH",
+        "value": 220,
+        "initial": 220
+    },
+    {
+        "name": "4201TI070PVHH",
+        "value": 220,
+        "initial": 220
+    },
+    {"name":"4201TI069", "value":110.2284, "initial":110.2284, "unit":"C", "HR":[0, 220], "HHR":[0, 220], "R": [0, 200]},
+    {
+        "name": "4201TI069PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI069PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI069PVH",
+        "value": 220,
+        "initial": 220
+    },
+    {
+        "name": "4201TI069PVHH",
+        "value": 220,
+        "initial": 220
+    },
+    {"name":"4201TI079", "value":60.2676, "initial":60.2676, "unit":"C", "HR":[50, 70], "HHR":[0, 160], "R": [0, 160]},
+    {
+        "name": "4201TI079PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI079PVL",
+        "value": 50,
+        "initial": 50
+    },
+    {
+        "name": "4201TI079PVH",
+        "value": 70,
+        "initial": 70
+    },
+    {
+        "name": "4201TI079PVHH",
+        "value": 160,
+        "initial": 160
+    },
+    {"name":"4201TI111", "value":64.0178, "initial":64.0178, "unit":"C", "HR":[0, 120], "HHR":[0, 120], "R": [0, 100]},
+    {
+        "name": "4201TI111PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI111PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI111PVH",
+        "value": 120,
+        "initial": 120
+    },
+    {
+        "name": "4201TI111PVHH",
+        "value": 120,
+        "initial": 120
+    },
+    {"name": "4201BV001", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201BV001PV", "value": 2, "derived": {"variableIds": ["4201BV001"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV021", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV021PV", "value": 2, "derived": {"variableIds": ["4201EV021"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV006", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV006PV", "value": 1, "derived": {"variableIds": ["4201EV006"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420P103A", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420P103APV", "value": 1, "derived": {"variableIds": ["420P103A"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420P113", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420P113PV", "value": 1, "derived": {"variableIds": ["420P113"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420P103B", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "420P103BPV", "value": 2, "derived": {"variableIds": ["420P103B"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "1BPZIC007", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "1BPZIC007PV", "value": 2, "derived": {"variableIds": ["1BPZIC013"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name":"1LDI001A", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name": "1BPZIC005", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "1BPZIC005PV", "value": 2, "derived": {"variableIds": ["1BPZIC005"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name":"4201FI003B", "value":366427.9028, "initial":366427.9028, "unit":"kg/hr", "HR":[170000, 450000], "HHR":[0, 450000], "R": [0, 444000]},
+    {
+        "name": "4201FI003BPVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI003BPVL",
+        "value": 170000,
+        "initial": 170000
+    },
+    {
+        "name": "4201FI003BPVH",
+        "value": 450000,
+        "initial": 450000
+    },
+    {
+        "name": "4201FI003BPVHH",
+        "value": 450000,
+        "initial": 450000
+    },
+    {"name":"4201FI006", "value":366429.6849, "initial":366429.6849, "unit":"kg/hr", "HR":[170000, 450000], "HHR":[0, 450000], "R": [0, 444000]},
+    {
+        "name": "4201FI006PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI006PVL",
+        "value": 170000,
+        "initial": 170000
+    },
+    {
+        "name": "4201FI006PVH",
+        "value": 450000,
+        "initial": 450000
+    },
+    {
+        "name": "4201FI006PVHH",
+        "value": 450000,
+        "initial": 450000
+    },
+    {"name":"4201FI047A", "value":43.7998, "initial":43.7998, "unit":"T/hr", "HR":[0, 51], "HHR":[0, 51], "R": [0, 50]},
+    {
+        "name": "4201FI047APVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI047APVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI047APVH",
+        "value": 51,
+        "initial": 51
+    },
+    {
+        "name": "4201FI047APVHH",
+        "value": 51,
+        "initial": 51
+    },
+    
+    {"name":"4201PI031", "value":6.9869, "initial":6.9869, "unit":"barg", "HR":[0, 16], "HHR":[0, 16], "R": [0, 15]},
+    {
+        "name": "4201PI031PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI031PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI031PVH",
+        "value": 16,
+        "initial": 16
+    },
+    {
+        "name": "4201PI031PVHH",
+        "value": 16,
+        "initial": 16
+    },
+    
+    {"name":"4201PI081", "value":3.4987, "initial":3.4987, "unit":"barg", "HR":[2.5, 4.5], "HHR":[0, 6], "R": [0, 6]},
+    {
+        "name": "4201PI081PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI081PVL",
+        "value": 2.5,
+        "initial": 2.5
+    },
+    {
+        "name": "4201PI081PVH",
+        "value": 4.5,
+        "initial": 4.5
+    },
+    {
+        "name": "4201PI081PVHH",
+        "value": 6,
+        "initial": 6
+    },
+    {"name":"1FI073", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"1XA707A", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"1XA706A", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"1XA707B", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    
+    
+    { "name": "4201LIC028ASP", "unit": "%", "value": 45.0766, "initial": 45.0766 },
+    { "name": "4201LIC028ASPAd", "unit": "%", "value": 49.23, "initial": 49.23 },
+    { "name": "4201LIC028ATV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC028AAC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC028ACAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC028AKC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC028ATI", "unit": "min", "value": 5.0, "initial": 5.0 },
+    { "name": "4201LIC028AOPM", "unit": "%", "value": -1.0, "initial": -1.0  },
+    { "name": "4201LIC028AOPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201LIC028AOPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201LIC028AOP","unit": "%","value": 0.0,"initial": 0.0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201LIC028APV","unit": "%","value": 45.0714,"initial": 45.0714,"R": [0, 100],"HR": [20, 78.5],"HHR": [0, 100]},
+    
+    
+    { "name": "4201LIC028BSP", "unit": "%", "value": 45.0766, "initial": 45.0766 },
+    { "name": "4201LIC028BSPAd", "unit": "%", "value": 49.23, "initial": 49.23 },
+    { "name": "4201LIC028BTV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC028BAC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC028BCAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201LIC028BKC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201LIC028BTI", "unit": "min", "value": 5, "initial": 5 },
+    { "name": "4201LIC028BOPM", "unit": "%", "value": 47.8464, "initial": 47.8464  },
+    { "name": "4201LIC028BOPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201LIC028BOPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201LIC028BOP","unit": "%","value": 47.8464,"initial": 47.8464,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201LIC028BPV","unit": "%","value": 45.0714,"initial": 45.0714,"R": [0, 100],"HR": [20, 78.5],"HHR": [0, 100]},
+    
+    
+    {"name": "420P102A", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420P102APV", "value": 1, "derived": {"variableIds": ["420P102A"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420P102B", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "420P102BPV", "value": 2, "derived": {"variableIds": ["420P102B"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420P101A", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420P101APV", "value": 1, "derived": {"variableIds": ["420P101A"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420P101B", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "420P101BPV", "value": 2, "derived": {"variableIds": ["420P101B"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV014", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV014PV", "value": 1, "derived": {"variableIds": ["4201EV014"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "4201EV008", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "4201EV008PV", "value": 1, "derived": {"variableIds": ["4201EV008"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name":"1LDI017A", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"4201FI004", "value":0.3594, "initial":0.3594, "unit":"T/hr", "HR":[0, 0.55], "HHR":[0, 0.55], "R": [0, 0.51]},
+    {
+        "name": "4201FI004PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI004PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI004PVH",
+        "value": 0.55,
+        "initial": 0.55
+    },
+    {
+        "name": "4201FI004PVHH",
+        "value": 0.55,
+        "initial": 0.55
+    },
+    {"name":"4201PI032", "value":6.9767, "initial":6.9767, "unit":"barg", "HR":[0, 15], "HHR":[0, 10], "R": [0, 15]},
+    {
+        "name": "4201PI032PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI032PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI032PVH",
+        "value": 15,
+        "initial": 15
+    },
+    {
+        "name": "4201PI032PVHH",
+        "value": 10,
+        "initial": 10
+    },
+    {"name":"4201LI006", "value":53.9999, "initial":53.9999, "unit":"%", "HR":[0, 100], "HHR":[8, 88], "R": [0, 100]},
+    {
+        "name": "4201LI006PVLL",
+        "value": 8,
+        "initial": 8
+    },
+    {
+        "name": "4201LI006PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI006PVH",
+        "value": 100,
+        "initial": 100
+    },
+    {
+        "name": "4201LI006PVHH",
+        "value": 88,
+        "initial": 88
+    },
+    
+    
+    { "name": "4201PIC044SP", "unit": "barg", "value": 5.0, "initial": 5.0 },
+    { "name": "4201PIC044SPAd", "unit": "barg", "value": 5.0, "initial": 5.0 },
+    { "name": "4201PIC044TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC044AC", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC044CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC044KC", "value": 4.0, "initial": 4.0 },
+    { "name": "4201PIC044TI", "unit": "min", "value": 0.5, "initial": 0.5 },
+    { "name": "4201PIC044OPM", "unit": "%", "value": -1, "initial": -1  },
+    { "name": "4201PIC044OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201PIC044OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201PIC044OP","unit": "%","value": 0.0,"initial": 0.0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201PIC044PV","unit": "barg","value": 6.9767,"initial": 6.9767,"R": [0, 15],"HR": [0, 18],"HHR": [0, 18]},
+    
+    
+    
+    { "name": "4201PIC005ASP", "unit": "barg", "value": 6.9767, "initial": 6.9767 },
+    { "name": "4201PIC005ASPAd", "unit": "barg", "value": 7, "initial": 7 },
+    { "name": "4201PIC005ATV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC005AAC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201PIC005ACAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC005AKC", "value": 4.0, "initial": 4.0 },
+    { "name": "4201PIC005ATI", "unit": "min", "value": 0.5, "initial": 0.5 },
+    { "name": "4201PIC005AOPM", "unit": "%", "value": 50.4739, "initial": 50.4739  },
+    { "name": "4201PIC005AOPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201PIC005AOPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201PIC005AOP","unit": "%","value": 50.4739,"initial": 50.4739,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201PIC005APV","unit": "barg","value": 6.9767,"initial": 6.9767,"R": [0, 15],"HR": [0, 18],"HHR": [0, 18]},
+    
+    
+    { "name": "4201PIC005BSP", "unit": "barg", "value": 8.0, "initial": 8.0 },
+    { "name": "4201PIC005BSPAd", "unit": "barg", "value": 8.0, "initial": 8.0 },
+    { "name": "4201PIC005BTV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC005BAC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201PIC005BCAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201PIC005BKC", "value": 4.0, "initial": 4.0 },
+    { "name": "4201PIC005BTI", "unit": "min", "value": 0.5, "initial": 0.5 },
+    { "name": "4201PIC005BOPM", "unit": "%", "value": -1, "initial": -1  },
+    { "name": "4201PIC005BOPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201PIC005BOPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201PIC005BOP","unit": "%","value": 0.0,"initial": 0.0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201PIC005BPV","unit": "barg","value": 6.9767,"initial": 6.9767,"R": [0, 15],"HR": [6.5, 8.5],"HHR": [0, 15]},
+    
+    
+    {"name":"4201TI030", "value":83.8504, "initial":83.8504, "unit":"C", "HR":[0, 83.9], "HHR":[0, 160], "R": [0, 160]},
+    {
+        "name": "4201TI030PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI030PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI030PVH",
+        "value": 83.9,
+        "initial": 83.9
+    },
+    {
+        "name": "4201TI030PVHH",
+        "value": 160,
+        "initial": 160
+    },
+    {"name":"4201PI080", "value":1.1830, "initial":1.1830, "unit":"barg", "HR":[0,3], "HHR":[0,3], "R": [0,2]},
+    {
+        "name": "4201PI080PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI080PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI080PVH",
+        "value": 3,
+        "initial": 3
+    },
+    {
+        "name": "4201PI080PVHH",
+        "value": 3,
+        "initial": 3
+    },
+    
+    {"name":"4201PI050", "value":6.8870, "initial":6.8870, "unit":"barg", "HR":[0,16], "HHR":[0,16], "R": [0,15]},
+    {
+        "name": "4201PI050PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI050PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI050PVH",
+        "value": 16,
+        "initial": 16
+    },
+    {
+        "name": "4201PI050PVHH",
+        "value": 16,
+        "initial": 16
+    },
+    
+    {"name":"4201TI031", "value":57.8875, "initial":57.8875, "unit":"C",  "HR":[0, 170], "HHR":[0, 170], "R": [0, 160]},
+    {
+        "name": "4201TI031PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI031PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI031PVH",
+        "value": 170,
+        "initial": 170
+    },
+    {
+        "name": "4201TI031PVHH",
+        "value": 170,
+        "initial": 170
+    },
+    {"name":"4201TI032", "value":114.2446, "initial":114.2446, "unit":" C", "HR":[95, 125], "HHR":[0, 160], "R": [0, 160]},
+    {
+        "name": "4201TI032PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI032PVL",
+        "value": 95,
+        "initial": 95
+    },
+    {
+        "name": "4201TI032PVH",
+        "value": 125,
+        "initial": 125
+    },
+    {
+        "name": "4201TI032PVHH",
+        "value": 160,
+        "initial": 160
+    },
+    {"name":"1PI070", "value":50.0, "initial":0.182036, "unit":"barg", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"4201TI036", "value":136.0195, "initial":136.0195, "unit":"C", "HR":[0, 170], "HHR":[0, 170], "R": [0, 160]},
+    {
+        "name": "4201TI036PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI036PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI036PVH",
+        "value": 170,
+        "initial": 170
+    },
+    {
+        "name": "4201TI036PVHH",
+        "value": 170,
+        "initial": 170
+    },
+    
+    {"name":"4201PI049", "value":1.7818, "initial":1.7818, "unit":"barg", "HR":[0, 5], "HHR":[0, 5], "R": [0, 4]},
+    {
+        "name": "4201PI049PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI049PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI049PVH",
+        "value": 5,
+        "initial": 5
+    },
+    {
+        "name": "4201PI049PVHH",
+        "value": 5,
+        "initial": 5
+    },
+    
+    {"name": "420E107FA01A", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420E107FA01APV", "value": 1, "derived": {"variableIds": ["E07FA101A"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420E107FA01B", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420E107FA01BPV", "value": 1, "derived": {"variableIds": ["E07FA101B"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420E107FA02A", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420E107FA02APV", "value": 1, "derived": {"variableIds": ["E07FA102A"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420E107FA02B", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420E107FA02BPV", "value": 1, "derived": {"variableIds": ["E07FA102B"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420E107FA03A", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420E107FA03APV", "value": 1, "derived": {"variableIds": ["E07FA103A"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420E107FA03B", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420E107FA03BPV", "value": 2, "derived": {"variableIds": ["E07FA103B"], "type": "timeDiff", "timeDiff": 1.0}},
+    
+    {"name": "420E106FA01A", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420E106FA01APV", "value": 1, "derived": {"variableIds": ["E07FA101A"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420E106FA01B", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420E106FA01BPV", "value": 1, "derived": {"variableIds": ["E07FA101B"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420E106FA02A", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420E106FA02APV", "value": 1, "derived": {"variableIds": ["E07FA102A"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420E106FA02B", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420E106FA02BPV", "value": 1, "derived": {"variableIds": ["E07FA102B"], "type": "timeDiff", "timeDiff": 1.0}},
+    
+    
+    {"name":"4201FI005B", "value":366135.2554, "initial":366135.2554, "unit":"kg/hr", "HR":[0, 450000], "HHR":[0 , 450000], "R": [0, 444000]},
+    {
+        "name": "4201FI005BPVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI005BPVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201FI005BPVH",
+        "value": 450000,
+        "initial": 450000
+    },
+    {
+        "name": "4201FI005BPVHH",
+        "value": 450000,
+        "initial": 450000
+    },
+    {"name":"1TY028CA", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0, 444000], "HHR":[0, 444000], "R": [0, 444000]},
+    {"name":"1TY028AA", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"1TY028BA", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name": "420P104B", "initial": 2, "defaultValue": 1, "errorValue": 2},
+    {"name": "420P104BPV", "value": 2, "derived": {"variableIds": ["420P104B"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420P104A", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420P104APV", "value": 1, "derived": {"variableIds": ["420P104A"], "type": "timeDiff", "timeDiff": 1.0}},
+    
+    
+    { "name": "4201TIC028SP", "unit": "C", "value": 58.0174, "initial": 58.0174 },
+    { "name": "4201TIC028SPAd", "unit": "C", "value": 58, "initial": 58 },
+    { "name": "4201TIC028TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC028AC", "value": 1.0, "initial": 1.0 },
+    { "name": "4201TIC028CAS", "value": 0.0, "initial": 0.0 },
+    { "name": "4201TIC028KC", "value": 3.5, "initial": 3.5 },
+    { "name": "4201TIC028TI", "unit": "min", "value": 0.7, "initial": 0.7 },
+    { "name": "4201TIC028OPM", "unit": "%", "value": 79.7142, "initial": 79.7142  },
+    { "name": "4201TIC028OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201TIC028OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201TIC028OP","unit": "%","value": 79.7142,"initial": 79.7142,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201TIC028PV","unit": "C","value": 58.0174,"initial": 58.0174,"R": [0, 160],"HR": [52, 72],"HHR": [0, 160]},
+    
+    
+    {"name":"4201LI009", "value":20.6719, "initial":20.6719, "unit":"%", "HR":[0, 110], "HHR":[0, 110], "R": [0, 100]},
+    {
+        "name": "4201LI009PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI009PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI009PVH",
+        "value": 110,
+        "initial": 110
+    },
+    {
+        "name": "4201LI009PVHH",
+        "value": 110,
+        "initial": 110
+    },
+    {"name":"4204201LI009", "value":2522.5698, "initial":2522.5698, "unit":"mm", "HR":[1000 , 8500], "HHR":[1000 , 8500], "R": [1000 , 8500]},
+    {
+        "name": "4204201LI009PVLL",
+        "value": 1000,
+        "initial": 1000
+    },
+    {
+        "name": "4204201LI009PVL",
+        "value": 1000,
+        "initial": 1000
+    },
+    {
+        "name": "4204201LI009PVH",
+        "value": 8500,
+        "initial": 8500
+    },
+    {
+        "name": "4204201LI009PVHH",
+        "value": 8500,
+        "initial": 8500
+    },
+    {"name":"4201LI001", "value":100.0, "initial":100.0, "unit":"%", "HR":[56.18, 110], "HHR":[56.18, 110], "R": [0, 100]},
+    {
+        "name": "4201LI001PVLL",
+        "value": 56.18,
+        "initial": 56.18
+    },
+    {
+        "name": "4201LI001PVL",
+        "value": 56.18,
+        "initial": 56.18
+    },
+    {
+        "name": "4201LI001PVH",
+        "value": 110,
+        "initial": 110
+    },
+    {
+        "name": "4201LI001PVHH",
+        "value": 110,
+        "initial": 110
+    },
+    
+    {"name":"4201PI160", "value":5.9907, "initial":5.9907, "unit":"barg", "HR":[0, 12], "HHR":[2, 12], "R": [0, 10]},
+    {
+        "name": "4201PI160PVLL",
+        "value": 2,
+        "initial": 2
+    },
+    {
+        "name": "4201PI160PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI160PVH",
+        "value": 12,
+        "initial": 12
+    },
+    {
+        "name": "4201PI160PVHH",
+        "value": 12,
+        "initial": 12
+    },
+    
+    {"name":"4201PI161", "value":1.2250, "initial":1.2250, "unit":"barg", "HR":[0, 2], "HHR":[0, 1.8], "R": [0, 2]},
+    {
+        "name": "4201PI161PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI161PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201PI161PVH",
+        "value": 2,
+        "initial": 2
+    },
+    {
+        "name": "4201PI161PVHH",
+        "value": 1.8,
+        "initial": 1.8
+    },
+    
+    {"name":"1XA701A", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"1XA701B", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"1XA702B", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"1XA705B", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"1XA702A", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"1XA703A", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"1XA704A", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    {"name":"1XA705A", "value":50.0, "initial":0.182036, "unit":"bar", "HR":[0.1, 0.4], "HHR":[0.05, 0.5], "R": [0, 0.5]},
+    { "name": "4201HIC001SP", "unit": "cum/hr", "value": 314.6484, "initial": 314.6484 },
+    { "name": "4201HIC001TV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201HIC001CAS", "value": 1.0, "initial": 1.0 },
+    { "name": "4201HIC001KC", "value": 18.0, "initial": 18.0 },
+    { "name": "4201HIC001TI", "unit": "min", "value": 1, "initial": 1 },
+    { "name": "4201HIC001OPM", "unit": "%", "value": 33.49, "initial": 33.49  },
+    { "name": "4201HIC001OPL", "unit": "%", "value": 0.0, "initial": 0.0  },
+    { "name": "4201HIC001OPH", "unit": "%", "value": 100.0, "initial": 100.0  },
+    { "name": "4201HIC001OP","unit": "%","value": 0,"initial": 0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201HIC001PV","unit": "cum/hr","value": 314.6493,"initial": 314.6493,"R": [0, 500],"HR": [125, 375],"HHR": [50, 450]},
+    
+    { "name": "4201TI099", "value":40.0, "initial":40.0, "unit":"C", "HR":[35, 50], "HHR":[0, 100], "R": [0, 100]},
+    {
+        "name": "4201TI099PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI099PVL",
+        "value": 35,
+        "initial": 35
+    },
+    {
+        "name": "4201TI099PVH",
+        "value": 50,
+        "initial": 50
+    },
+    {
+        "name": "4201TI099PVHH",
+        "value": 100,
+        "initial": 100
+    },
+    
+    { "name": "4201TI012", "value": 57.9879, "initial": 57.9879, "unit": "C", "HR":[0, 110], "HHR":[0, 110], "R": [0, 100] },
+    {
+        "name": "4201TI012PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI012PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201TI012PVH",
+        "value": 110,
+        "initial": 110
+    },
+    {
+        "name": "4201TI012PVHH",
+        "value": 110,
+        "initial": 110
+    },
+    
+    { "name": "4201LI061", "value":105.0, "initial":105.0, "unit":"%", "HR":[0, 110], "HHR":[0, 110], "R": [0, 100]},
+    {
+        "name": "4201LI061PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI061PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI061PVH",
+        "value": 110,
+        "initial": 110
+    },
+    {
+        "name": "4201LI061PVHH",
+        "value": 110,
+        "initial": 110
+    },
+    { "name": "4201LI062", "value":105.0, "initial":105.0, "unit":"%", "HR":[0, 110], "HHR":[0, 110], "R": [0, 100]},
+    {
+        "name": "4201LI062PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI062PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI062PVH",
+        "value": 110,
+        "initial": 110
+    },
+    {
+        "name": "4201LI062PVHH",
+        "value": 110,
+        "initial": 110
+    },
+    { "name": "4201LI033", "value":105.0, "initial":105.0, "unit":"%", "HR":[0, 100], "HHR":[0, 100], "R": [0, 100]},
+    {
+        "name": "4201LI033PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI033PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI033PVH",
+        "value": 100,
+        "initial": 100
+    },
+    {
+        "name": "4201LI033PVHH",
+        "value": 100,
+        "initial": 100
+    },
+    { "name": "4201LI005", "value":50.0, "initial":50.0, "unit":"%", "HR":[0, 100], "HHR":[0, 100], "R": [0, 100]},
+    {
+        "name": "4201LI005PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI005PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4201LI005PVH",
+        "value": 100,
+        "initial": 100
+    },
+    {
+        "name": "4201LI005PVHH",
+        "value": 100,
+        "initial": 100
+    },
+    { "name": "420FEEDRATIO", "value": 1.31787, "initial": 1.31787, "R":[0,4],"HR":[0.05,4.5],"HHR":[0.01,4.5] },
+    {
+        "name": "420FEEDRATIOPVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "420FEEDRATIOPVL",
+        "value": 0.05,
+        "initial": 0.05
+    },
+    {
+        "name": "420FEEDRATIOPVH",
+        "value": 4.5,
+        "initial": 4.5
+    },
+    {
+        "name": "420FEEDRATIOPVHH",
+        "value": 4.5,
+        "initial": 4.5
+    },
+    { "name": "4201HS002", "value": 1.0, "initial": 1.0 },
+    { "name": "4201HS028", "value": 1.0, "initial": 1.0 },
+    { "name": "4201FV002OP", "value": 49.991, "initial": 49.991, "R":[0,100],"HR":[0,100],"HHR":[0,100] },
+    { "name": "4201FV002SP", "value": 50, "initial": 50 },
+    { "name": "4201FV002PV", "value": 50,"unit":"C", "initial": 50 ,"R":[0,100],"HR":[0,100],"HHR":[0,100]},
+    { "name": "4201FV002TV", "value": 1, "initial": 1 },
+    { "name": "4201FV002CAS", "value": 0, "initial": 0 },
+    { "name": "4201TV028OP","unit": "%","value": 0,"initial": 0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201TV028SP", "value": 50, "initial": 50 },
+    { "name": "4201LV028BOP","unit": "%","value": 0,"initial": 0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201LV028COP","unit": "%","value": 95.6928,"initial": 95.6928,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201PV117AOP","unit": "%","value": 0,"initial": 0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201PV117BOP","unit": "%","value": 0,"initial": 0,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201TIC047PRDOP","unit": "%","value": 44.09,"initial": 44.09,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201TIC047PRDSP","unit": "%","value": 103.62,"initial": 103.62,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201TIC047PRDPV","unit": "%","value": 103.62,"initial": 103.62,"R": [0.0, 100.0],"HR": [25.0, 75.0],"HHR": [10.0, 90.0],"errorValue": 0.0},
+    { "name": "4201TIC047PRDTV", "value": 0.0, "initial": 0.0 },
+    { "name": "4201FANE107SLD", "value": 59.4286, "initial": 59.4286 },
+    {
+    "name": "4201FIC002PVs",
+    "value": 64.3896,
+    "initial": 64.3896,
+    "R": [0.0, 100.0],
+    "HR": [0.0, 100.0],
+    "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201FIC003PVs",
+        "value": 81.4284,
+        "initial": 81.4284,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201FIC005APVs",
+        "value": 49.9521,
+        "initial": 49.9521,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201FIC010PVs",
+        "value": 50.0097,
+        "initial": 50.0097,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201FIC047APVs",
+        "value": 49.9419,
+        "initial": 49.9419,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201LIC007PVs",
+        "value": 49.9999,
+        "initial": 49.9999,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201LIC008PVs",
+        "value": 49.9999,
+        "initial": 49.9999,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201LIC011PVs",
+        "value": 50.0,
+        "initial": 50.0,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201LIC015PVs",
+        "value": 37.0716,
+        "initial": 37.0716,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201LIC019BPVs",
+        "value": 50.0,
+        "initial": 50.0,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201LIC021BPVs",
+        "value": 50.0,
+        "initial": 50.0,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201LIC023PVs",
+        "value": 33.7014,
+        "initial": 33.7014,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201LIC025PVs",
+        "value": 50.0,
+        "initial": 50.0,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201LIC026PVs",
+        "value": 40.6456,
+        "initial": 40.6456,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201LIC027PVs",
+        "value": 49.1057,
+        "initial": 49.1057,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201LIC028APVs",
+        "value": 5.0,
+        "initial": 5.0,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201LIC028BPVs",
+        "value": 49.9943,
+        "initial": 49.9943,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201LIC029BPVs",
+        "value": 50.0,
+        "initial": 50.0,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201PIC002PVs",
+        "value": 50.0,
+        "initial": 50.0,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201PIC005APVs",
+        "value": 50.0,
+        "initial": 50.0,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201PIC005BPVs",
+        "value": 50.0,
+        "initial": 50.0,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201PIC008PVs",
+        "value": 49.9896,
+        "initial": 49.9896,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201PIC010PVs",
+        "value": 50.0,
+        "initial": 50.0,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201PIC044PVs",
+        "value": 50.0,
+        "initial": 50.0,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201PIC073PVs",
+        "value": 49.929,
+        "initial": 49.929,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201PIC096PVs",
+        "value": 50.1372,
+        "initial": 50.1372,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201PIC117PVs",
+        "value": 49.9896,
+        "initial": 49.9896,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201TIC017PVs",
+        "value": 50.0,
+        "initial": 50.0,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201TIC023PVs",
+        "value": 50.0598,
+        "initial": 50.0598,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201TIC028PVs",
+        "value": 49.9999,
+        "initial": 49.9999,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201TIC042PVs",
+        "value": 49.9999,
+        "initial": 49.9999,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201TIC047PVs",
+        "value": 50.0047,
+        "initial": 50.0047,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201TIC051PVs",
+        "value": 50.0,
+        "initial": 50.0,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    {
+        "name": "4201TIC057PVs",
+        "value": 50.0,
+        "initial": 50.0,
+        "R": [0.0, 100.0],
+        "HR": [0.0, 100.0],
+        "HHR": [0.0, 100.0]
+    },
+    { "name": "1ESD2317" , "value":1 , "initial":1},
+    { "name": "1ESD2317L" , "value":1 , "initial":1},
+    { "name": "1LALL022L" , "value":1 , "initial":1},
+    { "name": "1LALL021AL" , "value":1 , "initial":1},
+    { "name": "1LALL021A" , "value":1 , "initial":1},
+    { "name": "1LALL001L" , "value":1 , "initial":1},
+    { "name": "1LALL029AL" , "value":1 , "initial":1},
+    { "name": "1LALL019AL" , "value":1 , "initial":1},
+    { "name": "1ESD3908L" , "value":1 , "initial":1},
+    { "name": "1ESD3217L" , "value":1 , "initial":1},
+    { "name": "1ESD3299" , "value":1 , "initial":1},
+    { "name": "1ESD3299L" , "value":1 , "initial":1},
+    { "name": "1ESD3309" , "value":1 , "initial":1},
+    { "name": "1ESD3309L" , "value":1 , "initial":1},
+    { "name": "1ESD3306" , "value":1 , "initial":1},
+    { "name": "1ESD3306L" , "value":1 , "initial":1},
+    { "name": "1ESD3310" , "value":1 , "initial":1},
+    { "name": "1ESD3310L" , "value":1 , "initial":1},
+    { "name": "1ESD3304A" , "value":1 , "initial":1},
+    { "name": "1ESD3304AL" , "value":1 , "initial":1},
+
+
+    { "name": "1ESD2020L" , "value":1 , "initial":1},
+    { "name": "1ESD2320" , "value":1 , "initial":1},
+    { "name": "1ESD2320L" , "value":1 , "initial":1},
+    { "name": "1LALL062L" , "value":1 , "initial":1},
+    { "name": "1LALL061L" , "value":1 , "initial":1},
+    { "name": "1ESD3302L" , "value":1 , "initial":1},
+    { "name": "1ESD3303L" , "value":1 , "initial":1},
+    { "name": "1ESD3912L" , "value":1 , "initial":1},
+    { "name": "1ESD3914L" , "value":1 , "initial":1},
+    { "name": "1ESD3914" , "value":1 , "initial":1},
+    { "name": "1ESD3917L" , "value":1 , "initial":1},
+    { "name": "1ESD3918L" , "value":1 , "initial":1},
+    { "name": "1FALL027BL" , "value":1 , "initial":1},
+    { "name": "1ESD3323L" , "value":1 , "initial":1},
+    { "name": "1ESD3320" , "value":1 , "initial":1},
+    { "name": "1ESD3320L" , "value":1 , "initial":1},
+    { "name": "1ESD3909L" , "value":1 , "initial":1},
+    { "name": "1ESD3909" , "value":1 , "initial":1},
+    { "name": "1PB002L" , "value":1 , "initial":1},
+    { "name": "1PB001L" , "value":1 , "initial":1},
+    { "name": "1ESD3905L" , "value":1 , "initial":1},
+    { "name": "1ESD3905" , "value":1 , "initial":1},
+    { "name": "1ESD3911L" , "value":1 , "initial":1},
+    { "name": "1ESD3911" , "value":1 , "initial":1},
+    { "name": "1ESD3913L" , "value":1 , "initial":1},
+    { "name": "1ESD3913" , "value":1 , "initial":1},
+    { "name": "1ESD3907L" , "value":1 , "initial":1},
+    { "name": "1ESD404L" , "value":1 , "initial":1},
+    { "name": "1ESD404" , "value":1 , "initial":1},
+    { "name": "1PAHH161" , "value":1 , "initial":1},
+
+    { "name": "1LAHH006L" , "value":1 , "initial":1},
+    { "name": "1LAHH006BL" , "value":1 , "initial":1},
+    { "name": "1LAHH006B" , "value":1 , "initial":1},
+
+    { "name": "1LAHH006CL" , "value":1 , "initial":1},
+    { "name": "1LAHH006C" , "value":1 , "initial":1},
+
+
+    { "name": "1LAHH006DL" , "value":1 , "initial":1},
+    { "name": "1LAHH006D" , "value":1 , "initial":1},
+
+    { "name": "1ESD3308A-L" , "value":1 , "initial":1},
+    { "name": "1ESD3308B-L" , "value":1 , "initial":1},
+    { "name": "1ESD3308C-L" , "value":1 , "initial":1},
+    { "name": "1ESD3308C-" , "value":1 , "initial":1},
+
+
+    { "name": "1ESD3308" , "value":1 , "initial":1},
+    { "name": "1ESD3308L" , "value":1 , "initial":1},
+
+    { "name": "1PAHH032L" , "value":1 , "initial":1},
+    { "name": "1ESD3309B-L" , "value":1 , "initial":1},
+    { "name": "1ESD3309A-L" , "value":1 , "initial":1},
+
+
+    { "name": "1ESD3309C-L" , "value":1 , "initial":1},
+    { "name": "1ESD3309C-" , "value":1 , "initial":1},
+
+    { "name": "1ESD3308D-L" , "value":1 , "initial":1},
+    { "name": "1ESD3308D-" , "value":1 , "initial":1},
+
+    { "name": "1ESD3309D-L" , "value":1 , "initial":1},
+    { "name": "1ESD3309D-" , "value":1 , "initial":1},
+
+    { "name": "1LALL004L" , "value":1 , "initial":1},
+
+    { "name": "1LALL016L" , "value":1 , "initial":1},
+    { "name": "1ESD3305L" , "value":1 , "initial":1},
+    { "name": "1ESD3305" , "value":1 , "initial":1},
+
+    { "name": "1ESD3304L" , "value":1 , "initial":1},
+    { "name": "1ESD3304" , "value":1 , "initial":1},
+
+    { "name": "1ESD3304A-L" , "value":1 , "initial":1},
+    { "name": "1ESD3304A-" , "value":1 , "initial":1},
+
+    { "name": "1ESD3304B-L" , "value":1 , "initial":1},
+    { "name": "1ESD3304B-" , "value":1 , "initial":1},
+
+    { "name": "1ESD3304C-L" , "value":1 , "initial":1},
+    { "name": "1ESD3304C-" , "value":1 , "initial":1},
+
+    { "name": "1YL102AL" , "value":1 , "initial":1},
+    { "name": "1YA102AL" , "value":1 , "initial":1},
+    { "name": "1XSLL701A" , "value":1 , "initial":1},
+    { "name": "1XSLL702AL" , "value":1 , "initial":1},
+
+    { "name": "1ESD3927L" , "value":1 , "initial":1},
+
+    { "name": "1PAHH031L" , "value":1 , "initial":1},
+    { "name": "1XSLL703A" , "value":1 , "initial":1},
+    { "name": "1XSLL704A" , "value":1 , "initial":1},
+
+    { "name": "1XSLL705A" , "value":1 , "initial":1},
+    { "name": "1ESD3324L" , "value":1 , "initial":1},
+    { "name": "1ESD404AL" , "value":1 , "initial":1},
+    { "name": "1ESD404A" , "value":1 , "initial":1},
+    { "name": "1ESD404AAL" , "value":1 , "initial":1},
+    { "name": "1ESD404AA" , "value":1 , "initial":1},
+    { "name": "1LALL012L" , "value":1 , "initial":1},
+    { "name": "1FALL026L" , "value":1 , "initial":1},
+
+    { "name": "1ESD3314L" , "value":1 , "initial":1},
+
+
+    { "name": "1VAHH004BL" , "value":1 , "initial":1},
+    { "name": "1ESD3316BL" , "value":1 , "initial":1},
+    { "name": "1LALL005L" , "value":1 , "initial":1},
+
+    { "name": "1ESD3325AL" , "value":1 , "initial":1},
+
+
+    { "name": "1LAHH012L" , "value":1 , "initial":1},
+    { "name": "1ESD3315L" , "value":1 , "initial":1},
+
+    { "name": "1VAHH005AL" , "value":1 , "initial":1},
+    { "name": "1ESD3316CL" , "value":1 , "initial":1},
+    { "name": "1ESD3907" , "value":1 , "initial":1},
+    { "name": "1LALL020L" , "value":1 , "initial":1},
+
+    { "name": "1ESD3322L" , "value":1 , "initial":1},
+
+
+
+    { "name": "1VAHH004AL" , "value":1 , "initial":1},
+
+    { "name": "1ESD3316AL" , "value":1 , "initial":1},
+    { "name": "1ESD3307L" , "value":1 , "initial":1},
+    { "name": "1ESD3326L" , "value":1 , "initial":1},
+    { "name": "1ESD3904L" , "value":1 , "initial":1},
+
+    { "name": "1VAHH005BL" , "value":1 , "initial":1},
+    { "name": "1ESD3316DL" , "value":1 , "initial":1},
+    { "name": "0ESD3299L" , "value":1 , "initial":1},
+    { "name": "1LALL024L" , "value":1 , "initial":1},
+    { "name": "1ESD3219L" , "value":1 , "initial":1},
+    { "name": "1PAHH161L" , "value":1 , "initial":1},
+    { "name": "FEED" , "value":1 , "initial":1},
+    { "name": "1ESD3908" , "value":1 , "initial":1},
+    { "name": "1ESD2020" , "value":1 , "initial":1},
+    { "name": "1ESD3217" , "value":1 , "initial":1},
+    { "name": "1ESD3219" , "value":1 , "initial":1},
+    { "name": "1ESD3322" , "value":1 , "initial":1},
+    { "name": "1ESD3325A" , "value":1 , "initial":1},
+    { "name": "1ESD3307" , "value":1 , "initial":1},
+    { "name": "1ESD3326" , "value":1 , "initial":1},
+    { "name": "1ESD3323" , "value":1 , "initial":1},
+    { "name": "1ESD3308A-" , "value":1 , "initial":1},
+    { "name": "1ESD3308B-" , "value":1 , "initial":1},
+    { "name": "1ESD3309A-" , "value":1 , "initial":1},
+    { "name": "1ESD3309B-" , "value":1 , "initial":1},
+    { "name": "1ESD3904" , "value":1 , "initial":1},
+    { "name": "1ESD3927" , "value":1 , "initial":1},
+    { "name": "1ESD3324" , "value":1 , "initial":1},
+    { "name": "1ESD3314" , "value":1 , "initial":1},
+    { "name": "1ESD3314A" , "value":1 , "initial":1},
+    { "name": "1ESD3314AL" , "value":1 , "initial":1},
+    { "name": "1ESD3314B" , "value":1 , "initial":1},
+    { "name": "1ESD3314BL" , "value":1 , "initial":1},
+    { "name": "1ESD3315" , "value":1 , "initial":1},
+    { "name": "1ESD3316A" , "value":1 , "initial":1},
+    { "name": "1ESD3316B" , "value":1 , "initial":1},
+    { "name": "1ESD3316C" , "value":1 , "initial":1},
+    { "name": "1ESD3316D" , "value":1 , "initial":1},
+    { "name": "1ESD3302" , "value":1 , "initial":1},
+    { "name": "1ESD3303" , "value":1 , "initial":1},
+    { "name": "1ESD3912" , "value":1 , "initial":1},
+    { "name": "1ESD3917" , "value":1 , "initial":1},
+    { "name": "1ESD3918" , "value":1 , "initial":1},
+    { "name": "1ESD3906" , "value":1 , "initial":1},
+    { "name": "1ESD3906L" , "value":1 , "initial":1},
+    { "name": "1ESD3906B" , "value":1 , "initial":1},
+    { "name": "1ESD3906BL" , "value":1 , "initial":1},
+    { "name": "1ESD3906A" , "value":1 , "initial":1},
+    { "name": "1ESD3906AL" , "value":1 , "initial":1},
+    { "name": "1ESD3325L" , "value":1 , "initial":1},
+    { "name": "1ESD3325" , "value":1 , "initial":1},
+    { "name": "1ESD3314CL" , "value":1 , "initial":1},
+    { "name": "1ESD3314DL" , "value":1 , "initial":1},
+    { "name": "1ESD3314EL" , "value":1 , "initial":1},
+    { "name": "1ESD3314FL" , "value":1 , "initial":1},
+    { "name": "1ESD3314GL" , "value":1 , "initial":1},
+    { "name": "1ESD3314HL" , "value":1 , "initial":1},
+    { "name": "1ESD3314C" , "value":1 , "initial":1},
+    { "name": "1ESD3314D" , "value":1 , "initial":1},
+    { "name": "1ESD3314E" , "value":1 , "initial":1},
+    { "name": "1ESD3314F" , "value":1 , "initial":1},
+    { "name": "1ESD3314G" , "value":1 , "initial":1},
+    { "name": "1ESD3314H" , "value":1 , "initial":1},
+    { "name": "1ESD3316BAL" , "value":1 , "initial":1},
+    { "name": "1ESD3316BBL" , "value":1 , "initial":1},
+    { "name": "1ESD3316BA" , "value":1 , "initial":1},
+    { "name": "1ESD3316BB" , "value":1 , "initial":1},
+    { "name": "1ESD3325BL" , "value":1 , "initial":1},
+    { "name": "1ESD3325B" , "value":1 , "initial":1},
+    { "name": "1ESD3325CL" , "value":1 , "initial":1},
+    { "name": "1ESD3325C" , "value":1 , "initial":1},
+    { "name": "1ESD3325DL" , "value":1 , "initial":1},
+    { "name": "1ESD3325D" , "value":1 , "initial":1},
+    { "name": "1ESD3325EL" , "value":1 , "initial":1},
+    { "name": "1ESD3325E" , "value":1 , "initial":1},
+    { "name": "1ESD3325FL" , "value":1 , "initial":1},
+    { "name": "1ESD3325F" , "value":1 , "initial":1},
+    { "name": "1ESD3315AL" , "value":1 , "initial":1},
+    { "name": "1ESD3315BL" , "value":1 , "initial":1},
+    { "name": "1ESD3315CL" , "value":1 , "initial":1},
+    { "name": "1ESD3315A" , "value":1 , "initial":1},
+    { "name": "1ESD3315B" , "value":1 , "initial":1},
+    { "name": "1ESD3315C" , "value":1 , "initial":1},
+    { "name": "1ESD3316CAL" , "value":1 , "initial":1},
+    { "name": "1ESD3316CBL" , "value":1 , "initial":1},
+    { "name": "1ESD3316CCL" , "value":1 , "initial":1},
+    { "name": "1ESD3316CA" , "value":1 , "initial":1},
+    { "name": "1ESD3316CB" , "value":1 , "initial":1},
+    { "name": "1ESD3316CC" , "value":1 , "initial":1},
+    { "name": "1ESD3322AL" , "value":1 , "initial":1},
+    { "name": "1ESD3322BL" , "value":1 , "initial":1},
+    { "name": "1ESD3322CL" , "value":1 , "initial":1},
+    { "name": "1ESD3322DL" , "value":1 , "initial":1},
+    { "name": "1ESD3322EL" , "value":1 , "initial":1},
+    { "name": "1ESD3322FL" , "value":1 , "initial":1},
+    { "name": "1ESD3322GL" , "value":1 , "initial":1},
+    { "name": "1ESD3322HL" , "value":1 , "initial":1},
+    { "name": "1ESD3322IL" , "value":1 , "initial":1},
+    { "name": "1ESD3322A" , "value":1 , "initial":1},
+    { "name": "1ESD3322B" , "value":1 , "initial":1},
+    { "name": "1ESD3322C" , "value":1 , "initial":1},
+    { "name": "1ESD3322D" , "value":1 , "initial":1},
+    { "name": "1ESD3322E" , "value":1 , "initial":1},
+    { "name": "1ESD3322F" , "value":1 , "initial":1},
+    { "name": "1ESD3322G" , "value":1 , "initial":1},
+    { "name": "1ESD3322H" , "value":1 , "initial":1},
+    { "name": "1ESD3322I" , "value":1 , "initial":1},
+    { "name": "1ESD3316AAL" , "value":1 , "initial":1},
+    { "name": "1ESD3316ABL" , "value":1 , "initial":1},
+    { "name": "1ESD3316ACL" , "value":1 , "initial":1},
+    { "name": "1ESD3316AA" , "value":1 , "initial":1},
+    { "name": "1ESD3316AB" , "value":1 , "initial":1},
+    { "name": "1ESD3316AC" , "value":1 , "initial":1},
+    { "name": "1ESD3316DAL" , "value":1 , "initial":1},
+    { "name": "1ESD3316DBL" , "value":1 , "initial":1},
+    { "name": "1ESD3316DCL" , "value":1 , "initial":1},
+    { "name": "1ESD3316DA" , "value":1 , "initial":1},
+    { "name": "1ESD3316DB" , "value":1 , "initial":1},
+    { "name": "1ESD3316DC" , "value":1 , "initial":1},
+    { "name": "1ESD3219AL" , "value":1 , "initial":1},
+    { "name": "1ESD3219BL" , "value":1 , "initial":1},
+    { "name": "1ESD3219CL" , "value":1 , "initial":1},
+    { "name": "1ESD3219A" , "value":1 , "initial":1},
+    { "name": "1ESD3219B" , "value":1 , "initial":1},
+    { "name": "1ESD3219C" , "value":1 , "initial":1},
+    { "name": "1ESD2317A" , "value":1 , "initial":1},
+    { "name": "1ESD2317AL" , "value":1 , "initial":1},
+    { "name": "1ESD2317B" , "value":1 , "initial":1},
+    { "name": "1ESD2317BL" , "value":1 , "initial":1},
+    { "name": "1ESD404C" , "value":1 , "initial":1},
+    { "name": "1ESD404CL" , "value":1 , "initial":1},
+    { "name": "1ESD404B" , "value":1 , "initial":1},
+    { "name": "1ESD404BL" , "value":1 , "initial":1},
+    { "name": "1ESD3908AL" , "value":1 , "initial":1},
+    { "name": "1ESD3908BL" , "value":1 , "initial":1},
+    { "name": "1ESD3908CL" , "value":1 , "initial":1},
+    { "name": "1ESD3908DL" , "value":1 , "initial":1},
+    { "name": "1ESD3908EL" , "value":1 , "initial":1},
+    { "name": "1ESD3908FL" , "value":1 , "initial":1},
+    { "name": "1ESD3908GL" , "value":1 , "initial":1},
+    { "name": "1ESD3908HL" , "value":1 , "initial":1},
+    { "name": "1ESD3908IL" , "value":1 , "initial":1},
+    { "name": "1ESD3908JL" , "value":1 , "initial":1},
+    { "name": "1ESD3908KL" , "value":1 , "initial":1},
+    { "name": "1ESD3908A" , "value":1 , "initial":1},
+    { "name": "1ESD3908B" , "value":1 , "initial":1},
+    { "name": "1ESD3908C" , "value":1 , "initial":1},
+    { "name": "1ESD3908D" , "value":1 , "initial":1},
+    { "name": "1ESD3908E" , "value":1 , "initial":1},
+    { "name": "1ESD3908F" , "value":1 , "initial":1},
+    { "name": "1ESD3908G" , "value":1 , "initial":1},
+    { "name": "1ESD3908H" , "value":1 , "initial":1},
+    { "name": "1ESD3908I" , "value":1 , "initial":1},
+    { "name": "1ESD3908J" , "value":1 , "initial":1},
+    { "name": "1ESD3908K" , "value":1 , "initial":1},
+    { "name": "1ESD3323AL" , "value":1 , "initial":1},
+    { "name": "1ESD3323BL" , "value":1 , "initial":1},
+    { "name": "1ESD3323CL" , "value":1 , "initial":1},
+    { "name": "1ESD3323DL" , "value":1 , "initial":1},
+    { "name": "1ESD3323A" , "value":1 , "initial":1},
+    { "name": "1ESD3323B" , "value":1 , "initial":1},
+    { "name": "1ESD3323C" , "value":1 , "initial":1},
+    { "name": "1ESD3323D" , "value":1 , "initial":1},
+    { "name": "1ESD3326A" , "value":1 , "initial":1},
+    { "name": "1ESD3326B" , "value":1 , "initial":1},
+    { "name": "1ESD3326C" , "value":1 , "initial":1},
+    { "name": "1ESD3326D" , "value":1 , "initial":1},
+    { "name": "1ESD3326AL" , "value":1 , "initial":1},
+    { "name": "1ESD3326BL" , "value":1 , "initial":1},
+    { "name": "1ESD3326CL" , "value":1 , "initial":1},
+    { "name": "1ESD3326DL" , "value":1 , "initial":1},
+    { "name": "1ESD3305BL" , "value":1 , "initial":1},
+    { "name": "1ESD3305B" , "value":1 , "initial":1},
+    { "name": "1ESD3905AL" , "value":1 , "initial":1},
+    { "name": "1PB001" , "value":1 , "initial":1},
+    { "name": "1PB002" , "value":1 , "initial":1},
+    { "name": "1LALL033L" , "value":1 , "initial":1},
+    { "name": "1LALL033" , "value":1 , "initial":1},
+    { "name": "1ESD3321" , "value":1 , "initial":1},
+    { "name": "1ESD3321L" , "value":1 , "initial":1},
+    { "name": "4201TIC057PVH","value": 45,"initial":  45},
+    { "name": "4201TIC057PVL","value": 35,"initial":  35},
+    { "name": "4201TIC057PVHH","value":100,"initial":  100},
+    { "name": "4201TIC057PVLL","value": 0,"initial":  0},
+    { "name": "4201PIC002PVH","value": 140,"initial": 140},
+    { "name": "4201PIC002PVL","value": 0,"initial": 0},
+    { "name": "4201PIC002PVHH","value": 140,"initial": 140},
+    { "name": "4201PIC002PVLL","value": 0,"initial": 0},
+    { "name": "4201FIC002PVL","value": 0,"initial": 0},
+    { "name": "4201FIC002PVH","value": 700,"initial": 700},
+    { "name": "4201FIC002PVLL","value": 0,"initial": 0},
+    { "name": "4201FIC002PVHH","value": 700,"initial": 700},
+    { "name": "4201LIC025PVL","value": 36.9,"initial": 36.9},
+    { "name": "4201LIC025PVH","value": 61.5,"initial":61.5},
+    { "name": "4201LIC025PVLL","value": 0,"initial": 0},
+    { "name": "4201LIC025PVHH","value": 100,"initial":100},
+    { "name": "4201TIC051PVL","value": 35,"initial": 35},
+    { "name": "4201TIC051PVH","value": 45,"initial": 45},
+    { "name": "4201TIC051PVLL","value": 0,"initial": 0},
+    { "name": "4201TIC051PVHH","value": 100,"initial": 100},
+    { "name": "4201PIC073PVH","value": 3,"initial": 3 },
+    { "name": "4201PIC073PVL","value": 0.2,"initial":0.2 },
+    { "name": "4201PIC073PVHH","value": 3,"initial": 3 },
+    { "name": "4201PIC073PVLL","value": 0,"initial":0 },
+    { "name": "4201PIC010PVH","value": 88,"initial": 88},
+    { "name": "4201PIC010PVL","value": 0,"initial":0},
+    { "name": "4201PIC010PVHH","value": 120,"initial": 88},
+    { "name": "4201PIC010PVLL","value": 0,"initial":0},
+    { "name": "4201PV117APVH","value": 314.6493,"initial": 314.6493},
+    { "name": "4201PV117BPVL","value": 314.6493,"initial": 314.6493},
+    { "name": "4201PV117APVHH","value": 314.6493,"initial": 314.6493},
+    { "name": "4201PV117BPVLL","value": 314.6493,"initial": 314.6493},
+    { "name": "4201TIC017PVH","value": 50.0,"initial": 50.0},
+    { "name": "4201TIC017PVL","value": 35.0,"initial": 35.0},
+    { "name": "4201TIC017PVHH","value": 100,"initial": 100},
+    { "name": "4201TIC017PVLL","value": 0,"initial":0},
+    { "name": "4201LIC015PVH","value":76.54,"initial": 76.54},
+    { "name": "4201LIC015PVL","value":13.67,"initial": 13.67},
+    { "name": "4201LIC015PVHH","value":100,"initial": 100},
+    { "name": "4201LIC015PVLL","value":0,"initial":0},
+    { "name": "4201PIC005BPVH","value":8.5,"initial": 8.5},
+    { "name": "4201PIC005BPVL","value":6.5,"initial": 6.5},
+    { "name": "4201PIC005BPVHH","value":15,"initial": 15},
+    { "name": "4201PIC005BPVLL","value":0,"initial": 0},
+    { "name": "4201PIC005APVH","value": 18,"initial":18},
+    { "name": "4201PIC005APVL","value": 0,"initial":0},
+    { "name": "4201PIC005APVHH","value": 18,"initial":18},
+    { "name": "4201PIC005APVLL","value": 0,"initial":0},
+    { "name": "4201LIC007PVH","value": 92.95,"initial":92.95},
+    { "name": "4201LIC007PVLL","value": 0,"initial": 0},
+    { "name": "4201LIC007PVHH","value": 100,"initial":100},
+    { "name": "4201LIC007PVL","value": 21.87,"initial": 24.87},
+    { "name": "4201FIC003PVH","value": 450,"initial": 450},
+    { "name": "4201FIC003PVL","value": 0,"initial": 0},
+    { "name": "4201FIC003PVHH","value": 450,"initial": 450},
+    { "name": "4201FIC003PVLL","value": 0,"initial": 0},
+    { "name": "4201FIC010PVH","value": 450,"initial": 450},
+    { "name": "4201FIC010PVL","value": 0,"initial": 0},
+    { "name": "4201FIC010PVHH","value": 450,"initial": 450},
+    { "name": "4201FIC010PVLL","value": 0,"initial": 0},
+    { "name": "4201LIC019BPVH","value": 83.5,"initial": 83.5},
+    { "name": "4201LIC019BPVL","value": 12.5,"initial": 12.5},
+    { "name": "4201LIC019BPVHH","value": 100,"initial": 100},
+    { "name": "4201LIC019BPVLL","value": 0,"initial":0},
+    { "name": "4201LIC021BPVH","value": 75.5,"initial": 75.5},
+    { "name": "4201LIC021BPVL","value": 38.5,"initial": 38.5},
+    { "name": "4201LIC021BPVHH","value": 100,"initial": 100},
+    { "name": "4201LIC021BPVLL","value": 0,"initial":0},  
+    { "name": "4201LIC027PVH","value": 95.35,"initial": 95.35},
+    { "name": "4201LIC027PVL","value": 2.4,"initial": 2.4},
+    { "name": "4201LIC027PVHH","value": 100,"initial": 100},
+    { "name": "4201LIC027PVLL","value": 0,"initial": 0},
+    { "name": "4201TIC023PVH","value": 156,"initial": 156},
+    { "name": "4201TIC023PVL","value":139,"initial":139},
+    { "name": "4201TIC023PVHH","value": 250,"initial": 250},
+    { "name": "4201TIC023PVLL","value":0,"initial":0},
+    { "name": "4201TIC042PVH","value": 63,"initial": 63},
+    { "name": "4201TIC042PVL","value": 53,"initial": 53},
+    { "name": "4201TIC042PVHH","value": 100,"initial": 100},
+    { "name": "4201TIC042PVLL","value":0,"initial":0 },
+    { "name": "4201LIC011PVH","value": 63.98,"initial": 63.98},
+    { "name": "4201LIC011PVL","value": 27.89,"initial": 27.89},
+    { "name": "4201LIC011PVHH","value": 100,"initial": 100},
+    { "name": "4201LIC011PVLL","value": 0,"initial": 0},
+    { "name": "4201FIC047APVH","value": 50,"initial": 50},
+    { "name": "4201FIC047APVL","value": 0,"initial": 0},
+    { "name": "4201FIC047APVHH","value": 50,"initial": 50},
+    { "name": "4201FIC047APVLL","value": 0,"initial": 0},
+    { "name": "4201PIC096PVH","value":12,"initial":12},
+    { "name": "4201PIC096PVL","value":0,"initial":0},
+    { "name": "4201PIC096PVHH","value":12,"initial":12},
+    { "name": "4201PIC096PVLL","value":0,"initial":0},
+    { "name": "4201PIC117PVH","value": 1.25,"initial": 1.25 },
+    { "name": "4201PIC117PVL","value": 0,"initial": 0 },
+    { "name": "4201PIC117PVHH","value": 2,"initial": 2},
+    { "name": "4201PIC117PVLL","value": 0,"initial": 0 },
+    { "name": "4201PIC008PVH","value": 1.2,"initial": 1.2},
+    { "name": "4201PIC008PVL","value": 0.85,"initial": 0.85},
+    { "name": "4201PIC008PVHH","value": 2,"initial": 2},
+    { "name": "4201PIC008PVLL","value": 0,"initial": 0},
+    { "name": "4201TIC047PVH","value":115,"initial":115},
+    { "name": "4201TIC047PVL","value":100,"initial":100},
+    { "name": "4201TIC047PVHH","value":250,"initial":115},
+    { "name": "4201TIC047PVLL","value":0,"initial":0},
+    { "name": "4201LIC008PVH","value": 78.36,"initial": 78.36},
+    { "name": "4201LIC008PVL","value": 24.56,"initial": 24.56},
+    { "name": "4201LIC008PVHH","value": 100,"initial": 100},
+    { "name": "4201LIC008PVLL","value": 0,"initial": 0},
+    { "name": "4201FIC005APVH","value": 450,"initial": 450},
+    { "name": "4201FIC005APVL","value": 0,"initial": 0},
+    { "name": "4201FIC005APVHH","value": 450,"initial": 450},
+    { "name": "4201FIC005APVLL","value": 0,"initial": 0},
+    { "name": "4201LIC023PVH","value":64.24,"initial":64.24},
+    { "name": "4201LIC023PVL","value": 31.42,"initial": 31.42},
+    { "name": "4201LIC023PVHH","value":100,"initial":100},
+    { "name": "4201LIC023PVLL","value": 0,"initial": 0},
+    { "name": "4201LIC029BPVH","value": 83.5,"initial": 83.5},
+    { "name": "4201LIC029BPVL","value": 12.5,"initial": 12.5},
+    { "name": "4201LIC029BPVHH","value": 100,"initial": 100},
+    { "name": "4201LIC029BPVLL","value": 0,"initial": 0},
+    { "name": "4201LIC026PVH","value": 89.75,"initial": 89.75},
+    { "name": "4201LIC026PVL","value": 18,"initial": 18},
+    { "name": "4201LIC026PVHH","value": 89.75,"initial": 89.75},
+    { "name": "4201LIC026PVLL","value": 0,"initial": 0},
+    { "name": "4201LIC028APVH","value": 78.5,"initial": 78.5},
+    { "name": "4201LIC028APVL","value": 20,"initial": 20},
+    { "name": "4201LIC028APVHH","value": 100,"initial": 100},
+    { "name": "4201LIC028APVLL","value": 0,"initial": 0},
+    { "name": "4201LIC028BPVH","value": 78.5,"initial": 78.5},
+    { "name": "4201LIC028BPVL","value": 20,"initial": 20},
+    { "name": "4201LIC028BPVHH","value": 100,"initial": 100},
+    { "name": "4201LIC028BPVLL","value": 0,"initial": 0},
+    { "name": "4201PIC044PVH","value":18,"initial":18},
+    { "name": "4201PIC044PVL","value":0,"initial":0},
+    { "name": "4201PIC044PVHH","value":18,"initial":18},
+    { "name": "4201PIC044PVLL","value":0,"initial":0},
+    { "name": "4201TIC028PVH","value": 72,"initial": 72},
+    { "name": "4201TIC028PVL","value": 52,"initial": 52},
+    { "name": "4201TIC028PVHH","value": 100,"initial": 100},
+    { "name": "4201TIC028PVLL","value": 0,"initial": 0},
+    { "name": "4201HIC001PVH","value": 314.6493,"initial": 314.6493},
+    { "name": "4201HIC001PVL","value": 314.6493,"initial": 314.6493},
+    { "name": "4201HIC001PVHH","value": 314.6493,"initial": 314.6493},
+    { "name": "4201HIC001PVLL","value": 314.6493,"initial": 314.6493},
+    { "name": "4201ALI051","value": 0,"initial": 0,"R": [-160, 160],"HR": [-160, 160],"HHR": [-160, 160]},
+    { "name": "4201ALI051PVL","value": 0,"initial": 0},
+    { "name": "4201ALI051PVLL","value": 0,"initial": 0},
+    { "name": "4201ALI051PVH","value": 0,"initial": 0},
+    { "name": "4201ALI051PVHH","value": 0,"initial": 0},
+    { "name": "1LIC021BLG" , "value":2 , "initial":2},
+    { "name": "1LIC019BLG" , "value":2 , "initial":2},
+    { "name": "1LIC029BLG" , "value":2 , "initial":2},
+    { "name": "1LAHH016L" , "value":1 , "initial":1},
+    { "name": "1LAHH016" , "value":1 , "initial":1},
+    { "name": "1ESD405GL" , "value":1 , "initial":1},
+    { "name": "1ESD405G" , "value":1 , "initial":1},
+    { "name": "1ESD405AL" , "value":1 , "initial":1},
+    { "name": "1ESD405A" , "value":1 , "initial":1},
+    { "name": "1ESD405BL" , "value":1 , "initial":1},
+    { "name": "1ESD405B" , "value":1 , "initial":1},
+    { "name": "1ESD405CL" , "value":1 , "initial":1},
+    { "name": "1ESD405C" , "value":1 , "initial":1},
+    { "name": "1ESD405DL" , "value":1 , "initial":1},
+    { "name": "1ESD405D" , "value":1 , "initial":1},
+    { "name": "1ESD405EL" , "value":1 , "initial":1},
+    { "name": "1ESD405E" , "value":1 , "initial":1},
+    { "name": "1ESD405FL" , "value":1 , "initial":1},
+    { "name": "1ESD405F" , "value":1 , "initial":1},
+    { "name": "1ESD3928L" , "value":1 , "initial":1},
+    { "name": "1ESD3928" , "value":1 , "initial":1},
+    { "name": "1XSLL702BL" , "value":1 , "initial":1},
+    { "name": "1XSLL702B" , "value":1 , "initial":1},
+    { "name": "1XSLL701BL" , "value":1 , "initial":1},
+    { "name": "1XSLL701B" , "value":1 , "initial":1},
+    { "name": "1FALL006L" , "value":1 , "initial":1},
+    { "name": "1FALL006" , "value":1 , "initial":1},
+    { "name": "1FALL003BL" , "value":1 , "initial":1},
+    { "name": "1FALL003B" , "value":1 , "initial":1},
+    { "name": "1PALL160L" , "value":1 , "initial":1},
+    { "name": "1PALL160" , "value":1 , "initial":1},
+    { "name": "1ESD3216L" , "value":1 , "initial":1},
+    { "name": "1ESD3216" , "value":1 , "initial":1},
+    { "name": "1LAHH022L" , "value":1 , "initial":1},
+    { "name": "1LAHH022" , "value":1 , "initial":1},
+    { "name": "1PB003L" , "value":1 , "initial":1},
+    { "name": "1PB003" , "value":1 , "initial":1},
+    { "name": "1LAHH029AL" , "value":1 , "initial":1},
+    { "name": "1LAHH029A" , "value":1 , "initial":1},
+    { "name": "1ESD405L" , "value":1 , "initial":1},
+    { "name": "1ESD405" , "value":1 , "initial":1},
+    { "name": "1ESD3321AL" , "value":1 , "initial":1},
+    { "name": "1ESD3321A" , "value":1 , "initial":1},
+    { "name": "1ESD3321BL" , "value":1 , "initial":1},
+    { "name": "1ESD3321B" , "value":1 , "initial":1},
+    { "name": "1ESD406AL" , "value":1 , "initial":1},
+    { "name": "1ESD406A" , "value":1 , "initial":1},
+    { "name": "1ESD3909AL" , "value":1 , "initial":1},
+    { "name": "1ESD3909A" , "value":1 , "initial":1},
+    { "name": "1ESD3909BL" , "value":1 , "initial":1},
+    { "name": "1ESD3909B" , "value":1 , "initial":1},
+    { "name": "1ESD3306A" , "value":1 , "initial":1},
+    { "name": "1ESD3306AL" , "value":1 , "initial":1},
+    { "name": "1ESD3306B" , "value":1 , "initial":1},
+    { "name": "1ESD3306BL" , "value":1 , "initial":1},
+    { "name": "1ESD3306C" , "value":1 , "initial":1},
+    { "name": "1ESD3306CL" , "value":1 , "initial":1},
+    { "name": "1ESD3306D" , "value":1 , "initial":1},
+    { "name": "1ESD3306DL" , "value":1 , "initial":1},
+    { "name": "1ESD3216AL" , "value":1 , "initial":1},
+    { "name": "1ESD3216A" , "value":1 , "initial":1},
+    { "name": "1ESD3216BL" , "value":1 , "initial":1},
+    { "name": "1ESD3216B" , "value":1 , "initial":1},
+    { "name": "1ESD3216CL" , "value":1 , "initial":1},
+    { "name": "1ESD3216C" , "value":1 , "initial":1},
+    { "name": "1ESD405BAL" , "value":1 , "initial":1},
+    { "name": "1ESD405BBL" , "value":1 , "initial":1},
+    { "name": "1ESD405BCL" , "value":1 , "initial":1},
+    { "name": "1ESD405BA" , "value":1 , "initial":1},
+    { "name": "1ESD405BB" , "value":1 , "initial":1},
+    { "name": "1ESD405BC" , "value":1 , "initial":1},
+    { "name": "1ESD3913AL" , "value":1 , "initial":1},
+    { "name": "1ESD3913A" , "value":1 , "initial":1},
+    { "name": "1ESD405CA" , "value":1 , "initial":1},
+    { "name": "1ESD405CAL" , "value":1 , "initial":1},
+    { "name": "1ESD405EA" , "value":1 , "initial":1},
+    { "name": "1ESD405EAL" , "value":1 , "initial":1},
+    { "name": "1ESD3928A" , "value":1 , "initial":1},
+    { "name": "1ESD3928AL" , "value":1 , "initial":1},
+    { "name": "1ESD3321C" , "value":1 , "initial":1},
+    { "name": "1ESD3321CL" , "value":1 , "initial":1},
+    { "name": "4201TIC047OPR" , "value":1 , "initial":1},
+    { "name": "4201LIC019BOPLG" , "value":0.0 , "initial":0.0},
+    { "name": "4201LIC021BOPLG" , "value":0.0 , "initial":0.0},
+    { "name": "4201LIC029BOPLG" , "value":0.0 , "initial":0.0},
+    { "name": "4201LIC026OPLG" , "value":0.1256 , "initial":0.1256},
+    { "name": "4201TIC051OPLG" , "value":2.62 , "initial":2.62},
+    { "name": "4201LIC028AOPLG" , "value":0 , "initial":0},
+    { "name": "4201LIC008OPLG" , "value":49.8937 , "initial":49.8937},
+    { "name": "4201TIC017OPLG" , "value":49.5583 , "initial":49.5583},
+    { "name": "4201LIC007OPLG" , "value":49.8594 , "initial":49.8594},
+    { "name": "4201PIC096OPLG" , "value":50 , "initial":50},
+    { "name": "4201FIC047AOPLG" , "value":49.6432 , "initial":49.6432},
+    { "name": "4201TIC023OPLG" , "value":49.6605 , "initial":49.6605},
+    { "name": "4201LIC027OPLG" , "value":49.6648 , "initial":49.6648},
+    { "name": "420M103" , "value":1.0 , "initial":1.0},
+    {"name": "420P116", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420P116PV", "value": 1, "derived": {"variableIds": ["420P116"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420P115", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420P115PV", "value": 1, "derived": {"variableIds": ["420P115"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420P117A", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420P117APV", "value": 1, "derived": {"variableIds": ["420P117A"], "type": "timeDiff", "timeDiff": 1.0}},
+    {"name": "420P117B", "initial": 1, "defaultValue": 1, "errorValue": 2},
+    {"name": "420P117BPV", "value": 1, "derived": {"variableIds": ["420P117B"], "type": "timeDiff", "timeDiff": 1.0}},
+    { "name": "4201EV002LG" , "value":1.0 , "initial":1.0},
+    { "name": "420P103ALG" , "value":1.0 , "initial":1.0},
+    { "name": "420P103BLG" , "value":2.0 , "initial":2.0},
+    { "name": "420P101ALG" , "value":1.0 , "initial":1.0},
+    { "name": "420P101BLG" , "value":2.0 , "initial":2.0},
+    { "name": "420P102ALG" , "value":1.0 , "initial":1.0},
+    { "name": "420P102BLG" , "value":2.0 , "initial":2.0},
+    { "name": "420P104ALG" , "value":1.0 , "initial":1.0},
+    { "name": "420P104BLG" , "value":2.0 , "initial":2.0},
+    { "name": "4201EV001LG" , "value":2.0 , "initial":2.0},
+    { "name": "4201EV005LG" , "value":1.0 , "initial":1.0},
+    { "name": "4201EV006LG" , "value":1.0 , "initial":1.0},
+    { "name": "4201EV007LG" , "value":1.0 , "initial":1.0},
+    { "name": "4201EV008LG" , "value":1.0 , "initial":1.0},
+    { "name": "4201EV009LG" , "value":1.0 , "initial":1.0},
+    { "name": "4201EV010LG" , "value":1.0 , "initial":1.0},
+    { "name": "4201EV016LG" , "value":1.0 , "initial":1.0},
+    { "name": "4201EV017LG" , "value":1.0 , "initial":1.0},
+
+    { "name": "1LIC027LG" , "value":1.0 , "initial":1.0},
+    { "name": "1TIC023LG" , "value":1.0 , "initial":1.0},
+    { "name": "1FIC047ALG" , "value":1.0 , "initial":1.0},
+    { "name": "1PIC096LG" , "value":1.0 , "initial":1.0},
+    { "name": "1LIC007LG" , "value":1.0 , "initial":1.0},
+    { "name": "1TIC017LG" , "value":1.0 , "initial":1.0},
+    { "name": "1LIC008LG" , "value":1.0 , "initial":1.0},
+    { "name": "1LIC028ALG" , "value":1.0 , "initial":1.0},
+    { "name": "1LIC026LG" , "value":1.0 , "initial":1.0},
+    { "name": "1TIC051LG" , "value":1.0 , "initial":1.0},
+
+
+
+    { "name": "4201EV019LG" , "value":1.0 , "initial":1.0},
+    { "name": "4201EV013LG" , "value":1.0 , "initial":1.0},
+    { "name": "4201EV021LG" , "value":1.0 , "initial":1.0},
+    { "name": "4201EV014LG" , "value":1.0 , "initial":1.0},
+    { "name": "4201EV012LG" , "value":1.0 , "initial":1.0},
+    { "name": "4201EV015LG" , "value":1.0 , "initial":1.0},
+
+
+
+    {"name":"4200TI453", "value":25.0, "initial":25.0, "unit":"C", "HR":[0, 50], "HHR":[0, 50], "R": [0, 50]},
+    {
+        "name": "4200TI453PVLL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4200TI453PVL",
+        "value": 0,
+        "initial": 0
+    },
+    {
+        "name": "4200TI453PVH",
+        "value": 50,
+        "initial": 50
+    },
+    {
+        "name": "4200TI453PVHH",
+        "value": 50,
+        "initial": 50
+    }
+    ]
+    

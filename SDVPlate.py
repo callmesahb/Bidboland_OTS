@@ -1,18 +1,27 @@
 from PyQt6 import QtWidgets, QtGui, QtCore
 from Store import Store
+import os
 import sys
 
 class Valves(QtWidgets.QWidget):
     ValveChangingPos = QtCore.pyqtSignal(int)
     updatevalues = QtCore.pyqtSignal()
-    def __init__(self,store:Store,variableid,value):
+    def __init__(self,store:Store,variableid,value,title):
         super().__init__()
         self.setFixedSize(200,400)
         self.value = value
         self.variableid = variableid
         self.store = store
+        self.title = title
+        cd = os.getcwd()
+        imgd = os.path.join(cd,"images")
+        eqd = os.path.join(imgd,"equipment")
+        icon = os.path.join(eqd,"ev2g1.png")
+        self.setWindowIcon(QtGui.QIcon(icon))
+        self.setWindowTitle(self.variableid)
         self.name = QtWidgets.QLabel("0EV001",self)
-        self.setWindowFlags(QtCore.Qt.WindowType.Window | QtCore.Qt.WindowType.CustomizeWindowHint | QtCore.Qt.WindowType.WindowTitleHint | QtCore.Qt.WindowType.WindowCloseButtonHint)
+        self.setFixedWidth(250)
+        self.setWindowFlags(QtCore.Qt.WindowType.WindowStaysOnTopHint)
         self._InitUi()
         store.updatevalues.connect(self.ReadingValue)
         self.settingData()
@@ -23,9 +32,14 @@ class Valves(QtWidgets.QWidget):
         self.setLayout(self.vlayout)
         
     def settingData(self):
-        name = "" + self.variableid 
+        name = " " + self.variableid
+        title = QtWidgets.QLabel("",self)
+        ftitle = " " + self.title 
+        title.setText(ftitle)
         self.name.setText(name)
+        self.name.setStyleSheet("font-weight:bold;size:14px")
         self.vlayout.addWidget(self.name)
+        self.vlayout.addWidget(title)
         hline = QtWidgets.QFrame()
         hline.setFrameShape(QtWidgets.QFrame.Shape.HLine)
         hline.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
@@ -38,11 +52,41 @@ class Valves(QtWidgets.QWidget):
         self.radioGroupBox.setEnabled(False)
         self.radioLayout = QtWidgets.QVBoxLayout()
         self.Openradio= QtWidgets.QRadioButton("OPEN",self)
-        self.Openradio.setStyleSheet("color:black;")
+        # self.Openradio.setStyleSheet
+        self.Openradio.setStyleSheet("""
+                QRadioButton::indicator {
+                    background-color: white;
+                    border: 1px solid gray;
+                    width: 10px;
+                    height: 10px;;
+                    border-radius: 15px;
+                }
+                QRadioButton::indicator:checked {
+                    background-color: black;
+                }
+                QRadioButton::indicator:unchecked {
+                    background-color: white;
+                }
+                """)
         self.Openradio.setChecked(True)
         self.Openradio.setEnabled(False)
         self.Closeradio= QtWidgets.QRadioButton("CLOSE",self)
-        self.Closeradio.setStyleSheet("color:black;")
+        # self.Close
+        self.Closeradio.setStyleSheet("""
+                QRadioButton::indicator {
+                    background-color: white;
+                    border: 1px solid gray;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 15px;
+                }
+                QRadioButton::indicator:checked {
+                    background-color: black;
+                }
+                QRadioButton::indicator:unchecked {
+                    background-color: white;
+                }
+                """)
         self.Closeradio.setEnabled(False)
         self.radioLayout.addWidget(self.Openradio)
         self.radioLayout.addWidget(self.Closeradio)
@@ -52,7 +96,7 @@ class Valves(QtWidgets.QWidget):
 
     def settingOP(self):
         hlayout = QtWidgets.QHBoxLayout()
-        self.OP = QtWidgets.QLabel("OP",self)
+        self.OP = QtWidgets.QLabel(" OP",self)
         self.OP.setStyleSheet("color:gray;")
         self.OPValue = QtWidgets.QLabel("",self)
         self.OPValue.setStyleSheet("""
@@ -86,8 +130,8 @@ class Valves(QtWidgets.QWidget):
     def OpeningPosition(self):
         self.store.settingValueOPC(self.variableid,1)
         self.OPValue.setText("OPEN")
-        self.Openradio.setChecked(True)
-        self.Closeradio.setChecked(False)
+        # self.Openradio.setChecked(True)
+        # self.Closeradio.setChecked(False)
         
         # self.ValveChangingPos.emit(1)
         # print("Signal emitted: OpeningPosition")
@@ -95,14 +139,20 @@ class Valves(QtWidgets.QWidget):
     def ClosingPostion(self):
         self.store.settingValueOPC(self.variableid,2)
         self.OPValue.setText("CLOSE")
-        self.Closeradio.setChecked(True)
-        self.Openradio.setChecked(False)
+        # self.Closeradio.setChecked(True)
+        # self.Openradio.setChecked(False)
         # self.ValveChangingPos.emit(2)
         # print("Signal emitted: ClosingPostion")
     
     @QtCore.pyqtSlot()
     def ReadingValue(self):
         value = self.store.finaltag[self.variableid]
+        if value == 1:
+            self.Openradio.setChecked(True)
+            self.Closeradio.setChecked(False)
+        if value == 2:
+            self.Openradio.setChecked(False)
+            self.Closeradio.setChecked(True)
         # print(f"{self.variableid}:{value}")
         # self.ValveChangingPos.emit(value)
         

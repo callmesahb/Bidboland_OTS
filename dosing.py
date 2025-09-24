@@ -12,7 +12,7 @@ from Store import Store
 class DosingPump(QWidget):
         PumpChangingPos = pyqtSignal(str)
         updatevalues = pyqtSignal()
-        def __init__(self, store:Store,variableid ,value,rotated):
+        def __init__(self, store:Store,variableid ,value,rotated,title):
                 super().__init__()
                 self.setWindowTitle("p2")
                 self.rotated = rotated
@@ -27,7 +27,8 @@ class DosingPump(QWidget):
                 self.store=store
                 self.variableid=variableid
                 self.value=value
-                self.faceplate = PumpFacePlate(variableid,store)
+                self.title = title
+                self.faceplate = PumpFacePlate(variableid,store,title)
                 # self.faceplate.PumpChangingPos.connect(self.set_status)
                 self.store.updatevalues.connect(self.ReadingValue)
 
@@ -47,7 +48,7 @@ class DosingPump(QWidget):
                 self.UP="up"
                 self.DOWN="down"
 
-                self.set_status("RUN")
+                self.set_status(value)
 
                           
 
